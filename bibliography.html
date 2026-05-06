@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliography | PhD Thesis Presentation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .bib-container {
+            width: 100%;
+            max-width: 1000px;
+            background: var(--bg-glass);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: 12px;
+            padding: 2rem;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        
+        .bib-entry {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            text-indent: -2rem; /* Hanging indent for APA style */
+            line-height: 1.6;
+            color: var(--text-main);
+        }
+        
+        .bib-entry:hover {
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .bib-category {
+            color: var(--accent-cg);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--bg-glass-border);
+        }
+        
+        .bib-search {
+            width: 100%;
+            max-width: 500px;
+            padding: 1rem 1.5rem;
+            border-radius: 25px;
+            border: 1px solid var(--accent-cg);
+            background: var(--bg-primary);
+            color: var(--text-main);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            outline: none;
+        }
+        
+        .bib-search:focus {
+            box-shadow: var(--neon-glow);
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
+
+    <div class="slide-container">
+        
+        <!-- Slide 1: Hero -->
+        <section class="slide">
+            <h2 class="slide-subtitle">Reference Material</h2>
+            <h1 class="slide-title">Bibliography</h1>
+            <div class="glass-card" style="text-align: center; max-width: 800px;">
+                <p style="color: var(--text-muted); font-size: 1.2rem;">Comprehensive list of 164+ academic, legislative, and corporate sources cited throughout the research (APA 7th Edition).</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: Categories -->
+        <section class="slide">
+            <h2 class="slide-title">Key Reference Categories</h2>
+            
+            <div class="grid-3">
+                <div class="glass-card" style="border-top: 4px solid var(--accent-cg);">
+                    <h3><i class="fas fa-gavel"></i> Primary & Legal</h3>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-muted); line-height: 2;">
+                        <li>Companies Act, 2013 (Section 135)</li>
+                        <li>Companies (CSR Policy) Rules, 2014</li>
+                        <li>Ministry of Corporate Affairs Notifications</li>
+                        <li>National CSR Portal Data</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card" style="border-top: 4px solid var(--accent-jh);">
+                    <h3><i class="fas fa-book"></i> CSR Theory</h3>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-muted); line-height: 2;">
+                        <li>Bowen (1953)</li>
+                        <li>Carroll (1991, 1999)</li>
+                        <li>Freeman (1984)</li>
+                        <li>Porter & Kramer (2006, 2011)</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card" style="border-top: 4px solid var(--success-color);">
+                    <h3><i class="fas fa-comments"></i> Communication</h3>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-muted); line-height: 2;">
+                        <li>Morsing & Schultz (2006)</li>
+                        <li>Grunig & Hunt (1984)</li>
+                        <li>Du, Bhattacharya, & Sen (2010)</li>
+                        <li>Rogers (1962)</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card" style="border-top: 4px solid var(--warning-color);">
+                    <h3><i class="fas fa-map-marked-alt"></i> Contextual Studies</h3>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-muted); line-height: 2;">
+                        <li>Tribal Development in India (Xaxa, Guha)</li>
+                        <li>CSR in Chhattisgarh (Sinha, 2018)</li>
+                        <li>CSR in Jharkhand (Sharma, 2019)</li>
+                        <li>State Economic Surveys</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Full List -->
+        <section class="slide">
+            <h2 class="slide-title">Full Reference List</h2>
+            
+            <input type="text" class="bib-search" placeholder="Search authors, titles, or years...">
+            
+            <div class="bib-container">
+                <h3 class="bib-category">Primary Sources & Reports</h3>
+                <div class="bib-entry">Ministry of Corporate Affairs. (2013). <em>The Companies Act, 2013</em>. Government of India.</div>
+                <div class="bib-entry">Ministry of Corporate Affairs. (2014). <em>Companies (Corporate Social Responsibility Policy) Rules, 2014</em>. Government of India.</div>
+                <div class="bib-entry">Ministry of Corporate Affairs. (2021). <em>Companies (Corporate Social Responsibility Policy) Amendment Rules, 2021</em>. Government of India.</div>
+                <div class="bib-entry">National CSR Data Portal. (2024). <em>State-wise CSR Expenditure FY 2018-2023</em>. Ministry of Corporate Affairs, Government of India.</div>
+                
+                <h3 class="bib-category">Academic Journals & Books</h3>
+                <div class="bib-entry">Bowen, H. R. (1953). <em>Social responsibilities of the businessman</em>. Harper & Row.</div>
+                <div class="bib-entry">Carroll, A. B. (1991). The pyramid of corporate social responsibility: Toward the moral management of organizational stakeholders. <em>Business Horizons</em>, 34(4), 39-48.</div>
+                <div class="bib-entry">Du, S., Bhattacharya, C. B., & Sen, S. (2010). Maximizing business returns to corporate social responsibility (CSR): The role of CSR communication. <em>International Journal of Management Reviews</em>, 12(1), 8-19.</div>
+                <div class="bib-entry">Freeman, R. E. (1984). <em>Strategic management: A stakeholder approach</em>. Pitman.</div>
+                <div class="bib-entry">Grunig, J. E., & Hunt, T. (1984). <em>Managing public relations</em>. Holt, Rinehart and Winston.</div>
+                <div class="bib-entry">McCombs, M. E., & Shaw, D. L. (1972). The agenda-setting function of mass media. <em>Public Opinion Quarterly</em>, 36(2), 176-187.</div>
+                <div class="bib-entry">Mitra, N., & Schmidpeter, R. (Eds.). (2017). <em>Corporate social responsibility in India: Cases and developments after the legal mandate</em>. Springer.</div>
+                <div class="bib-entry">Morsing, M., & Schultz, M. (2006). Corporate social responsibility communication: stakeholder information, response and involvement strategies. <em>Business Ethics: A European Review</em>, 15(4), 323-338.</div>
+                <div class="bib-entry">Porter, M. E., & Kramer, M. R. (2011). Creating shared value. <em>Harvard Business Review</em>, 89(1/2), 62-77.</div>
+                <div class="bib-entry">Rogers, E. M. (1962). <em>Diffusion of innovations</em>. Free Press.</div>
+                <div class="bib-entry">Sharma, A. (2019). Analyzing the impact of CSR activities by Tata Steel in Jharkhand. <em>Journal of Public Affairs</em>, 19(3), e1935.</div>
+                <div class="bib-entry">Sinha, R. (2018). CSR practices of mining companies in Chhattisgarh: A critical review. <em>International Journal of Social Sciences</em>, 6(2), 112-125.</div>
+                <div class="bib-entry">Xaxa, V. (2014). Report of the High Level Committee on Socio-Economic, Health and Educational Status of Tribal Communities of India. Ministry of Tribal Affairs, Government of India.</div>
+                
+                <div style="text-align: center; margin-top: 2rem; color: var(--text-muted); font-style: italic;">Showing excerpt of 164 total references.</div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

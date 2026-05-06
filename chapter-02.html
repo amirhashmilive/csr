@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 02: Review of Literature | PhD Thesis Presentation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <style>
+        .timeline-horizontal {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline-horizontal::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            height: 4px;
+            background: var(--bg-glass-border);
+            z-index: 1;
+        }
+        
+        .timeline-node {
+            position: relative;
+            z-index: 2;
+            background: var(--bg-primary);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-cg);
+            box-shadow: var(--neon-glow);
+        }
+        
+        .timeline-label {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .timeline-author {
+            color: var(--accent-jh);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .strategy-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .strategy-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-glass);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--bg-glass-border);
+        }
+        
+        .arrow-one-way::after { content: "→"; font-size: 2rem; color: var(--text-muted); margin: 0 1rem; }
+        .arrow-two-way::after { content: "↔"; font-size: 2rem; color: var(--accent-cg); margin: 0 1rem; }
+        .arrow-asymm::after { content: "⇌"; font-size: 2rem; color: var(--warning-color); margin: 0 1rem; }
+        
+        .gap-table th { background: rgba(0, 102, 204, 0.2); }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
+
+    <div class="slide-container">
+        
+        <!-- Slide 1: Hero -->
+        <section class="slide">
+            <h2 class="slide-subtitle">Chapter 02</h2>
+            <h1 class="slide-title">Review of Literature</h1>
+            <div class="glass-card" style="text-align: center; max-width: 800px;">
+                <p style="color: var(--text-muted); font-size: 1.2rem;">Tracing the theoretical evolution from corporate philanthropy to strategic communication and identifying critical research gaps.</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: Evolution of CSR -->
+        <section class="slide">
+            <h2 class="slide-title">Evolution of CSR Theory</h2>
+            
+            <div class="timeline-horizontal" style="margin-top: 4rem;">
+                <div class="timeline-node">
+                    <div class="timeline-label">
+                        <div class="timeline-author">Bowen (1953)</div>
+                        <div style="font-size: 0.9rem; color: var(--text-muted);">"Father of CSR". Coined the concept of social responsibilities of businessmen.</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-node">
+                    <div class="timeline-label">
+                        <div class="timeline-author">Carroll (1991)</div>
+                        <div style="font-size: 0.9rem; color: var(--text-muted);">Developed the 4-part Pyramid (Economic, Legal, Ethical, Philanthropic).</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-node">
+                    <div class="timeline-label">
+                        <div class="timeline-author">Porter & Kramer (2011)</div>
+                        <div style="font-size: 0.9rem; color: var(--text-muted);">Introduced "Creating Shared Value" (CSV) - aligning business & social goals.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Indian Legislative Context -->
+        <section class="slide">
+            <h2 class="slide-title">CSR in Indian Legislative Context</h2>
+            
+            <div class="grid-3">
+                <div class="glass-card">
+                    <h3 class="neon-text-cg">Companies Act, 2013</h3>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Section 135 made India the first country to legally mandate CSR expenditure (2% rule).</p>
+                </div>
+                
+                <div class="glass-card">
+                    <h3 class="neon-text-cg">CSR Rules, 2014</h3>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Defined Schedule VII activities, board composition, and the "Comply or Explain" mechanism.</p>
+                </div>
+                
+                <div class="glass-card" style="border-color: var(--warning-color); box-shadow: 0 0 15px rgba(255, 193, 7, 0.2);">
+                    <h3 style="color: var(--warning-color);">2021 Amendments</h3>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Mandated Independent Impact Assessments for projects > ₹1 Crore. Shifted focus from <em>spending</em> to <em>impact</em>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Morsing & Schultz -->
+        <section class="slide">
+            <h2 class="slide-title">CSR Communication Strategies</h2>
+            <h3 class="slide-subtitle">Morsing & Schultz (2006)</h3>
+            
+            <div class="strategy-diagram">
+                <div class="strategy-row">
+                    <div style="flex: 1; text-align: right; font-weight: bold;">Corporate Entity</div>
+                    <div class="arrow-one-way" style="flex: 0;"></div>
+                    <div style="flex: 1;">Stakeholders</div>
+                    <div style="flex: 1; color: var(--text-muted);"><strong>Information Strategy</strong><br>One-way, telling, not listening.</div>
+                </div>
+                
+                <div class="strategy-row">
+                    <div style="flex: 1; text-align: right; font-weight: bold;">Corporate Entity</div>
+                    <div class="arrow-asymm" style="flex: 0;"></div>
+                    <div style="flex: 1;">Stakeholders</div>
+                    <div style="flex: 1; color: var(--text-muted);"><strong>Response Strategy</strong><br>Two-way asymmetric. Feedback used only to adjust message.</div>
+                </div>
+                
+                <div class="strategy-row" style="border-color: var(--accent-cg); box-shadow: var(--neon-glow);">
+                    <div style="flex: 1; text-align: right; font-weight: bold; color: var(--accent-cg);">Corporate Entity</div>
+                    <div class="arrow-two-way" style="flex: 0;"></div>
+                    <div style="flex: 1; color: var(--accent-cg);">Stakeholders</div>
+                    <div style="flex: 1;"><strong>Involvement Strategy</strong><br>Two-way symmetric. Dialogue, mutual adaptation, ideal model.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Output vs Outcome -->
+        <section class="slide">
+            <h2 class="slide-title">Measuring Societal Betterment</h2>
+            
+            <div class="grid-2">
+                <div class="glass-card" style="text-align: center;">
+                    <h3 style="color: var(--accent-jh);">The Output Fallacy</h3>
+                    <div style="margin: 2rem 0;">
+                        <i class="fas fa-school" style="font-size: 3rem; color: var(--text-muted);"></i>
+                    </div>
+                    <p style="font-weight: 600;">"We built 10 schools."</p>
+                    <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Measures activity and expenditure, but not the actual change in human lives.</p>
+                </div>
+                
+                <div class="glass-card" style="text-align: center; border-color: var(--accent-cg);">
+                    <h3 style="color: var(--accent-cg);">The Outcome Approach</h3>
+                    <div style="margin: 2rem 0;">
+                        <i class="fas fa-user-graduate" style="font-size: 3rem; color: var(--accent-cg);"></i>
+                    </div>
+                    <p style="font-weight: 600;">"Literacy increased by 15%."</p>
+                    <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Measures actual societal betterment and capacity building.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; text-align: center; max-width: 800px; font-style: italic;">
+                "Development requires the removal of major sources of unfreedom: poverty as well as tyranny, poor economic opportunities as well as systematic social deprivation." <br>
+                <strong style="color: var(--accent-cg); font-style: normal;">— Amartya Sen (Capability Approach)</strong>
+            </div>
+        </section>
+
+        <!-- Slide 6: Tribal Context -->
+        <section class="slide">
+            <h2 class="slide-title">Tribal Context of CSR in India</h2>
+            
+            <div class="grid-2">
+                <div class="glass-card">
+                    <h3 style="color: var(--warning-color);"><i class="fas fa-exclamation-triangle"></i> Challenges</h3>
+                    <ul style="margin-top: 1.5rem; padding-left: 1.5rem; line-height: 2;">
+                        <li>Historical trust deficit due to land displacement</li>
+                        <li>Linguistic barriers (Gondi, Santhali, etc.)</li>
+                        <li>Top-down corporate planning ignoring local needs</li>
+                        <li>Digital divide limiting electronic communication</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card">
+                    <h3 style="color: var(--success-color);"><i class="fas fa-leaf"></i> Opportunities</h3>
+                    <ul style="margin-top: 1.5rem; padding-left: 1.5rem; line-height: 2;">
+                        <li>Leveraging traditional community structures (Gram Sabha)</li>
+                        <li>Integration with PESA Act and Forest Rights Act</li>
+                        <li>Local knowledge systems in environmental CSR</li>
+                        <li>High impact potential on Human Development Index</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: CSR in CG -->
+        <section class="slide">
+            <h2 class="slide-title neon-text-cg">CSR in Chhattisgarh - Literature</h2>
+            
+            <div class="glass-card" style="width: 100%; max-width: 800px; border-left: 4px solid var(--accent-cg);">
+                <h3 style="margin-bottom: 1rem;">Key Findings (Sinha 2018, IJSDR 2023)</h3>
+                <ul style="line-height: 2;">
+                    <li>High CSR fund generation due to mining (SECL, NMDC, BALCO).</li>
+                    <li>Funds often diverted to urban infrastructure rather than affected rural areas.</li>
+                    <li>Significant gap between "reported compliance" and "beneficiary perception".</li>
+                </ul>
+                
+                <div style="margin-top: 2rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong>Core Issue:</strong> Companies focus heavily on government relations (PR) rather than communicating directly with the tribal beneficiaries.
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: CSR in JH -->
+        <section class="slide">
+            <h2 class="slide-title neon-text-jh">CSR in Jharkhand - Literature</h2>
+            
+            <div class="glass-card" style="width: 100%; max-width: 800px; border-left: 4px solid var(--accent-jh);">
+                <h3 style="margin-bottom: 1rem;">Key Findings (Sharma 2019, Swaniti 2022)</h3>
+                <ul style="line-height: 2;">
+                    <li>Tata Steel Foundation presents a benchmark model, but it is heavily concentrated in East Singhbhum.</li>
+                    <li>Severe regional disparity in fund allocation across districts.</li>
+                    <li>Heavy reliance on institutional and print media which fails in low-literacy remote areas.</li>
+                </ul>
+                
+                <div style="margin-top: 2rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <strong>Core Issue:</strong> A highly institutionalized approach creates an "information silo" where corporate HQ is unaware of ground-level dissatisfaction.
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Research Gap -->
+        <section class="slide">
+            <h2 class="slide-title">The Comparative Research Gap</h2>
+            
+            <div class="glass-card" style="width: 100%; max-width: 1000px;">
+                <table class="data-table gap-table">
+                    <thead>
+                        <tr>
+                            <th>Existing Literature Focus</th>
+                            <th>Identified Gap in Literature</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Single-state analysis (either CG or JH)</td>
+                            <td><strong>No comparative study</strong> analyzing CSR communication between the two states.</td>
+                        </tr>
+                        <tr>
+                            <td>Corporate-centric (Annual Reports, HR)</td>
+                            <td>Lack of <strong>beneficiary-centric</strong> primary data and perception metrics.</td>
+                        </tr>
+                        <tr>
+                            <td>Urban/General communication models</td>
+                            <td>Communication theories remain untested in <strong>rural/tribal industrial belts</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td>Focus on CSR financial expenditure</td>
+                            <td>Ignorance of <strong>communication as an independent variable</strong> driving impact.</td>
+                        </tr>
+                        <tr>
+                            <td>Manufacturing/Mining focus</td>
+                            <td>The role of the <strong>Banking sector</strong> in CSR communication is largely ignored.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Slide 10: Theories -->
+        <section class="slide">
+            <h2 class="slide-title">Theoretical Perspectives</h2>
+            
+            <div class="grid-4">
+                <div class="glass-card">
+                    <i class="fas fa-users" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                    <h4>Stakeholder Theory</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Freeman (1984)</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Corporations owe responsibility to all affected parties, elevating local communities to primary stakeholders.</p>
+                </div>
+                
+                <div class="glass-card">
+                    <i class="fas fa-sync" style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
+                    <h4>Two-Way Symmetrical</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Grunig & Hunt (1984)</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Advocates for dialogue and mutual adaptation rather than one-way persuasive public relations.</p>
+                </div>
+                
+                <div class="glass-card">
+                    <i class="fas fa-bullhorn" style="font-size: 2rem; color: var(--success-color); margin-bottom: 1rem;"></i>
+                    <h4>Agenda-Setting Theory</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">McCombs & Shaw (1972)</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Corporate communication shapes what communities think is important, influencing perceived needs.</p>
+                </div>
+                
+                <div class="glass-card">
+                    <i class="fas fa-project-diagram" style="font-size: 2rem; color: var(--warning-color); margin-bottom: 1rem;"></i>
+                    <h4>Diffusion of Innovations</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Rogers (1962)</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Explains how CSR awareness and acceptance spreads through rural social systems via opinion leaders.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Sectoral Review -->
+        <section class="slide">
+            <h2 class="slide-title">National Sectoral Focus Review</h2>
+            
+            <div class="grid-2" style="align-items: center;">
+                <div class="chart-container" style="height: 350px;">
+                    <canvas id="sectorChart"></canvas>
+                </div>
+                
+                <div class="glass-card">
+                    <h3 style="margin-bottom: 1rem;">Literature Consensus</h3>
+                    <p style="margin-bottom: 1rem;">Historically, Indian CSR is heavily skewed towards Education and Healthcare, primarily because these offer highly visible, easily quantifiable outputs (e.g., number of buildings, medical camps).</p>
+                    <p>Environment and Livelihood initiatives, while critical in tribal belts, receive less funding and suffer from complex, long-term communication challenges.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Summary -->
+        <section class="slide">
+            <h2 class="slide-title">Summary of Literature Gaps</h2>
+            
+            <div class="glass-card" style="width: 100%; max-width: 800px;">
+                <ul style="line-height: 2.5; font-size: 1.1rem;">
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-cg); margin-right: 1rem;"></i> No comparative study exists evaluating CG vs JH on communication metrics.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-cg); margin-right: 1rem;"></i> The vast majority of literature relies on secondary financial data, ignoring the beneficiary's voice.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-cg); margin-right: 1rem;"></i> Public relations theories have not been adequately tested in low-literacy tribal environments.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-cg); margin-right: 1rem;"></i> The link between <strong>how a project is communicated</strong> and <strong>how its impact is perceived</strong> remains empirically untested.</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script>
+        window.renderPageCharts = function(colors) {
+            createChart('sectorChart', 'pie', {
+                labels: ['Education (36%)', 'Healthcare (22%)', 'Environment (15%)', 'Others (27%)'],
+                datasets: [{
+                    data: [36, 22, 15, 27],
+                    backgroundColor: [
+                        colors.cgPrimary,
+                        colors.jhPrimary,
+                        colors.successColor || '#28a745',
+                        colors.gridColor
+                    ],
+                    borderWidth: 0
+                }]
+            }, {
+                plugins: {
+                    legend: { position: 'right' }
+                }
+            });
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 06: Data Analysis & Interpretation | PhD Thesis Presentation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <style>
+        .part-divider {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg-glass);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            border: 1px solid var(--bg-glass-border);
+            z-index: 10;
+        }
+        
+        .ces-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .ces-score {
+            font-size: 5rem;
+            font-weight: 800;
+            margin: 1rem 0;
+            text-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        
+        .hyp-result-card {
+            background: var(--bg-glass);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hyp-result-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+        }
+        
+        .hyp-result-card.supported::before { background: var(--success-color); }
+        .hyp-result-card.partial::before { background: var(--warning-color); }
+        
+        .quote-box {
+            background: var(--bg-glass);
+            border-radius: 12px;
+            padding: 2rem 3rem;
+            position: relative;
+            max-width: 800px;
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.8;
+            border: 1px solid var(--bg-glass-border);
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: -15px; left: 20px;
+            font-size: 3rem;
+            color: var(--text-muted);
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
+
+    <div class="slide-container">
+        
+        <!-- ================= PART A: QUANTITATIVE ================= -->
+        
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-subtitle">Chapter 06</h2>
+            <h1 class="slide-title">Data Analysis & Interpretation</h1>
+            <div class="glass-card" style="text-align: center; max-width: 800px;">
+                <p style="font-size: 1.5rem; color: var(--accent-cg); font-weight: bold; margin-bottom: 0.5rem;">400 Beneficiary Surveys</p>
+                <p style="font-size: 1.5rem; color: var(--accent-jh); font-weight: bold; margin-bottom: 1.5rem;">40 Stakeholder Interviews</p>
+                <p style="color: var(--text-muted);">Study Period: FY 2018–23 | Mixed-methods approach</p>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-title">Q6: State Distribution</h2>
+            <div class="chart-container"><canvas id="q6Chart"></canvas></div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-title">Q7: CSR Awareness Gap</h2>
+            <h3 class="slide-subtitle popup-trigger" data-popup="awareness-gap">13-Point Awareness Gap</h3>
+            <div class="chart-container"><canvas id="q7Chart"></canvas></div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-title">Q8: Corporate Identification</h2>
+            <h3 class="slide-subtitle popup-trigger" data-popup="identification-gap">Jharkhand incorrect ID rate is double CG</h3>
+            <div class="chart-container"><canvas id="q8Chart"></canvas></div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-title">Q9 & Q10: Impact & Sector</h2>
+            <div class="grid-2">
+                <div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Q9: Visible Impact</h3>
+                    <div class="chart-container" style="height: 250px;"><canvas id="q9Chart"></canvas></div>
+                </div>
+                <div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;">Q10: Sector Distribution</h3>
+                    <div class="chart-container" style="height: 250px;"><canvas id="q10Chart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Combining multiple charts per slide to save DOM nodes and fit within 35 total logical blocks -->
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-title">Sectoral Impact Perceptions (Q12 - Q15)</h2>
+            <div class="grid-2">
+                <div><h4 style="text-align:center;">Q12: Education</h4><div class="chart-container" style="height:200px;"><canvas id="q12Chart"></canvas></div></div>
+                <div><h4 style="text-align:center;">Q13: Healthcare</h4><div class="chart-container" style="height:200px;"><canvas id="q13Chart"></canvas></div></div>
+                <div><h4 style="text-align:center;">Q14: Environment</h4><div class="chart-container" style="height:200px;"><canvas id="q14Chart"></canvas></div></div>
+                <div><h4 style="text-align:center;">Q15: Poverty Alleviation</h4><div class="chart-container" style="height:200px;"><canvas id="q15Chart"></canvas></div></div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-title">Community Development Perceptions (Q16 - Q19)</h2>
+            <div class="grid-2">
+                <div><h4 style="text-align:center;">Q16: Infrastructure</h4><div class="chart-container" style="height:200px;"><canvas id="q16Chart"></canvas></div></div>
+                <div><h4 style="text-align:center;">Q17: Sanitation</h4><div class="chart-container" style="height:200px;"><canvas id="q17Chart"></canvas></div></div>
+                <div><h4 style="text-align:center;">Q18: Livelihood</h4><div class="chart-container" style="height:200px;"><canvas id="q18Chart"></canvas></div></div>
+                <div><h4 style="text-align:center;">Q19: Women Empowerment</h4><div class="chart-container" style="height:200px;"><canvas id="q19Chart"></canvas></div></div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-title">Q21: Perceived Quality of Life</h2>
+            <h3 class="slide-subtitle popup-trigger" data-popup="qol-gap">Largest Gap: 18 Points</h3>
+            <div class="chart-container"><canvas id="q21Chart"></canvas></div>
+        </section>
+        
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-title">Communication Metrics (Q23 & Q24)</h2>
+            <div class="grid-2">
+                <div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;" class="popup-trigger" data-popup="clarity-gap">Q23: Clarity of Info</h3>
+                    <div class="chart-container" style="height: 300px;"><canvas id="q23Chart"></canvas></div>
+                </div>
+                <div>
+                    <h3 style="text-align: center; margin-bottom: 1rem;" class="popup-trigger" data-popup="language-gap">Q24: Local Language</h3>
+                    <div class="chart-container" style="height: 300px;"><canvas id="q24Chart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-title">Q25: Communication Channels</h2>
+            <div class="chart-container"><canvas id="q25Chart"></canvas></div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART A: QUANTITATIVE</div>
+            <h2 class="slide-title">Communication Effectiveness Score (CES)</h2>
+            <h3 class="slide-subtitle popup-trigger" data-popup="cohens-d">Cohen's d = 1.24 (Large Effect)</h3>
+            
+            <div class="grid-2" style="margin-top: 2rem;">
+                <div class="glass-card ces-card" style="border: 4px solid var(--accent-cg); box-shadow: var(--accent-glow-cg);">
+                    <h3>Chhattisgarh</h3>
+                    <div class="ces-score popup-trigger" data-popup="ces-cg" style="color: var(--accent-cg);">2.67</div>
+                    <p style="color: var(--text-muted);">SD: 0.52 | Range: 1.5 - 3.8</p>
+                </div>
+                
+                <div class="glass-card ces-card" style="border: 4px solid var(--accent-jh); box-shadow: var(--accent-glow-jh);">
+                    <h3>Jharkhand</h3>
+                    <div class="ces-score popup-trigger" data-popup="ces-jh" style="color: var(--accent-jh);">1.89</div>
+                    <p style="color: var(--text-muted);">SD: 0.71 | Range: 0.8 - 3.2</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PART B: HYPOTHESIS ================= -->
+
+        <section class="slide">
+            <div class="part-divider">PART B: HYPOTHESIS TESTING</div>
+            <h2 class="slide-title">Hypothesis Testing Results</h2>
+            <h3 class="slide-subtitle">5 Hypotheses Validated via Statistical Modeling</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; width: 100%; align-items: center; margin-top: 2rem;">
+                
+                <!-- H1 -->
+                <div class="hyp-result-card supported">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 class="popup-trigger" data-popup="h1-ttest">H₁: CES Difference Between States</h3>
+                        <span class="badge badge-supported">SUPPORTED</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-muted);">Independent Samples t-test: t(398) = 12.41, p < 0.001</p>
+                </div>
+                
+                <!-- H2 -->
+                <div class="hyp-result-card supported">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 class="popup-trigger" data-popup="h2-regression">H₂: Communication → Education</h3>
+                        <span class="badge badge-supported">SUPPORTED</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-muted);">Binary Logistic Regression: Nagelkerke R² = 0.31</p>
+                </div>
+                
+                <!-- H3 -->
+                <div class="hyp-result-card partial">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 class="popup-trigger" data-popup="h3-anova">H₃: Communication → Healthcare</h3>
+                        <span class="badge badge-partial">PARTIALLY SUPPORTED</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-muted);">Two-Way ANOVA: Interaction F(3,389) = 5.14, p = 0.002</p>
+                </div>
+                
+                <!-- H4 -->
+                <div class="hyp-result-card supported">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 class="popup-trigger" data-popup="h4-chisq">H₄: Communication → Environment</h3>
+                        <span class="badge badge-supported">SUPPORTED</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-muted);">Chi-square: χ²(3) = 24.88, Cramer's V = 0.25</p>
+                </div>
+                
+                <!-- H5 -->
+                <div class="hyp-result-card supported">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 class="popup-trigger" data-popup="h5-mlr">H₅: Communication → Livelihood</h3>
+                        <span class="badge badge-supported">SUPPORTED</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-muted);">Multiple Linear Regression: β(CES) = 0.67, R² = 0.50</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART B: HYPOTHESIS TESTING</div>
+            <h2 class="slide-title">Sector Satisfaction Analysis</h2>
+            <h3 class="slide-subtitle popup-trigger" data-popup="sector-anova">Banking Sector shows highest satisfaction</h3>
+            <div class="chart-container"><canvas id="sectorAnovaChart"></canvas></div>
+        </section>
+
+        <!-- ================= PART C: QUALITATIVE ================= -->
+
+        <section class="slide">
+            <div class="part-divider">PART C: QUALITATIVE</div>
+            <h2 class="slide-title">Thematic Analysis</h2>
+            <h3 class="slide-subtitle">Based on 40 In-depth NVivo Interviews</h3>
+            <div class="chart-container"><canvas id="thematicChart"></canvas></div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART C: QUALITATIVE</div>
+            <h2 class="slide-title">Voices from the Field</h2>
+            
+            <div class="grid-2">
+                <!-- Education Quote -->
+                <div class="quote-box" style="border-left: 4px solid var(--accent-cg);">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Since smart class came, with big pictures and zooming, it was explained well, so we have benefited a lot."</p>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="badge" style="background: rgba(0, 212, 255, 0.2); color: var(--accent-cg);">CG</span>
+                        <span style="color: var(--text-muted);">Community Leader, Balodabazar</span>
+                    </div>
+                </div>
+                
+                <!-- Health Quote -->
+                <div class="quote-box" style="border-left: 4px solid var(--accent-jh);">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"About 60% of our patients come from BPL. The fact that we can provide them world-class care without pushing them into bankruptcy is what makes our work meaningful."</p>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="badge" style="background: rgba(255, 107, 53, 0.2); color: var(--accent-jh);">JH</span>
+                        <span style="color: var(--text-muted);">Hospital Admin, East Singhbhum</span>
+                    </div>
+                </div>
+                
+                <!-- Livelihood Quote -->
+                <div class="quote-box" style="border-left: 4px solid var(--accent-jh);">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Today, a woman can also call herself a farmer. She herself steps forward and says I am a farmer."</p>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="badge" style="background: rgba(255, 107, 53, 0.2); color: var(--accent-jh);">JH</span>
+                        <span style="color: var(--text-muted);">Community Leader, Ramgarh</span>
+                    </div>
+                </div>
+                
+                <!-- Environment Quote -->
+                <div class="quote-box" style="border-left: 4px solid var(--accent-cg);">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"In collaboration with HDFC, we installed 416 lights in 50 villages. The biggest benefit is that women can now sit and conduct meetings in the evenings."</p>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="badge" style="background: rgba(0, 212, 255, 0.2); color: var(--accent-cg);">CG</span>
+                        <span style="color: var(--text-muted);">Agency Coordinator, Dhamtari</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PART D: INTEGRATION ================= -->
+
+        <section class="slide">
+            <div class="part-divider">PART D: SYNTHESIS</div>
+            <h2 class="slide-title">Integrated Interpretation</h2>
+            
+            <div class="glass-card" style="width: 100%; max-width: 900px; text-align: center;">
+                <h3 style="color: var(--success-color); margin-bottom: 2rem; font-size: 1.8rem;">The Chhattisgarh Advantage</h3>
+                
+                <div class="grid-3" style="text-align: left;">
+                    <div>
+                        <i class="fas fa-comments" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem;">Verbal Dominance</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">58% rely on verbal channels vs 32% in JH. Overcomes low literacy.</p>
+                    </div>
+                    
+                    <div>
+                        <i class="fas fa-language" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem;">Local Language</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">80% info in native dialect vs 54% in JH. Builds trust.</p>
+                    </div>
+                    
+                    <div>
+                        <i class="fas fa-project-diagram" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem;">Embedded Structures</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Use of existing Gram Sabhas rather than corporate-imposed structures.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px dashed var(--bg-glass-border);">
+                    <p style="font-size: 1.2rem; font-weight: 600;">Resulting in a monumental <span class="popup-trigger" data-popup="cohens-d" style="color: var(--accent-jh);">Cohen's d = 1.24</span> gap in effectiveness.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script>
+        window.renderPageCharts = function(colors) {
+            const commonOptions = { scales: { y: { beginAtZero: true, max: 100 } } };
+            
+            // Q6 State
+            createChart('q6Chart', 'pie', {
+                labels: ['Chhattisgarh', 'Jharkhand'],
+                datasets: [{ data: [50, 50], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderWidth: 0 }]
+            });
+
+            // Q7 Awareness
+            createChart('q7Chart', 'bar', {
+                labels: ['Chhattisgarh', 'Jharkhand'],
+                datasets: [{ label: '% Aware of CSR Initiatives', data: [78, 65], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 8 }]
+            }, commonOptions);
+
+            // Q8 Identification
+            createChart('q8Chart', 'bar', {
+                labels: ['Chhattisgarh', 'Jharkhand'],
+                datasets: [
+                    { label: 'Accurate ID', data: [52, 38], backgroundColor: colors.successColor || '#28a745' },
+                    { label: 'Partial ID', data: [30, 30], backgroundColor: colors.warningColor || '#ffc107' },
+                    { label: 'Incorrect ID', data: [18, 32], backgroundColor: '#dc3545' }
+                ]
+            }, { scales: { x: { stacked: true }, y: { stacked: true, max: 100 } } });
+
+            // Q9 Impact
+            createChart('q9Chart', 'bar', {
+                labels: ['CG', 'JH'],
+                datasets: [{ label: '% Visible Impact', data: [86, 76], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 4 }]
+            }, commonOptions);
+
+            // Q10 Sector
+            createChart('q10Chart', 'doughnut', {
+                labels: ['Banking', 'Metal', 'Energy', 'Cement'],
+                datasets: [{ data: [40, 25, 20, 15], backgroundColor: [colors.cgPrimary, colors.jhPrimary, colors.other1, colors.other2], borderWidth: 0 }]
+            });
+
+            // Mini Charts Q12-Q19
+            const createMiniBar = (id, label, cg, jh) => {
+                createChart(id, 'bar', {
+                    labels: ['CG', 'JH'],
+                    datasets: [{ label: label, data: [cg, jh], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 4 }]
+                }, { plugins: { legend: { display: false } }, scales: { y: { max: 100 } } });
+            };
+            
+            createMiniBar('q12Chart', 'Education', 82, 74);
+            createMiniBar('q13Chart', 'Healthcare', 79, 80);
+            createMiniBar('q14Chart', 'Environment', 72, 60);
+            createMiniBar('q15Chart', 'Poverty', 62, 52);
+            createMiniBar('q16Chart', 'Infrastructure', 75, 65);
+            createMiniBar('q17Chart', 'Sanitation', 74, 64);
+            createMiniBar('q18Chart', 'Livelihood', 66, 52);
+            createMiniBar('q19Chart', 'Women Emp.', 68, 54);
+
+            // Q21 Quality of Life
+            createChart('q21Chart', 'bar', {
+                labels: ['Chhattisgarh', 'Jharkhand'],
+                datasets: [{ label: '% Reporting Improved Quality of Life', data: [80, 62], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 8 }]
+            }, commonOptions);
+
+            // Q23 Clarity
+            createChart('q23Chart', 'bar', {
+                labels: ['CG', 'JH'],
+                datasets: [{ label: '% Finding Comm. Clear', data: [86, 60], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 6 }]
+            }, commonOptions);
+
+            // Q24 Language
+            createChart('q24Chart', 'bar', {
+                labels: ['CG', 'JH'],
+                datasets: [{ label: '% In Local Language', data: [80, 54], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 6 }]
+            }, commonOptions);
+
+            // Q25 Channels
+            createChart('q25Chart', 'bar', {
+                labels: ['Verbal', 'Print', 'Electronic', 'Social Media'],
+                datasets: [
+                    { label: 'Chhattisgarh', data: [58, 20, 18, 4], backgroundColor: colors.cgPrimary, borderRadius: 6 },
+                    { label: 'Jharkhand', data: [32, 35, 22, 11], backgroundColor: colors.jhPrimary, borderRadius: 6 }
+                ]
+            }, { indexAxis: 'y', scales: { x: { max: 70 } } });
+
+            // Sector ANOVA
+            createChart('sectorAnovaChart', 'bar', {
+                labels: ['Banking/Finance', 'Metal', 'Energy', 'Cement'],
+                datasets: [{
+                    label: 'Mean Satisfaction Score',
+                    data: [2.44, 2.10, 2.05, 1.87],
+                    backgroundColor: [colors.successColor || '#28a745', colors.jhPrimary, colors.other1, colors.gridColor],
+                    borderRadius: 8
+                }]
+            }, { scales: { y: { max: 3 } } });
+
+            // Thematic Chart
+            createChart('thematicChart', 'bar', {
+                labels: ['Livelihood', 'Education', 'Environment', 'Health'],
+                datasets: [{
+                    label: 'Thematic References in NVivo',
+                    data: [76, 54, 41, 39],
+                    backgroundColor: colors.cgSecondary,
+                    borderColor: colors.cgPrimary,
+                    borderWidth: 2,
+                    borderRadius: 8
+                }]
+            }, { indexAxis: 'y' });
+        };
+    </script>
+</body>
+</html>

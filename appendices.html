@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appendices | PhD Thesis Presentation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent-cg);
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            box-shadow: var(--accent-glow-cg);
+            transform: translateY(-2px);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--bg-glass-border);
+            border: 1px solid var(--bg-glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 0.8rem;
+            font-size: 0.85rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .placeholder-icon {
+            font-size: 3rem;
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+        
+        .video-player {
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--bg-glass-border);
+            position: relative;
+        }
+        
+        .play-btn {
+            font-size: 4rem;
+            color: rgba(255,255,255,0.8);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .play-btn:hover { color: var(--accent-cg); }
+        
+        .appendix-table th { background: rgba(0, 102, 204, 0.2); }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
+
+    <div class="slide-container">
+        
+        <!-- Slide 1: Hero -->
+        <section class="slide">
+            <h2 class="slide-subtitle">Supplemental Material</h2>
+            <h1 class="slide-title">Appendices</h1>
+            <div class="glass-card" style="text-align: center; max-width: 800px;">
+                <p style="color: var(--text-muted); font-size: 1.2rem;">Questionnaires, raw data, fieldwork photography, and legal documentation supporting the primary research.</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: Questionnaire -->
+        <section class="slide">
+            <h2 class="slide-title">Appendix I: Survey Questionnaire</h2>
+            
+            <div class="glass-card" style="width: 100%; max-width: 900px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h3>Beneficiary Survey Form (English Translation)</h3>
+                    <a href="#" class="download-btn"><i class="fas fa-file-pdf"></i> Download Full PDF</a>
+                </div>
+                
+                <div style="max-height: 400px; overflow-y: auto; padding-right: 1rem;">
+                    <table class="data-table appendix-table">
+                        <thead>
+                            <tr>
+                                <th width="10%">Q. No.</th>
+                                <th>Question Text</th>
+                                <th width="20%">Scale / Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Q1-Q5</td><td>Demographic profile (Age, Gender, Education, Income, District)</td><td>Multiple Choice</td></tr>
+                            <tr><td>Q6</td><td>Which state do you belong to?</td><td>Nominal</td></tr>
+                            <tr><td>Q7</td><td>Are you aware of any CSR initiatives in your area?</td><td>Yes/No</td></tr>
+                            <tr><td>Q8</td><td>Can you correctly identify the company conducting the CSR?</td><td>Categorical</td></tr>
+                            <tr><td>Q9</td><td>Is there a visible impact of CSR in your village?</td><td>Yes/No</td></tr>
+                            <tr><td>Q12-15</td><td>Impact in Education, Healthcare, Environment, Poverty</td><td>5-Point Likert</td></tr>
+                            <tr><td>Q23</td><td>How clear is the communication from the corporate/NGO?</td><td>5-Point Likert</td></tr>
+                            <tr><td>Q24</td><td>Is the information provided in your local language?</td><td>Yes/No</td></tr>
+                            <tr><td>Q25</td><td>What is the primary channel of communication used?</td><td>Categorical</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: CSR Data -->
+        <section class="slide">
+            <h2 class="slide-title">Appendix II: National CSR Expenditure</h2>
+            
+            <div class="glass-card" style="width: 100%; max-width: 900px;">
+                <h3 style="margin-bottom: 1rem;">Ministry of Corporate Affairs Official Data</h3>
+                
+                <table class="data-table appendix-table" style="margin-bottom: 2rem;">
+                    <thead>
+                        <tr>
+                            <th>Financial Year</th>
+                            <th>Total Amount Spent (₹ Cr.)</th>
+                            <th>No. of Companies</th>
+                            <th>No. of CSR Projects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2018-19</td><td>20,217.47</td><td>25,103</td><td>32,605</td></tr>
+                        <tr><td>2019-20</td><td>25,123.63</td><td>22,668</td><td>35,116</td></tr>
+                        <tr><td>2020-21</td><td>26,210.95</td><td>18,638</td><td>40,119</td></tr>
+                        <tr><td>2021-22</td><td>26,279.16</td><td>18,913</td><td>39,697</td></tr>
+                        <tr><td>2022-23</td><td>30,167.43</td><td>20,119</td><td>41,201</td></tr>
+                    </tbody>
+                </table>
+                
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://www.csr.gov.in" target="_blank" class="download-btn" style="background: var(--accent-jh);">
+                        <i class="fas fa-external-link-alt"></i> Visit National CSR Portal
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Legal -->
+        <section class="slide">
+            <h2 class="slide-title">Annexure III: Section 135 Text</h2>
+            
+            <div class="glass-card" style="width: 100%; max-width: 900px; height: 500px; display: flex; flex-direction: column;">
+                <h3 style="color: var(--accent-cg); margin-bottom: 1rem;">Companies Act, 2013</h3>
+                
+                <div style="flex: 1; overflow-y: auto; padding: 1.5rem; background: rgba(0,0,0,0.2); border-radius: 8px; font-family: serif; line-height: 1.8;">
+                    <h4 style="text-align: center; margin-bottom: 1rem;">135. Corporate Social Responsibility</h4>
+                    <p>(1) Every company having net worth of rupees five hundred crore or more, or turnover of rupees one thousand crore or more or a net profit of rupees five crore or more during any financial year shall constitute a Corporate Social Responsibility Committee of the Board consisting of three or more directors, out of which at least one director shall be an independent director.</p>
+                    <p style="margin-top: 1rem;">(2) The Board's report under sub-section (3) of section 134 shall disclose the composition of the Corporate Social Responsibility Committee.</p>
+                    <p style="margin-top: 1rem;">(3) The Corporate Social Responsibility Committee shall,—<br>
+                    (a) formulate and recommend to the Board, a Corporate Social Responsibility Policy which shall indicate the activities to be undertaken by the company as specified in Schedule VII;<br>
+                    (b) recommend the amount of expenditure to be incurred on the activities referred to in clause (a); and<br>
+                    (c) monitor the Corporate Social Responsibility Policy of the company from time to time.</p>
+                    <p style="margin-top: 1rem;">(5) The Board of every company referred to in sub-section (1), shall ensure that the company spends, in every financial year, at least two per cent. of the average net profits of the company made during the three immediately preceding financial years, in pursuance of its Corporate Social Responsibility Policy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Gallery -->
+        <section class="slide">
+            <h2 class="slide-title">Fieldwork Photographs</h2>
+            
+            <div class="gallery-grid">
+                <!-- Placeholders for actual images -->
+                <div class="gallery-item">
+                    <i class="fas fa-camera placeholder-icon"></i>
+                    <div class="gallery-caption">Gram Sabha Meeting, Bastar (CG)</div>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-camera placeholder-icon"></i>
+                    <div class="gallery-caption">Medical Camp Assessment, Ranchi (JH)</div>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-camera placeholder-icon"></i>
+                    <div class="gallery-caption">Smart Classroom Visit, Balodabazar (CG)</div>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-camera placeholder-icon"></i>
+                    <div class="gallery-caption">Women SHG Interview, Ramgarh (JH)</div>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-camera placeholder-icon"></i>
+                    <div class="gallery-caption">Solar Panel Installation Site (CG)</div>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-camera placeholder-icon"></i>
+                    <div class="gallery-caption">Focus Group Discussion (JH)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Audio/Video -->
+        <section class="slide">
+            <h2 class="slide-title">Interview Recordings (Excerpts)</h2>
+            
+            <div class="grid-2">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <h3 style="margin-bottom: 1rem;">Stakeholder Interview (CG)</h3>
+                    <div class="video-player">
+                        <i class="fas fa-play-circle play-btn"></i>
+                        <span style="position: absolute; bottom: 10px; right: 10px; font-size: 0.8rem; background: rgba(0,0,0,0.5); padding: 2px 5px; border-radius: 4px;">02:45</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-muted); text-align: center;">Discussion on local language usage in Dhamtari</p>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <h3 style="margin-bottom: 1rem;">Focus Group Audio (JH)</h3>
+                    <div class="video-player" style="aspect-ratio: auto; height: 100px; width: 100%; max-width: 400px; padding: 0 2rem;">
+                        <i class="fas fa-play play-btn" style="font-size: 2rem; margin-right: 1rem;"></i>
+                        <div style="flex: 1; height: 4px; background: var(--bg-glass-border); border-radius: 2px; position: relative;">
+                            <div style="position: absolute; left: 0; top: 0; height: 100%; width: 30%; background: var(--accent-jh);"></div>
+                            <div style="position: absolute; left: 30%; top: -4px; width: 12px; height: 12px; border-radius: 50%; background: #fff;"></div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-muted); text-align: center;">Community leaders discussing hospital access</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Data Links -->
+        <section class="slide">
+            <h2 class="slide-title">Raw Data & Documentation</h2>
+            
+            <div class="grid-2">
+                <div class="glass-card" style="text-align: center;">
+                    <i class="fas fa-file-excel" style="font-size: 4rem; color: #2ecc71; margin-bottom: 1.5rem;"></i>
+                    <h3>Survey Data (SPSS)</h3>
+                    <p style="color: var(--text-muted); margin: 1rem 0;">Cleaned dataset of 400 responses including codebook.</p>
+                    <a href="#" class="download-btn" style="background: #2ecc71;"><i class="fas fa-download"></i> Download .CSV</a>
+                </div>
+                
+                <div class="glass-card" style="text-align: center;">
+                    <i class="fas fa-file-signature" style="font-size: 4rem; color: var(--accent-cg); margin-bottom: 1.5rem;"></i>
+                    <h3>Ethical Clearance</h3>
+                    <p style="color: var(--text-muted); margin: 1rem 0;">Blank consent forms and institutional approval letters.</p>
+                    <a href="#" class="download-btn"><i class="fas fa-download"></i> Download Forms</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

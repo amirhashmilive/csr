@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 03: Research Objectives and Hypotheses | PhD Thesis Presentation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .obj-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+        
+        .obj-icon {
+            font-size: 2rem;
+            color: var(--accent-cg);
+            background: rgba(0, 102, 204, 0.1);
+            padding: 1rem;
+            border-radius: 50%;
+        }
+        
+        .hyp-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        
+        .hyp-badge {
+            align-self: flex-start;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--accent-jh);
+        }
+        
+        .matrix-table th { background: rgba(0, 102, 204, 0.15); }
+        .matrix-table td { font-size: 0.95rem; }
+        
+        .mindmap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .mindmap-node {
+            background: var(--bg-glass);
+            border: 2px solid var(--accent-cg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+            box-shadow: var(--neon-glow);
+            width: 180px;
+        }
+        
+        .mindmap-arrow {
+            font-size: 2rem;
+            color: var(--text-muted);
+        }
+        
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .flowchart-step {
+            background: var(--bg-glass);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: 8px;
+            padding: 1rem 3rem;
+            font-weight: bold;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
+
+    <div class="slide-container">
+        
+        <!-- Slide 1: Hero -->
+        <section class="slide">
+            <h2 class="slide-subtitle">Chapter 03</h2>
+            <h1 class="slide-title">Research Objectives & Hypotheses</h1>
+            <div class="glass-card" style="text-align: center; max-width: 800px;">
+                <p style="color: var(--text-muted); font-size: 1.2rem;">Defining the research aims and establishing the testable hypotheses through the Five-Pillar Framework.</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: Research Gap -->
+        <section class="slide">
+            <h2 class="slide-title">Addressing the 5 Research Gaps</h2>
+            
+            <div class="grid-3" style="justify-content: center;">
+                <div class="glass-card" style="text-align: center;">
+                    <i class="fas fa-map-marked-alt" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                    <p>No comparative study of CG vs JH</p>
+                </div>
+                <div class="glass-card" style="text-align: center;">
+                    <i class="fas fa-users" style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
+                    <p>Corporate-centric, not beneficiary-centric</p>
+                </div>
+                <div class="glass-card" style="text-align: center;">
+                    <i class="fas fa-tree" style="font-size: 2rem; color: var(--success-color); margin-bottom: 1rem;"></i>
+                    <p>Theories untested in tribal contexts</p>
+                </div>
+                <div class="glass-card" style="text-align: center; grid-column: span 1.5;">
+                    <i class="fas fa-microscope" style="font-size: 2rem; color: var(--warning-color); margin-bottom: 1rem;"></i>
+                    <p>No mixed-methods studies in this region</p>
+                </div>
+                <div class="glass-card" style="text-align: center; grid-column: span 1.5;">
+                    <i class="fas fa-university" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                    <p>Banking sector CSR not analyzed</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Objectives -->
+        <section class="slide">
+            <h2 class="slide-title">Research Objectives</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%; max-width: 900px;">
+                <div class="glass-card obj-card">
+                    <div class="obj-icon"><i class="fas fa-check"></i></div>
+                    <div>
+                        <h3 style="color: var(--accent-cg);">O1: Primary Objective</h3>
+                        <p>To compare the effectiveness of CSR communication strategies between companies operating in Chhattisgarh and Jharkhand.</p>
+                    </div>
+                </div>
+                <div class="glass-card obj-card">
+                    <div class="obj-icon"><i class="fas fa-book"></i></div>
+                    <div>
+                        <h3>O2: Education</h3>
+                        <p>To assess the role of CSR communication in the educational development of beneficiaries.</p>
+                    </div>
+                </div>
+                <div class="glass-card obj-card">
+                    <div class="obj-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div>
+                        <h3>O3: Healthcare</h3>
+                        <p>To evaluate the influence of CSR communication on healthcare access and awareness.</p>
+                    </div>
+                </div>
+                <div class="glass-card obj-card">
+                    <div class="obj-icon"><i class="fas fa-leaf"></i></div>
+                    <div>
+                        <h3>O4: Environment</h3>
+                        <p>To examine the contribution of CSR communication in promoting environmental conservation.</p>
+                    </div>
+                </div>
+                <div class="glass-card obj-card">
+                    <div class="obj-icon"><i class="fas fa-briefcase"></i></div>
+                    <div>
+                        <h3>O5: Livelihood</h3>
+                        <p>To analyse the role of CSR communication in enhancing livelihood opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Hypotheses -->
+        <section class="slide">
+            <h2 class="slide-title">Research Hypotheses</h2>
+            
+            <div class="grid-3">
+                <div class="glass-card hyp-card" style="grid-column: span 3;">
+                    <div class="hyp-badge">H₁</div>
+                    <p style="font-size: 1.2rem;">There is a significant difference in the Communication Effectiveness Score (CES) between Chhattisgarh and Jharkhand.</p>
+                    <span class="badge badge-supported">Tested via Independent t-test</span>
+                </div>
+                
+                <div class="glass-card hyp-card">
+                    <div class="hyp-badge">H₂</div>
+                    <p>Effective CSR communication significantly increases the likelihood of perceived educational improvement.</p>
+                    <span class="badge badge-supported">Tested via Logistic Regression</span>
+                </div>
+                
+                <div class="glass-card hyp-card">
+                    <div class="hyp-badge">H₃</div>
+                    <p>There is a significant interaction effect between state geography and communication channels on healthcare perception.</p>
+                    <span class="badge badge-partial">Tested via Two-Way ANOVA</span>
+                </div>
+                
+                <div class="glass-card hyp-card">
+                    <div class="hyp-badge">H₄</div>
+                    <p>There is a significant association between the type of communication channel used and environmental impact recognition.</p>
+                    <span class="badge badge-supported">Tested via Chi-Square</span>
+                </div>
+                
+                <div class="glass-card hyp-card" style="grid-column: span 3; text-align: center; align-items: center;">
+                    <div class="hyp-badge" style="align-self: center;">H₅</div>
+                    <p style="max-width: 600px;">Communication Effectiveness is a stronger predictor of perceived livelihood enhancement than geographical state.</p>
+                    <span class="badge badge-supported">Tested via Multiple Linear Regression</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Matrix Table -->
+        <section class="slide">
+            <h2 class="slide-title">Structured Hypothesis Matrix</h2>
+            <h3 class="slide-subtitle">Table 4: Statistical Architecture</h3>
+            
+            <div class="glass-card" style="width: 100%; max-width: 1000px;">
+                <table class="data-table matrix-table">
+                    <thead>
+                        <tr>
+                            <th>H. No.</th>
+                            <th>Independent Variable(s)</th>
+                            <th>Dependent Variable</th>
+                            <th>Statistical Test</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>H₁</strong></td>
+                            <td>State (CG vs JH)</td>
+                            <td>Communication Effectiveness Score (CES)</td>
+                            <td>Independent Samples t-test</td>
+                        </tr>
+                        <tr>
+                            <td><strong>H₂</strong></td>
+                            <td>CES (Continuous)</td>
+                            <td>Educational Improvement (Binary: Yes/No)</td>
+                            <td>Binary Logistic Regression</td>
+                        </tr>
+                        <tr>
+                            <td><strong>H₃</strong></td>
+                            <td>State & Communication Channel</td>
+                            <td>Healthcare Perception Score</td>
+                            <td>Two-Way ANOVA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>H₄</strong></td>
+                            <td>Communication Channel</td>
+                            <td>Environmental Recognition (Categorical)</td>
+                            <td>Chi-Square Test of Independence</td>
+                        </tr>
+                        <tr>
+                            <td><strong>H₅</strong></td>
+                            <td>CES & State</td>
+                            <td>Livelihood Enhancement Score</td>
+                            <td>Multiple Linear Regression</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Slide 6: Five-Pillar -->
+        <section class="slide">
+            <h2 class="slide-title">Five-Pillar Framework</h2>
+            <h3 class="slide-subtitle">The theoretical architecture constructed for this study</h3>
+            
+            <div class="mindmap">
+                <div class="mindmap-node">
+                    <div style="color: var(--accent-jh); font-size: 0.8rem; margin-bottom: 0.5rem;">PILLAR 1</div>
+                    Corporate Entity
+                </div>
+                <i class="fas fa-arrow-right mindmap-arrow"></i>
+                
+                <div class="mindmap-node">
+                    <div style="color: var(--accent-jh); font-size: 0.8rem; margin-bottom: 0.5rem;">PILLAR 2</div>
+                    Implementation
+                </div>
+                <i class="fas fa-arrow-right mindmap-arrow"></i>
+                
+                <div class="mindmap-node">
+                    <div style="color: var(--accent-jh); font-size: 0.8rem; margin-bottom: 0.5rem;">PILLAR 3</div>
+                    Initiative
+                </div>
+                
+                <div style="width: 100%; display: flex; justify-content: center; margin: 1rem 0;">
+                    <i class="fas fa-arrow-down mindmap-arrow" style="margin-left: 200px;"></i>
+                </div>
+                
+                <div class="mindmap-node" style="border-color: var(--accent-cg); box-shadow: var(--accent-glow-cg);">
+                    <div style="color: var(--accent-cg); font-size: 0.8rem; margin-bottom: 0.5rem;">PILLAR 5 (Focus)</div>
+                    Communication Strategy
+                </div>
+                <i class="fas fa-arrow-left mindmap-arrow"></i>
+                
+                <div class="mindmap-node">
+                    <div style="color: var(--accent-jh); font-size: 0.8rem; margin-bottom: 0.5rem;">PILLAR 4</div>
+                    Impact
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Four Dimensions -->
+        <section class="slide">
+            <h2 class="slide-title">Four Dimensions of Betterment</h2>
+            
+            <div class="grid-4">
+                <div class="glass-card" style="text-align: center;">
+                    <i class="fas fa-book-reader" style="font-size: 3rem; color: #3498db; margin-bottom: 1rem;"></i>
+                    <h3>Education</h3>
+                    <div style="height: 2px; background: #3498db; margin: 1rem 0;"></div>
+                    <ul style="text-align: left; font-size: 0.9rem; padding-left: 1.2rem;">
+                        <li>Infrastructure</li>
+                        <li>Scholarships</li>
+                        <li>Digital Learning</li>
+                        <li>Enrolment Rates</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card" style="text-align: center;">
+                    <i class="fas fa-heartbeat" style="font-size: 3rem; color: #e74c3c; margin-bottom: 1rem;"></i>
+                    <h3>Healthcare</h3>
+                    <div style="height: 2px; background: #e74c3c; margin: 1rem 0;"></div>
+                    <ul style="text-align: left; font-size: 0.9rem; padding-left: 1.2rem;">
+                        <li>Medical Camps</li>
+                        <li>Ambulance Access</li>
+                        <li>WASH Initiatives</li>
+                        <li>Maternal Care</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card" style="text-align: center;">
+                    <i class="fas fa-leaf" style="font-size: 3rem; color: #2ecc71; margin-bottom: 1rem;"></i>
+                    <h3>Environment</h3>
+                    <div style="height: 2px; background: #2ecc71; margin: 1rem 0;"></div>
+                    <ul style="text-align: left; font-size: 0.9rem; padding-left: 1.2rem;">
+                        <li>Afforestation</li>
+                        <li>Water Harvesting</li>
+                        <li>Solar Energy</li>
+                        <li>Waste Mgmt</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card" style="text-align: center;">
+                    <i class="fas fa-briefcase" style="font-size: 3rem; color: #f1c40f; margin-bottom: 1rem;"></i>
+                    <h3>Livelihood</h3>
+                    <div style="height: 2px; background: #f1c40f; margin: 1rem 0;"></div>
+                    <ul style="text-align: left; font-size: 0.9rem; padding-left: 1.2rem;">
+                        <li>Skill Training</li>
+                        <li>Women SHGs</li>
+                        <li>Agri-training</li>
+                        <li>Market Linkage</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Architecture -->
+        <section class="slide">
+            <h2 class="slide-title">Research Architecture Flowchart</h2>
+            <h3 class="slide-subtitle">Figure 6</h3>
+            
+            <div class="flowchart">
+                <div class="flowchart-step" style="border-top: 4px solid var(--accent-cg);">1. Identify Research Gap</div>
+                <i class="fas fa-arrow-down" style="color: var(--text-muted);"></i>
+                <div class="flowchart-step" style="border-top: 4px solid var(--accent-cg);">2. Formulate 5 Objectives</div>
+                <i class="fas fa-arrow-down" style="color: var(--text-muted);"></i>
+                <div class="flowchart-step" style="border-top: 4px solid var(--accent-jh);">3. Construct 5 Hypotheses</div>
+                <i class="fas fa-arrow-down" style="color: var(--text-muted);"></i>
+                <div class="flowchart-step" style="border-top: 4px solid var(--accent-jh);">4. Mixed-Methods Testing (SPSS/NVivo)</div>
+                <i class="fas fa-arrow-down" style="color: var(--text-muted);"></i>
+                <div class="flowchart-step" style="border-top: 4px solid var(--success-color);">5. Synthesize Outcomes & Policy</div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Methods Summary -->
+        <section class="slide">
+            <h2 class="slide-title">Hypothesis Testing Methodology</h2>
+            <h3 class="slide-subtitle">Figure 7</h3>
+            
+            <div class="grid-3">
+                <div class="glass-card" style="text-align: center;">
+                    <div style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;">t</div>
+                    <h4>Independent t-test</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Compares CES means between CG and JH (H₁)</p>
+                </div>
+                
+                <div class="glass-card" style="text-align: center;">
+                    <div style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;">β</div>
+                    <h4>Logistic Regression</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Predicts binary educational outcomes based on CES (H₂)</p>
+                </div>
+                
+                <div class="glass-card" style="text-align: center;">
+                    <div style="font-size: 2rem; color: var(--success-color); margin-bottom: 1rem;">F</div>
+                    <h4>ANOVA</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Tests interaction between state and channel on health (H₃)</p>
+                </div>
+                
+                <div class="glass-card" style="text-align: center; grid-column: span 1.5;">
+                    <div style="font-size: 2rem; color: var(--warning-color); margin-bottom: 1rem;">χ²</div>
+                    <h4>Chi-Square</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Tests association between channels and environment (H₄)</p>
+                </div>
+                
+                <div class="glass-card" style="text-align: center; grid-column: span 1.5;">
+                    <div style="font-size: 2rem; color: #a020f0; margin-bottom: 1rem;">R²</div>
+                    <h4>Multiple Linear Regression</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Predicts continuous livelihood score using CES and State (H₅)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: Expected Outcomes -->
+        <section class="slide">
+            <h2 class="slide-title">Expected Outcomes</h2>
+            
+            <div class="grid-2">
+                <div class="glass-card" style="border-left: 4px solid var(--accent-cg);">
+                    <h3 style="margin-bottom: 1rem;">Theoretical Contributions</h3>
+                    <ul style="line-height: 2; padding-left: 1.5rem;">
+                        <li>Validation of the Five-Pillar Framework.</li>
+                        <li>Empirical proof that communication is an independent driver of CSR success.</li>
+                        <li>Adaptation of PR models to tribal/rural demographics.</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card" style="border-left: 4px solid var(--accent-jh);">
+                    <h3 style="margin-bottom: 1rem;">Policy Implications</h3>
+                    <ul style="line-height: 2; padding-left: 1.5rem;">
+                        <li>Recommendations for the Ministry of Corporate Affairs (MCA).</li>
+                        <li>Guidelines for linguistic inclusion in CSR reporting.</li>
+                        <li>Actionable framework for NGOs and Corporate Foundations.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
