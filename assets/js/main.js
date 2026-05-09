@@ -142,3 +142,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Dynamic Transform Origin for hover magnify to prevent off-screen clipping
+document.addEventListener('mouseover', (e) => {
+    const card = e.target.closest('.hover-magnify');
+    if (!card) return;
+    
+    const rect = card.getBoundingClientRect();
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    
+    let xOrigin = 'center';
+    let yOrigin = 'center';
+    
+    if (rect.left < windowWidth * 0.25) xOrigin = 'left';
+    else if (rect.right > windowWidth * 0.75) xOrigin = 'right';
+    
+    if (rect.top < windowHeight * 0.25) yOrigin = 'top';
+    else if (rect.bottom > windowHeight * 0.75) yOrigin = 'bottom';
+    
+    card.style.transformOrigin = `${yOrigin} ${xOrigin}`;
+});

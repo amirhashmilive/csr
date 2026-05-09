@@ -489,3 +489,44 @@ h1, h2, h3, h4, h5, h6 {
         transform: scale(1.1); /* Slightly smaller scale on mobile to prevent extreme overflow */
     }
 }
+
+/* Universal Hover Magnify Effect */
+.hover-magnify {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease !important;
+    z-index: 1;
+}
+
+.hover-magnify:hover {
+    transform: scale(1.5);
+    background-color: var(--accent-cg) !important;
+    color: #ffffff !important;
+    z-index: 100;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    border-color: var(--accent-cg) !important;
+}
+
+.hover-magnify:hover h2,
+.hover-magnify:hover h3, 
+.hover-magnify:hover h4, 
+.hover-magnify:hover p,
+.hover-magnify:hover ul, 
+.hover-magnify:hover li, 
+.hover-magnify:hover i,
+.hover-magnify:hover .state-stat span,
+.hover-magnify:hover .state-stat strong,
+.hover-magnify:hover th,
+.hover-magnify:hover td,
+.hover-magnify:hover .badge {
+    color: #ffffff !important;
+    border-color: rgba(255,255,255,0.3) !important;
+}
+
+.hover-magnify:hover .badge {
+    background: rgba(255,255,255,0.2) !important;
+}
+
+@media (max-width: 768px) {
+    .hover-magnify:hover {
+        transform: scale(1.1);
+    }
+}
