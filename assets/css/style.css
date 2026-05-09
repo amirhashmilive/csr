@@ -486,28 +486,29 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .framework-card:hover {
-        transform: scale(1.02) translateY(-2px); /* Slightly smaller scale on mobile to prevent extreme overflow */
+        transform: scale(1.02) ; /* Slightly smaller scale on mobile to prevent extreme overflow */
     }
 }
 
 /* Universal Hover Magnify Effect */
 .hover-magnify {
+    transform-origin: center !important;
     transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, z-index 0.25s ease !important;
     z-index: 1;
 }
 
 .hover-magnify-sm:hover {
-    transform: scale(2.75) translateY(-4px);
+    transform: scale(2.75) ;
 }
 .hover-magnify-md:hover {
-    transform: scale(1.75) translateY(-4px);
+    transform: scale(1.75) ;
 }
 .hover-magnify-lg:hover {
-    transform: scale(1.15) translateY(-4px);
+    transform: scale(1.15) ;
 }
 
 .hover-magnify:not(.hover-magnify-sm):not(.hover-magnify-md):not(.hover-magnify-lg):hover {
-    transform: scale(1.15) translateY(-4px);
+    transform: scale(1.15) ;
 }
 
 .hover-magnify:hover {
@@ -543,16 +544,16 @@ h1, h2, h3, h4, h5, h6 {
     .hover-magnify-md:hover,
     .hover-magnify-lg:hover,
     .hover-magnify:hover {
-        transform: scale(1.02) translateY(-2px);
+        transform: scale(1.02) ;
     }
 }
 
 /* Custom 4x Magnification for Chapter 1 Pillar Cards */
-.pillar-card-4x:hover,
-.pillar-card-4x.hover-magnify-sm:hover,
-.pillar-card-4x.hover-magnify-md:hover,
-.pillar-card-4x.hover-magnify-lg:hover {
-    transform: scale(4.0) translateY(-8px) !important;
+.pillar-card-2x:hover,
+.pillar-card-2x.hover-magnify-sm:hover,
+.pillar-card-2x.hover-magnify-md:hover,
+.pillar-card-2x.hover-magnify-lg:hover {
+    transform: scale(2.0)  !important;
     background-color: #b34700 !important;
     color: #ffffff !important;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease !important;
