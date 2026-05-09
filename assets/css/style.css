@@ -364,3 +364,32 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.75rem;
     opacity: 0.5;
 }
+
+/* Hover Image Popup */
+.hover-image-popup {
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 40%;
+  max-width: 500px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  background: transparent;
+  pointer-events: none;
+}
+
+.hover-image-popup img {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid var(--accent-cg);
+}
+
+.hover-image-popup.show {
+  opacity: 1;
+  visibility: visible;
+}

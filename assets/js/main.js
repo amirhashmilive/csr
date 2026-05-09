@@ -65,3 +65,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Hover Popup Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const hovers = document.querySelectorAll('.timeline-hover');
+    if (hovers.length > 0) {
+        const popup = document.createElement('div');
+        popup.className = 'hover-image-popup';
+        const img = document.createElement('img');
+        popup.appendChild(img);
+        document.body.appendChild(popup);
+
+        hovers.forEach(el => {
+            el.addEventListener('mouseenter', (e) => {
+                const src = el.getAttribute('data-image');
+                if (src) {
+                    img.src = src;
+                    popup.classList.add('show');
+                }
+            });
+            el.addEventListener('mouseleave', () => {
+                popup.classList.remove('show');
+            });
+        });
+    }
+});
