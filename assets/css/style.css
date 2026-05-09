@@ -486,18 +486,18 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .framework-card:hover {
-        transform: scale(1.1); /* Slightly smaller scale on mobile to prevent extreme overflow */
+        transform: scale(1.02) translateY(-2px); /* Slightly smaller scale on mobile to prevent extreme overflow */
     }
 }
 
 /* Universal Hover Magnify Effect */
 .hover-magnify {
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease !important;
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, z-index 0.25s ease !important;
     z-index: 1;
 }
 
 .hover-magnify:hover {
-    transform: scale(1.5);
+    transform: scale(1.04) translateY(-4px);
     background-color: var(--accent-cg) !important;
     color: #ffffff !important;
     z-index: 100;
@@ -527,6 +527,6 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .hover-magnify:hover {
-        transform: scale(1.1);
+        transform: scale(1.02) translateY(-2px);
     }
 }
