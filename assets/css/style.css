@@ -454,3 +454,38 @@ h1, h2, h3, h4, h5, h6 {
   .lightbox-prev { left: -20px; }
   .lightbox-next { right: -20px; }
 }
+
+/* Framework Card Hover Effect */
+.framework-card {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
+}
+
+.framework-card:hover {
+    transform: scale(2.0);
+    background-color: var(--accent-cg) !important;
+    color: #ffffff !important;
+    z-index: 100;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    border-color: var(--accent-cg) !important;
+}
+
+.framework-card:hover h3, 
+.framework-card:hover ul, 
+.framework-card:hover li, 
+.framework-card:hover i {
+    color: #ffffff !important;
+}
+
+/* Transform Origins to keep within screen */
+.fw-1 { transform-origin: top left; }
+.fw-2 { transform-origin: top center; }
+.fw-3 { transform-origin: top right; }
+.fw-4 { transform-origin: bottom left; }
+.fw-5 { transform-origin: bottom right; }
+
+@media (max-width: 768px) {
+    .framework-card:hover {
+        transform: scale(1.1); /* Slightly smaller scale on mobile to prevent extreme overflow */
+    }
+}
