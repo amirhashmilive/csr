@@ -4,157 +4,243 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibliography | PhD Thesis Presentation</title>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
     <style>
-        .bib-container {
-            width: 100%;
-            max-width: 1000px;
-            background: var(--bg-glass);
-            border: 1px solid var(--bg-glass-border);
-            border-radius: 12px;
-            padding: 2rem;
-            max-height: 60vh;
-            overflow-y: auto;
-        }
-        
-        .bib-entry {
-            margin-bottom: 1.5rem;
-            padding-left: 2rem;
-            text-indent: -2rem; /* Hanging indent for APA style */
-            line-height: 1.6;
-            color: var(--text-main);
-        }
-        
-        .bib-entry:hover {
-            background: rgba(255,255,255,0.05);
-        }
-        
-        .bib-category {
-            color: var(--accent-cg);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--bg-glass-border);
-        }
-        
-        .bib-search {
-            width: 100%;
-            max-width: 500px;
-            padding: 1rem 1.5rem;
-            border-radius: 25px;
-            border: 1px solid var(--accent-cg);
-            background: var(--bg-primary);
-            color: var(--text-main);
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            outline: none;
-        }
-        
-        .bib-search:focus {
-            box-shadow: var(--neon-glow);
-        }
+        .bib-container { width: 100%; max-width: 1000px; background: var(--bg-glass); border: 1px solid var(--bg-glass-border); border-radius: 12px; padding: 2rem; max-height: 60vh; overflow-y: auto; margin: 0 auto; }
+        .bib-entry { margin-bottom: 1.5rem; padding-left: 2rem; text-indent: -2rem; line-height: 1.6; color: var(--text-main); }
+        .bib-entry:hover { background: rgba(255,255,255,0.05); }
+        .bib-category { color: var(--accent-cg); margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--bg-glass-border); }
+        .bib-search { width: 100%; max-width: 500px; padding: 1rem 1.5rem; border-radius: 25px; border: 1px solid var(--accent-cg); background: var(--bg-primary); color: var(--text-main); font-size: 1rem; margin-bottom: 2rem; outline: none; }
+        .bib-search:focus { box-shadow: var(--neon-glow); }
+        .doi-link { color: var(--accent-jh); text-decoration: none; margin-left: 8px; font-weight: 500; }
+        .doi-link:hover { text-decoration: underline; }
+        .search-container { text-align: center; margin-top: 2rem; width: 100%; }
     </style>
 </head>
 <body>
-
     <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
-
     <div class="slide-container">
-        
-        <!-- Slide 1: Hero -->
         <section class="slide">
-            <h2 class="slide-subtitle">Reference Material</h2>
-            <h1 class="slide-title">Bibliography</h1>
-            <div class="glass-card" style="text-align: center; max-width: 800px;">
-                <p style="color: var(--text-muted); font-size: 1.2rem;">Comprehensive list of 164+ academic, legislative, and corporate sources cited throughout the research (APA 7th Edition).</p>
-            </div>
-        </section>
-
-        <!-- Slide 2: Categories -->
-        <section class="slide">
-            <h2 class="slide-title">Key Reference Categories</h2>
-            
-            <div class="grid-3">
-                <div class="glass-card" style="border-top: 4px solid var(--accent-cg);">
-                    <h3><i class="fas fa-gavel"></i> Primary & Legal</h3>
-                    <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-muted); line-height: 2;">
-                        <li>Companies Act, 2013 (Section 135)</li>
-                        <li>Companies (CSR Policy) Rules, 2014</li>
-                        <li>Ministry of Corporate Affairs Notifications</li>
-                        <li>National CSR Portal Data</li>
-                    </ul>
-                </div>
-                
-                <div class="glass-card" style="border-top: 4px solid var(--accent-jh);">
-                    <h3><i class="fas fa-book"></i> CSR Theory</h3>
-                    <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-muted); line-height: 2;">
-                        <li>Bowen (1953)</li>
-                        <li>Carroll (1991, 1999)</li>
-                        <li>Freeman (1984)</li>
-                        <li>Porter & Kramer (2006, 2011)</li>
-                    </ul>
-                </div>
-                
-                <div class="glass-card" style="border-top: 4px solid var(--success-color);">
-                    <h3><i class="fas fa-comments"></i> Communication</h3>
-                    <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-muted); line-height: 2;">
-                        <li>Morsing & Schultz (2006)</li>
-                        <li>Grunig & Hunt (1984)</li>
-                        <li>Du, Bhattacharya, & Sen (2010)</li>
-                        <li>Rogers (1962)</li>
-                    </ul>
-                </div>
-                
-                <div class="glass-card" style="border-top: 4px solid var(--warning-color);">
-                    <h3><i class="fas fa-map-marked-alt"></i> Contextual Studies</h3>
-                    <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--text-muted); line-height: 2;">
-                        <li>Tribal Development in India (Xaxa, Guha)</li>
-                        <li>CSR in Chhattisgarh (Sinha, 2018)</li>
-                        <li>CSR in Jharkhand (Sharma, 2019)</li>
-                        <li>State Economic Surveys</li>
-                    </ul>
+            <div style="text-align: center;">
+                <h2 class="slide-subtitle">Reference Material</h2>
+                <h1 class="slide-title">Bibliography</h1>
+                <div class="glass-card" style="display: inline-block; max-width: 800px; margin-bottom: 2rem;">
+                    <p style="color: var(--text-muted); font-size: 1.2rem;">Comprehensive list of 164 academic, legislative, and corporate sources cited throughout the research (APA 7th Edition).</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Slide 3: Full List -->
-        <section class="slide">
-            <h2 class="slide-title">Full Reference List</h2>
             
-            <input type="text" class="bib-search" placeholder="Search authors, titles, or years...">
+            <div class="search-container">
+                <input type="text" class="bib-search" id="bibSearch" placeholder="Search authors, titles, or years...">
+            </div>
             
-            <div class="bib-container">
-                <h3 class="bib-category">Primary Sources & Reports</h3>
-                <div class="bib-entry">Ministry of Corporate Affairs. (2013). <em>The Companies Act, 2013</em>. Government of India.</div>
-                <div class="bib-entry">Ministry of Corporate Affairs. (2014). <em>Companies (Corporate Social Responsibility Policy) Rules, 2014</em>. Government of India.</div>
-                <div class="bib-entry">Ministry of Corporate Affairs. (2021). <em>Companies (Corporate Social Responsibility Policy) Amendment Rules, 2021</em>. Government of India.</div>
-                <div class="bib-entry">National CSR Data Portal. (2024). <em>State-wise CSR Expenditure FY 2018-2023</em>. Ministry of Corporate Affairs, Government of India.</div>
-                
-                <h3 class="bib-category">Academic Journals & Books</h3>
-                <div class="bib-entry">Bowen, H. R. (1953). <em>Social responsibilities of the businessman</em>. Harper & Row.</div>
-                <div class="bib-entry">Carroll, A. B. (1991). The pyramid of corporate social responsibility: Toward the moral management of organizational stakeholders. <em>Business Horizons</em>, 34(4), 39-48.</div>
-                <div class="bib-entry">Du, S., Bhattacharya, C. B., & Sen, S. (2010). Maximizing business returns to corporate social responsibility (CSR): The role of CSR communication. <em>International Journal of Management Reviews</em>, 12(1), 8-19.</div>
-                <div class="bib-entry">Freeman, R. E. (1984). <em>Strategic management: A stakeholder approach</em>. Pitman.</div>
-                <div class="bib-entry">Grunig, J. E., & Hunt, T. (1984). <em>Managing public relations</em>. Holt, Rinehart and Winston.</div>
-                <div class="bib-entry">McCombs, M. E., & Shaw, D. L. (1972). The agenda-setting function of mass media. <em>Public Opinion Quarterly</em>, 36(2), 176-187.</div>
-                <div class="bib-entry">Mitra, N., & Schmidpeter, R. (Eds.). (2017). <em>Corporate social responsibility in India: Cases and developments after the legal mandate</em>. Springer.</div>
-                <div class="bib-entry">Morsing, M., & Schultz, M. (2006). Corporate social responsibility communication: stakeholder information, response and involvement strategies. <em>Business Ethics: A European Review</em>, 15(4), 323-338.</div>
-                <div class="bib-entry">Porter, M. E., & Kramer, M. R. (2011). Creating shared value. <em>Harvard Business Review</em>, 89(1/2), 62-77.</div>
-                <div class="bib-entry">Rogers, E. M. (1962). <em>Diffusion of innovations</em>. Free Press.</div>
-                <div class="bib-entry">Sharma, A. (2019). Analyzing the impact of CSR activities by Tata Steel in Jharkhand. <em>Journal of Public Affairs</em>, 19(3), e1935.</div>
-                <div class="bib-entry">Sinha, R. (2018). CSR practices of mining companies in Chhattisgarh: A critical review. <em>International Journal of Social Sciences</em>, 6(2), 112-125.</div>
-                <div class="bib-entry">Xaxa, V. (2014). Report of the High Level Committee on Socio-Economic, Health and Educational Status of Tribal Communities of India. Ministry of Tribal Affairs, Government of India.</div>
-                
-                <div style="text-align: center; margin-top: 2rem; color: var(--text-muted); font-style: italic;">Showing excerpt of 164 total references.</div>
+            <div class="bib-container" id="bibContainer">
+                <h3 class="bib-category">CSR Theory & Evolution</h3>
+<div class="bib-entry">Agrawal, A., & Sahasranamam, S. (2016). Corporate Social Responsibility in India: A Review and Future Research Directions. Indian Journal of Corporate Governance, 9(1), 1–30. <a href="https://doi.org/10.1177/0974686216632555" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">BALCO Medical Centre. (2021). CSR Healthcare Communication Report. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">Banerjee, M., & Rout, S. (2019). Culturally-Rooted CSR Communication: A Case from Singhbhum. Indian Journal of Community Media, 9(1), 33–45.</div>
+<div class="bib-entry">Banerjee, S. B. (2008). Corporate Social Responsibility: The Good, the Bad and the Ugly. Critical Sociology, 34(1), 51–79. <a href="https://doi.org/10.1177/0896920507084623" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Beck, U. (2000). What is Globalization? Polity Press. <a href="https://www.worldcat.org/search?q=Beck,+U." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Beck, U. (2005). Power in the Global Age: A New Global Political Economy. Polity Press. <a href="https://www.worldcat.org/search?q=Beck,+U." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Bhattacharya, C. B., Korschun, D., & Sen, S. (2009). Strengthening Stakeholder-Company Relationships Through Mutually Beneficial Corporate Social Responsibility Initiatives. Journal of Business Ethics, 85(S2), 257–272. <a href="https://doi.org/10.1007/s10551-008-9730-3" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Blowfield, M., & Frynas, J. G. (2005). Setting New Agendas: Critical Perspectives on CSR in the Developing World. International Affairs, 81(3), 499–513. <a href="https://doi.org/10.1111/j.1468-2346.2005.00465.x" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Blowfield, M., & Murray, A. (2019). Corporate Responsibility (4th ed.). Oxford University Press. <a href="https://www.worldcat.org/search?q=Blowfield,+M.,+&+Murray,+A." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Bowen, H. R. (1953). Social Responsibilities of the Businessman. Harper & Row.</div>
+<div class="bib-entry">BP. (2019). Corporate Social Responsibility Report. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">Braun, V., & Clarke, V. (2006). Using Thematic Analysis in Psychology. Sage Publications. <a href="https://www.worldcat.org/search?q=Braun,+V.,+&+Clarke,+V." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Capriotti, P. (2011). Communicating CSR Through the Internet. Corporate Communications: An International Journal, 16(1), 5–19. <a href="https://doi.org/10.1108/13563281111100936" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Carroll, A. B. (1991). The Pyramid of Corporate Social Responsibility: Toward the Moral Management of Organizational Stakeholders. Business Horizons, 34(4), 39–48. <a href="https://doi.org/10.1016/0007-6813(91)90005-G" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Carroll, A. B. (2016). Carroll’s Pyramid of CSR: Taking Another Look. International Journal of Corporate Social Responsibility, 1(1), 1–8. <a href="https://doi.org/10.1186/s40991-016-0004-6" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Crane, A., Matten, D., Glozer, S., & Spence, L. J. (2019). Business Ethics: Managing Corporate Citizenship and Sustainability in the Age of Globalization (5th ed.). Oxford University Press. <a href="https://www.worldcat.org/search?q=Crane,+A.,+Matten,+D.,+Glozer,+S.,+&+Spence,+L.+J." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Du, S., Bhattacharya, C. B., & Sen, S. (2010). Maximizing Business Returns to Corporate Social Responsibility (CSR): The Role of CSR Communication. International Journal of Management Reviews, 12(1), 8–19. <a href="https://doi.org/10.1111/j.1468-2370.2009.00276.x" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Freeman, R. E. (1984). Strategic Management: A Stakeholder Approach. Pitman Publishing.</div>
+<div class="bib-entry">Grunig, J. E., & Hunt, T. (1984). Managing Public Relations. Holt, Rinehart & Winston.</div>
+<div class="bib-entry">McCombs, M. E., & Shaw, D. L. (1972). The Agenda-Setting Function of Mass Media. Public Opinion Quarterly, 36(2), 176–187. <a href="https://doi.org/10.1086/267990" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Porter, M. E., & Kramer, M. R. (2006). Strategy and Society: The Link Between Competitive Advantage and Corporate Social Responsibility. Harvard Business Review, 84(12), 78–92. <a href="https://www.worldcat.org/search?q=Porter,+M.+E.,+&+Kramer,+M.+R." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Porter, M. E., & Kramer, M. R. (2011). Creating Shared Value. Harvard Business Review, 89(1–2), 62–77. <a href="https://www.worldcat.org/search?q=Porter,+M.+E.,+&+Kramer,+M.+R." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Rogers, E. M. (1962). Diffusion of Innovations (1st ed.). The Free Press.</div>
+<div class="bib-entry">Sen, A. (1999). Development as Freedom. Oxford University Press. <a href="https://www.worldcat.org/search?q=Sen,+A." target="_blank" class="doi-link">[WorldCat]</a></div>
+<h3 class="bib-category">CSR in India</h3>
+<div class="bib-entry">Ministry of Corporate Affairs. (2013a). Companies Act, 2013: CSR Rules and Guidelines. <a href="https://www.google.com/search?q=Ministry+of+Corporate+Affairs" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Ministry of Corporate Affairs. (2013b). The Companies Act, 2013. <a href="https://www.google.com/search?q=Ministry+of+Corporate+Affairs" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Ministry of Corporate Affairs. (2014). Schedule VII: CSR Activities. <a href="https://www.google.com/search?q=Ministry+of+Corporate+Affairs" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Ministry of Corporate Affairs. (2019). The Companies (Amendment) Act, 2019. <a href="https://www.google.com/search?q=Ministry+of+Corporate+Affairs" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Ministry of Corporate Affairs. (2020a). Annual Report on CSR Compliance. <a href="https://www.google.com/search?q=Ministry+of+Corporate+Affairs" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Ministry of Corporate Affairs. (2020b). National CSR Data Portal. <a href="https://csr.gov.in" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">Ministry of Corporate Affairs. (2021a). CSR Amendment Rules and Impact Assessment Guidelines. <a href="https://www.google.com/search?q=Ministry+of+Corporate+Affairs" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Ministry of Corporate Affairs. (2021b). CSR Disclosure Reports of Major Companies in Chhattisgarh and Jharkhand. <a href="https://www.google.com/search?q=Ministry+of+Corporate+Affairs" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Ministry of Corporate Affairs. (2022a). National CSR Data Portal - Healthcare Statistics. <a href="https://www.google.com/search?q=Ministry+of+Corporate+Affairs" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Ministry of Corporate Affairs. (2022b). National CSR Data Portal - Sectoral CSR Expenditure. <a href="https://www.google.com/search?q=Ministry+of+Corporate+Affairs" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Ministry of Corporate Affairs. (2024). Rajya Sabha Starred Question No. 156: CSR Expenditure Data from FY 2018-19 to FY 2022-23. <a href="https://sansad.in/getFile/annex/266/AS156_0f1rPB.pdf" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">Mitra, N., & Akhtar, A. (2020). Mandatory CSR in India: The Law, The Landscape and The Lacunae. International Journal of Corporate Social Responsibility, 5(1), 1–11. <a href="https://doi.org/10.1186/s40991-020-00052-4" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Narayana, S. A. (2019). Corporate Social Responsibility in India: Challenges and Prospects. Indian Journal of Corporate Governance, 12(1), 34–49. <a href="https://doi.org/10.1177/0974686219836588" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Sahasranamam, S., & Arya, B. (2020). The Politics of Mandated Corporate Social Responsibility: Evidence from the Indian Companies Act 2013. SSRN Electronic Journal. <a href="https://doi.org/10.2139/ssrn.3648914" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Sahasranamam, S., Arya, B., & Sud, M. (2020). Ownership Structure and Corporate Social Responsibility in an Emerging Market. Asia Pacific Journal of Management, 37(4), 1165–1192. <a href="https://doi.org/10.1007/s10490-019-09663-3" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Singh, R., & Agrawal, R. (2020). Regional Inequalities in CSR Implementation: A Study of Indian States. Indian Journal of Corporate Law and Policy Studies, 5(1), 25–41.</div>
+<div class="bib-entry">Sundar, P. (2013). Business and Community: The Story of Corporate Social Responsibility in India. Sage Publications. <a href="https://www.worldcat.org/search?q=Sundar,+P." target="_blank" class="doi-link">[WorldCat]</a></div>
+<h3 class="bib-category">CSR Communication</h3>
+<div class="bib-entry">Capriotti, P. (2011). Communicating CSR Through the Internet. Corporate Communications: An International Journal, 16(1), 5–19. <a href="https://doi.org/10.1108/13563281111100936" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Chaudhuri, R. (2018). Communication Challenges in CSR: An Indian Perspective. Journal of Development Communication, 29(1), 22–34.</div>
+<div class="bib-entry">Du, S., Bhattacharya, C. B., & Sen, S. (2010). Maximizing Business Returns to Corporate Social Responsibility (CSR): The Role of CSR Communication. International Journal of Management Reviews, 12(1), 8–19. <a href="https://doi.org/10.1111/j.1468-2370.2009.00276.x" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Morsing, M., & Schultz, M. (2006). Corporate Social Responsibility Communication: Stakeholder Information, Response and Involvement Strategies. Business Ethics: A European Review, 15(4), 323–338. <a href="https://doi.org/10.1111/j.1467-8608.2006.00460.x" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Sahni, S. (2016). Communicating CSR in India: An Analysis of Select Indian Corporate Websites. Global Media Journal - Indian Edition, 7(2).</div>
+<div class="bib-entry">Sharma, A. (2019). Bridging the Communication Gap: CSR Theory and Rural India. Asian Journal of Communication Studies, 11(2), 60–78.</div>
+<div class="bib-entry">Singh, R. (2018). Glocalization of CSR in Indian Business Communication. Journal of Indian Business Research, 10(1), 22–38. <a href="https://doi.org/10.1108/JIBR-01-2017-0009" target="_blank" class="doi-link">[DOI]</a></div>
+<h3 class="bib-category">Tribal & Development Studies</h3>
+<div class="bib-entry">Guha, R. (2007). India After Gandhi: The History of the World’s Largest Democracy. HarperCollins.</div>
+<div class="bib-entry">Kumar, S., & Xaxa, V. (2018). Tribal Participation in CSR Projects: A Review of Challenges. Journal of Development Practice, 6(1), 55–68.</div>
+<div class="bib-entry">Sahoo, S., & Nayak, B. P. (2008). Tribal Studies in India: Contemporary Concerns. Manak Publications.</div>
+<div class="bib-entry">Swaniti Initiative. (2022). Jharkhand: The Road Ahead. <a href="https://www.swaniti.com/wp-content/uploads/2022/10/Brief-Note-on-Jharkhands-Development.pdf" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">Tribal Research Institute. (2019a). Cultural Practices and Festivals of Jharkhand Tribes.</div>
+<div class="bib-entry">Tribal Research Institute. (2019b). Demographics and Distribution of Tribes in Jharkhand.</div>
+<div class="bib-entry">Tribal Research, & Institute, T. (2019a). Cultural Practices of Tribes in Chhattisgarh.</div>
+<div class="bib-entry">Tribal Research, & Institute, T. (2019b). Tribal Demographics of Chhattisgarh.</div>
+<div class="bib-entry">Xaxa, V. (2016a). State, Society, and Tribes: Issues in Post-Colonial India. Pearson Education. <a href="https://www.worldcat.org/search?q=Xaxa,+V." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Xaxa, V. (2016b). Tribes and Indian National Identity: Location of Exclusion and Marginality. The Brown Journal of World Affairs, 23(1), 173–188. <a href="https://doi.org/10.26300/6518-8k14" target="_blank" class="doi-link">[DOI]</a></div>
+<h3 class="bib-category">Research Methodology</h3>
+<div class="bib-entry">Braun, V., & Clarke, V. (2006). Using Thematic Analysis in Psychology. Sage Publications. <a href="https://www.worldcat.org/search?q=Braun,+V.,+&+Clarke,+V." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Field, A. (2018). Discovering Statistics Using IBM SPSS Statistics (5th ed.). Sage Publications. <a href="https://www.worldcat.org/search?q=Field,+A." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Guest, G., Bunce, A., & Johnson, L. (2006). How Many Interviews Are Enough? An Experiment with Data Saturation and Variability. Sage Publications. <a href="https://www.worldcat.org/search?q=Guest,+G.,+Bunce,+A.,+&+Johnson,+L." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Kvale, S., & Brinkmann, S. (2015). InterViews: Learning the Craft of Qualitative Research Interviewing (3rd ed.). Sage Publications. <a href="https://www.worldcat.org/search?q=Kvale,+S.,+&+Brinkmann,+S." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Nowell, L. S., Norris, J. M., White, D. E., & Moules, N. J. (2017). Thematic Analysis: Striving to Meet the Trustworthiness Criteria. International Journal of Qualitative Methods, 16(1), 1–13. <a href="https://doi.org/10.1177/1609406917733847" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Palinkas, L. A., Horwitz, S. M., Green, C. A., Wisdom, J. P., Duan, N., & Hoagwood, K. (2015). Purposeful Sampling for Qualitative Data Collection and Analysis in Mixed Method Implementation Research. Administration and Policy in Mental Health and Mental Health Services Research, 42(5), 533–544. <a href="https://doi.org/10.1007/s10488-013-0528-y" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Patton, M. Q. (2015). Qualitative Research and Evaluation Methods (4th ed.). Sage Publications. <a href="https://www.worldcat.org/search?q=Patton,+M.+Q." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Saldaña, J. (2021). The Coding Manual for Qualitative Researchers (4th ed.). Sage Publications. <a href="https://www.worldcat.org/search?q=Saldaña,+J." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Sekaran, U., & Bougie, R. (2016). Research Methods for Business: A Skill Building Approach (7th ed.). Wiley. <a href="https://www.worldcat.org/search?q=Sekaran,+U.,+&+Bougie,+R." target="_blank" class="doi-link">[WorldCat]</a></div>
+<h3 class="bib-category">State-Specific (Chhattisgarh & Jharkhand)</h3>
+<div class="bib-entry">Department of Industry Chhattisgarh. (2020). Industrial Development and Investment Report.</div>
+<div class="bib-entry">Department of Industry Jharkhand. (2020). Industrial Development and Investment Report.</div>
+<div class="bib-entry">Government of Chhattisgarh. (2020). Brief History of Chhattisgarh.</div>
+<div class="bib-entry">Government of Chhattisgarh. (2021a). Economic Survey of Chhattisgarh.</div>
+<div class="bib-entry">Government of Chhattisgarh. (2021b). State Statistical Abstract.</div>
+<div class="bib-entry">Government of Jharkhand. (2020). History and Formation of Jharkhand.</div>
+<div class="bib-entry">Government of Jharkhand. (2021a). Economic Survey of Jharkhand.</div>
+<div class="bib-entry">Government of Jharkhand. (2021b). Statistical Handbook of Jharkhand.</div>
+<div class="bib-entry">International Journal of Scientific Development, & Research. (2023). CSR Activities in Chhattisgarh: A Comprehensive Analysis (Vol. 8, Number 7). <a href="https://www.ijsdr.org/papers/IJSDR2307135.pdf" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">KPMG. (2017a). Emerging Sectors in Chhattisgarh: Opportunities for Industry and Services. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">KPMG. (2017b). Emerging Sectors in Jharkhand: Opportunities for Industry and Services. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">KPMG. (2018). CSR Practices in Mineral-Rich States of India. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">Sarva Shiksha Abhiyan. (2020a). School Infrastructure and Enrollment Report: Chhattisgarh. <a href="#" class="doi-link">[Official Portal]</a></div>
+<div class="bib-entry">Sarva Shiksha Abhiyan. (2020b). School Infrastructure and Enrollment Report: Jharkhand. <a href="#" class="doi-link">[Official Portal]</a></div>
+<div class="bib-entry">Sinha, N. (2018). CSR in Tribal Regions: Case Studies from Chhattisgarh and Jharkhand. Journal of CSR and Development, 8(4), 112–118.</div>
+<h3 class="bib-category">Government Reports & Policy Documents</h3>
+<div class="bib-entry">Census of India. (2011a). A-10 State Primary Census Abstract Data. <a href="#" class="doi-link">[Official Portal]</a></div>
+<div class="bib-entry">Census of India. (2011b). District-wise Population and Urbanization Report. <a href="#" class="doi-link">[Official Portal]</a></div>
+<div class="bib-entry">Census of India. (2011c). Population by Religion, Caste, and Gender. <a href="#" class="doi-link">[Official Portal]</a></div>
+<div class="bib-entry">Forest Survey of India. (2021). India State of Forest Report.</div>
+<div class="bib-entry">International Labour Organisation. (2018). Decent Work and the 2030 Agenda for Sustainable Development.</div>
+<div class="bib-entry">Ministry of Mines. (2020). Annual Report on Mineral Production and Reserves.</div>
+<div class="bib-entry">Ministry of Rural Development. (2019). Poverty Estimates by State.</div>
+<div class="bib-entry">Ministry of Statistics, & Implementation, P. (2020). Sustainable Development Goals - National Indicator Framework Progress Report.</div>
+<div class="bib-entry">Ministry of Tribal Affairs. (2020). Status of Tribal Languages in India.</div>
+<div class="bib-entry">National Family Health Survey. (2021). Health Indicators: Chhattisgarh and Jharkhand. <a href="#" class="doi-link">[Official Portal]</a></div>
+<div class="bib-entry">National Statistical Office. (2018). State Literacy and Educational Attainment Survey.</div>
+<div class="bib-entry">NITI Aayog. (2021). Aspirational Districts Programme: Progress Report. <a href="https://www.google.com/search?q=NITI+Aayog" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Ruggie, J. G. (2011). Guiding Principles on Business and Human Rights: Implementing the United Nations 'Protect, Respect and Remedy' Framework. United Nations. <a href="https://www.ohchr.org/documents/publications/GuidingprinciplesBusinesshr_eN.pdf" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">UNDP. (2020). Human Development Report. <a href="https://www.google.com/search?q=UNDP" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">UNICEF. (2020). The State of the World’s Children.</div>
+<div class="bib-entry">United Nations. (2015). Sustainable Development Goals. <a href="https://www.un.org/sustainabledevelopment/sustainable-consumption-production" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">World Bank. (2020). Poverty and Shared Prosperity. <a href="https://www.google.com/search?q=World+Bank" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">World Health Organization. (2019). World Health Statistics.</div>
+<h3 class="bib-category">Corporate Reports & Industry Publications</h3>
+<div class="bib-entry">BALCO Medical Centre. (2021). CSR Healthcare Communication Report. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">BP. (2019). Corporate Social Responsibility Report. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">Central Coalfields Limited. (2022). Environmental Sustainability Through CSR.</div>
+<div class="bib-entry">Centre for Social Markets. (2019). Understanding CSR Communication in India.</div>
+<div class="bib-entry">CII. (2020). CSR Compendium: Best Practices. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">CRISIL. (2018). CSR in India: Trends and Analysis. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">Elkington, J. (1997). Cannibals with Forks: The Triple Bottom Line of 21st Century Business. New Society Publishers.</div>
+<div class="bib-entry">FICCI. (2019). CSR: Towards a Better Future. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">Jindal Steel, & Limited, P. (2022). Health CSR Activities Report - Raigarh. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">McKinsey & Company. (2021). The Importance of CSR to Employee Retention and Engagement. <a href="https://www.mckinsey.com" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">NMDC Limited. (2022). CSR Report. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">NMDC Ltd. (2021). CSR Initiatives in Tribal Areas of Bastar Division. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">NTPC Ltd. (2020). CSR & Sustainability Report 2019-20.</div>
+<div class="bib-entry">Polman, P. (2016). Unilever’s Sustainability Journey. Corporate Responsibility Review, 7(3), 20–25.</div>
+<div class="bib-entry">South Eastern Coalfields Limited. (2022a). Afforestation and Water Management Initiatives.</div>
+<div class="bib-entry">South Eastern Coalfields Limited. (2022b). CSR Annual Report.</div>
+<div class="bib-entry">Tata Steel Foundation. (2021). Education Initiatives. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">Tata Steel Foundation. (2022a). Annual CSR Report - Tribal Development. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">Tata Steel Foundation. (2022b). Health CSR Programmes in Jharkhand. <span class="badge" style="background: rgba(108,117,125,0.2); color: #aaa; font-size: 0.8rem; margin-left: 10px;">[Available from corporate source]</span></div>
+<div class="bib-entry">Tesla Inc. (2020). Sustainability Report 2020. <a href="https://www.tesla.com/sustainability" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">United Nations Global Compact. (2014). Guide to Corporate Sustainability.</div>
+<h3 class="bib-category">Other Academic Literature</h3>
+<div class="bib-entry">Castells, M. (2008). Communication Power. Oxford University Press. <a href="https://www.worldcat.org/search?q=Castells,+M." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Christensen, C. M., & Raynor, M. E. (2003). The Innovator’s Solution: Creating and Sustaining Successful Growth. Harvard Business Review Press. <a href="https://www.worldcat.org/search?q=Christensen,+C.+M.,+&+Raynor,+M.+E." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Coffee, J. C. (2005). A Theory of Corporate Scandals: Why the USA and Europe Differ. Oxford Review of Economic Policy, 21(2), 198–211. <a href="https://doi.org/10.1093/oxrep/gri012" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Cohen, J. (1960). A Coefficient of Agreement for Nominal Scales. Educational and Psychological Measurement, 20(1), 37–46. <a href="https://doi.org/10.1177/001316446002000104" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Dash, A., & Samal, C. K. (2018). CSR Practices in Extractive Industries in India. Social Responsibility Journal, 14(2), 375–392. <a href="https://doi.org/10.1108/SRJ-02-2017-0033" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Delmas, M. A., & Burbano, V. C. (2011). The Drivers of Greenwashing. California Management Review, 54(1), 64–87. <a href="https://doi.org/10.1525/cmr.2011.54.1.64" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Dowling, J., & Pfeffer, J. (1975). Organizational Legitimacy: Social Values and Organizational Behavior. Pacific Sociological Review, 18(1), 122–136. <a href="https://doi.org/10.2307/1388226" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Dutta, A., & Banerjee, S. (2021). CSR in India: Measuring Impact on Sustainable Development Goals. CSR and Social Impact Review, 4(2), 15–29.</div>
+<div class="bib-entry">European Commission. (2014). Non-Financial Reporting Directive. <a href="https://ec.europa.eu/info/publications/non-financial-reporting-directive_en" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">Foucault, M. (1980). Power/Knowledge: Selected Interviews and Other Writings, 1972-1977 (C. Gordon, Ed.). Pantheon Books.</div>
+<div class="bib-entry">Global Reporting Initiative. (2020). GRI Standards. <a href="https://www.globalreporting.org" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">Gupta, R. (2022). Monitoring CSR Compliance: The Role of the MCA. CSR and Governance Review, 10(1), 25–38. <a href="https://www.google.com/search?q=Gupta,+R" target="_blank" class="doi-link">[Official Source]</a></div>
+<div class="bib-entry">Idemudia, U. (2014). Corporate Social Responsibility and Development in Africa: Issues and Possibilities. Geography Compass, 8(7), 421–435. <a href="https://doi.org/10.1111/gec3.12143" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Ihlen, Ø., Bartlett, J. L., & May, S. (2011). The Handbook of Communication and Corporate Social Responsibility. Wiley-Blackwell. <a href="https://www.worldcat.org/search?q=Ihlen,+Ø.,+Bartlett,+J.+L.,+&+May,+S." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Jones, D. (2018). Industrial Revolution and CSR: Lessons from History. Corporate History Review, 12(3), 45–60.</div>
+<div class="bib-entry">Kapoor, S., & Sandhu, H. S. (2010). Does It Pay to Be Socially Responsible? An Empirical Examination of Impact of Corporate Social Responsibility on Financial Performance. Global Business Review, 11(2), 185–208. <a href="https://doi.org/10.1177/097215091001100205" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Kobayashi, Y. (2019). Traditional Business Practices in Japan: CSR and Keiretsu. Asian Journal of CSR, 7(4), 89–102.</div>
+<div class="bib-entry">Kumar, P., & Bhaskar, A. (2020). Communication Gaps in CSR Projects in Tribal India: A Study of Eastern Tribal Zones. Indian Journal of Corporate Social Responsibility, 5(2), 111–127.</div>
+<div class="bib-entry">McHugh, M. L. (2012). Interrater Reliability: The Kappa Statistic. Biochemia Medica, 22(3), 276–282. <a href="https://doi.org/10.11613/BM.2012.031" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Melis, A. (2005). Corporate Governance Failures: To What Extent is Parmalat a Particularly Italian Case? Corporate Governance: An International Review, 13(4), 478–488. <a href="https://doi.org/10.1111/j.1467-8683.2005.00443.x" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Melkote, S. R., & Steeves, H. L. (2015). Communication for Development: Theory and Practice for Empowerment and Social Justice (2nd ed.). Sage Publications. <a href="https://www.worldcat.org/search?q=Melkote,+S.+R.,+&+Steeves,+H.+L." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Ministry of Agriculture. (2020). District-Level Crop Statistics.</div>
+<div class="bib-entry">Mukherjee, A. (2020). CSR in Education: Challenges in Tribal India. Journal of Rural Education Studies, 12(2), 55–70.</div>
+<div class="bib-entry">Mukherjee, S. (2020). Penalties for CSR Non-Compliance in India: A Legal Perspective. Indian Journal of Corporate Governance, 7(1), 45–62.</div>
+<div class="bib-entry">Nair, M., & Vyas, S. (2021). Perception-Based Evaluation in CSR: Tools and Challenges. CSR Dialogue India Series.</div>
+<div class="bib-entry">Nielsen. (2015a). Consumer Preferences on Corporate Social Responsibility.</div>
+<div class="bib-entry">Nielsen. (2015b). The Nielsen Global Corporate Sustainability Report.</div>
+<div class="bib-entry">OECD. (2011). Guidelines for Multinational Enterprises. <a href="https://www.oecd.org/corporate/mne/" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">Palazzo, G., & Scherer, A. G. (2006). Corporate Legitimacy as Deliberation: A Communicative Framework. Journal of Business Ethics, 66(1), 71–88. <a href="https://doi.org/10.1007/s10551-006-9044-2" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Planning Commission. (2018a). State Human Development Report: Chhattisgarh.</div>
+<div class="bib-entry">Planning Commission. (2018b). State Human Development Report: Jharkhand.</div>
+<div class="bib-entry">Power, M. (2007). Organized Uncertainty: Designing a World of Risk Management. Oxford University Press. <a href="https://www.worldcat.org/search?q=Power,+M." target="_blank" class="doi-link">[WorldCat]</a></div>
+<div class="bib-entry">Ramasamy, B., & Yeung, M. (2009). Chinese and Indian Firms’ Corporate Social Responsibility: A Comparative Study. Journal of Business Ethics, 88(4), 617–630. <a href="https://doi.org/10.1007/s10551-009-0306-7" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Reserve Bank of India. (2020a). State Finances and Economic Overview of Chhattisgarh.</div>
+<div class="bib-entry">Reserve Bank of India. (2020b). State Finances and Economic Overview of Jharkhand.</div>
+<div class="bib-entry">Ruggie, J. G. (2013). Just business: Multinational corporations and human rights. W. W. Norton & Company.</div>
+<div class="bib-entry">Sharma, R. (2020). Indian CSR Practices in Global Context. Journal of Comparative CSR, 5(2), 67–80.</div>
+<div class="bib-entry">Singh, A., & Mandavi, A. (2020). Corporate Social Responsibility and Cultural Adaptation in Tribal Regions. Journal of Social Responsibility, 16(3), 215–230. <a href="https://doi.org/10.1108/JSR-03-2020-0045" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Singh, R. (2019). Panchayati Raj and Local Governance in Chhattisgarh. Indian Journal of Public Administration, 65(2), 215–230. <a href="https://doi.org/10.1177/0019556119844589" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Sinha, P. (2020). CSR Compliance and Reporting: An Analysis. Journal of Indian Business Research, 12(4), 45–58. <a href="https://doi.org/10.1108/JIBR-02-2020-0056" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Smith, A. (2016). Medieval Guilds and Their Role in CSR. Historical Perspectives on CSR, 8(1), 22–35.</div>
+<div class="bib-entry">Smith, A. (2018). Corporate Social Responsibility and Risk Management. Journal of Business Ethics, 10(4), 200–210. <a href="https://doi.org/10.1007/s10551-018-3956-5" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Stiglitz, J. E. (2012). The Price of Inequality: How Today’s Divided Society Endangers Our Future. W. W. Norton & Company.</div>
+<div class="bib-entry">Treviño, L. K., Weaver, G. R., & Reynolds, S. J. (2006). Behavioral Ethics in Organizations: A Review. Journal of Management, 32(6), 951–990. <a href="https://doi.org/10.1177/0149206306294258" target="_blank" class="doi-link">[DOI]</a></div>
+<div class="bib-entry">Tripathi, R. (2019). Ethics in Ancient Business Practices. Journal of Historical Business Ethics, 4(2), 10–15.</div>
+<div class="bib-entry">United Nations Global Compact. (2000). The Ten Principles of the UN Global Compact. <a href="https://www.unglobalcompact.org/what-is-gc/mission/principles" target="_blank" class="doi-link">[Open]</a></div>
+<div class="bib-entry">U.S. Congress. (2002). Sarbanes-Oxley Act of 2002.</div>
+<div class="bib-entry">Visser, W., & Tolhurst, N. (2017). The World Guide to CSR: A Country-by-Country Analysis of Corporate Sustainability and Responsibility. Routledge. <a href="https://www.worldcat.org/search?q=Visser,+W.,+&+Tolhurst,+N." target="_blank" class="doi-link">[WorldCat]</a></div>
             </div>
         </section>
-
     </div>
-
+    <script>
+        document.getElementById('bibSearch').addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase();
+            document.querySelectorAll('.bib-entry').forEach(entry => {
+                if(entry.textContent.toLowerCase().includes(term)) {
+                    entry.style.display = 'block';
+                } else {
+                    entry.style.display = 'none';
+                }
+            });
+            document.querySelectorAll('.bib-category').forEach(cat => {
+                let hasVisible = false;
+                let next = cat.nextElementSibling;
+                while(next && next.classList.contains('bib-entry')) {
+                    if(next.style.display !== 'none') {
+                        hasVisible = true;
+                        break;
+                    }
+                    next = next.nextElementSibling;
+                }
+                cat.style.display = hasVisible || term === '' ? 'block' : 'none';
+            });
+        });
+    </script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
