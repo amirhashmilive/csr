@@ -320,3 +320,47 @@ h1, h2, h3, h4, h5, h6 {
     .progress-dots { display: none; }
     .chart-container { height: 300px; }
 }
+
+/* Chapter Navigation Menu */
+.chap-nav {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: var(--bg-glass);
+    border: 1px solid var(--bg-glass-border);
+    border-radius: 30px;
+    padding: 6px 16px;
+    display: flex;
+    gap: 12px;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    align-items: center;
+}
+
+.chap-nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.chap-nav a:hover {
+    color: var(--accent-jh);
+}
+
+.chap-nav a.active {
+    color: var(--accent-cg);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.chap-nav-sep {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
