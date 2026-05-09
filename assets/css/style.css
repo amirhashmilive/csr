@@ -497,17 +497,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hover-magnify-sm:hover {
-    transform: scale(1.5) translateY(-4px);
+    transform: scale(2.75) translateY(-4px);
 }
 .hover-magnify-md:hover {
-    transform: scale(1.25) translateY(-4px);
+    transform: scale(1.75) translateY(-4px);
 }
 .hover-magnify-lg:hover {
-    transform: scale(1.1) translateY(-4px);
+    transform: scale(1.15) translateY(-4px);
 }
 
 .hover-magnify:not(.hover-magnify-sm):not(.hover-magnify-md):not(.hover-magnify-lg):hover {
-    transform: scale(1.1) translateY(-4px);
+    transform: scale(1.15) translateY(-4px);
 }
 
 .hover-magnify:hover {
