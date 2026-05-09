@@ -546,3 +546,15 @@ h1, h2, h3, h4, h5, h6 {
         transform: scale(1.02) translateY(-2px);
     }
 }
+
+/* Custom 4x Magnification for Chapter 1 Pillar Cards */
+.pillar-card-4x:hover,
+.pillar-card-4x.hover-magnify-sm:hover,
+.pillar-card-4x.hover-magnify-md:hover,
+.pillar-card-4x.hover-magnify-lg:hover {
+    transform: scale(4.0) translateY(-8px) !important;
+    background-color: #b34700 !important;
+    color: #ffffff !important;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease !important;
+    z-index: 999 !important;
+}
