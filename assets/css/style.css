@@ -486,7 +486,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .framework-card:hover {
-        transform: scale(1.02) ; /* Slightly smaller scale on mobile to prevent extreme overflow */
+        transform: scale(1.02) !important; /* Slightly smaller scale on mobile to prevent extreme overflow */
     }
 }
 
@@ -498,17 +498,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hover-magnify-sm:hover {
-    transform: scale(2.75) ;
+    transform: scale(2.75) !important;
 }
 .hover-magnify-md:hover {
-    transform: scale(1.75) ;
+    transform: scale(1.75) !important;
 }
 .hover-magnify-lg:hover {
-    transform: scale(1.15) ;
+    transform: scale(1.15) !important;
 }
 
 .hover-magnify:not(.hover-magnify-sm):not(.hover-magnify-md):not(.hover-magnify-lg):hover {
-    transform: scale(1.15) ;
+    transform: scale(1.15) !important;
 }
 
 .hover-magnify:hover {
@@ -544,7 +544,7 @@ h1, h2, h3, h4, h5, h6 {
     .hover-magnify-md:hover,
     .hover-magnify-lg:hover,
     .hover-magnify:hover {
-        transform: scale(1.02) ;
+        transform: scale(1.02) !important;
     }
 }
 
@@ -553,7 +553,7 @@ h1, h2, h3, h4, h5, h6 {
 .pillar-card-2x.hover-magnify-sm:hover,
 .pillar-card-2x.hover-magnify-md:hover,
 .pillar-card-2x.hover-magnify-lg:hover {
-    transform: scale(2.0)  !important;
+    transform: scale(2.0) !important;
     background-color: #b34700 !important;
     color: #ffffff !important;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease !important;
