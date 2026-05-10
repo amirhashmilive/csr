@@ -179,8 +179,8 @@
     <!-- Section Jump Toolbar -->
     <div class="section-tabs" id="sectionTabs">
         <button class="section-tab active" id="tab-quant" onclick="jumpTo('part-a')">Quantitative</button>
-        <button class="section-tab" id="tab-qual"  onclick="jumpTo('part-c')">Qualitative</button>
-        <button class="section-tab" id="tab-hyp"   onclick="jumpTo('part-b')">Hypothesis &amp; Synthesis</button>
+        <button class="section-tab" id="tab-qual"  onclick="jumpTo('part-b')">Qualitative</button>
+        <button class="section-tab" id="tab-hyp"   onclick="jumpTo('part-c')">Hypothesis &amp; Synthesis</button>
     </div>
 
     <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
@@ -305,10 +305,66 @@
             </div>
         </section>
 
-        <!-- ================= PART B: HYPOTHESIS & SYNTHESIS ================= -->
+        <!-- ================= PART B: QUALITATIVE ================= -->
 
         <section class="slide" id="part-b">
-            <div class="part-divider">PART B: HYPOTHESIS TESTING</div>
+            <div class="part-divider">PART B: QUALITATIVE</div>
+            <h2 class="slide-title">Thematic Analysis</h2>
+            <h3 class="slide-subtitle">Based on 40 In-depth NVivo Interviews</h3>
+            <div class="chart-container"><canvas id="thematicChart"></canvas></div>
+        </section>
+
+        <section class="slide">
+            <div class="part-divider">PART B: QUALITATIVE</div>
+            <h2 class="slide-title">Voices from the Field</h2>
+            
+            <div class="grid-2">
+                <!-- Education Quote -->
+                <div class="quote-box" style="border-left: 4px solid var(--accent-cg);">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Since smart class came, with big pictures and zooming, it was explained well, so we have benefited a lot."</p>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="badge" style="background: rgba(0, 212, 255, 0.2); color: var(--accent-cg);">CG</span>
+                        <span style="color: var(--text-muted);">Community Leader, Balodabazar</span>
+                    </div>
+                </div>
+                
+                <!-- Health Quote -->
+                <div class="quote-box" style="border-left: 4px solid var(--accent-jh);">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"About 60% of our patients come from BPL. The fact that we can provide them world-class care without pushing them into bankruptcy is what makes our work meaningful."</p>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="badge" style="background: rgba(255, 107, 53, 0.2); color: var(--accent-jh);">JH</span>
+                        <span style="color: var(--text-muted);">Hospital Admin, East Singhbhum</span>
+                    </div>
+                </div>
+                
+                <!-- Livelihood Quote -->
+                <div class="quote-box" style="border-left: 4px solid var(--accent-jh);">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Today, a woman can also call herself a farmer. She herself steps forward and says I am a farmer."</p>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="badge" style="background: rgba(255, 107, 53, 0.2); color: var(--accent-jh);">JH</span>
+                        <span style="color: var(--text-muted);">Community Leader, Ramgarh</span>
+                    </div>
+                </div>
+                
+                <!-- Environment Quote -->
+                <div class="quote-box" style="border-left: 4px solid var(--accent-cg);">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"In collaboration with HDFC, we installed 416 lights in 50 villages. The biggest benefit is that women can now sit and conduct meetings in the evenings."</p>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="badge" style="background: rgba(0, 212, 255, 0.2); color: var(--accent-cg);">CG</span>
+                        <span style="color: var(--text-muted);">Agency Coordinator, Dhamtari</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PART C: HYPOTHESIS & SYNTHESIS ================= -->
+
+        <section class="slide" id="part-c">
+            <div class="part-divider">PART C: HYPOTHESIS &amp; SYNTHESIS</div>
             <h2 class="slide-title">Hypothesis Testing Results</h2>
             <h3 class="slide-subtitle">5 Hypotheses Validated via Statistical Modeling</h3>
             
@@ -363,72 +419,16 @@
         </section>
 
         <section class="slide">
-            <div class="part-divider">PART B: HYPOTHESIS TESTING</div>
+            <div class="part-divider">PART C: HYPOTHESIS &amp; SYNTHESIS</div>
             <h2 class="slide-title">Sector Satisfaction Analysis</h2>
             <h3 class="slide-subtitle popup-trigger" data-popup="sector-anova">Banking Sector shows highest satisfaction</h3>
             <div class="chart-container"><canvas id="sectorAnovaChart"></canvas></div>
         </section>
 
-        <!-- ================= PART C: QUALITATIVE ================= -->
-
-        <section class="slide" id="part-c">
-            <div class="part-divider">PART C: QUALITATIVE</div>
-            <h2 class="slide-title">Thematic Analysis</h2>
-            <h3 class="slide-subtitle">Based on 40 In-depth NVivo Interviews</h3>
-            <div class="chart-container"><canvas id="thematicChart"></canvas></div>
-        </section>
+        <!-- ================= SYNTHESIS (part of PART C) ================= -->
 
         <section class="slide">
-            <div class="part-divider">PART C: QUALITATIVE</div>
-            <h2 class="slide-title">Voices from the Field</h2>
-            
-            <div class="grid-2">
-                <!-- Education Quote -->
-                <div class="quote-box" style="border-left: 4px solid var(--accent-cg);">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p>"Since smart class came, with big pictures and zooming, it was explained well, so we have benefited a lot."</p>
-                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
-                        <span class="badge" style="background: rgba(0, 212, 255, 0.2); color: var(--accent-cg);">CG</span>
-                        <span style="color: var(--text-muted);">Community Leader, Balodabazar</span>
-                    </div>
-                </div>
-                
-                <!-- Health Quote -->
-                <div class="quote-box" style="border-left: 4px solid var(--accent-jh);">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p>"About 60% of our patients come from BPL. The fact that we can provide them world-class care without pushing them into bankruptcy is what makes our work meaningful."</p>
-                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
-                        <span class="badge" style="background: rgba(255, 107, 53, 0.2); color: var(--accent-jh);">JH</span>
-                        <span style="color: var(--text-muted);">Hospital Admin, East Singhbhum</span>
-                    </div>
-                </div>
-                
-                <!-- Livelihood Quote -->
-                <div class="quote-box" style="border-left: 4px solid var(--accent-jh);">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p>"Today, a woman can also call herself a farmer. She herself steps forward and says I am a farmer."</p>
-                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
-                        <span class="badge" style="background: rgba(255, 107, 53, 0.2); color: var(--accent-jh);">JH</span>
-                        <span style="color: var(--text-muted);">Community Leader, Ramgarh</span>
-                    </div>
-                </div>
-                
-                <!-- Environment Quote -->
-                <div class="quote-box" style="border-left: 4px solid var(--accent-cg);">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p>"In collaboration with HDFC, we installed 416 lights in 50 villages. The biggest benefit is that women can now sit and conduct meetings in the evenings."</p>
-                    <div style="margin-top: 1rem; font-size: 0.9rem; font-style: normal; display: flex; align-items: center; gap: 0.5rem;">
-                        <span class="badge" style="background: rgba(0, 212, 255, 0.2); color: var(--accent-cg);">CG</span>
-                        <span style="color: var(--text-muted);">Agency Coordinator, Dhamtari</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= SYNTHESIS (part of PART B) ================= -->
-
-        <section class="slide">
-            <div class="part-divider">PART B: HYPOTHESIS &amp; SYNTHESIS</div>
+            <div class="part-divider">PART C: HYPOTHESIS &amp; SYNTHESIS</div>
             <h2 class="slide-title">Integrated Interpretation</h2>
             
             <div class="glass-card hover-magnify" style="width: 100%; max-width: 900px; text-align: center;">
@@ -479,7 +479,7 @@
 
         (function () {
             const container  = document.querySelector('.slide-container');
-            const sections   = [{ id: 'part-a', tab: 'tab-quant' }, { id: 'part-b', tab: 'tab-hyp' }, { id: 'part-c', tab: 'tab-qual' }];
+            const sections   = [{ id: 'part-a', tab: 'tab-quant' }, { id: 'part-b', tab: 'tab-qual' }, { id: 'part-c', tab: 'tab-hyp' }];
             const tabs       = { 'tab-quant': document.getElementById('tab-quant'), 'tab-hyp': document.getElementById('tab-hyp'), 'tab-qual': document.getElementById('tab-qual') };
 
             function setActive(tabId) {
