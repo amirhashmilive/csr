@@ -161,3 +161,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// =====================================================================
+// CINEMATIC ENHANCEMENTS — Intersection Observer for slide fade-ins
+// =====================================================================
+
+(function initCinematicEffects() {
+    const slides = document.querySelectorAll('.slide');
+    if (!slides.length) return;
+
+    // First/hero slide is immediately visible
+    if (slides[0]) slides[0].classList.add('is-visible');
+
+    const slideContainer = document.querySelector('.slide-container');
+
+    const cinematicObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var slide = entry.target;
+                // Remove then re-add to retrigger CSS animation
+                slide.classList.remove('is-visible');
+                void slide.offsetWidth; // force reflow
+                slide.classList.add('is-visible');
+            }
+        });
+    }, {
+        root: slideContainer,
+        threshold: 0.25
+    });
+
+    slides.forEach(function(slide, i) {
+        if (i === 0) return; // skip hero
+        cinematicObserver.observe(slide);
+    });
+})();
