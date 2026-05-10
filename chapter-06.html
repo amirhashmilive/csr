@@ -99,9 +99,8 @@
         /* ── Section Jump Toolbar ── */
         .section-tabs {
             position: fixed;
-            top: 50px;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 18px;
+            right: 5.5rem;
             z-index: 999;
             display: flex;
             gap: 8px;
@@ -144,12 +143,19 @@
 
         /* Push slide content down to clear both fixed bars */
         .slide {
-            padding-top: 10rem;
+            padding-top: 8rem;
         }
 
-        @media (max-width: 600px) {
-            .section-tabs { gap: 4px; padding: 4px 8px; top: 46px; }
-            .section-tab  { font-size: 0.65rem; padding: 3px 10px; }
+        @media (max-width: 800px) {
+            .section-tabs { 
+                top: 60px; 
+                right: 1rem;
+                flex-direction: column;
+                gap: 4px; 
+                padding: 6px 8px; 
+                border-radius: 12px;
+            }
+            .section-tab { font-size: 0.65rem; padding: 4px 10px; width: 100%; text-align: right; }
         }
     </style>
 </head>
