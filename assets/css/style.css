@@ -345,11 +345,15 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     font-size: 0.75rem;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.25s ease;
+    display: inline-block;
 }
 
 .chap-nav a:hover {
-    color: var(--accent-jh);
+    color: #e67e22;
+    transform: scale(1.1);
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .chap-nav a.active {
