@@ -96,6 +96,61 @@
             color: var(--text-muted);
             opacity: 0.3;
         }
+        /* ── Section Jump Toolbar ── */
+        .section-tabs {
+            position: fixed;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            display: flex;
+            gap: 8px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: 30px;
+            padding: 5px 10px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .section-tab {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: 'Inter', sans-serif;
+            white-space: nowrap;
+        }
+
+        .section-tab:hover {
+            color: var(--text-main);
+            border-color: var(--bg-glass-border);
+            background: rgba(255,255,255,0.06);
+        }
+
+        .section-tab.active {
+            background: var(--accent-cg);
+            color: #fff;
+            border-color: var(--accent-cg);
+            box-shadow: var(--accent-glow-cg);
+        }
+
+        /* Push slide content down to clear both fixed bars */
+        .slide {
+            padding-top: 10rem;
+        }
+
+        @media (max-width: 600px) {
+            .section-tabs { gap: 4px; padding: 4px 8px; top: 46px; }
+            .section-tab  { font-size: 0.65rem; padding: 3px 10px; }
+        }
     </style>
 </head>
 <body>
@@ -115,6 +170,12 @@
         <a href="chapter-07.html" data-fullname="Findings & Conclusions">Ch 07</a>
     </nav>
 
+    <!-- Section Jump Toolbar -->
+    <div class="section-tabs" id="sectionTabs">
+        <button class="section-tab active" id="tab-quant" onclick="jumpTo('part-a')">Quantitative</button>
+        <button class="section-tab" id="tab-qual"  onclick="jumpTo('part-c')">Qualitative</button>
+        <button class="section-tab" id="tab-hyp"   onclick="jumpTo('part-b')">Hypothesis &amp; Synthesis</button>
+    </div>
 
     <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
 
@@ -122,7 +183,7 @@
         
         <!-- ================= PART A: QUANTITATIVE ================= -->
         
-        <section class="slide">
+        <section class="slide" id="part-a">
             <div class="part-divider">PART A: QUANTITATIVE</div>
             <h2 class="slide-subtitle">Chapter 06</h2>
             <h1 class="slide-title">Data Analysis & Interpretation</h1>
@@ -238,9 +299,9 @@
             </div>
         </section>
 
-        <!-- ================= PART B: HYPOTHESIS ================= -->
+        <!-- ================= PART B: HYPOTHESIS & SYNTHESIS ================= -->
 
-        <section class="slide">
+        <section class="slide" id="part-b">
             <div class="part-divider">PART B: HYPOTHESIS TESTING</div>
             <h2 class="slide-title">Hypothesis Testing Results</h2>
             <h3 class="slide-subtitle">5 Hypotheses Validated via Statistical Modeling</h3>
@@ -304,7 +365,7 @@
 
         <!-- ================= PART C: QUALITATIVE ================= -->
 
-        <section class="slide">
+        <section class="slide" id="part-c">
             <div class="part-divider">PART C: QUALITATIVE</div>
             <h2 class="slide-title">Thematic Analysis</h2>
             <h3 class="slide-subtitle">Based on 40 In-depth NVivo Interviews</h3>
@@ -358,10 +419,10 @@
             </div>
         </section>
 
-        <!-- ================= PART D: INTEGRATION ================= -->
+        <!-- ================= SYNTHESIS (part of PART B) ================= -->
 
         <section class="slide">
-            <div class="part-divider">PART D: SYNTHESIS</div>
+            <div class="part-divider">PART B: HYPOTHESIS &amp; SYNTHESIS</div>
             <h2 class="slide-title">Integrated Interpretation</h2>
             
             <div class="glass-card hover-magnify" style="width: 100%; max-width: 900px; text-align: center;">
@@ -399,6 +460,38 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/popup.js"></script>
     <script src="assets/js/charts.js"></script>
+
+    <script>
+        /* ── Section Jump & Active Tab Logic ── */
+        function jumpTo(sectionId) {
+            const target = document.getElementById(sectionId);
+            if (!target) return;
+            // slide-container is the scroll host
+            const container = document.querySelector('.slide-container');
+            container.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+        }
+
+        (function () {
+            const container  = document.querySelector('.slide-container');
+            const sections   = [{ id: 'part-a', tab: 'tab-quant' }, { id: 'part-b', tab: 'tab-hyp' }, { id: 'part-c', tab: 'tab-qual' }];
+            const tabs       = { 'tab-quant': document.getElementById('tab-quant'), 'tab-hyp': document.getElementById('tab-hyp'), 'tab-qual': document.getElementById('tab-qual') };
+
+            function setActive(tabId) {
+                Object.values(tabs).forEach(t => t.classList.remove('active'));
+                if (tabs[tabId]) tabs[tabId].classList.add('active');
+            }
+
+            container.addEventListener('scroll', function () {
+                const scrollMid = container.scrollTop + container.clientHeight / 3;
+                let current = sections[0].tab;
+                sections.forEach(s => {
+                    const el = document.getElementById(s.id);
+                    if (el && el.offsetTop <= scrollMid) current = s.tab;
+                });
+                setActive(current);
+            }, { passive: true });
+        })();
+    </script>
     <script>
         window.renderPageCharts = function(colors) {
             const commonOptions = { scales: { y: { beginAtZero: true, max: 100 } } };
