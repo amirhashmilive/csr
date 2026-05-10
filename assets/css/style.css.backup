@@ -345,46 +345,11 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     font-size: 0.75rem;
     font-weight: 500;
-    transition: all 0.25s ease;
-    display: inline-block;
-    position: relative;
-}
-
-/* Tooltip styles */
-.chap-nav a::after {
-    content: attr(data-fullname);
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: rgba(20, 20, 25, 0.95);
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 0.7rem;
-    font-weight: 400;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
-    pointer-events: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    z-index: 1001;
-    margin-top: 8px;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.chap-nav a:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transition: color 0.3s ease;
 }
 
 .chap-nav a:hover {
-    color: #e67e22;
-    transform: scale(1.1);
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    color: var(--accent-jh);
 }
 
 .chap-nav a.active {
@@ -521,7 +486,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .framework-card:hover {
-        transform: scale(1.02) !important; /* Slightly smaller scale on mobile to prevent extreme overflow */
+        transform: scale(1.02) ; /* Slightly smaller scale on mobile to prevent extreme overflow */
     }
 }
 
@@ -533,17 +498,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hover-magnify-sm:hover {
-    transform: scale(2.75) !important;
+    transform: scale(2.75) ;
 }
 .hover-magnify-md:hover {
-    transform: scale(1.75) !important;
+    transform: scale(1.75) ;
 }
 .hover-magnify-lg:hover {
-    transform: scale(1.15) !important;
+    transform: scale(1.15) ;
 }
 
 .hover-magnify:not(.hover-magnify-sm):not(.hover-magnify-md):not(.hover-magnify-lg):hover {
-    transform: scale(1.15) !important;
+    transform: scale(1.15) ;
 }
 
 .hover-magnify:hover {
@@ -579,7 +544,7 @@ h1, h2, h3, h4, h5, h6 {
     .hover-magnify-md:hover,
     .hover-magnify-lg:hover,
     .hover-magnify:hover {
-        transform: scale(1.02) !important;
+        transform: scale(1.02) ;
     }
 }
 
@@ -588,163 +553,9 @@ h1, h2, h3, h4, h5, h6 {
 .pillar-card-2x.hover-magnify-sm:hover,
 .pillar-card-2x.hover-magnify-md:hover,
 .pillar-card-2x.hover-magnify-lg:hover {
-    transform: scale(2.0) !important;
+    transform: scale(2.0)  !important;
     background-color: #b34700 !important;
     color: #ffffff !important;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease !important;
     z-index: 999 !important;
 }
-
-
-/* ═══════════════════════════════════════════════════════════════════
-   CINEMATIC ENHANCEMENTS — Apple-style premium micro-interactions
-   (Only affects .slide content area — never nav/header/footer)
-   ═══════════════════════════════════════════════════════════════════ */
-
-/* 1. Smooth scroll already set on .slide-container — ensure html too */
-html {
-    scroll-behavior: smooth;
-}
-
-/* 2. Premium Typography */
-.slide h1, .slide h2, .slide h3, .slide h4 {
-    letter-spacing: -0.01em;
-    line-height: 1.25;
-}
-
-.slide p, .slide li, .slide td, .slide th {
-    line-height: 1.75;
-}
-
-/* 3. Slide Fade-In (Intersection Observer hooks) */
-@keyframes cinematic-fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(18px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Cards and content blocks start invisible; JS adds .visible when in-view */
-.slide .glass-card,
-.slide .slide-title,
-.slide .slide-subtitle,
-.slide .stat-box,
-.slide .quote-card,
-.slide .impact-card,
-.slide .data-card,
-.slide table {
-    opacity: 0;
-    animation: none;
-    will-change: opacity, transform;
-}
-
-.slide.is-visible .glass-card,
-.slide.is-visible .slide-title,
-.slide.is-visible .slide-subtitle,
-.slide.is-visible .stat-box,
-.slide.is-visible .quote-card,
-.slide.is-visible .impact-card,
-.slide.is-visible .data-card,
-.slide.is-visible table {
-    animation: cinematic-fade-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-/* Staggered delays for child elements */
-.slide.is-visible .glass-card:nth-child(1) { animation-delay: 0.05s; }
-.slide.is-visible .glass-card:nth-child(2) { animation-delay: 0.12s; }
-.slide.is-visible .glass-card:nth-child(3) { animation-delay: 0.19s; }
-.slide.is-visible .glass-card:nth-child(4) { animation-delay: 0.26s; }
-.slide.is-visible .glass-card:nth-child(5) { animation-delay: 0.33s; }
-.slide.is-visible .glass-card:nth-child(6) { animation-delay: 0.40s; }
-.slide.is-visible .glass-card:nth-child(n+7) { animation-delay: 0.46s; }
-
-.slide.is-visible .slide-title  { animation-delay: 0s; }
-.slide.is-visible .slide-subtitle { animation-delay: 0.08s; }
-.slide.is-visible table         { animation-delay: 0.15s; }
-
-/* Hero slides — never animate (first .slide child) */
-.slide:first-child,
-.slide:first-child .glass-card,
-.slide:first-child .slide-title,
-.slide:first-child .slide-subtitle {
-    opacity: 1 !important;
-    animation: none !important;
-}
-
-/* 4. Micro-interactions — buttons, links, clickable spans */
-.slide a,
-.slide button,
-.slide .timeline-click,
-.slide .btn,
-.slide [role="button"] {
-    transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 0.2s ease,
-                opacity 0.2s ease;
-}
-
-.slide a:hover,
-.slide button:hover,
-.slide .timeline-click:hover,
-.slide .btn:hover,
-.slide [role="button"]:hover {
-    transform: scale(1.04);
-    opacity: 0.9;
-}
-
-/* 5. Subtle background gradient noise on slides */
-.slide {
-    background-image:
-        radial-gradient(ellipse at 20% 50%, rgba(0, 102, 204, 0.04) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, rgba(204, 68, 0, 0.03) 0%, transparent 55%);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-[data-theme="dark"] .slide {
-    background-image:
-        radial-gradient(ellipse at 20% 50%, rgba(0, 212, 255, 0.06) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, rgba(255, 107, 53, 0.05) 0%, transparent 55%);
-}
-
-/* 6. Enhanced glass card hover — smoother glow in addition to scale */
-.glass-card {
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.glass-card:hover:not(.hover-magnify) {
-    box-shadow: var(--card-shadow), 0 0 0 1px var(--bg-glass-border), var(--neon-glow);
-}
-
-/* 7. Page-load staggered reveal for first slide content */
-@keyframes page-load-reveal {
-    from { opacity: 0; transform: translateY(24px) scale(0.98); }
-    to   { opacity: 1; transform: translateY(0)    scale(1);    }
-}
-
-.slide:first-child .slide-title {
-    animation: page-load-reveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
-}
-
-.slide:first-child .slide-subtitle {
-    animation: page-load-reveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
-}
-
-.slide:first-child .glass-card:nth-child(1) {
-    animation: page-load-reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
-}
-.slide:first-child .glass-card:nth-child(2) {
-    animation: page-load-reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.38s both;
-}
-.slide:first-child .glass-card:nth-child(3) {
-    animation: page-load-reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.46s both;
-}
-
-/* 8. Smooth slide-to-slide visual continuity */
-.slide-container {
-    isolation: isolate;
-}
-
