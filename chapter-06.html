@@ -368,10 +368,10 @@
             <h2 class="slide-title">Hypothesis Testing Results</h2>
             <h3 class="slide-subtitle">5 Hypotheses Validated via Statistical Modeling</h3>
             
-            <div style="display: flex; flex-direction: column; gap: 1.5rem; width: 100%; align-items: center; margin-top: 2rem;">
+            <div class="grid-2" style="width: 100%; max-width: 1000px; margin-top: 1.5rem;">
                 
                 <!-- H1 -->
-                <div class="hyp-result-card supported">
+                <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" data-popup="h1-ttest">H₁: CES Difference Between States</h3>
                         <span class="badge badge-supported">SUPPORTED</span>
@@ -380,7 +380,7 @@
                 </div>
                 
                 <!-- H2 -->
-                <div class="hyp-result-card supported">
+                <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" data-popup="h2-regression">H₂: Communication → Education</h3>
                         <span class="badge badge-supported">SUPPORTED</span>
@@ -389,7 +389,7 @@
                 </div>
                 
                 <!-- H3 -->
-                <div class="hyp-result-card partial">
+                <div class="hyp-result-card partial hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" data-popup="h3-anova">H₃: Communication → Healthcare</h3>
                         <span class="badge badge-partial">PARTIALLY SUPPORTED</span>
@@ -398,7 +398,7 @@
                 </div>
                 
                 <!-- H4 -->
-                <div class="hyp-result-card supported">
+                <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" data-popup="h4-chisq">H₄: Communication → Environment</h3>
                         <span class="badge badge-supported">SUPPORTED</span>
@@ -407,7 +407,7 @@
                 </div>
                 
                 <!-- H5 -->
-                <div class="hyp-result-card supported">
+                <div class="hyp-result-card supported hover-magnify" style="grid-column: 1 / -1; max-width: 100%;">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" data-popup="h5-mlr">H₅: Communication → Livelihood</h3>
                         <span class="badge badge-supported">SUPPORTED</span>
