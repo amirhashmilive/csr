@@ -708,3 +708,9 @@ html {
 }
 .glow-cyan { animation: breatheCyan 3.6s ease-in-out infinite; }
 
+/* Reusable premium border style with glow (matches timeline Pre-2014) */
+.border-glow-blue {
+    border: 4px solid var(--accent-cg);
+    border-radius: 12px;
+    box-shadow: var(--neon-glow);
+}
