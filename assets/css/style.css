@@ -1,3 +1,5 @@
+@import url('slider-styles.css');
+
 :root {
     /* Light Mode Tokens */
     --bg-primary: #f8f9ff;
@@ -399,96 +401,6 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-muted);
     font-size: 0.75rem;
     opacity: 0.5;
-}
-
-/* Lightbox Slider */
-.lightbox-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  z-index: 2000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.lightbox-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.lightbox-content {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.lightbox-img {
-  max-width: 100%;
-  max-height: 80vh;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  border: 2px solid var(--accent-cg);
-}
-
-.lightbox-close {
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 10px;
-}
-
-.lightbox-prev, .lightbox-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  font-size: 3rem;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 20px;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-}
-
-.lightbox-prev:hover, .lightbox-next:hover {
-  opacity: 1;
-}
-
-.lightbox-prev {
-  left: -80px;
-}
-
-.lightbox-next {
-  right: -80px;
-}
-
-.lightbox-counter {
-  color: white;
-  margin-top: 15px;
-  font-size: 1.2rem;
-  font-family: 'Inter', sans-serif;
-}
-
-@media (max-width: 768px) {
-  .lightbox-close { right: 0; top: -50px; }
-  .lightbox-prev { left: -20px; }
-  .lightbox-next { right: -20px; }
 }
 
 /* Framework Card Hover Effect */
