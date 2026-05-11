@@ -288,100 +288,110 @@
                     color: #ffffff !important;
                 }
 
-                .flow-card:hover .hover-hint {
-                    color: #ffffff !important;
-                    opacity: 1 !important;
+                    font-style: italic;
                 }
 
-                .flow-arrow {
-                    font-size: 2rem;
+                .pillar-flow-arrow {
+                    font-size: 1.6rem;
                     color: var(--accent-cg);
+                    opacity: 0.7;
+                    flex-shrink: 0;
+                }
+
+                .pillar-flow-footer {
+                    margin-top: 2.5rem;
+                    text-align: center;
+                    opacity: 1 !important;
                 }
             </style>
 
-            <div class="flow-container">
+            <h3 class="slide-subtitle">Five Pillars Framework</h3>
+
+            <div class="pillar-flow-wrapper">
+
                 <!-- Card 1 -->
-                <div class="glass-card flow-card magnify-2x glow-blue">
-                    <span class="hover-hint" style="position: absolute; top: 10px; right: 10px; font-size: 1.1rem; color: var(--text-muted); opacity: 0.6; pointer-events: none; transition: all 0.3s ease;">↗</span>
-                    <div class="default-state">
-                        <h3 style="color: var(--accent-cg); font-size: 1.2rem;">PILLAR 1</h3>
-                        <p style="font-size: 1.1rem; font-weight: 600;">Who did it?</p>
+                <div class="pillar-flow-card">
+                    <div class="pfc-default">
+                        <span class="pillar-label">Pillar 1</span>
+                        <p class="pillar-question">Who did it?</p>
                     </div>
-                    <div class="hover-state">
-                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; width: 100%;">Corporate Entity</h4>
-                        <p style="font-size: 0.85rem;">Tata Group, HDFC Bank, Emami Cement etc.</p>
-                        <p style="font-size: 0.85rem; font-weight: 600;">Provide funds and mandate</p>
+                    <div class="pfc-hover">
+                        <h4>Corporate Entity</h4>
+                        <p>Tata Group, HDFC Bank,<br>Emami Cement etc.</p>
+                        <p class="bold">Provide funds &amp; mandate</p>
                     </div>
+                    <span class="pillar-hint">hover ↗</span>
                 </div>
 
-                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="pillar-flow-arrow"><i class="fas fa-arrow-right"></i></div>
 
                 <!-- Card 2 -->
-                <div class="glass-card flow-card magnify-2x glow-green">
-                    <span class="hover-hint" style="position: absolute; top: 10px; right: 10px; font-size: 1.1rem; color: var(--text-muted); opacity: 0.6; pointer-events: none; transition: all 0.3s ease;">↗</span>
-                    <div class="default-state">
-                        <h3 style="color: var(--accent-jh); font-size: 1.2rem;">PILLAR 2</h3>
-                        <p style="font-size: 1.1rem; font-weight: 600;">How did they do it?</p>
+                <div class="pillar-flow-card">
+                    <div class="pfc-default">
+                        <span class="pillar-label">Pillar 2</span>
+                        <p class="pillar-question">How did they do it?</p>
                     </div>
-                    <div class="hover-state">
-                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; width: 100%;">Implementation Agency</h4>
-                        <p style="font-size: 0.85rem;">Direct execution or NGO partnership</p>
-                        <p style="font-size: 0.85rem; font-weight: 600;">On-ground delivery</p>
+                    <div class="pfc-hover">
+                        <h4>Implementation Agency</h4>
+                        <p>Direct execution or<br>NGO partnership</p>
+                        <p class="bold">On-ground delivery</p>
                     </div>
+                    <span class="pillar-hint">hover ↗</span>
                 </div>
 
-                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="pillar-flow-arrow"><i class="fas fa-arrow-right"></i></div>
 
                 <!-- Card 3 -->
-                <div class="glass-card flow-card magnify-2x glow-purple">
-                    <span class="hover-hint" style="position: absolute; top: 10px; right: 10px; font-size: 1.1rem; color: var(--text-muted); opacity: 0.6; pointer-events: none; transition: all 0.3s ease;">↗</span>
-                    <div class="default-state">
-                        <h3 style="color: var(--success-color); font-size: 1.2rem;">PILLAR 3</h3>
-                        <p style="font-size: 1.1rem; font-weight: 600;">What did they do?</p>
+                <div class="pillar-flow-card">
+                    <div class="pfc-default">
+                        <span class="pillar-label">Pillar 3</span>
+                        <p class="pillar-question">What did they do?</p>
                     </div>
-                    <div class="hover-state">
-                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; width: 100%;">Initiative Type</h4>
-                        <p style="font-size: 0.85rem;">Education, Health, Environment, Livelihood</p>
-                        <p style="font-size: 0.85rem; font-weight: 600;">Women Empowerment, Infrastructure</p>
+                    <div class="pfc-hover">
+                        <h4>Initiative Type</h4>
+                        <p>Education, Health,<br>Environment, Livelihood</p>
+                        <p class="bold">Women Empowerment,<br>Infrastructure</p>
                     </div>
+                    <span class="pillar-hint">hover ↗</span>
                 </div>
 
-                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="pillar-flow-arrow"><i class="fas fa-arrow-right"></i></div>
 
                 <!-- Card 4 -->
-                <div class="glass-card flow-card magnify-2x glow-orange">
-                    <span class="hover-hint" style="position: absolute; top: 10px; right: 10px; font-size: 1.1rem; color: var(--text-muted); opacity: 0.6; pointer-events: none; transition: all 0.3s ease;">↗</span>
-                    <div class="default-state">
-                        <h3 style="color: var(--warning-color); font-size: 1.2rem;">PILLAR 4</h3>
-                        <p style="font-size: 1.1rem; font-weight: 600;">What was the impact?</p>
+                <div class="pillar-flow-card">
+                    <div class="pfc-default">
+                        <span class="pillar-label">Pillar 4</span>
+                        <p class="pillar-question">What was the impact?</p>
                     </div>
-                    <div class="hover-state">
-                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; width: 100%;">Impact & Outcome</h4>
-                        <p style="font-size: 0.85rem;">Educational, Health, Environmental gains</p>
-                        <p style="font-size: 0.85rem; font-weight: 600;">Economic, Social, Infrastructural development</p>
+                    <div class="pfc-hover">
+                        <h4>Impact &amp; Outcome</h4>
+                        <p>Educational, Health,<br>Environmental gains</p>
+                        <p class="bold">Economic, Social,<br>Infrastructural development</p>
                     </div>
+                    <span class="pillar-hint">hover ↗</span>
                 </div>
 
-                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="pillar-flow-arrow"><i class="fas fa-arrow-right"></i></div>
 
                 <!-- Card 5 -->
-                <div class="glass-card flow-card magnify-2x glow-cyan">
-                    <span class="hover-hint" style="position: absolute; top: 10px; right: 10px; font-size: 1.1rem; color: var(--text-muted); opacity: 0.6; pointer-events: none; transition: all 0.3s ease;">↗</span>
-                    <div class="default-state">
-                        <h3 style="color: var(--accent-cg); font-size: 1.1rem;">PILLAR 5 (FOCUS)</h3>
-                        <p style="font-size: 1.1rem; font-weight: 600;">How they communicated?</p>
+                <div class="pillar-flow-card">
+                    <div class="pfc-default">
+                        <span class="pillar-label">Pillar 5</span>
+                        <p class="pillar-question">How they communicated?</p>
                     </div>
-                    <div class="hover-state">
-                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; width: 100%;">Communication Strategy</h4>
-                        <p style="font-size: 0.85rem;">Community meetings, Digital platforms</p>
-                        <p style="font-size: 0.85rem; font-weight: 600;">Reports, Media, Stakeholder forums</p>
+                    <div class="pfc-hover">
+                        <h4>Communication Strategy</h4>
+                        <p>Community meetings,<br>Digital platforms</p>
+                        <p class="bold">Reports, Media,<br>Stakeholder forums</p>
                     </div>
+                    <span class="pillar-hint">hover ↗</span>
                 </div>
+
             </div>
-            
-            <div style="margin-top: 3rem; text-align: center;">
-                <i class="fas fa-arrow-down" style="font-size: 1.5rem; color: var(--text-muted); margin-bottom: 0.5rem;"></i>
-                <h3 style="color: var(--accent-cg); margin: 0; font-size: 1.3rem;">Societal Betterment & Sustainable Development</h3>
+
+            <div class="pillar-flow-footer">
+                <i class="fas fa-arrow-down" style="font-size: 1.3rem; color: var(--text-muted); display: block; margin-bottom: 0.4rem;"></i>
+                <h3 style="color: var(--accent-cg); margin: 0; font-size: 1.25rem;">Societal Betterment &amp; Sustainable Development</h3>
             </div>
         </section>
 
