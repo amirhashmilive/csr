@@ -226,59 +226,159 @@
         <section class="slide" style="display: flex; flex-direction: column; justify-content: center;">
             <h2 class="slide-title">CSR Communication</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; width: 100%; max-width: 1000px; margin-top: 2rem;">
-                
-                <!-- Pillar 1 -->
-                <div class="glass-card hover-magnify pillar-card-2x" style="padding: 1.2rem; display: flex; flex-direction: column;">
-                    <h3 style="color: var(--accent-cg); font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-building"></i> 1: Corporate Entity</h3>
-                    <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-muted); margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li>Tata Group, Banking, Mining, Cement companies</li>
-                        <li>Provide funds and mandate</li>
-                    </ul>
+            <style>
+                .flow-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    width: 100%;
+                    max-width: 1200px;
+                    margin-top: 4rem;
+                }
+
+                .flow-card {
+                    width: 200px;
+                    min-height: 240px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding: 1.5rem 1rem;
+                    transition: all 0.3s ease;
+                    cursor: default;
+                    position: relative;
+                }
+
+                .flow-card .default-state {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1.5rem;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity 0.2s ease;
+                }
+
+                .flow-card .hover-state {
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.8rem;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .flow-card:hover .default-state {
+                    display: none;
+                }
+
+                .flow-card:hover .hover-state {
+                    display: flex;
+                    color: #ffffff !important;
+                }
+
+                .flow-card:hover {
+                    background: var(--accent-cg) !important;
+                    transform: scale(1.15);
+                    z-index: 10;
+                }
+
+                .flow-card:hover h3, .flow-card:hover h4, .flow-card:hover p {
+                    color: #ffffff !important;
+                }
+
+                .flow-arrow {
+                    font-size: 2rem;
+                    color: var(--accent-cg);
+                }
+
+                .focal-card {
+                    box-shadow: 0 0 20px var(--accent-cg);
+                    border: 2px solid var(--accent-cg);
+                }
+            </style>
+
+            <div class="flow-container">
+                <!-- Card 1 -->
+                <div class="glass-card flow-card">
+                    <div class="default-state">
+                        <h3 style="color: var(--accent-cg); font-size: 1.2rem;">PILLAR 1</h3>
+                        <p style="font-size: 1.1rem; font-weight: 600;">Who did it?</p>
+                    </div>
+                    <div class="hover-state">
+                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; width: 100%;">Corporate Entity</h4>
+                        <p style="font-size: 0.85rem;">Tata Group, HDFC Bank, Emami Cement etc.</p>
+                        <p style="font-size: 0.85rem; font-weight: 600;">Provide funds and mandate</p>
+                    </div>
                 </div>
 
-                <!-- Pillar 2 -->
-                <div class="glass-card hover-magnify pillar-card-2x" style="padding: 1.2rem; display: flex; flex-direction: column;">
-                    <h3 style="color: var(--accent-jh); font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-hands-helping"></i> 2: Implementation Agency</h3>
-                    <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-muted); margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li>Direct execution or NGO partnership</li>
-                        <li>On-ground delivery</li>
-                    </ul>
+                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                <!-- Card 2 -->
+                <div class="glass-card flow-card">
+                    <div class="default-state">
+                        <h3 style="color: var(--accent-jh); font-size: 1.2rem;">PILLAR 2</h3>
+                        <p style="font-size: 1.1rem; font-weight: 600;">How did they do it?</p>
+                    </div>
+                    <div class="hover-state">
+                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; width: 100%;">Implementation Agency</h4>
+                        <p style="font-size: 0.85rem;">Direct execution or NGO partnership</p>
+                        <p style="font-size: 0.85rem; font-weight: 600;">On-ground delivery</p>
+                    </div>
                 </div>
 
-                <!-- Pillar 3 -->
-                <div class="glass-card hover-magnify pillar-card-2x" style="padding: 1.2rem; display: flex; flex-direction: column;">
-                    <h3 style="color: var(--success-color); font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-project-diagram"></i> 3: Initiative Type</h3>
-                    <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-muted); margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li>Education, Health, Environment, Livelihood</li>
-                        <li>Women Empowerment, Infrastructure</li>
-                    </ul>
+                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                <!-- Card 3 -->
+                <div class="glass-card flow-card">
+                    <div class="default-state">
+                        <h3 style="color: var(--success-color); font-size: 1.2rem;">PILLAR 3</h3>
+                        <p style="font-size: 1.1rem; font-weight: 600;">What did they do?</p>
+                    </div>
+                    <div class="hover-state">
+                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; width: 100%;">Initiative Type</h4>
+                        <p style="font-size: 0.85rem;">Education, Health, Environment, Livelihood</p>
+                        <p style="font-size: 0.85rem; font-weight: 600;">Women Empowerment, Infrastructure</p>
+                    </div>
                 </div>
 
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; width: 100%; max-width: 800px; margin-top: 1rem;">
-                <!-- Pillar 4 -->
-                <div class="glass-card hover-magnify pillar-card-2x" style="padding: 1.2rem; border: 2px solid var(--accent-cg); box-shadow: var(--neon-glow); position: relative; display: flex; flex-direction: column;">
+                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                <!-- Card 4 -->
+                <div class="glass-card flow-card">
+                    <div class="default-state">
+                        <h3 style="color: var(--warning-color); font-size: 1.2rem;">PILLAR 4</h3>
+                        <p style="font-size: 1.1rem; font-weight: 600;">What was the impact?</p>
+                    </div>
+                    <div class="hover-state">
+                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; width: 100%;">Impact & Outcome</h4>
+                        <p style="font-size: 0.85rem;">Educational, Health, Environmental gains</p>
+                        <p style="font-size: 0.85rem; font-weight: 600;">Economic, Social, Infrastructural development</p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                <!-- Card 5 -->
+                <div class="glass-card flow-card focal-card">
                     <span class="badge" style="position: absolute; top: -10px; right: 10px; background: var(--accent-cg); font-size: 0.7rem; color: #fff;">FOCAL VARIABLE</span>
-                    <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-bullhorn"></i> 4: Communication</h3>
-                    <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-muted); margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li>Community meetings, Digital platforms</li>
-                        <li>Reports, Media, Stakeholder forums</li>
-                    </ul>
-                </div>
-
-                <!-- Pillar 5 -->
-                <div class="glass-card hover-magnify pillar-card-2x" style="padding: 1.2rem; display: flex; flex-direction: column;">
-                    <h3 style="color: var(--accent-jh); font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-chart-line"></i> 5: Impact & Outcome</h3>
-                    <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: var(--text-muted); margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li>Educational, Health, Environmental gains</li>
-                        <li>Economic, Social, Infrastructural development</li>
-                    </ul>
+                    <div class="default-state">
+                        <h3 style="color: var(--accent-cg); font-size: 1.1rem;">PILLAR 5 (FOCUS)</h3>
+                        <p style="font-size: 1.1rem; font-weight: 600;">How they communicated?</p>
+                    </div>
+                    <div class="hover-state">
+                        <h4 style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; width: 100%;">Communication Strategy</h4>
+                        <p style="font-size: 0.85rem;">Community meetings, Digital platforms</p>
+                        <p style="font-size: 0.85rem; font-weight: 600;">Reports, Media, Stakeholder forums</p>
+                    </div>
                 </div>
             </div>
             
-            <div style="margin-top: 2rem; text-align: center;">
+            <div style="margin-top: 3rem; text-align: center;">
                 <i class="fas fa-arrow-down" style="font-size: 1.5rem; color: var(--text-muted); margin-bottom: 0.5rem;"></i>
                 <h3 style="color: var(--accent-cg); margin: 0; font-size: 1.3rem;">Societal Betterment & Sustainable Development</h3>
             </div>
