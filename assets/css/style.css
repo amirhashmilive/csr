@@ -748,3 +748,50 @@ html {
     isolation: isolate;
 }
 
+/* Magnification Protocol */
+.magnify-2x {
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.magnify-2x:hover {
+  transform: scale(2);
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .magnify-2x:hover {
+    transform: none;
+  }
+}
+
+/* Breathing Glow Animations */
+@keyframes breatheBlue {
+  0%, 100% { box-shadow: 0 0 5px #0066cc; border-color: rgba(0,102,204,0.3); }
+  50% { box-shadow: 0 0 20px #0066cc; border-color: #0066cc; }
+}
+.glow-blue { animation: breatheBlue 3.5s ease-in-out infinite; }
+
+@keyframes breatheGreen {
+  0%, 100% { box-shadow: 0 0 5px #28a745; border-color: rgba(40,167,69,0.3); }
+  50% { box-shadow: 0 0 20px #28a745; border-color: #28a745; }
+}
+.glow-green { animation: breatheGreen 3.2s ease-in-out infinite; }
+
+@keyframes breathePurple {
+  0%, 100% { box-shadow: 0 0 5px #9c27b0; border-color: rgba(156,39,176,0.3); }
+  50% { box-shadow: 0 0 20px #9c27b0; border-color: #9c27b0; }
+}
+.glow-purple { animation: breathePurple 3.8s ease-in-out infinite; }
+
+@keyframes breatheOrange {
+  0%, 100% { box-shadow: 0 0 5px #ff9800; border-color: rgba(255,152,0,0.3); }
+  50% { box-shadow: 0 0 20px #ff9800; border-color: #ff9800; }
+}
+.glow-orange { animation: breatheOrange 3.4s ease-in-out infinite; }
+
+@keyframes breatheCyan {
+  0%, 100% { box-shadow: 0 0 5px #00d4ff; border-color: rgba(0,212,255,0.3); }
+  50% { box-shadow: 0 0 20px #00d4ff; border-color: #00d4ff; }
+}
+.glow-cyan { animation: breatheCyan 3.6s ease-in-out infinite; }
+

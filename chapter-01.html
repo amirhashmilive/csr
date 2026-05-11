@@ -246,7 +246,6 @@
                     align-items: center;
                     text-align: center;
                     padding: 1.5rem 1rem;
-                    transition: all 0.3s ease;
                     cursor: default;
                     position: relative;
                 }
@@ -283,28 +282,27 @@
 
                 .flow-card:hover {
                     background: var(--accent-cg) !important;
-                    transform: scale(1.15);
-                    z-index: 10;
                 }
 
                 .flow-card:hover h3, .flow-card:hover h4, .flow-card:hover p {
                     color: #ffffff !important;
                 }
 
+                .flow-card:hover .hover-hint {
+                    color: #ffffff !important;
+                    opacity: 1 !important;
+                }
+
                 .flow-arrow {
                     font-size: 2rem;
                     color: var(--accent-cg);
-                }
-
-                .focal-card {
-                    box-shadow: 0 0 20px var(--accent-cg);
-                    border: 2px solid var(--accent-cg);
                 }
             </style>
 
             <div class="flow-container">
                 <!-- Card 1 -->
-                <div class="glass-card flow-card">
+                <div class="glass-card flow-card magnify-2x glow-blue">
+                    <span class="hover-hint" style="position: absolute; top: 10px; right: 10px; font-size: 1.1rem; color: var(--text-muted); opacity: 0.6; pointer-events: none; transition: all 0.3s ease;">↗</span>
                     <div class="default-state">
                         <h3 style="color: var(--accent-cg); font-size: 1.2rem;">PILLAR 1</h3>
                         <p style="font-size: 1.1rem; font-weight: 600;">Who did it?</p>
@@ -319,7 +317,8 @@
                 <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
 
                 <!-- Card 2 -->
-                <div class="glass-card flow-card">
+                <div class="glass-card flow-card magnify-2x glow-green">
+                    <span class="hover-hint" style="position: absolute; top: 10px; right: 10px; font-size: 1.1rem; color: var(--text-muted); opacity: 0.6; pointer-events: none; transition: all 0.3s ease;">↗</span>
                     <div class="default-state">
                         <h3 style="color: var(--accent-jh); font-size: 1.2rem;">PILLAR 2</h3>
                         <p style="font-size: 1.1rem; font-weight: 600;">How did they do it?</p>
@@ -334,7 +333,8 @@
                 <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
 
                 <!-- Card 3 -->
-                <div class="glass-card flow-card">
+                <div class="glass-card flow-card magnify-2x glow-purple">
+                    <span class="hover-hint" style="position: absolute; top: 10px; right: 10px; font-size: 1.1rem; color: var(--text-muted); opacity: 0.6; pointer-events: none; transition: all 0.3s ease;">↗</span>
                     <div class="default-state">
                         <h3 style="color: var(--success-color); font-size: 1.2rem;">PILLAR 3</h3>
                         <p style="font-size: 1.1rem; font-weight: 600;">What did they do?</p>
@@ -349,7 +349,8 @@
                 <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
 
                 <!-- Card 4 -->
-                <div class="glass-card flow-card">
+                <div class="glass-card flow-card magnify-2x glow-orange">
+                    <span class="hover-hint" style="position: absolute; top: 10px; right: 10px; font-size: 1.1rem; color: var(--text-muted); opacity: 0.6; pointer-events: none; transition: all 0.3s ease;">↗</span>
                     <div class="default-state">
                         <h3 style="color: var(--warning-color); font-size: 1.2rem;">PILLAR 4</h3>
                         <p style="font-size: 1.1rem; font-weight: 600;">What was the impact?</p>
@@ -364,8 +365,8 @@
                 <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
 
                 <!-- Card 5 -->
-                <div class="glass-card flow-card focal-card">
-                    <span class="badge" style="position: absolute; top: -10px; right: 10px; background: var(--accent-cg); font-size: 0.7rem; color: #fff;">FOCAL VARIABLE</span>
+                <div class="glass-card flow-card magnify-2x glow-cyan">
+                    <span class="hover-hint" style="position: absolute; top: 10px; right: 10px; font-size: 1.1rem; color: var(--text-muted); opacity: 0.6; pointer-events: none; transition: all 0.3s ease;">↗</span>
                     <div class="default-state">
                         <h3 style="color: var(--accent-cg); font-size: 1.1rem;">PILLAR 5 (FOCUS)</h3>
                         <p style="font-size: 1.1rem; font-weight: 600;">How they communicated?</p>
