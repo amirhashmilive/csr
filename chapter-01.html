@@ -246,7 +246,7 @@
 
             <div class="pillar-grid">
                 <!-- Card 1 -->
-                <div class="glass-card hover-magnify" style="text-align: center; position: relative; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="glass-card hover-magnify" style="text-align: center; position: relative; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" data-pillar-image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop">
                     <h3 style="color: var(--accent-cg); font-size: 1.1rem; margin-bottom: 0.5rem;">🏢 Pillar 1</h3>
                     <h4 style="margin-bottom: 1rem; font-size: 1.05rem;">Who did it?</h4>
                     <p style="font-weight: 700; color: var(--accent-jh); font-size: 0.95rem; margin-bottom: 0.5rem;">Corporate Entity</p>
@@ -256,7 +256,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="glass-card hover-magnify" style="text-align: center; position: relative; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="glass-card hover-magnify" style="text-align: center; position: relative; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" data-pillar-image="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&auto=format&fit=crop">
                     <h3 style="color: var(--accent-cg); font-size: 1.1rem; margin-bottom: 0.5rem;">🤝 Pillar 2</h3>
                     <h4 style="margin-bottom: 1rem; font-size: 1.05rem;">How did they do it?</h4>
                     <p style="font-weight: 700; color: var(--accent-jh); font-size: 0.95rem; margin-bottom: 0.5rem;">Implementation Agency</p>
@@ -266,7 +266,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="glass-card hover-magnify" style="text-align: center; position: relative; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="glass-card hover-magnify" style="text-align: center; position: relative; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" data-pillar-image="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2104&auto=format&fit=crop">
                     <h3 style="color: var(--accent-cg); font-size: 1.1rem; margin-bottom: 0.5rem;">🎯 Pillar 3</h3>
                     <h4 style="margin-bottom: 1rem; font-size: 1.05rem;">What did they do?</h4>
                     <p style="font-weight: 700; color: var(--accent-jh); font-size: 0.95rem; margin-bottom: 0.5rem;">Initiative Type</p>
@@ -276,7 +276,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="glass-card hover-magnify" style="text-align: center; position: relative; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="glass-card hover-magnify" style="text-align: center; position: relative; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" data-pillar-image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop">
                     <h3 style="color: var(--accent-cg); font-size: 1.1rem; margin-bottom: 0.5rem;">📊 Pillar 4</h3>
                     <h4 style="margin-bottom: 1rem; font-size: 1.05rem;">What was the impact?</h4>
                     <p style="font-weight: 700; color: var(--accent-jh); font-size: 0.95rem; margin-bottom: 0.5rem;">Impact &amp; Outcome</p>
@@ -286,7 +286,7 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="glass-card hover-magnify" style="text-align: center; position: relative; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="glass-card hover-magnify" style="text-align: center; position: relative; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: flex-start; cursor: pointer;" data-pillar-image="https://images.unsplash.com/photo-1577563906417-45a18e029474?q=80&w=2070&auto=format&fit=crop">
                     <h3 style="color: var(--accent-cg); font-size: 1.1rem; margin-bottom: 0.5rem;">💬 Pillar 5</h3>
                     <h4 style="margin-bottom: 1rem; font-size: 1.05rem;">How they communicated?</h4>
                     <p style="font-weight: 700; color: var(--accent-jh); font-size: 0.95rem; margin-bottom: 0.5rem;">Communication Strategy</p>
@@ -551,10 +551,49 @@
 
     </div>
 
+    <div id="pillarSlider" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closePillarSlider()">&times;</button>
+            <img id="pillarSliderImg" class="lightbox-img" src="" alt="Pillar Image">
+        </div>
+    </div>
+
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/charts.js"></script>
     <script>
+        // Pillar Slider Logic
+        const pillarSlider = document.getElementById('pillarSlider');
+        const pillarSliderImg = document.getElementById('pillarSliderImg');
+
+        function openPillarSlider(imgSrc) {
+            pillarSliderImg.src = imgSrc;
+            pillarSlider.classList.add('active');
+        }
+
+        function closePillarSlider() {
+            pillarSlider.classList.remove('active');
+            pillarSliderImg.src = '';
+        }
+
+        document.querySelectorAll('[data-pillar-image]').forEach(card => {
+            card.addEventListener('click', () => {
+                openPillarSlider(card.getAttribute('data-pillar-image'));
+            });
+        });
+
+        pillarSlider.addEventListener('click', (e) => {
+            if (e.target === pillarSlider || e.target.classList.contains('lightbox-content')) {
+                closePillarSlider();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && pillarSlider.classList.contains('active')) {
+                closePillarSlider();
+            }
+        });
+
         window.renderPageCharts = function(colors) {
             createChart('expenditureChart', 'bar', {
                 labels: ['Chhattisgarh', 'Jharkhand'],
