@@ -118,26 +118,34 @@
         <!-- Slide 2: Evolution of CSR -->
         <section class="slide">
             <h2 class="slide-title">Evolution of CSR Theory</h2>
+
+            <!-- Hidden slider triggers — all 6 images registered in order -->
+            <span class="theory-click" data-image="assets/images/chapter-02/theories/image-1.webp" style="display:none;"></span>
+            <span class="theory-click" data-image="assets/images/chapter-02/theories/image-2.webp" style="display:none;"></span>
+            <span class="theory-click" data-image="assets/images/chapter-02/theories/image-3.webp" style="display:none;"></span>
+            <span class="theory-click" data-image="assets/images/chapter-02/theories/image-4.webp" style="display:none;"></span>
+            <span class="theory-click" data-image="assets/images/chapter-02/theories/image-5.webp" style="display:none;"></span>
+            <span class="theory-click" data-image="assets/images/chapter-02/theories/image-6.webp" style="display:none;"></span>
             
             <div class="timeline-horizontal" style="margin-top: 4rem;">
                 <div class="timeline-node">
                     <div class="timeline-label">
-                        <div class="timeline-author">Bowen (1953)</div>
+                        <div class="timeline-author theory-name-btn" id="btn-bowen" title="Click to view slides" style="cursor: pointer; text-decoration: underline dotted; transition: color 0.2s;">Bowen (1953)</div>
                         <div style="font-size: 0.9rem; color: var(--text-muted);">"Father of CSR". Coined the concept of social responsibilities of businessmen.</div>
                     </div>
                 </div>
                 
                 <div class="timeline-node">
                     <div class="timeline-label">
-                        <div class="timeline-author">Carroll (1991)</div>
+                        <div class="timeline-author theory-name-btn" id="btn-carroll" title="Click to view slides" style="cursor: pointer; text-decoration: underline dotted; transition: color 0.2s;">Carroll (1991)</div>
                         <div style="font-size: 0.9rem; color: var(--text-muted);">Developed the 4-part Pyramid (Economic, Legal, Ethical, Philanthropic).</div>
                     </div>
                 </div>
                 
                 <div class="timeline-node">
                     <div class="timeline-label">
-                        <div class="timeline-author">Porter & Kramer (2011)</div>
-                        <div style="font-size: 0.9rem; color: var(--text-muted);">Introduced "Creating Shared Value" (CSV) - aligning business & social goals.</div>
+                        <div class="timeline-author theory-name-btn" id="btn-porter" title="Click to view slides" style="cursor: pointer; text-decoration: underline dotted; transition: color 0.2s;">Porter &amp; Kramer (2011)</div>
+                        <div style="font-size: 0.9rem; color: var(--text-muted);">Introduced "Creating Shared Value" (CSV) - aligning business &amp; social goals.</div>
                     </div>
                 </div>
             </div>
@@ -396,6 +404,34 @@
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/charts.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Init the theory slider with all 6 hidden triggers
+            if (typeof initLightbox === 'function') {
+                initLightbox('.theory-click', 'theory');
+            }
+
+            // Wire each visible theorist name to click the correct hidden trigger
+            const triggers = document.querySelectorAll('.theory-click');
+
+            document.getElementById('btn-bowen').addEventListener('click', () => {
+                if (triggers[0]) triggers[0].click();
+            });
+            document.getElementById('btn-carroll').addEventListener('click', () => {
+                if (triggers[2]) triggers[2].click();
+            });
+            document.getElementById('btn-porter').addEventListener('click', () => {
+                if (triggers[4]) triggers[4].click();
+            });
+
+            // Hover colour highlight for theorist name buttons
+            document.querySelectorAll('.theory-name-btn').forEach(btn => {
+                btn.addEventListener('mouseenter', () => btn.style.color = 'var(--accent-cg)');
+                btn.addEventListener('mouseleave', () => btn.style.color = '');
+            });
+        });
+    </script>
     <script>
         window.renderPageCharts = function(colors) {
             createChart('sectorChart', 'pie', {
