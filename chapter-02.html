@@ -176,28 +176,43 @@
         <!-- Slide 4: Morsing & Schultz -->
         <section class="slide">
             <h2 class="slide-title">CSR Communication Strategies</h2>
-            <h3 class="slide-subtitle">Morsing & Schultz (2006)</h3>
+            <h3 class="slide-subtitle">Morsing &amp; Schultz (2006)</h3>
             
             <div class="strategy-diagram">
                 <div class="strategy-row">
                     <div style="flex: 1; text-align: right; font-weight: bold;">Corporate Entity</div>
                     <div class="arrow-one-way" style="flex: 0;"></div>
                     <div style="flex: 1;">Stakeholders</div>
-                    <div style="flex: 1; color: var(--text-muted);"><strong>Information Strategy</strong><br>One-way, telling, not listening.</div>
+                    <div style="flex: 1; color: var(--text-muted);">
+                        <!-- Hidden triggers for Information Strategy slider -->
+                        <span class="info-strategy-click" data-image="assets/images/chapter-02/strategies/info-theory.webp" style="display:none;"></span>
+                        <span class="info-strategy-click" data-image="assets/images/chapter-02/strategies/info-application.webp" style="display:none;"></span>
+                        <strong><span class="strategy-name-btn" id="btn-info" title="Click to view slides" style="cursor: pointer; text-decoration: underline dotted; transition: color 0.2s;">Information Strategy</span></strong><br>One-way, telling, not listening.
+                    </div>
                 </div>
                 
                 <div class="strategy-row">
                     <div style="flex: 1; text-align: right; font-weight: bold;">Corporate Entity</div>
                     <div class="arrow-asymm" style="flex: 0;"></div>
                     <div style="flex: 1;">Stakeholders</div>
-                    <div style="flex: 1; color: var(--text-muted);"><strong>Response Strategy</strong><br>Two-way asymmetric. Feedback used only to adjust message.</div>
+                    <div style="flex: 1; color: var(--text-muted);">
+                        <!-- Hidden triggers for Response Strategy slider -->
+                        <span class="response-strategy-click" data-image="assets/images/chapter-02/strategies/response-theory.webp" style="display:none;"></span>
+                        <span class="response-strategy-click" data-image="assets/images/chapter-02/strategies/response-application.webp" style="display:none;"></span>
+                        <strong><span class="strategy-name-btn" id="btn-response" title="Click to view slides" style="cursor: pointer; text-decoration: underline dotted; transition: color 0.2s;">Response Strategy</span></strong><br>Two-way asymmetric. Feedback used only to adjust message.
+                    </div>
                 </div>
                 
                 <div class="strategy-row" style="border-color: var(--accent-cg); box-shadow: var(--neon-glow);">
                     <div style="flex: 1; text-align: right; font-weight: bold; color: var(--accent-cg);">Corporate Entity</div>
                     <div class="arrow-two-way" style="flex: 0;"></div>
                     <div style="flex: 1; color: var(--accent-cg);">Stakeholders</div>
-                    <div style="flex: 1;"><strong>Involvement Strategy</strong><br>Two-way symmetric. Dialogue, mutual adaptation, ideal model.</div>
+                    <div style="flex: 1;">
+                        <!-- Hidden triggers for Involvement Strategy slider -->
+                        <span class="involvement-strategy-click" data-image="assets/images/chapter-02/strategies/involvement-theory.webp" style="display:none;"></span>
+                        <span class="involvement-strategy-click" data-image="assets/images/chapter-02/strategies/involvement-application.webp" style="display:none;"></span>
+                        <strong><span class="strategy-name-btn" id="btn-involvement" title="Click to view slides" style="cursor: pointer; text-decoration: underline dotted; transition: color 0.2s;">Involvement Strategy</span></strong><br>Two-way symmetric. Dialogue, mutual adaptation, ideal model.
+                    </div>
                 </div>
             </div>
         </section>
@@ -427,6 +442,34 @@
 
             // Hover colour highlight for theorist name buttons
             document.querySelectorAll('.theory-name-btn').forEach(btn => {
+                btn.addEventListener('mouseenter', () => btn.style.color = 'var(--accent-cg)');
+                btn.addEventListener('mouseleave', () => btn.style.color = '');
+            });
+
+            // Init 3 separate strategy sliders (each 2 images)
+            if (typeof initLightbox === 'function') {
+                initLightbox('.info-strategy-click', 'info-strategy');
+                initLightbox('.response-strategy-click', 'response-strategy');
+                initLightbox('.involvement-strategy-click', 'involvement-strategy');
+            }
+
+            // Wire strategy name buttons to open their respective sliders
+            const infoTriggers        = document.querySelectorAll('.info-strategy-click');
+            const responseTriggers    = document.querySelectorAll('.response-strategy-click');
+            const involvementTriggers = document.querySelectorAll('.involvement-strategy-click');
+
+            document.getElementById('btn-info').addEventListener('click', () => {
+                if (infoTriggers[0]) infoTriggers[0].click();
+            });
+            document.getElementById('btn-response').addEventListener('click', () => {
+                if (responseTriggers[0]) responseTriggers[0].click();
+            });
+            document.getElementById('btn-involvement').addEventListener('click', () => {
+                if (involvementTriggers[0]) involvementTriggers[0].click();
+            });
+
+            // Hover colour highlight for strategy name buttons
+            document.querySelectorAll('.strategy-name-btn').forEach(btn => {
                 btn.addEventListener('mouseenter', () => btn.style.color = 'var(--accent-cg)');
                 btn.addEventListener('mouseleave', () => btn.style.color = '');
             });
