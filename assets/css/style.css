@@ -714,3 +714,83 @@ html {
     border-radius: 12px;
     box-shadow: var(--neon-glow);
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    /* Prevent horizontal overflow */
+    html, body, .slide-container, .slide {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    /* Reduce slide padding */
+    .slide {
+        padding: 1rem !important;
+    }
+
+    /* Convert grid layouts to single column */
+    .grid-2, .grid-3, .grid-4, .grid-5, .architecture-grid, .pillar-grid, .strategy-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* For architecture-grid specifically, make it 2 columns */
+    .architecture-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* Convert flexbox rows to column direction */
+    .flex-row, .strategy-flow, .pillar-flow {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* For Five-Pillar Framework, make it 2 columns */
+    .pillar-flow {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* Stack information flow map and integrated framework boxes vertically */
+    .slide > div[style*="display: flex"], 
+    .glass-card > div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+    
+    .glass-card > div[style*="display: flex"] > div {
+        width: 100% !important;
+    }
+
+    /* Hide horizontal arrows */
+    .fa-arrow-right, .fas.fa-arrow-right, .arrow-icon, .fa-arrows-alt-h {
+        display: none !important;
+    }
+
+    /* Reduce font sizes */
+    h1, .slide-title {
+        font-size: 1.8rem !important;
+    }
+    h2, .slide-subtitle {
+        font-size: 1.4rem !important;
+    }
+    h3 {
+        font-size: 1.2rem !important;
+    }
+    body, p, li, td, th {
+        font-size: 14px !important;
+    }
+
+    /* Make images scale properly */
+    img, video {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Increase touch target size for cards */
+    .glass-card {
+        padding: 1.5rem !important;
+    }
+}
