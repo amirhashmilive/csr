@@ -85,6 +85,44 @@
         .var-table th { background: rgba(0,0,0,0.2); padding: 1rem; text-align: center; }
         .var-table td { padding: 1.5rem; vertical-align: top; border: 1px solid var(--bg-glass-border); }
         .var-table ul { padding-left: 1.5rem; line-height: 2; }
+
+        /* Theoretical Architecture Grid */
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 2rem;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .architecture-card {
+            grid-column: span 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 180px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            padding: 2rem;
+            border: 2px solid var(--accent-cg) !important;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
+            transition: all 0.3s ease !important;
+            background: var(--bg-glass);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+        }
+
+        .architecture-card:nth-child(4) { grid-column: 2 / 4; }
+        .architecture-card:nth-child(5) { grid-column: 4 / 6; }
+
+        .architecture-card:hover {
+            transform: none !important; /* No magnification */
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4) !important;
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: var(--accent-cg) !important;
+        }
     </style>
 </head>
 <body>
@@ -120,35 +158,14 @@
 
         <!-- Slide 2: Theoretical Architecture -->
         <section class="slide" style="padding-top: 2rem; padding-bottom: 2rem; overflow-y: hidden; justify-content: center;">
-            <h2 class="slide-title" style="margin-bottom: 2rem; text-align: center;">Theoretical Architecture</h2>
+            <h2 class="slide-title" style="margin-bottom: 3rem; text-align: center;">Theoretical Architecture</h2>
             
-            <div style="display: flex; flex-direction: column; gap: 0.8rem; width: 100%; max-width: 900px;">
-                
-                <div class="glass-card" style="text-align: center; padding: 1rem 1.5rem;">
-                    <h3 class="neon-text-cg" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Historical Foundation</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Bowen (1953) &rarr; Carroll (1991) &rarr; Porter &amp; Kramer (2011)</p>
-                </div>
-                
-                <div class="glass-card" style="text-align: center; padding: 1rem 1.5rem;">
-                    <h3 class="neon-text-jh" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Grand Communication Theories</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Stakeholder Theory | Two-Way Symmetrical | Agenda-Setting | Diffusion of Innovations</p>
-                </div>
-                
-                <div class="glass-card" style="text-align: center; padding: 1rem 1.5rem;">
-                    <h3 class="neon-text-cg" style="font-size: 1.1rem; margin-bottom: 0.5rem;">CSR Communication Strategies</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Morsing &amp; Schultz (2006) | Information &rarr; Response &rarr; Involvement</p>
-                </div>
-                
-                <div class="glass-card" style="text-align: center; padding: 1rem 1.5rem;">
-                    <h3 style="color: var(--warning-color); font-size: 1.1rem; margin-bottom: 0.5rem;">Institutional &amp; Legal Context</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Section 135, Companies Act 2013 | Schedule VII | 2021 Amendments</p>
-                </div>
-                
-                <div class="glass-card" style="text-align: center; padding: 1rem 1.5rem; border-color: var(--accent-cg);">
-                    <h3 class="neon-text-cg" style="font-size: 1.1rem; margin-bottom: 0.5rem;">Five-Pillar Framework (Original Contribution)</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Pillar 1: Corporate &rarr; Pillar 2: Implementation &rarr; Pillar 3: Initiative &rarr; Pillar 4: Impact &rarr; Pillar 5: Communication</p>
-                </div>
-                
+            <div class="architecture-grid">
+                <div class="glass-card architecture-card">01 Legal Foundation</div>
+                <div class="glass-card architecture-card">02 Evolution of CSR</div>
+                <div class="glass-card architecture-card">03 Grand Theories</div>
+                <div class="glass-card architecture-card">04 CSR Strategies</div>
+                <div class="glass-card architecture-card">05 Five-Pillar Framework</div>
             </div>
         </section>
 
