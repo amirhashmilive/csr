@@ -182,3 +182,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// =====================================================================
+// AUTOMATIC HASH NAVIGATION (Scrolls to anchor links like #thesis-structure)
+// =====================================================================
+window.addEventListener('load', () => {
+    if (window.location.hash) {
+        setTimeout(() => {
+            try {
+                const targetSlide = document.querySelector(window.location.hash);
+                if (targetSlide) {
+                    targetSlide.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            } catch (e) {
+                console.error("Invalid hash target:", e);
+            }
+        }, 200); // Slight delay ensures layout rendering and CSS scroll-snapping are complete
+    }
+});
+
