@@ -21,7 +21,7 @@ const popupData = {
         title: 'Clarity of Communication Gap',
         formula: 'Gap = % CG (Clear) - % JH (Clear)',
         rawData: 'CG: 86% | JH: 60% | Gap: 26 points',
-        whyMatters: '40% of beneficiaries in Jharkhand find CSR communication unclear. Without clarity, the intended societal betterment cannot be fully realized or appreciated.'
+        whyMatters: '40% of beneficiaries in Jharkhand find CSR communication unclear. Without clarity, the intended betterment of society cannot be fully realized or appreciated.'
     },
     'language-gap': {
         title: 'Local Language Usage Gap',
