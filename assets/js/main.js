@@ -120,3 +120,65 @@ document.addEventListener('DOMContentLoaded', () => {
         cinematicObserver.observe(slide);
     });
 })();
+
+// =====================================================================
+// AUTOMATIC TEXT ENFORCEMENT
+// =====================================================================
+function enforceBettermentOfSociety() {
+    const walkDOM = (node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+            const text = node.nodeValue;
+            const regex = /societal\s+betterment/gi;
+            if (regex.test(text)) {
+                node.nodeValue = text.replace(regex, (match) => {
+                    if (match === match.toUpperCase()) {
+                        return "BETTERMENT OF SOCIETY";
+                    } else if (match === match.toLowerCase()) {
+                        return "betterment of society";
+                    } else if (match.split(/\s+/).every(w => /^[A-Z]/.test(w))) {
+                        return "Betterment of Society";
+                    } else if (/^[A-Z]/.test(match)) {
+                        return "Betterment of society";
+                    }
+                    return "betterment of society";
+                });
+                console.log("✅ Enforcement active: 'societal betterment' → 'betterment of society'");
+            }
+        } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+            for (let i = 0; i < node.childNodes.length; i++) {
+                walkDOM(node.childNodes[i]);
+            }
+        }
+    };
+    
+    // Only run if document.body is available
+    if (document.body) {
+        walkDOM(document.body);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', enforceBettermentOfSociety);
+window.addEventListener('load', enforceBettermentOfSociety);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const textObserver = new MutationObserver((mutations) => {
+        let shouldEnforce = false;
+        for (const mutation of mutations) {
+            if (mutation.addedNodes.length > 0 || mutation.type === 'characterData') {
+                shouldEnforce = true;
+                break;
+            }
+        }
+        if (shouldEnforce) {
+            // Temporarily disconnect to avoid infinite loop when changing text
+            textObserver.disconnect();
+            enforceBettermentOfSociety();
+            textObserver.observe(document.body, { childList: true, subtree: true, characterData: true });
+        }
+    });
+
+    if (document.body) {
+        textObserver.observe(document.body, { childList: true, subtree: true, characterData: true });
+    }
+});
+
