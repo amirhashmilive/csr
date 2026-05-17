@@ -224,11 +224,14 @@
                     min-width: 180px;
                     text-align: center;
                     padding: 1.5rem 1rem;
-                    transition: all 0.3s ease;
+                    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+                    transform-origin: center;
+                    position: relative;
+                    z-index: 1;
                     cursor: default;
                 }
                 .gap-card:hover {
-                    transform: scale(1.15);
+                    transform: scale(1.5);
                     z-index: 10;
                     box-shadow: 0 15px 35px rgba(0,0,0,0.6);
                     background: rgba(20, 20, 25, 0.95);
@@ -238,7 +241,7 @@
                     font-size: 0.9rem;
                     color: var(--text-muted);
                     line-height: 1.4;
-                    transition: all 0.3s ease;
+                    transition: color 0.25s ease;
                 }
                 .gap-card:hover .gap-detail {
                     color: #fff;
