@@ -123,6 +123,24 @@
             background: rgba(255, 255, 255, 0.1) !important;
             border-color: var(--accent-cg) !important;
         }
+
+        /* Convergence Funnel */
+        .funnel-flow { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; max-width: 1000px; width: 100%; }
+        .funnel-top { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        .funnel-top .glass-card { flex: 1; min-width: 180px; max-width: 220px; text-align: center; padding: 1.2rem; }
+        .funnel-arrow { font-size: 2rem; color: var(--text-muted); animation: flowDown 1.5s ease-in-out infinite; }
+        @keyframes flowDown { 0%,100% { opacity: 0.4; transform: translateY(-3px); } 50% { opacity: 1; transform: translateY(3px); } }
+        .funnel-bridge { width: 100%; max-width: 600px; text-align: center; border-color: var(--warning-color) !important; }
+        .funnel-result { width: 100%; max-width: 700px; text-align: center; border-color: var(--accent-cg) !important; box-shadow: 0 0 25px rgba(0, 212, 255, 0.3) !important; }
+
+        /* Theory use tag */
+        .theory-use { margin-top: 1.5rem; padding: 1rem; background: rgba(0, 212, 255, 0.08); border-left: 3px solid var(--accent-cg); border-radius: 0 8px 8px 0; }
+        .theory-use strong { color: var(--accent-cg); }
+
+        /* Mapping table */
+        .map-table { width: 100%; border-collapse: collapse; }
+        .map-table th { padding: 1rem; background: rgba(0, 212, 255, 0.1); text-align: left; border-bottom: 2px solid var(--accent-cg); }
+        .map-table td { padding: 1rem; border-bottom: 1px solid var(--bg-glass-border); vertical-align: top; }
     </style>
 </head>
 <body>
@@ -174,6 +192,34 @@
             <div class="glass-card" style="text-align: center; max-width: 900px;">
                 <h1 style="font-size: 3rem; margin-bottom: 1.5rem; color: #fff;">Can corporate money actually buy community trust?</h1>
                 <p style="font-size: 1.5rem; color: var(--text-muted);">This thesis systematically climbs through five levels of theoretical architecture to answer that question.</p>
+            </div>
+        </section>
+
+        <!-- Slide: The Convergence Funnel (NEW) -->
+        <section class="slide" style="justify-content: center; height: 100vh;">
+            <h2 class="slide-title" style="text-align: center; margin-bottom: 2rem;">How the Theories Converge</h2>
+            
+            <div class="funnel-flow">
+                <div class="funnel-top">
+                    <div class="glass-card"><h4 style="color: var(--accent-cg);">Stakeholder Theory</h4><p style="font-size: 0.8rem; color: var(--text-muted);">WHO to communicate with</p></div>
+                    <div class="glass-card"><h4 style="color: var(--success-color);">Two-Way Symmetrical</h4><p style="font-size: 0.8rem; color: var(--text-muted);">HOW to communicate</p></div>
+                    <div class="glass-card"><h4 style="color: var(--warning-color);">Agenda-Setting</h4><p style="font-size: 0.8rem; color: var(--text-muted);">WHAT is communicated</p></div>
+                    <div class="glass-card"><h4 style="color: #a020f0;">Diffusion of Innovations</h4><p style="font-size: 0.8rem; color: var(--text-muted);">HOW FAST it spreads</p></div>
+                </div>
+
+                <div class="funnel-arrow"><i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i></div>
+
+                <div class="glass-card funnel-bridge">
+                    <h4 style="color: var(--warning-color); margin-bottom: 0.5rem;">Morsing & Schultz (2006)</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Operationalization Bridge — classifies communication into Information, Response, and Involvement strategies</p>
+                </div>
+
+                <div class="funnel-arrow"><i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i></div>
+
+                <div class="glass-card funnel-result">
+                    <h3 style="color: var(--accent-cg); margin-bottom: 0.5rem;">★ Five-Pillar Framework</h3>
+                    <p style="color: #fff;">Original Contribution — maps the complete lifecycle of a CSR initiative</p>
+                </div>
             </div>
         </section>
 
@@ -246,6 +292,34 @@
             </div>
         </section>
 
+        <!-- Slide: Why These Four? (NEW) -->
+        <section class="slide" style="height: 100vh; justify-content: center;">
+            <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">Why These Four Theories?</h2>
+            
+            <div class="grid-2" style="max-width: 900px; width: 100%; margin: 0 auto;">
+                <div class="glass-card" style="border-left: 4px solid var(--accent-cg);">
+                    <h4 style="color: var(--accent-cg); margin-bottom: 0.5rem;">Stakeholder Theory</h4>
+                    <p style="font-size: 1.1rem;">Answers: <strong style="color: #fff;">WHO</strong> should be communicated to?</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Defines tribal communities as primary stakeholders, not secondary.</p>
+                </div>
+                <div class="glass-card" style="border-left: 4px solid var(--success-color);">
+                    <h4 style="color: var(--success-color); margin-bottom: 0.5rem;">Two-Way Symmetrical</h4>
+                    <p style="font-size: 1.1rem;">Answers: <strong style="color: #fff;">HOW</strong> should communication flow?</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Tests whether dialogue outperforms one-way messaging.</p>
+                </div>
+                <div class="glass-card" style="border-left: 4px solid var(--warning-color);">
+                    <h4 style="color: var(--warning-color); margin-bottom: 0.5rem;">Agenda-Setting</h4>
+                    <p style="font-size: 1.1rem;">Answers: <strong style="color: #fff;">WHAT</strong> gets communicated?</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Tests whether corporate priorities match community needs.</p>
+                </div>
+                <div class="glass-card" style="border-left: 4px solid #a020f0;">
+                    <h4 style="color: #a020f0; margin-bottom: 0.5rem;">Diffusion of Innovations</h4>
+                    <p style="font-size: 1.1rem;">Answers: <strong style="color: #fff;">HOW FAST</strong> does awareness spread?</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Maps the adoption curve in low-literacy tribal settings.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Slide E: Level 4 - CSR Communication Strategies -->
         <section class="slide" style="height: 100vh; justify-content: center;">
             <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">Level 4: CSR Communication Strategies</h2>
@@ -272,6 +346,10 @@
             </div>
             
             <p style="text-align: center; font-style: italic; color: var(--text-muted);">Morsing &amp; Schultz (2006)</p>
+            
+            <div class="glass-card" style="max-width: 800px; width: 100%; margin: 2rem auto 0 auto; text-align: center; background: rgba(0, 212, 255, 0.05); border-color: var(--accent-cg);">
+                <p style="font-size: 1rem;"><i class="fas fa-calculator" style="color: var(--accent-cg); margin-right: 0.5rem;"></i> <strong>In this study:</strong> All 400 survey responses are classified into these three strategies using a <strong style="color: var(--accent-cg);">CES composite score</strong> (Communication Effectiveness Score).</p>
+            </div>
         </section>
 
         <!-- Slide F: The Core Argument -->
@@ -284,6 +362,36 @@
                 <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">You can spend millions building a school, but if the community doesn't understand it, wasn't consulted on it, or doesn't trust you, the project fails.</p>
                 
                 <p style="font-size: 1.3rem; font-weight: bold; color: var(--accent-cg);">The true impact of CSR is determined by HOW it is communicated, not just by the money spent.</p>
+            </div>
+        </section>
+
+        <!-- Slide: Output vs Outcome (Moved from Ch 02) -->
+        <section class="slide">
+            <h2 class="slide-title">Why Communication Matters More Than Money</h2>
+            
+            <div class="grid-2">
+                <div class="glass-card hover-magnify" style="text-align: center;">
+                    <h3 style="color: var(--accent-jh);">The Output Fallacy</h3>
+                    <div style="margin: 2rem 0;">
+                        <i class="fas fa-school" style="font-size: 3rem; color: var(--text-muted);"></i>
+                    </div>
+                    <p style="font-weight: 600;">"We built 10 schools."</p>
+                    <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Measures activity and expenditure, but not the actual change in human lives.</p>
+                </div>
+                
+                <div class="glass-card hover-magnify" style="text-align: center; border-color: var(--accent-cg);">
+                    <h3 style="color: var(--accent-cg);">The Outcome Approach</h3>
+                    <div style="margin: 2rem 0;">
+                        <i class="fas fa-user-graduate" style="font-size: 3rem; color: var(--accent-cg);"></i>
+                    </div>
+                    <p style="font-weight: 600;">"Literacy increased by 15%."</p>
+                    <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Measures actual societal betterment and capacity building.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; text-align: center; max-width: 800px; font-style: italic;">
+                "Development requires the removal of major sources of unfreedom: poverty as well as tyranny, poor economic opportunities as well as systematic social deprivation." <br>
+                <strong style="color: var(--accent-cg); font-style: normal;">— Amartya Sen (Capability Approach)</strong>
             </div>
         </section>
 
@@ -337,6 +445,10 @@
                 <div class="theory-line"></div>
                 <div class="theory-circle" style="border-color: var(--accent-jh); color: var(--accent-jh);">Local<br>Community</div>
             </div>
+
+            <div class="theory-use" style="max-width: 800px; width: 100%;">
+                <strong>Used in this study to:</strong> Define tribal beneficiaries in CG and JH as primary stakeholders whose perception of CSR is the dependent variable.
+            </div>
         </section>
 
         <!-- Slide 3: Two-Way Symmetrical -->
@@ -360,6 +472,10 @@
                 
                 <div class="theory-circle" style="border-color: var(--success-color);">Beneficiary</div>
             </div>
+
+            <div class="theory-use" style="max-width: 800px; width: 100%;">
+                <strong>Used in this study to:</strong> Test whether companies using two-way dialogue (Involvement Strategy) achieve higher perceived societal betterment than those using one-way messaging.
+            </div>
         </section>
 
         <!-- Slide 4: Agenda Setting -->
@@ -379,6 +495,10 @@
                 </div>
                 <div class="theory-circle" style="border-color: var(--warning-color); border-radius: 8px;">Community<br>Perception</div>
             </div>
+
+            <div class="theory-use" style="max-width: 800px; width: 100%;">
+                <strong>Used in this study to:</strong> Analyze whether corporate communication priorities (education, health, environment) align with what tribal communities actually need.
+            </div>
         </section>
 
         <!-- Slide 5: Diffusion of Innovations -->
@@ -395,6 +515,50 @@
                 <div class="badge" style="background: rgba(160,32,240,0.4); color: #fff; border: 1px solid #a020f0; padding: 1rem;">Early Adopters (13.5%)</div>
                 <div class="badge" style="background: rgba(160,32,240,0.6); color: #fff; border: 1px solid #a020f0; padding: 1rem;">Early Majority (34%)</div>
                 <div class="badge" style="background: rgba(160,32,240,0.8); color: #fff; border: 1px solid #a020f0; padding: 1rem;">Late Majority (34%)</div>
+            </div>
+
+            <div class="theory-use" style="max-width: 800px; width: 100%;">
+                <strong>Used in this study to:</strong> Examine how CSR awareness penetrates tribal communities via opinion leaders (Gram Pradhan, Sarpanch) and whether Chhattisgarh's adoption curve differs from Jharkhand's.
+            </div>
+        </section>
+
+        <!-- Slide: Theory → Pillar Mapping (NEW) -->
+        <section class="slide">
+            <h2 class="slide-title">Theory → Pillar Mapping</h2>
+            <h3 class="slide-subtitle">How each theory feeds the Five-Pillar Framework</h3>
+            
+            <div class="glass-card hover-magnify" style="width: 100%; max-width: 950px;">
+                <table class="map-table">
+                    <thead>
+                        <tr>
+                            <th style="color: var(--accent-cg);">Theory</th>
+                            <th style="color: var(--warning-color);">Feeds Pillar</th>
+                            <th style="color: var(--success-color);">Research Question Answered</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stakeholder Theory</td>
+                            <td><strong>P1</strong> Corporate Entity + <strong>P2</strong> Implementation</td>
+                            <td>Who are the primary stakeholders of CSR?</td>
+                        </tr>
+                        <tr>
+                            <td>Agenda-Setting</td>
+                            <td><strong>P3</strong> Initiative Type</td>
+                            <td>Do corporate priorities match community needs?</td>
+                        </tr>
+                        <tr>
+                            <td>Diffusion of Innovations</td>
+                            <td><strong>P4</strong> Impact Measurement</td>
+                            <td>How fast does CSR awareness penetrate the community?</td>
+                        </tr>
+                        <tr>
+                            <td>Two-Way Symmetrical + Morsing & Schultz</td>
+                            <td><strong style="color: var(--accent-cg);">P5 Communication Strategy ★</strong></td>
+                            <td>Does dialogue-based communication improve perceived impact?</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
