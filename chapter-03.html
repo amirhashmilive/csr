@@ -10,39 +10,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <style>
-        .theory-diagram {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 2rem;
-            width: 100%;
-        }
-        
-        .theory-circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: var(--bg-glass);
-            border: 3px solid;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-weight: bold;
-            z-index: 2;
-        }
-        
-        .theory-line {
-            height: 4px;
-            width: 100px;
-            background: var(--text-muted);
-            z-index: 1;
-        }
-        
         .five-pillar-container {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1.5rem;
             width: 100%;
             max-width: 1000px;
             margin: 0 auto;
@@ -74,73 +45,103 @@
             flex: 1;
         }
         
-        .pillar-details {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        
-        .var-table { width: 100%; margin-top: 2rem; }
+        .var-table { width: 100%; margin-top: 1rem; font-size: 0.95rem; line-height: 1.6; }
         .var-table th { background: rgba(0,0,0,0.2); padding: 1rem; text-align: center; }
-        .var-table td { padding: 1.5rem; vertical-align: top; border: 1px solid var(--bg-glass-border); }
-        .var-table ul { padding-left: 1.5rem; line-height: 2; }
+        .var-table td { padding: 1.5rem; vertical-align: top; border: 1px solid var(--bg-glass-border); text-align: center;}
 
         /* Theoretical Architecture Grid */
         .architecture-grid {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
         .architecture-card {
-            grid-column: span 2;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            min-height: 180px;
-            font-size: 1.6rem;
-            font-weight: 700;
-            padding: 2rem;
+            min-height: 250px;
+            padding: 1.5rem 1rem;
             border: 2px solid var(--accent-cg) !important;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.1);
             transition: all 0.3s ease !important;
             background: var(--bg-glass);
             backdrop-filter: blur(10px);
             border-radius: 16px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .architecture-card:nth-child(4) { grid-column: 2 / 4; }
-        .architecture-card:nth-child(5) { grid-column: 4 / 6; }
+        .arch-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: transform 0.3s ease, top 0.3s ease;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .arch-content {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            position: absolute;
+            top: 5rem;
+            width: 90%;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            pointer-events: none;
+            text-align: left;
+        }
+
+        .arch-content ul {
+            list-style: none; padding: 0; margin: 0;
+        }
+        .arch-content li {
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+            line-height: 1.3;
+        }
+        .arch-content li:last-child { border-bottom: none; }
 
         .architecture-card:hover {
-            transform: none !important; /* No magnification */
+            transform: scale(1.05) !important;
             box-shadow: 0 0 30px rgba(0, 212, 255, 0.4) !important;
             background: rgba(255, 255, 255, 0.1) !important;
             border-color: var(--accent-cg) !important;
+            z-index: 10;
+        }
+
+        .architecture-card:hover .arch-title {
+            top: 1.5rem;
+            transform: translateY(0);
+        }
+
+        .architecture-card:hover .arch-content {
+            opacity: 1;
+            pointer-events: auto;
         }
 
         /* Convergence Funnel */
-        .funnel-flow { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; max-width: 1000px; width: 100%; }
+        .funnel-flow { display: flex; flex-direction: column; align-items: center; gap: 1rem; max-width: 1000px; width: 100%; }
         .funnel-top { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
         .funnel-top .glass-card { flex: 1; min-width: 180px; max-width: 220px; text-align: center; padding: 1.2rem; }
-        .funnel-arrow { font-size: 2rem; color: var(--text-muted); animation: flowDown 1.5s ease-in-out infinite; }
+        .funnel-arrow { font-size: 1.5rem; color: var(--text-muted); animation: flowDown 1.5s ease-in-out infinite; margin: 0.5rem 0; }
         @keyframes flowDown { 0%,100% { opacity: 0.4; transform: translateY(-3px); } 50% { opacity: 1; transform: translateY(3px); } }
-        .funnel-bridge { width: 100%; max-width: 600px; text-align: center; border-color: var(--warning-color) !important; }
-        .funnel-result { width: 100%; max-width: 700px; text-align: center; border-color: var(--accent-cg) !important; box-shadow: 0 0 25px rgba(0, 212, 255, 0.3) !important; }
-
-        /* Theory use tag */
-        .theory-use { margin-top: 1.5rem; padding: 1rem; background: rgba(0, 212, 255, 0.08); border-left: 3px solid var(--accent-cg); border-radius: 0 8px 8px 0; }
-        .theory-use strong { color: var(--accent-cg); }
+        .funnel-bridge { width: 100%; max-width: 600px; text-align: center; border-color: var(--warning-color) !important; padding: 1rem !important; }
+        .funnel-result { width: 100%; max-width: 700px; text-align: center; border-color: var(--accent-cg) !important; box-shadow: 0 0 25px rgba(0, 212, 255, 0.3) !important; padding: 1rem !important; }
 
         /* Mapping table */
         .map-table { width: 100%; border-collapse: collapse; }
         .map-table th { padding: 1rem; background: rgba(0, 212, 255, 0.1); text-align: left; border-bottom: 2px solid var(--accent-cg); }
-        .map-table td { padding: 1rem; border-bottom: 1px solid var(--bg-glass-border); vertical-align: top; }
+        .map-table td { padding: 1rem; border-bottom: 1px solid var(--bg-glass-border); vertical-align: middle; }
     </style>
 </head>
 <body>
@@ -166,40 +167,122 @@
     <div class="slide-container">
         
         <!-- Slide 1: Hero -->
-        <section class="slide">
+        <section class="slide" style="height: auto; min-height: 100vh; padding: 4rem 2rem;">
             <h2 class="slide-subtitle">Chapter 03</h2>
             <h1 class="slide-title">Theoretical & Conceptual Framework</h1>
-            <div class="glass-card" style="text-align: center; max-width: 800px;">
+            
+            <div class="glass-card" style="text-align: center; max-width: 800px; margin-bottom: 2rem;">
                 <h3 class="neon-text-cg" style="font-size: 1.8rem;">Establishing the foundational theories and introducing the comprehensive Five-Pillar Framework designed for this study.</h3>
+            </div>
+            
+            <div class="glass-card" style="max-width: 800px; width: 100%; margin: 0 auto 2rem auto; text-align: center; border-color: var(--accent-cg); box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #fff;">Financial expenditure is meaningless without an effective communication architecture.</h3>
+                <p style="font-size: 1.1rem; font-weight: bold; color: var(--accent-cg);">The true impact of CSR is determined by HOW it is communicated, not just by the money spent.</p>
+            </div>
+            
+            <div class="grid-2" style="max-width: 900px; margin: 0 auto 2rem auto;">
+                <div class="glass-card hover-magnify" style="text-align: center; padding: 1.5rem;">
+                    <h3 style="color: var(--accent-jh);">The Output Fallacy</h3>
+                    <div style="margin: 1rem 0;">
+                        <i class="fas fa-school" style="font-size: 2rem; color: var(--text-muted);"></i>
+                    </div>
+                    <p style="font-weight: 600;">"We built 10 schools."</p>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.85rem;">Measures activity and expenditure, but not the actual change in human lives.</p>
+                </div>
+                
+                <div class="glass-card hover-magnify" style="text-align: center; border-color: var(--accent-cg); padding: 1.5rem;">
+                    <h3 style="color: var(--accent-cg);">The Outcome Approach</h3>
+                    <div style="margin: 1rem 0;">
+                        <i class="fas fa-user-graduate" style="font-size: 2rem; color: var(--accent-cg);"></i>
+                    </div>
+                    <p style="font-weight: 600;">"Literacy increased by 15%."</p>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.85rem;">Measures actual societal betterment and capacity building.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; max-width: 800px; font-style: italic; margin: 0 auto;">
+                "Development requires the removal of major sources of unfreedom: poverty as well as tyranny, poor economic opportunities as well as systematic social deprivation." <br>
+                <strong style="color: var(--accent-cg); font-style: normal;">— Amartya Sen (Capability Approach)</strong>
             </div>
         </section>
 
         <!-- Slide 2: Theoretical Architecture -->
-        <section class="slide" style="padding-top: 2rem; padding-bottom: 2rem; overflow-y: hidden; justify-content: center;">
-            <h2 class="slide-title" style="margin-bottom: 3rem; text-align: center;">Theoretical Architecture</h2>
+        <section class="slide" style="justify-content: center; height: 100vh;">
+            <h2 class="slide-title" style="margin-bottom: 3rem; text-align: center;">Theoretical Architecture for Analysis</h2>
             
             <div class="architecture-grid">
-                <div class="glass-card architecture-card">01 Legal Foundation</div>
-                <div class="glass-card architecture-card">02 Evolution of CSR</div>
-                <div class="glass-card architecture-card">03 Grand Theories</div>
-                <div class="glass-card architecture-card">04 CSR Strategies</div>
-                <div class="glass-card architecture-card">05 Five-Pillar Framework</div>
+                <!-- Level 1 -->
+                <div class="glass-card architecture-card">
+                    <div class="arch-title">01<br>Legal Foundation</div>
+                    <div class="arch-content">
+                        <ul>
+                            <li>Companies Act 2013</li>
+                            <li>Section 135</li>
+                            <li>Schedule VII</li>
+                            <li>2021 Amendments</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Level 2 -->
+                <div class="glass-card architecture-card">
+                    <div class="arch-title">02<br>Evolution of CSR</div>
+                    <div class="arch-content">
+                        <ul>
+                            <li>Bowen (1953)</li>
+                            <li>Carroll (1991)</li>
+                            <li>Porter &amp; Kramer (2011)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Level 3 -->
+                <div class="glass-card architecture-card">
+                    <div class="arch-title">03<br>Grand Theories</div>
+                    <div class="arch-content">
+                        <ul>
+                            <li>Stakeholder Theory</li>
+                            <li>Two-Way Symmetrical</li>
+                            <li>Agenda-Setting</li>
+                            <li>Diffusion of Innovations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Level 4 -->
+                <div class="glass-card architecture-card">
+                    <div class="arch-title">04<br>CSR Strategies</div>
+                    <div class="arch-content">
+                        <p style="margin-bottom: 0.5rem; color: #fff;"><strong>Morsing &amp; Schultz</strong></p>
+                        <ul>
+                            <li>Information Strategy</li>
+                            <li>Response Strategy</li>
+                            <li>Involvement Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Level 5 -->
+                <div class="glass-card architecture-card">
+                    <div class="arch-title">05<br>Five-Pillar Framework</div>
+                    <div class="arch-content">
+                        <ul style="font-size: 0.8rem;">
+                            <li>P1 Corporate Entity &rarr;</li>
+                            <li>P2 Implementation &rarr;</li>
+                            <li>P3 Initiative &rarr;</li>
+                            <li>P4 Impact &rarr;</li>
+                            <li style="color: var(--accent-cg); font-weight: bold;">P5 Communication Strategy (Focal Variable)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Slide A: The Core Question -->
-        <section class="slide" style="justify-content: center; height: 100vh;">
-            <div class="glass-card" style="text-align: center; max-width: 900px;">
-                <h1 style="font-size: 3rem; margin-bottom: 1.5rem; color: #fff;">Can corporate money actually buy community trust?</h1>
-                <p style="font-size: 1.5rem; color: var(--text-muted);">This thesis systematically climbs through five levels of theoretical architecture to answer that question.</p>
-            </div>
-        </section>
-
-        <!-- Slide: The Convergence Funnel (NEW) -->
-        <section class="slide" style="justify-content: center; height: 100vh;">
-            <h2 class="slide-title" style="text-align: center; margin-bottom: 2rem;">How the Theories Converge</h2>
+        <!-- Slide 3: How the Theories Converge -->
+        <section class="slide" style="height: auto; min-height: 100vh; padding: 4rem 2rem; justify-content: center;">
+            <h2 class="slide-title" style="text-align: center; margin-bottom: 1.5rem;">How the Theories Converge</h2>
             
-            <div class="funnel-flow">
+            <div class="funnel-flow" style="margin-bottom: 2rem;">
                 <div class="funnel-top">
                     <div class="glass-card"><h4 style="color: var(--accent-cg);">Stakeholder Theory</h4><p style="font-size: 0.8rem; color: var(--text-muted);">WHO to communicate with</p></div>
                     <div class="glass-card"><h4 style="color: var(--success-color);">Two-Way Symmetrical</h4><p style="font-size: 0.8rem; color: var(--text-muted);">HOW to communicate</p></div>
@@ -210,591 +293,260 @@
                 <div class="funnel-arrow"><i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i></div>
 
                 <div class="glass-card funnel-bridge">
-                    <h4 style="color: var(--warning-color); margin-bottom: 0.5rem;">Morsing & Schultz (2006)</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Operationalization Bridge — classifies communication into Information, Response, and Involvement strategies</p>
+                    <h4 style="color: var(--warning-color); margin-bottom: 0.2rem;">Morsing &amp; Schultz (2006)</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Operationalization Bridge</p>
                 </div>
 
                 <div class="funnel-arrow"><i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i></div>
 
                 <div class="glass-card funnel-result">
-                    <h3 style="color: var(--accent-cg); margin-bottom: 0.5rem;">★ Five-Pillar Framework</h3>
-                    <p style="color: #fff;">Original Contribution — maps the complete lifecycle of a CSR initiative</p>
+                    <h3 style="color: var(--accent-cg); margin-bottom: 0.2rem;">★ Five-Pillar Framework</h3>
+                    <p style="font-size: 0.85rem; color: #fff;">Original Contribution at the apex</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 1rem; color: #fff;">Why These Four Theories?</h3>
+            <div class="grid-2" style="max-width: 1000px; width: 100%; margin: 0 auto; gap: 1rem;">
+                <div class="glass-card" style="border-left: 3px solid var(--accent-cg); padding: 1rem;">
+                    <strong style="color: var(--accent-cg);">Stakeholder Theory:</strong> <span style="font-size: 0.9rem;">Defines tribal communities as primary stakeholders, not secondary</span>
+                </div>
+                <div class="glass-card" style="border-left: 3px solid var(--success-color); padding: 1rem;">
+                    <strong style="color: var(--success-color);">Two-Way Symmetrical:</strong> <span style="font-size: 0.9rem;">Tests whether dialogue outperforms one-way messaging</span>
+                </div>
+                <div class="glass-card" style="border-left: 3px solid var(--warning-color); padding: 1rem;">
+                    <strong style="color: var(--warning-color);">Agenda-Setting:</strong> <span style="font-size: 0.9rem;">Tests whether corporate priorities match community needs</span>
+                </div>
+                <div class="glass-card" style="border-left: 3px solid #a020f0; padding: 1rem;">
+                    <strong style="color: #a020f0;">Diffusion of Innovations:</strong> <span style="font-size: 0.9rem;">Maps the adoption curve in low-literacy tribal settings</span>
                 </div>
             </div>
         </section>
 
-        <!-- Slide B: Level 1 - Legal & Institutional Foundation -->
+        <!-- Slide 4: Theory → Pillar Mapping -->
         <section class="slide" style="height: 100vh; justify-content: center;">
-            <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">Level 1: Legal &amp; Institutional Foundation</h2>
-            
-            <div class="grid-2" style="max-width: 800px; width: 100%; margin: 0 auto 2rem auto;">
-                <div class="glass-card" style="text-align: center;">
-                    <h3>Companies Act 2013</h3>
-                </div>
-                <div class="glass-card" style="text-align: center;">
-                    <h3>Section 135</h3>
-                </div>
-                <div class="glass-card" style="text-align: center;">
-                    <h3>Schedule VII</h3>
-                </div>
-                <div class="glass-card" style="text-align: center;">
-                    <h3>2021 Amendments</h3>
-                </div>
-            </div>
-            
-            <p style="text-align: center; font-size: 1.2rem; color: var(--text-muted);">India became the first country to legally mandate CSR expenditure (2% rule)</p>
-        </section>
-
-        <!-- Slide C: Level 2 - Evolution of CSR Philosophy -->
-        <section class="slide" style="height: 100vh; justify-content: center;">
-            <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">Level 2: Evolution of CSR Philosophy</h2>
-            
-            <div class="grid-3" style="max-width: 1000px; width: 100%; margin: 0 auto;">
-                <div class="glass-card" style="text-align: center;">
-                    <h3 style="color: var(--accent-cg); margin-bottom: 1rem;">Bowen (1953)</h3>
-                    <p style="font-weight: bold; margin-bottom: 0.5rem;">Father of CSR</p>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Social responsibilities of businessmen</p>
-                </div>
-                <div class="glass-card" style="text-align: center;">
-                    <h3 style="color: var(--warning-color); margin-bottom: 1rem;">Carroll (1991)</h3>
-                    <p style="font-weight: bold; margin-bottom: 0.5rem;">CSR Pyramid</p>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Economic, Legal, Ethical, Philanthropic</p>
-                </div>
-                <div class="glass-card" style="text-align: center;">
-                    <h3 style="color: var(--success-color); margin-bottom: 1rem;">Porter &amp; Kramer (2011)</h3>
-                    <p style="font-weight: bold; margin-bottom: 0.5rem;">Creating Shared Value (CSV)</p>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Aligning business &amp; social goals</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide D: Level 3 - Grand Communication Theories -->
-        <section class="slide" style="height: 100vh; justify-content: center;">
-            <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">Level 3: Grand Communication Theories</h2>
-            
-            <div class="grid-2" style="max-width: 900px; width: 100%; margin: 0 auto;">
-                <div class="glass-card" style="text-align: center;">
-                    <h3 style="color: var(--accent-cg); margin-bottom: 1rem;">Stakeholder Theory (Freeman, 1984)</h3>
-                    <p style="color: var(--text-muted);">Corporations accountable to all affected groups</p>
-                </div>
-                <div class="glass-card" style="text-align: center;">
-                    <h3 style="color: var(--success-color); margin-bottom: 1rem;">Two-Way Symmetrical (Grunig &amp; Hunt, 1984)</h3>
-                    <p style="color: var(--text-muted);">Dialogue, not one-way persuasion</p>
-                </div>
-                <div class="glass-card" style="text-align: center;">
-                    <h3 style="color: var(--warning-color); margin-bottom: 1rem;">Agenda-Setting (McCombs &amp; Shaw, 1972)</h3>
-                    <p style="color: var(--text-muted);">CSR shapes community priorities</p>
-                </div>
-                <div class="glass-card" style="text-align: center;">
-                    <h3 style="color: #a020f0; margin-bottom: 1rem;">Diffusion of Innovations (Rogers, 1962)</h3>
-                    <p style="color: var(--text-muted);">How CSR awareness spreads through communities</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide: Why These Four? (NEW) -->
-        <section class="slide" style="height: 100vh; justify-content: center;">
-            <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">Why These Four Theories?</h2>
-            
-            <div class="grid-2" style="max-width: 900px; width: 100%; margin: 0 auto;">
-                <div class="glass-card" style="border-left: 4px solid var(--accent-cg);">
-                    <h4 style="color: var(--accent-cg); margin-bottom: 0.5rem;">Stakeholder Theory</h4>
-                    <p style="font-size: 1.1rem;">Answers: <strong style="color: #fff;">WHO</strong> should be communicated to?</p>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Defines tribal communities as primary stakeholders, not secondary.</p>
-                </div>
-                <div class="glass-card" style="border-left: 4px solid var(--success-color);">
-                    <h4 style="color: var(--success-color); margin-bottom: 0.5rem;">Two-Way Symmetrical</h4>
-                    <p style="font-size: 1.1rem;">Answers: <strong style="color: #fff;">HOW</strong> should communication flow?</p>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Tests whether dialogue outperforms one-way messaging.</p>
-                </div>
-                <div class="glass-card" style="border-left: 4px solid var(--warning-color);">
-                    <h4 style="color: var(--warning-color); margin-bottom: 0.5rem;">Agenda-Setting</h4>
-                    <p style="font-size: 1.1rem;">Answers: <strong style="color: #fff;">WHAT</strong> gets communicated?</p>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Tests whether corporate priorities match community needs.</p>
-                </div>
-                <div class="glass-card" style="border-left: 4px solid #a020f0;">
-                    <h4 style="color: #a020f0; margin-bottom: 0.5rem;">Diffusion of Innovations</h4>
-                    <p style="font-size: 1.1rem;">Answers: <strong style="color: #fff;">HOW FAST</strong> does awareness spread?</p>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Maps the adoption curve in low-literacy tribal settings.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide E: Level 4 - CSR Communication Strategies -->
-        <section class="slide" style="height: 100vh; justify-content: center;">
-            <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">Level 4: CSR Communication Strategies</h2>
-            
-            <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; max-width: 1100px; width: 100%; margin: 0 auto 2rem auto;">
-                <div class="glass-card" style="text-align: center; flex: 1;">
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cg);">Information Strategy</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">One-way, telling, not listening</p>
-                </div>
-                
-                <i class="fas fa-arrow-right" style="font-size: 2rem; color: var(--text-muted);"></i>
-                
-                <div class="glass-card" style="text-align: center; flex: 1;">
-                    <h3 style="margin-bottom: 1rem; color: var(--warning-color);">Response Strategy</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Two-way asymmetric. Feedback to adjust message</p>
-                </div>
-                
-                <i class="fas fa-arrow-right" style="font-size: 2rem; color: var(--text-muted);"></i>
-                
-                <div class="glass-card" style="text-align: center; flex: 1; border-color: var(--success-color); box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);">
-                    <h3 style="margin-bottom: 1rem; color: var(--success-color);">Involvement Strategy</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Two-way symmetric. Dialogue, ideal model</p>
-                </div>
-            </div>
-            
-            <p style="text-align: center; font-style: italic; color: var(--text-muted);">Morsing &amp; Schultz (2006)</p>
-            
-            <div class="glass-card" style="max-width: 800px; width: 100%; margin: 2rem auto 0 auto; text-align: center; background: rgba(0, 212, 255, 0.05); border-color: var(--accent-cg);">
-                <p style="font-size: 1rem;"><i class="fas fa-calculator" style="color: var(--accent-cg); margin-right: 0.5rem;"></i> <strong>In this study:</strong> All 400 survey responses are classified into these three strategies using a <strong style="color: var(--accent-cg);">CES composite score</strong> (Communication Effectiveness Score).</p>
-            </div>
-        </section>
-
-        <!-- Slide F: The Core Argument -->
-        <section class="slide" style="height: 100vh; justify-content: center;">
-            <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">The Core Argument</h2>
-            
-            <div class="glass-card" style="max-width: 800px; width: 100%; margin: 0 auto; text-align: center; border-color: var(--accent-cg); box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);">
-                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #fff;">Financial expenditure is meaningless without an effective communication architecture.</h3>
-                
-                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">You can spend millions building a school, but if the community doesn't understand it, wasn't consulted on it, or doesn't trust you, the project fails.</p>
-                
-                <p style="font-size: 1.3rem; font-weight: bold; color: var(--accent-cg);">The true impact of CSR is determined by HOW it is communicated, not just by the money spent.</p>
-            </div>
-        </section>
-
-        <!-- Slide: Output vs Outcome (Moved from Ch 02) -->
-        <section class="slide">
-            <h2 class="slide-title">Why Communication Matters More Than Money</h2>
-            
-            <div class="grid-2">
-                <div class="glass-card hover-magnify" style="text-align: center;">
-                    <h3 style="color: var(--accent-jh);">The Output Fallacy</h3>
-                    <div style="margin: 2rem 0;">
-                        <i class="fas fa-school" style="font-size: 3rem; color: var(--text-muted);"></i>
-                    </div>
-                    <p style="font-weight: 600;">"We built 10 schools."</p>
-                    <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Measures activity and expenditure, but not the actual change in human lives.</p>
-                </div>
-                
-                <div class="glass-card hover-magnify" style="text-align: center; border-color: var(--accent-cg);">
-                    <h3 style="color: var(--accent-cg);">The Outcome Approach</h3>
-                    <div style="margin: 2rem 0;">
-                        <i class="fas fa-user-graduate" style="font-size: 3rem; color: var(--accent-cg);"></i>
-                    </div>
-                    <p style="font-weight: 600;">"Literacy increased by 15%."</p>
-                    <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">Measures actual societal betterment and capacity building.</p>
-                </div>
-            </div>
-            
-            <div style="margin-top: 3rem; text-align: center; max-width: 800px; font-style: italic;">
-                "Development requires the removal of major sources of unfreedom: poverty as well as tyranny, poor economic opportunities as well as systematic social deprivation." <br>
-                <strong style="color: var(--accent-cg); font-style: normal;">— Amartya Sen (Capability Approach)</strong>
-            </div>
-        </section>
-
-        <!-- Slide G: Level 5 - Five-Pillar Framework -->
-        <section class="slide" style="height: 100vh; justify-content: center;">
-            <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">Level 5: Five-Pillar Framework (Original Contribution)</h2>
-            
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 1000px; width: 100%; margin: 0 auto 3rem auto;">
-                <div class="glass-card" style="text-align: center; flex: 1; min-width: 150px; padding: 1.5rem;">
-                    <p style="font-weight: bold; color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.9rem;">Pillar 1</p>
-                    <h4 style="color: #fff;">Corporate Entity</h4>
-                </div>
-                <div class="glass-card" style="text-align: center; flex: 1; min-width: 150px; padding: 1.5rem;">
-                    <p style="font-weight: bold; color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.9rem;">Pillar 2</p>
-                    <h4 style="color: #fff;">Implementation Agency</h4>
-                </div>
-                <div class="glass-card" style="text-align: center; flex: 1; min-width: 150px; padding: 1.5rem;">
-                    <p style="font-weight: bold; color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.9rem;">Pillar 3</p>
-                    <h4 style="color: #fff;">Initiative Type</h4>
-                </div>
-                <div class="glass-card" style="text-align: center; flex: 1; min-width: 150px; padding: 1.5rem;">
-                    <p style="font-weight: bold; color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.9rem;">Pillar 4</p>
-                    <h4 style="color: #fff;">Impact &amp; Outcome</h4>
-                </div>
-                <div class="glass-card" style="text-align: center; flex: 2; min-width: 250px; padding: 1.5rem; border-color: var(--accent-cg); box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);">
-                    <p style="font-weight: bold; color: var(--accent-cg); margin-bottom: 0.5rem; font-size: 0.9rem;">Pillar 5</p>
-                    <h4 style="color: #fff;">Communication Strategy<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">(Focal Variable)</span></h4>
-                </div>
-            </div>
-            
-            <div class="glass-card" style="max-width: 700px; width: 100%; margin: 0 auto; text-align: center; background: rgba(0, 255, 136, 0.05); border-color: var(--success-color);">
-                <p style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #fff;"><strong>Chhattisgarh CES: 2.67</strong> | <strong>Jharkhand CES: 1.89</strong></p>
-                <p style="color: var(--success-color); font-weight: bold;">Face-to-face, two-way dialogue directly dictates societal impact</p>
-            </div>
-        </section>
-
-        <!-- Slide 3: Stakeholder Theory -->
-        <section class="slide">
-            <h2 class="slide-title">Stakeholder Theory</h2>
-            <h3 class="slide-subtitle">Freeman (1984)</h3>
-            
-            <div class="glass-card hover-magnify" style="width: 100%; max-width: 800px; text-align: center; border-color: var(--accent-cg);">
-                <p style="font-size: 1.2rem; font-style: italic;">"Corporations are responsible to ALL stakeholders, not just shareholders."</p>
-                <p style="margin-top: 1rem; color: var(--accent-cg); font-weight: bold;">Communities are Primary Stakeholders</p>
-            </div>
-            
-            <div class="theory-diagram">
-                <div class="theory-circle" style="border-color: var(--text-muted); color: var(--text-muted);">Shareholders</div>
-                <div class="theory-line"></div>
-                <div class="theory-circle" style="border-color: var(--accent-cg); width: 150px; height: 150px; box-shadow: var(--neon-glow);">Corporate<br>Entity</div>
-                <div class="theory-line"></div>
-                <div class="theory-circle" style="border-color: var(--accent-jh); color: var(--accent-jh);">Local<br>Community</div>
-            </div>
-
-            <div class="theory-use" style="max-width: 800px; width: 100%;">
-                <strong>Used in this study to:</strong> Define tribal beneficiaries in CG and JH as primary stakeholders whose perception of CSR is the dependent variable.
-            </div>
-        </section>
-
-        <!-- Slide 3: Two-Way Symmetrical -->
-        <section class="slide">
-            <h2 class="slide-title">Two-Way Symmetrical Model</h2>
-            <h3 class="slide-subtitle">Grunig & Hunt (1984)</h3>
-            
-            <div class="glass-card hover-magnify" style="width: 100%; max-width: 800px; text-align: center; border-color: var(--success-color);">
-                <p style="font-size: 1.2rem; font-style: italic;">"Dialogue-based, feedback-driven communication leads to mutual understanding."</p>
-            </div>
-            
-            <div class="theory-diagram">
-                <div class="theory-circle" style="border-color: var(--success-color);">Company</div>
-                
-                <div style="display: flex; flex-direction: column; align-items: center; margin: 0 2rem;">
-                    <i class="fas fa-long-arrow-alt-right" style="font-size: 2rem; color: var(--success-color); margin-bottom: 0.5rem;"></i>
-                    <span style="font-size: 0.8rem; color: var(--text-muted);">Information</span>
-                    <span style="font-size: 0.8rem; color: var(--text-muted);">Feedback</span>
-                    <i class="fas fa-long-arrow-alt-left" style="font-size: 2rem; color: var(--success-color); margin-top: 0.5rem;"></i>
-                </div>
-                
-                <div class="theory-circle" style="border-color: var(--success-color);">Beneficiary</div>
-            </div>
-
-            <div class="theory-use" style="max-width: 800px; width: 100%;">
-                <strong>Used in this study to:</strong> Test whether companies using two-way dialogue (Involvement Strategy) achieve higher perceived societal betterment than those using one-way messaging.
-            </div>
-        </section>
-
-        <!-- Slide 4: Agenda Setting -->
-        <section class="slide">
-            <h2 class="slide-title">Agenda-Setting Theory</h2>
-            <h3 class="slide-subtitle">McCombs & Shaw (1972)</h3>
-            
-            <div class="glass-card hover-magnify" style="width: 100%; max-width: 800px; text-align: center; border-color: var(--warning-color);">
-                <p style="font-size: 1.2rem; font-style: italic;">"CSR communication shapes community priorities."</p>
-                <p style="margin-top: 1rem; color: var(--text-muted);">Media and corporate narratives influence what the public perceives as the most important developmental needs.</p>
-            </div>
-            
-            <div class="theory-diagram">
-                <div class="theory-circle" style="border-color: var(--warning-color); border-radius: 8px;">Corporate<br>Narrative</div>
-                <div class="theory-line" style="position: relative;">
-                    <i class="fas fa-caret-right" style="position: absolute; right: -5px; top: -5px; font-size: 1.5rem; color: var(--text-muted);"></i>
-                </div>
-                <div class="theory-circle" style="border-color: var(--warning-color); border-radius: 8px;">Community<br>Perception</div>
-            </div>
-
-            <div class="theory-use" style="max-width: 800px; width: 100%;">
-                <strong>Used in this study to:</strong> Analyze whether corporate communication priorities (education, health, environment) align with what tribal communities actually need.
-            </div>
-        </section>
-
-        <!-- Slide 5: Diffusion of Innovations -->
-        <section class="slide">
-            <h2 class="slide-title">Diffusion of Innovations</h2>
-            <h3 class="slide-subtitle">Rogers (1962)</h3>
-            
-            <div class="glass-card hover-magnify" style="width: 100%; max-width: 800px; text-align: center; border-color: #a020f0;">
-                <p style="font-size: 1.2rem; font-style: italic;">"How CSR awareness spreads through rural communities."</p>
-            </div>
-            
-            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 3rem;">
-                <div class="badge" style="background: rgba(160,32,240,0.2); color: #a020f0; border: 1px solid #a020f0; padding: 1rem;">Innovators (2.5%)</div>
-                <div class="badge" style="background: rgba(160,32,240,0.4); color: #fff; border: 1px solid #a020f0; padding: 1rem;">Early Adopters (13.5%)</div>
-                <div class="badge" style="background: rgba(160,32,240,0.6); color: #fff; border: 1px solid #a020f0; padding: 1rem;">Early Majority (34%)</div>
-                <div class="badge" style="background: rgba(160,32,240,0.8); color: #fff; border: 1px solid #a020f0; padding: 1rem;">Late Majority (34%)</div>
-            </div>
-
-            <div class="theory-use" style="max-width: 800px; width: 100%;">
-                <strong>Used in this study to:</strong> Examine how CSR awareness penetrates tribal communities via opinion leaders (Gram Pradhan, Sarpanch) and whether Chhattisgarh's adoption curve differs from Jharkhand's.
-            </div>
-        </section>
-
-        <!-- Slide: Theory → Pillar Mapping (NEW) -->
-        <section class="slide">
             <h2 class="slide-title">Theory → Pillar Mapping</h2>
-            <h3 class="slide-subtitle">How each theory feeds the Five-Pillar Framework</h3>
             
-            <div class="glass-card hover-magnify" style="width: 100%; max-width: 950px;">
+            <div class="glass-card hover-magnify" style="width: 100%; max-width: 1000px;">
                 <table class="map-table">
                     <thead>
                         <tr>
-                            <th style="color: var(--accent-cg);">Theory</th>
-                            <th style="color: var(--warning-color);">Feeds Pillar</th>
-                            <th style="color: var(--success-color);">Research Question Answered</th>
+                            <th style="color: var(--accent-cg); width: 25%;">Theory</th>
+                            <th style="color: var(--warning-color); width: 20%;">Feeds Pillar</th>
+                            <th style="color: var(--success-color); width: 55%;">Used in this study to</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Stakeholder Theory</td>
-                            <td><strong>P1</strong> Corporate Entity + <strong>P2</strong> Implementation</td>
-                            <td>Who are the primary stakeholders of CSR?</td>
+                            <td><strong>Stakeholder Theory</strong></td>
+                            <td>P1 + P2</td>
+                            <td>Define tribal beneficiaries in CG and JH as primary stakeholders</td>
                         </tr>
                         <tr>
-                            <td>Agenda-Setting</td>
-                            <td><strong>P3</strong> Initiative Type</td>
-                            <td>Do corporate priorities match community needs?</td>
+                            <td><strong>Agenda-Setting</strong></td>
+                            <td>P3</td>
+                            <td>Analyze whether corporate priorities match community needs</td>
                         </tr>
                         <tr>
-                            <td>Diffusion of Innovations</td>
-                            <td><strong>P4</strong> Impact Measurement</td>
-                            <td>How fast does CSR awareness penetrate the community?</td>
+                            <td><strong>Diffusion of Innovations</strong></td>
+                            <td>P4</td>
+                            <td>Examine how CSR awareness penetrates via Gram Pradhan, Sarpanch</td>
                         </tr>
                         <tr>
-                            <td>Two-Way Symmetrical + Morsing & Schultz</td>
-                            <td><strong style="color: var(--accent-cg);">P5 Communication Strategy ★</strong></td>
-                            <td>Does dialogue-based communication improve perceived impact?</td>
+                            <td><strong>Two-Way Symmetrical + Morsing &amp; Schultz</strong></td>
+                            <td><strong style="color: var(--accent-cg);">P5 (Focal)</strong></td>
+                            <td>Test whether dialogue-based communication improves perceived impact</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- Slide 6: Five Pillar Full Map -->
-        <section class="slide">
-            <h2 class="slide-title">The Five-Pillar Framework</h2>
-            <h3 class="slide-subtitle">Constructed to map the lifecycle of a CSR initiative</h3>
+        <!-- Slide 5: Five-Pillar Framework -->
+        <section class="slide" style="height: auto; min-height: 100vh; padding: 4rem 2rem; justify-content: center;">
+            <h2 class="slide-title" style="text-align: center; margin-bottom: 2rem;">The Five-Pillar Framework (Original Contribution)</h2>
             
-            <div class="five-pillar-container">
-                <div class="pillar-row">
-                    <div class="pillar-number">1</div>
-                    <div class="pillar-content">
-                        <h3 style="color: var(--accent-cg);">Corporate Entity</h3>
-                        <p style="color: var(--text-muted);">The originating body providing funds and mandate.</p>
-                    </div>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 1100px; width: 100%; margin: 0 auto 2rem auto;">
+                <div class="glass-card" style="text-align: center; flex: 1; min-width: 150px; padding: 1.5rem;">
+                    <p style="font-weight: bold; color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.9rem;">P1</p>
+                    <h4 style="color: #fff;">Corporate Entity</h4>
+                </div>
+                <div style="display: flex; align-items: center; color: var(--text-muted);"><i class="fas fa-arrow-right"></i></div>
+                <div class="glass-card" style="text-align: center; flex: 1; min-width: 150px; padding: 1.5rem;">
+                    <p style="font-weight: bold; color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.9rem;">P2</p>
+                    <h4 style="color: #fff;">Implementation Agency</h4>
+                </div>
+                <div style="display: flex; align-items: center; color: var(--text-muted);"><i class="fas fa-arrow-right"></i></div>
+                <div class="glass-card" style="text-align: center; flex: 1; min-width: 150px; padding: 1.5rem;">
+                    <p style="font-weight: bold; color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.9rem;">P3</p>
+                    <h4 style="color: #fff;">Initiative Type</h4>
+                </div>
+                <div style="display: flex; align-items: center; color: var(--text-muted);"><i class="fas fa-arrow-right"></i></div>
+                <div class="glass-card" style="text-align: center; flex: 1; min-width: 150px; padding: 1.5rem;">
+                    <p style="font-weight: bold; color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.9rem;">P4</p>
+                    <h4 style="color: #fff;">Impact &amp; Outcome</h4>
+                </div>
+                <div style="display: flex; align-items: center; color: var(--accent-cg);"><i class="fas fa-arrow-right"></i></div>
+                <div class="glass-card" style="text-align: center; flex: 2; min-width: 250px; padding: 1.5rem; border-color: var(--accent-cg); box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);">
+                    <p style="font-weight: bold; color: var(--accent-cg); margin-bottom: 0.5rem; font-size: 0.9rem;">P5</p>
+                    <h4 style="color: #fff;">Communication Strategy<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">(Focal Variable)</span></h4>
+                </div>
+            </div>
+
+            <div class="glass-card" style="max-width: 700px; width: 100%; margin: 0 auto 2rem auto; text-align: center; background: rgba(0, 255, 136, 0.05); border-color: var(--success-color);">
+                <p style="font-size: 1.4rem; color: #fff;"><strong>Chhattisgarh CES: 2.67</strong> <span style="color: var(--text-muted); margin: 0 1rem;">|</span> <strong>Jharkhand CES: 1.89</strong></p>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--accent-cg);">Pillar 5 Breakdown</h3>
+            <div class="grid-3" style="max-width: 1000px; margin: 0 auto;">
+                <div class="glass-card" style="text-align: center; padding: 1.5rem;">
+                    <i class="fas fa-comments" style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
+                    <h4>Channels</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Verbal, Print, Electronic, Social Media</p>
                 </div>
                 
-                <div class="pillar-row">
-                    <div class="pillar-number">2</div>
-                    <div class="pillar-content">
-                        <h3 style="color: var(--accent-jh);">Implementation Agency</h3>
-                        <p style="color: var(--text-muted);">Direct execution or NGO partnership on the ground.</p>
-                    </div>
+                <div class="glass-card" style="text-align: center; padding: 1.5rem;">
+                    <i class="fas fa-language" style="font-size: 2rem; color: var(--success-color); margin-bottom: 1rem;"></i>
+                    <h4>Language</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Use of native/tribal dialects vs Hindi/English</p>
                 </div>
                 
-                <div class="pillar-row">
-                    <div class="pillar-number">3</div>
-                    <div class="pillar-content">
-                        <h3 style="color: var(--success-color);">Initiative Type</h3>
-                        <p style="color: var(--text-muted);">The sectoral focus: Education, Health, Environment, Livelihood.</p>
-                    </div>
-                </div>
-                
-                <div class="pillar-row">
-                    <div class="pillar-number">4</div>
-                    <div class="pillar-content">
-                        <h3 style="color: var(--warning-color);">Impact Measurement</h3>
-                        <p style="color: var(--text-muted);">Assessing the actual betterment created (SROI, Pre/Post).</p>
-                    </div>
-                </div>
-                
-                <div class="pillar-row" style="border-color: var(--accent-cg); box-shadow: var(--neon-glow);">
-                    <div class="pillar-number" style="color: var(--accent-cg); opacity: 0.5;">5</div>
-                    <div class="pillar-content">
-                        <h3 class="neon-text-cg">Communication Strategy</h3>
-                        <p style="color: #fff; font-weight: bold;">How the impact is conveyed back to stakeholders. (The focal variable of this study)</p>
-                    </div>
+                <div class="glass-card" style="text-align: center; padding: 1.5rem;">
+                    <i class="fas fa-sync" style="font-size: 2rem; color: var(--warning-color); margin-bottom: 1rem;"></i>
+                    <h4>Feedback</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Existence of two-way grievance mechanisms</p>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 7: Pillar 1 & 2 -->
-        <section class="slide">
-            <h2 class="slide-title">Pillars 1 & 2 Breakdown</h2>
+        <!-- Slide 6: Morsing & Schultz + CES -->
+        <section class="slide" style="height: 100vh; justify-content: center;">
+            <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">CSR Communication Strategies</h2>
             
-            <div class="grid-2">
-                <div class="glass-card hover-magnify">
-                    <h3 style="color: var(--accent-cg); margin-bottom: 1.5rem;"><i class="fas fa-building"></i> P1: Corporate Entity</h3>
-                    <ul style="line-height: 2;">
-                        <li><strong>Scale:</strong> Large-cap vs Mid-cap vs Small-cap</li>
-                        <li><strong>Sector:</strong> Banking, Metal, Energy, Cement</li>
-                        <li><strong>Ownership:</strong> PSU vs Private Sector</li>
-                    </ul>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; max-width: 1100px; width: 100%; margin: 0 auto 2rem auto;">
+                <div class="glass-card" style="text-align: center; flex: 1; padding: 2rem 1.5rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cg);">Information Strategy</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">One-way, telling, not listening</p>
                 </div>
                 
-                <div class="glass-card hover-magnify">
-                    <h3 style="color: var(--accent-jh); margin-bottom: 1.5rem;"><i class="fas fa-hands-helping"></i> P2: Implementation</h3>
-                    <ul style="line-height: 2;">
-                        <li><strong>Direct:</strong> Company's own CSR foundation</li>
-                        <li><strong>Partnered:</strong> Implementation via local NGOs</li>
-                        <li><strong>Exclusion:</strong> Government agencies (delimited out of scope)</li>
-                    </ul>
+                <i class="fas fa-arrow-right" style="font-size: 2rem; color: var(--text-muted);"></i>
+                
+                <div class="glass-card" style="text-align: center; flex: 1; padding: 2rem 1.5rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--warning-color);">Response Strategy</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Two-way asymmetric, feedback used to adjust message</p>
                 </div>
+                
+                <i class="fas fa-arrow-right" style="font-size: 2rem; color: var(--text-muted);"></i>
+                
+                <div class="glass-card" style="text-align: center; flex: 1; border-color: var(--success-color); box-shadow: 0 0 15px rgba(0, 255, 136, 0.3); padding: 2rem 1.5rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--success-color);">Involvement Strategy</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">Two-way symmetric, dialogue, ideal model</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-style: italic; color: var(--text-muted);">Morsing &amp; Schultz (2006)</p>
+            
+            <div class="glass-card" style="max-width: 800px; width: 100%; margin: 2rem auto 0 auto; text-align: center; background: rgba(0, 212, 255, 0.05); border-color: var(--accent-cg);">
+                <p style="font-size: 1.1rem;"><i class="fas fa-calculator" style="color: var(--accent-cg); margin-right: 0.5rem;"></i> <strong>Note:</strong> All 400 survey responses are classified into these three strategies using the <strong style="color: var(--accent-cg);">CES composite score</strong>.</p>
             </div>
         </section>
 
-        <!-- Slide 8: Pillar 3 & 4 -->
-        <section class="slide">
-            <h2 class="slide-title">Pillars 3 & 4 Breakdown</h2>
+        <!-- Slide 7: Integrated Conceptual Framework -->
+        <section class="slide" style="height: auto; min-height: 100vh; padding: 4rem 2rem; justify-content: flex-start;">
+            <h2 class="slide-title" style="text-align: center; margin-bottom: 1.5rem;">Integrated Conceptual Framework</h2>
             
-            <div class="grid-2">
-                <div class="glass-card hover-magnify">
-                    <h3 style="color: var(--success-color); margin-bottom: 1.5rem;"><i class="fas fa-project-diagram"></i> P3: Initiative</h3>
-                    <div class="grid-2">
-                        <div class="badge" style="background: rgba(255,255,255,0.1);"><i class="fas fa-book"></i> Education</div>
-                        <div class="badge" style="background: rgba(255,255,255,0.1);"><i class="fas fa-heartbeat"></i> Health</div>
-                        <div class="badge" style="background: rgba(255,255,255,0.1);"><i class="fas fa-leaf"></i> Environment</div>
-                        <div class="badge" style="background: rgba(255,255,255,0.1);"><i class="fas fa-briefcase"></i> Livelihood</div>
-                    </div>
-                </div>
-                
-                <div class="glass-card hover-magnify">
-                    <h3 style="color: var(--warning-color); margin-bottom: 1.5rem;"><i class="fas fa-chart-line"></i> P4: Impact</h3>
-                    <ul style="line-height: 2;">
-                        <li><strong>Metrics:</strong> Pre/Post implementation data</li>
-                        <li><strong>Feedback:</strong> Direct beneficiary perception</li>
-                        <li><strong>SROI:</strong> Social Return on Investment methodology</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 9: Pillar 5 -->
-        <section class="slide">
-            <h2 class="slide-title">Pillar 5: Communication Strategy</h2>
-            
-            <div class="glass-card hover-magnify" style="width: 100%; max-width: 900px;">
-                <h3 style="text-align: center; margin-bottom: 2rem; color: var(--accent-cg);">The Critical Independent Variable</h3>
-                
-                <div class="grid-3">
-                    <div style="text-align: center;">
-                        <i class="fas fa-comments" style="font-size: 2.5rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
-                        <h4>Channels</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Verbal, Print, Electronic, Social Media</p>
-                    </div>
-                    
-                    <div style="text-align: center;">
-                        <i class="fas fa-language" style="font-size: 2.5rem; color: var(--success-color); margin-bottom: 1rem;"></i>
-                        <h4>Language</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Use of native/tribal dialects vs Hindi/English</p>
-                    </div>
-                    
-                    <div style="text-align: center;">
-                        <i class="fas fa-sync" style="font-size: 2.5rem; color: var(--warning-color); margin-bottom: 1rem;"></i>
-                        <h4>Feedback</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Existence of two-way grievance mechanisms</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 10: Integrated Framework -->
-        <section class="slide">
-            <h2 class="slide-title">Integrated Conceptual Framework</h2>
-            <h3 class="slide-subtitle">Figure 8</h3>
-            
-            <div class="glass-card hover-magnify" style="width: 100%; max-width: 900px; padding: 3rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div style="border: 2px solid var(--accent-cg); padding: 1.5rem; border-radius: 8px; text-align: center; width: 30%;">
-                        <h4 style="color: var(--accent-cg);">Independent Variable</h4>
-                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">CSR Communication Strategy (CES)</p>
-                    </div>
-                    
-                    <div style="display: flex; flex-direction: column; align-items: center; width: 30%;">
-                        <div style="border: 2px dashed var(--warning-color); padding: 1rem; border-radius: 8px; text-align: center; margin-bottom: 1rem;">
-                            <h5 style="color: var(--warning-color);">Intervening Variables</h5>
-                            <p style="font-size: 0.8rem;">State Geography, Literacy, Culture</p>
+            <div style="display: flex; gap: 2rem; max-width: 1200px; width: 100%; margin: 0 auto 2rem auto;">
+                <!-- Figure 8 -->
+                <div class="glass-card hover-magnify" style="flex: 1; padding: 1.5rem;">
+                    <h3 style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem;">Figure 8</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.5rem;">
+                        <div style="border: 2px solid var(--accent-cg); padding: 1rem 0.5rem; border-radius: 8px; text-align: center; flex: 1;">
+                            <h4 style="color: var(--accent-cg); font-size: 0.85rem;">Independent Variable</h4>
+                            <p style="font-size: 0.75rem; margin-top: 0.5rem;">CSR Communication Strategy / CES</p>
                         </div>
-                        <i class="fas fa-arrow-right" style="font-size: 2rem; color: var(--text-muted);"></i>
+                        
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="border: 2px dashed var(--warning-color); padding: 0.5rem; border-radius: 8px; text-align: center; margin-bottom: 0.5rem; width: 100%;">
+                                <h5 style="color: var(--warning-color); font-size: 0.8rem;">Intervening Variables</h5>
+                                <p style="font-size: 0.7rem;">State Geography, Literacy, Culture</p>
+                            </div>
+                            <i class="fas fa-arrow-right" style="font-size: 1.2rem; color: var(--text-muted);"></i>
+                        </div>
+                        
+                        <div style="border: 2px solid var(--success-color); padding: 1rem 0.5rem; border-radius: 8px; text-align: center; flex: 1;">
+                            <h4 style="color: var(--success-color); font-size: 0.85rem;">Dependent Variable</h4>
+                            <p style="font-size: 0.75rem; margin-top: 0.5rem;">Perceived Societal Betterment</p>
+                        </div>
                     </div>
-                    
-                    <div style="border: 2px solid var(--success-color); padding: 1.5rem; border-radius: 8px; text-align: center; width: 30%;">
-                        <h4 style="color: var(--success-color);">Dependent Variable</h4>
-                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Perceived Societal Betterment</p>
+                </div>
+
+                <!-- Figure 9 -->
+                <div class="glass-card hover-magnify" style="flex: 1; padding: 1.5rem;">
+                    <h3 style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem;">Figure 9: Information Flow</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; text-align: center;">
+                        <div>
+                            <i class="fas fa-building" style="font-size: 1.8rem; color: var(--accent-cg);"></i>
+                            <p style="margin-top: 0.5rem; font-size: 0.8rem; font-weight: bold;">Corporates</p>
+                        </div>
+                        <i class="fas fa-arrow-right" style="color: var(--text-muted);"></i>
+                        <div>
+                            <i class="fas fa-hands-helping" style="font-size: 1.8rem; color: var(--warning-color);"></i>
+                            <p style="margin-top: 0.5rem; font-size: 0.8rem; font-weight: bold;">NGOs / Implementers</p>
+                        </div>
+                        <i class="fas fa-arrow-right" style="color: var(--text-muted);"></i>
+                        <div>
+                            <i class="fas fa-users" style="font-size: 1.8rem; color: var(--accent-jh);"></i>
+                            <p style="margin-top: 0.5rem; font-size: 0.8rem; font-weight: bold;">Beneficiaries</p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-arrows-alt-h" style="color: var(--text-muted);"></i>
+                            <div>
+                                <i class="fas fa-landmark" style="font-size: 1.5rem; color: var(--success-color);"></i>
+                                <p style="margin-top: 0.5rem; font-size: 0.7rem;">Govt/MCA</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Slide 11: Communication Flowchart -->
-        <section class="slide">
-            <h2 class="slide-title">Information Flow Map</h2>
-            <h3 class="slide-subtitle">Figure 9</h3>
             
-            <div class="glass-card hover-magnify" style="width: 100%; max-width: 800px; padding: 3rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-building" style="font-size: 3rem; color: var(--accent-cg);"></i>
-                        <p style="margin-top: 1rem; font-weight: bold;">Corporates</p>
-                    </div>
-                    
-                    <i class="fas fa-arrows-alt-h" style="font-size: 2rem; color: var(--text-muted);"></i>
-                    
-                    <div style="text-align: center;">
-                        <i class="fas fa-hands-helping" style="font-size: 3rem; color: var(--warning-color);"></i>
-                        <p style="margin-top: 1rem; font-weight: bold;">NGOs / Implementers</p>
-                    </div>
-                    
-                    <i class="fas fa-arrows-alt-h" style="font-size: 2rem; color: var(--text-muted);"></i>
-                    
-                    <div style="text-align: center;">
-                        <i class="fas fa-users" style="font-size: 3rem; color: var(--accent-jh);"></i>
-                        <p style="margin-top: 1rem; font-weight: bold;">Beneficiaries</p>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px dashed var(--bg-glass-border);">
-                    <i class="fas fa-landmark" style="font-size: 2rem; color: var(--success-color);"></i>
-                    <p style="margin-top: 0.5rem; font-weight: bold;">Government / MCA (Regulator)</p>
-                </div>
+            <div style="width: 100%; max-width: 1200px; margin: 0 auto;">
+                <h3 style="font-size: 1.2rem; text-align: center; margin-bottom: 1rem;">Variable Operationalization</h3>
+                <table class="var-table">
+                    <thead>
+                        <tr>
+                            <th style="color: var(--accent-cg); width: 33%;">Independent Variables</th>
+                            <th style="color: var(--success-color); width: 33%;">Dependent Variables</th>
+                            <th style="color: var(--warning-color); width: 33%;">Intervening Variables</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Communication Channels Used, Language of Communication, Frequency of Interaction, Clarity of Message, <strong>Composite CES</strong>
+                            </td>
+                            <td>
+                                Educational Improvement, Healthcare Access, Environmental Recognition, Livelihood Enhancement, Corporate Identification
+                            </td>
+                            <td>
+                                State (CG vs JH), Corporate Sector, Demographic factors, Baseline Literacy Level
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <!-- Slide 12: Variable Structure -->
-        <section class="slide">
-            <h2 class="slide-title">Variable Operationalization</h2>
+        <!-- Slide 8: Summary -->
+        <section class="slide" style="height: 100vh; justify-content: center;">
+            <h2 class="slide-title" style="text-align: center; margin-bottom: 3rem;">How the Framework Applies to This Study</h2>
             
-            <table class="var-table">
-                <thead>
-                    <tr>
-                        <th style="color: var(--accent-cg);">Independent Variables</th>
-                        <th style="color: var(--success-color);">Dependent Variables</th>
-                        <th style="color: var(--warning-color);">Intervening Variables</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>Communication Channels Used</li>
-                                <li>Language of Communication</li>
-                                <li>Frequency of Interaction</li>
-                                <li>Clarity of Message</li>
-                                <li><strong>Composite: CES</strong></li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>Educational Improvement</li>
-                                <li>Healthcare Access</li>
-                                <li>Environmental Recognition</li>
-                                <li>Livelihood Enhancement</li>
-                                <li>Corporate Identification</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>State (CG vs JH)</li>
-                                <li>Corporate Sector</li>
-                                <li>Demographic factors (Age, Gender)</li>
-                                <li>Baseline Literacy Level</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="glass-card hover-magnify" style="width: 100%; max-width: 900px; padding: 2.5rem;">
+                <ul style="line-height: 2.2; font-size: 1.2rem; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--accent-cg); margin-right: 1rem;"></i> The Five-Pillar Framework maps the complete lifecycle of every CSR initiative in the sample</li>
+                    <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--accent-cg); margin-right: 1rem;"></i> Pillar 5 (Communication Strategy) is the independent variable measured by the CES</li>
+                    <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--accent-cg); margin-right: 1rem;"></i> Beneficiary perception is the dependent variable captured through 400 structured interviews</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-cg); margin-right: 1rem;"></i> State (CG vs JH) is the primary intervening variable for comparative analysis</li>
+                </ul>
+            </div>
         </section>
 
     </div>
