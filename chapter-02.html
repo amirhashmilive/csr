@@ -161,31 +161,49 @@
         <section class="slide">
             <h2 class="slide-title">Literature Review at a Glance</h2>
             
+            <style>
+                .glass-card.stat-card {
+                    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease !important;
+                    transform-origin: center center !important;
+                    position: relative !important;
+                    z-index: 1 !important;
+                    cursor: default;
+                    transform: scale(1) translateY(0) !important;
+                }
+                .glass-card.stat-card:hover {
+                    transform: scale(1.5) translateY(0) !important;
+                    z-index: 10 !important;
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.6) !important;
+                    background: rgba(20, 20, 25, 0.95) !important;
+                    border-color: rgba(255, 255, 255, 0.2) !important;
+                }
+            </style>
+
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; max-width: 1400px; width: 100%;">
                 
-                <div class="glass-card" style="flex: 1 1 200px; max-width: 280px; text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="glass-card stat-card" style="flex: 1 1 200px; max-width: 280px; text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: flex-start;">
                     <div style="font-size: 3.5rem; font-weight: 800; color: var(--accent-cg); margin-bottom: 1rem; line-height: 1;">6 <span style="font-size: 1.5rem; display: block; margin-top: 0.5rem; font-weight: 600;">Months</span></div>
                     <div style="font-size: 1.1rem; color: #fff; font-weight: 600;">Dedicated literature review period</div>
                 </div>
                 
-                <div class="glass-card" style="flex: 1 1 200px; max-width: 280px; text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="glass-card stat-card" style="flex: 1 1 200px; max-width: 280px; text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: flex-start;">
                     <div style="font-size: 3.5rem; font-weight: 800; color: var(--accent-jh); margin-bottom: 1rem; line-height: 1;">179+</div>
                     <div style="font-size: 1.1rem; color: #fff; font-weight: 600; margin-bottom: 0.5rem;">Sources reviewed</div>
                     <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">(including peer-reviewed journals, books, conference proceedings, government reports)</div>
                 </div>
                 
-                <div class="glass-card" style="flex: 1 1 200px; max-width: 280px; text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="glass-card stat-card" style="flex: 1 1 200px; max-width: 280px; text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: flex-start;">
                     <div style="font-size: 3.5rem; font-weight: 800; color: var(--success-color); margin-bottom: 1rem; line-height: 1;">4</div>
                     <div style="font-size: 1.1rem; color: #fff; font-weight: 600; margin-bottom: 0.5rem;">Major theoretical traditions identified</div>
                     <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">(Stakeholder Theory, Two-Way Symmetrical, Agenda-Setting, Diffusion of Innovations)</div>
                 </div>
                 
-                <div class="glass-card" style="flex: 1 1 200px; max-width: 280px; text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="glass-card stat-card" style="flex: 1 1 200px; max-width: 280px; text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: flex-start;">
                     <div style="font-size: 3.5rem; font-weight: 800; color: var(--warning-color); margin-bottom: 1rem; line-height: 1;">30+</div>
                     <div style="font-size: 1.1rem; color: #fff; font-weight: 600;">Research papers on CG &amp; JH CSR analyzed</div>
                 </div>
                 
-                <div class="glass-card" style="flex: 1 1 200px; max-width: 280px; text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="glass-card stat-card" style="flex: 1 1 200px; max-width: 280px; text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: flex-start;">
                     <div style="font-size: 3.5rem; font-weight: 800; color: #a020f0; margin-bottom: 1rem; line-height: 1;">2</div>
                     <div style="font-size: 1.1rem; color: #fff; font-weight: 600;">State-specific literature gaps identified</div>
                 </div>
