@@ -12,12 +12,12 @@
     <style>
         .theory-card {
             position: relative;
-            min-height: 160px;
+            min-height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            flex: 1 1 200px;
+            flex: 1 1 150px;
             cursor: default;
         }
         .theory-card .default-state {
@@ -26,7 +26,7 @@
             transform: translateY(0);
             position: absolute;
             width: 100%;
-            padding: 1rem;
+            padding: 0.5rem;
         }
         .theory-card .hover-state {
             transition: opacity 0.3s ease, transform 0.3s ease;
@@ -36,7 +36,7 @@
             top: 50%;
             left: 50%;
             width: 100%;
-            padding: 1.5rem;
+            padding: 0.5rem;
         }
         .theory-card:hover .default-state {
             opacity: 0;
@@ -46,6 +46,7 @@
             opacity: 1;
             transform: translate(-50%, -50%) scale(1);
         }
+    </style>
     <style>
         .timeline-horizontal {
             display: flex;
@@ -317,45 +318,45 @@
                 </div>
             </div>
 
-            <div style="display: flex; gap: 1rem; width: 100%; max-width: 1400px; justify-content: center; flex-wrap: wrap; margin-top: 5rem;">
+            <div style="display: flex; gap: 1rem; width: 100%; max-width: 1400px; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
                 
-                <div class="glass-card hover-magnify theory-card" style="border-top: 3px solid var(--accent-cg);">
+                <div class="glass-card hover-magnify theory-card" style="border-top: 3px solid var(--accent-cg); min-width: 150px;">
                     <div class="default-state">
-                        <div style="font-size: 1.15rem; font-weight: 700; color: var(--accent-cg);">Stakeholder Theory</div>
+                        <div style="font-size: 1rem; font-weight: 700; color: var(--accent-cg);">Stakeholder Theory</div>
                     </div>
                     <div class="hover-state">
-                        <div style="font-size: 0.9rem; font-weight: 700; color: var(--accent-cg); margin-bottom: 0.5rem;">Stakeholder Theory <span style="font-weight: 400; color: #fff;">(Freeman, 1984)</span></div>
-                        <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.5;">Defines tribal communities as primary stakeholders whose perceptions of CSR are the dependent variable.</div>
+                        <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-cg); margin-bottom: 0.25rem;">Stakeholder Theory <span style="font-weight: 400; color: #fff;">(Freeman, 1984)</span></div>
+                        <div style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.4;">Defines tribal communities as primary stakeholders whose perceptions of CSR are the dependent variable.</div>
                     </div>
                 </div>
 
-                <div class="glass-card hover-magnify theory-card" style="border-top: 3px solid var(--success-color);">
+                <div class="glass-card hover-magnify theory-card" style="border-top: 3px solid var(--success-color); min-width: 150px;">
                     <div class="default-state">
-                        <div style="font-size: 1.15rem; font-weight: 700; color: var(--success-color);">Two-Way Symmetrical Model</div>
+                        <div style="font-size: 1rem; font-weight: 700; color: var(--success-color);">Two-Way Symmetrical</div>
                     </div>
                     <div class="hover-state">
-                        <div style="font-size: 0.9rem; font-weight: 700; color: var(--success-color); margin-bottom: 0.5rem;">Two-Way Symmetrical Model <span style="font-weight: 400; color: #fff;">(Grunig &amp; Hunt, 1984)</span></div>
-                        <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.5;">Tests whether dialogue-based communication (Involvement Strategy) achieves higher perceived betterment of society than one-way messaging.</div>
+                        <div style="font-size: 0.8rem; font-weight: 700; color: var(--success-color); margin-bottom: 0.25rem;">Two-Way Symmetrical <span style="font-weight: 400; color: #fff;">(Grunig &amp; Hunt, 1984)</span></div>
+                        <div style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.4;">Tests whether dialogue-based communication (Involvement Strategy) achieves higher perceived betterment of society than one-way messaging.</div>
                     </div>
                 </div>
 
-                <div class="glass-card hover-magnify theory-card" style="border-top: 3px solid var(--warning-color);">
+                <div class="glass-card hover-magnify theory-card" style="border-top: 3px solid var(--warning-color); min-width: 150px;">
                     <div class="default-state">
-                        <div style="font-size: 1.15rem; font-weight: 700; color: var(--warning-color);">Agenda-Setting Theory</div>
+                        <div style="font-size: 1rem; font-weight: 700; color: var(--warning-color);">Agenda-Setting Theory</div>
                     </div>
                     <div class="hover-state">
-                        <div style="font-size: 0.9rem; font-weight: 700; color: var(--warning-color); margin-bottom: 0.5rem;">Agenda-Setting Theory <span style="font-weight: 400; color: #fff;">(McCombs &amp; Shaw, 1972)</span></div>
-                        <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.5;">Analyzes whether corporate communication priorities match what tribal communities actually need.</div>
+                        <div style="font-size: 0.8rem; font-weight: 700; color: var(--warning-color); margin-bottom: 0.25rem;">Agenda-Setting <span style="font-weight: 400; color: #fff;">(McCombs &amp; Shaw, 1972)</span></div>
+                        <div style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.4;">Analyzes whether corporate communication priorities match what tribal communities actually need.</div>
                     </div>
                 </div>
 
-                <div class="glass-card hover-magnify theory-card" style="border-top: 3px solid #a020f0;">
+                <div class="glass-card hover-magnify theory-card" style="border-top: 3px solid #a020f0; min-width: 150px;">
                     <div class="default-state">
-                        <div style="font-size: 1.15rem; font-weight: 700; color: #a020f0;">Diffusion of Innovations</div>
+                        <div style="font-size: 1rem; font-weight: 700; color: #a020f0;">Diffusion of Innovations</div>
                     </div>
                     <div class="hover-state">
-                        <div style="font-size: 0.9rem; font-weight: 700; color: #a020f0; margin-bottom: 0.5rem;">Diffusion of Innovations <span style="font-weight: 400; color: #fff;">(Rogers, 1962)</span></div>
-                        <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.5;">Examines how CSR awareness spreads through tribal communities via opinion leaders like Gram Pradhan and Sarpanch.</div>
+                        <div style="font-size: 0.8rem; font-weight: 700; color: #a020f0; margin-bottom: 0.25rem;">Diffusion of Innovations <span style="font-weight: 400; color: #fff;">(Rogers, 1962)</span></div>
+                        <div style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.4;">Examines how CSR awareness spreads through tribal communities via opinion leaders like Gram Pradhan and Sarpanch.</div>
                     </div>
                 </div>
 
