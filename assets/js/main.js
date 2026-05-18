@@ -69,23 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Apply different scale classes based on card width
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.hover-magnify');
-    cards.forEach(card => {
-        const width = card.offsetWidth;
-        const height = card.offsetHeight;
-        
-        if (width < 150 || height < 100) {
-            card.classList.add('hover-magnify-sm');
-        } else if (width >= 150 && width <= 300) {
-            card.classList.add('hover-magnify-md');
-        } else if (width > 300) {
-            card.classList.add('hover-magnify-lg');
-        }
-    });
-});
-
 
 // =====================================================================
 // CINEMATIC ENHANCEMENTS — Intersection Observer for slide fade-ins

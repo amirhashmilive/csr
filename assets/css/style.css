@@ -116,7 +116,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-card:hover {
-    transform: translateY(-5px);
     box-shadow: var(--neon-glow);
 }
 
@@ -440,72 +439,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Universal Hover Magnify Effect */
 .hover-magnify {
-    transform-origin: center !important;
-    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, z-index 0.25s ease !important;
-    z-index: 1;
-}
-
-.hover-magnify-sm:hover {
-    transform: scale(2.75) !important;
-}
-.hover-magnify-md:hover {
-    transform: scale(1.75) !important;
-}
-.hover-magnify-lg:hover {
-    transform: scale(1.15) !important;
-}
-
-.hover-magnify:not(.hover-magnify-sm):not(.hover-magnify-md):not(.hover-magnify-lg):hover {
-    transform: scale(1.15) !important;
+    transform-origin: center center !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, z-index 0.25s ease !important;
+    z-index: 1 !important;
+    transform: scale(1) translateY(0) !important;
 }
 
 .hover-magnify:hover {
-    background-color: #b34700 !important; /* Dark burnt orange for high contrast */
-    color: #ffffff !important;
-    z-index: 100;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-    border-color: #b34700 !important;
-}
-
-.hover-magnify:hover h2,
-.hover-magnify:hover h3, 
-.hover-magnify:hover h4, 
-.hover-magnify:hover p,
-.hover-magnify:hover ul, 
-.hover-magnify:hover li, 
-.hover-magnify:hover i,
-.hover-magnify:hover .state-stat span,
-.hover-magnify:hover .state-stat strong,
-.hover-magnify:hover th,
-.hover-magnify:hover td,
-.hover-magnify:hover .badge {
-    color: #ffffff !important;
-    border-color: rgba(255,255,255,0.3) !important;
-}
-
-.hover-magnify:hover .badge {
-    background: rgba(255,255,255,0.2) !important;
+    transform: scale(1.5) translateY(0) !important;
+    z-index: 100 !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6) !important;
 }
 
 @media (max-width: 768px) {
-    .hover-magnify-sm:hover,
-    .hover-magnify-md:hover,
-    .hover-magnify-lg:hover,
     .hover-magnify:hover {
-        transform: scale(1.02) !important;
+        transform: scale(1.02) translateY(0) !important;
     }
-}
-
-/* Custom 4x Magnification for Chapter 1 Pillar Cards */
-.pillar-card-2x:hover,
-.pillar-card-2x.hover-magnify-sm:hover,
-.pillar-card-2x.hover-magnify-md:hover,
-.pillar-card-2x.hover-magnify-lg:hover {
-    transform: scale(2.0) !important;
-    background-color: #b34700 !important;
-    color: #ffffff !important;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease !important;
-    z-index: 999 !important;
 }
 
 
