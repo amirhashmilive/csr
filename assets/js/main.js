@@ -71,6 +71,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // =====================================================================
+// CINEMATIC ENHANCEMENTS — Protect Layout from Massive Card Zoom
+// =====================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.hover-magnify');
+    cards.forEach(card => {
+        // We wait a tiny bit to ensure CSS layout has calculated width
+        setTimeout(() => {
+            const width = card.offsetWidth;
+            if (width > 400) {
+                card.classList.add('hover-magnify-lg');
+            }
+        }, 100);
+    });
+});
+
+// =====================================================================
 // CINEMATIC ENHANCEMENTS — Intersection Observer for slide fade-ins
 // =====================================================================
 
