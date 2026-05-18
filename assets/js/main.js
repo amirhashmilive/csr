@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // We wait a tiny bit to ensure CSS layout has calculated width
         setTimeout(() => {
             const width = card.offsetWidth;
-            if (width > 400) {
+            if (width > 400 && !card.hasAttribute('data-force-magnify')) {
                 card.classList.add('hover-magnify-lg');
             }
         }, 100);
