@@ -373,32 +373,40 @@
             </style>
 
             <div class="ces-grid">
-                <div class="glass-card hover-magnify" style="text-align: center;">
+                <div class="glass-card hover-magnify ces-click" data-image="assets/images/chapter-01/ces/ces-communication-channels.webp" style="text-align: center; cursor: pointer;">
                     <i class="fas fa-bullhorn" style="font-size: 3rem; color: #3498db; margin-bottom: 1rem;"></i>
                     <h3>Communication Channels</h3>
                     <div style="height: 2px; background: #3498db; margin-top: 1rem;"></div>
                 </div>
-                <div class="glass-card hover-magnify" style="text-align: center;">
+                <div class="glass-card hover-magnify ces-click" data-image="assets/images/chapter-01/ces/ces-language-accessibility.webp" style="text-align: center; cursor: pointer;">
                     <i class="fas fa-language" style="font-size: 3rem; color: #e74c3c; margin-bottom: 1rem;"></i>
                     <h3>Language Accessibility</h3>
                     <div style="height: 2px; background: #e74c3c; margin-top: 1rem;"></div>
                 </div>
-                <div class="glass-card hover-magnify" style="text-align: center;">
+                <div class="glass-card hover-magnify ces-click" data-image="assets/images/chapter-01/ces/ces-feedback-mechanisms.webp" style="text-align: center; cursor: pointer;">
                     <i class="fas fa-comments" style="font-size: 3rem; color: #2ecc71; margin-bottom: 1rem;"></i>
                     <h3>Feedback Mechanisms</h3>
                     <div style="height: 2px; background: #2ecc71; margin-top: 1rem;"></div>
                 </div>
-                <div class="glass-card hover-magnify" style="text-align: center;">
+                <div class="glass-card hover-magnify ces-click" data-image="assets/images/chapter-01/ces/ces-interaction-frequency.webp" style="text-align: center; cursor: pointer;">
                     <i class="fas fa-sync-alt" style="font-size: 3rem; color: #f1c40f; margin-bottom: 1rem;"></i>
                     <h3>Interaction Frequency</h3>
                     <div style="height: 2px; background: #f1c40f; margin-top: 1rem;"></div>
                 </div>
-                <div class="glass-card hover-magnify" style="text-align: center;">
+                <div class="glass-card hover-magnify ces-click" data-image="assets/images/chapter-01/ces/ces-message-clarity.webp" style="text-align: center; cursor: pointer;">
                     <i class="fas fa-check-circle" style="font-size: 3rem; color: #9b59b6; margin-bottom: 1rem;"></i>
                     <h3>Message Clarity</h3>
                     <div style="height: 2px; background: #9b59b6; margin-top: 1rem;"></div>
                 </div>
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    if (typeof initLightbox === 'function') {
+                        initLightbox('.ces-click', 'ces');
+                    }
+                });
+            </script>
 
             <div class="glass-card" style="width: 100%; max-width: 900px; text-align: center; border: 2px solid var(--accent-jh);">
                 <p style="font-size: 1.2rem; font-weight: 500; margin: 0; color: #fff;">CES is the primary communication variable used to compare CSR effectiveness between Chhattisgarh and Jharkhand.</p>
