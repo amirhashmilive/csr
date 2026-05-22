@@ -667,6 +667,10 @@ html {
     box-shadow: var(--neon-glow);
 }
 
+.mobile-resources-only {
+    display: none;
+}
+
 /* ═══════════════════════════════════════════════════════════════════
    MOBILE RESPONSIVENESS
    ═══════════════════════════════════════════════════════════════════ */
@@ -687,6 +691,64 @@ html {
         display: grid !important;
         grid-template-columns: 1fr !important;
         gap: 0.5rem !important;
+    }
+
+    /* Specific Thesis Structure layout for Mobile */
+    #thesis-structure .grid-7 {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* 2 columns */
+        gap: 0.25rem !important;
+    }
+    #thesis-structure .grid-7 .chapter-card:nth-child(7) {
+        grid-column: span 2;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    #thesis-structure .chapter-card {
+        padding: 0.25rem !important;
+        gap: 0.25rem !important;
+    }
+    #thesis-structure .chapter-icon {
+        font-size: 1.2rem !important;
+        margin-bottom: 0 !important;
+    }
+    #thesis-structure .chapter-num {
+        font-size: 0.6rem !important;
+        margin-bottom: 0 !important;
+    }
+    #thesis-structure .chapter-card h3 {
+        font-size: 0.7rem !important;
+        margin-bottom: 0 !important;
+    }
+    #thesis-structure .chapter-card p {
+        display: none !important; /* Hide descriptions to save space */
+    }
+
+    /* Resource cards merged into Thesis Structure (Slide 2) */
+    .mobile-resources-only {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 1 row, 3 cols */
+        gap: 0.25rem !important;
+        margin-top: 0.5rem !important;
+    }
+    .mobile-resources-only .resource-card {
+        padding: 0.25rem !important;
+    }
+    .mobile-resources-only .resource-card i {
+        font-size: 1.2rem !important;
+        margin-bottom: 0 !important;
+    }
+    .mobile-resources-only .resource-card h3 {
+        font-size: 0.6rem !important;
+        margin-bottom: 0 !important;
+    }
+    .mobile-resources-only .resource-card p {
+        display: none !important;
+    }
+    
+    /* Hide the original Slide 3 on mobile */
+    #slide-3 {
+        display: none !important;
     }
 
     /* Convert flexbox rows to column direction */
