@@ -677,39 +677,30 @@ html {
         overflow-x: hidden;
     }
 
-    /* Reduce slide padding */
+    /* Reduce slide padding and spacing */
     .slide {
-        padding: 1rem !important;
+        padding: 1rem 0.5rem !important;
     }
 
-    /* Convert grid layouts to single column */
+    /* Convert grid layouts to single column and reduce gap */
     .grid-2, .grid-3, .grid-4, .grid-5, .architecture-grid, .pillar-grid, .strategy-grid {
         display: grid !important;
         grid-template-columns: 1fr !important;
-    }
-
-    /* For architecture-grid specifically, make it 2 columns */
-    .architecture-grid {
-        grid-template-columns: 1fr 1fr !important;
+        gap: 0.5rem !important;
     }
 
     /* Convert flexbox rows to column direction */
     .flex-row, .strategy-flow, .pillar-flow {
         display: flex !important;
         flex-direction: column !important;
-    }
-
-    /* For Five-Pillar Framework, make it 2 columns */
-    .pillar-flow {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
+        gap: 0.5rem !important;
     }
 
     /* Stack information flow map and integrated framework boxes vertically */
     .slide > div[style*="display: flex"], 
     .glass-card > div[style*="display: flex"] {
         flex-direction: column !important;
-        gap: 1.5rem !important;
+        gap: 0.5rem !important;
     }
     
     .glass-card > div[style*="display: flex"] > div {
@@ -721,18 +712,26 @@ html {
         display: none !important;
     }
 
-    /* Reduce font sizes */
+    /* Reduce font sizes and margins */
     h1, .slide-title {
-        font-size: 1.8rem !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
     }
     h2, .slide-subtitle {
-        font-size: 1.4rem !important;
+        font-size: 1.2rem !important;
+        margin-bottom: 0.75rem !important;
     }
     h3 {
-        font-size: 1.2rem !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    h4, h5, h6 {
+        font-size: 1rem !important;
+        margin-bottom: 0.25rem !important;
     }
     body, p, li, td, th {
-        font-size: 14px !important;
+        font-size: 13px !important;
+        line-height: 1.3 !important;
     }
 
     /* Make images scale properly */
@@ -741,8 +740,8 @@ html {
         height: auto !important;
     }
 
-    /* Increase touch target size for cards */
+    /* CARDS: Reduce padding to save space */
     .glass-card {
-        padding: 1.5rem !important;
+        padding: 0.75rem !important;
     }
 }
