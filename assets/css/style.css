@@ -671,132 +671,195 @@ html {
    MOBILE RESPONSIVENESS
    ═══════════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-    /* Prevent horizontal overflow */
+    /* 1. Prevent Horizontal Scroll */
     html, body, .slide-container, .slide {
-        max-width: 100vw;
-        overflow-x: hidden;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
-
-    /* Reduce slide padding and spacing */
+    
+    /* 2. Fit exactly within slide height */
     .slide {
-        padding: 1rem 0.5rem !important;
+        padding: 0.5rem 0.5rem !important;
+        min-height: 100vh !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
     }
 
-    /* Convert grid layouts to single column and reduce gap */
-    .grid-2, .grid-3, .grid-4, .grid-5, .architecture-grid, .pillar-grid, .strategy-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 0.5rem !important;
+    /* 3. ALL Grids to 1 Column */
+    [class*="grid-"], .architecture-grid, .pillar-grid, .strategy-grid, .ces-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.4rem !important;
+        width: 100% !important;
     }
 
-    /* ----------------------------------------------------- */
-    /* index.html - Slide 2: Thesis Structure (Chapter Cards) */
-    /* ----------------------------------------------------- */
-    #thesis-structure .grid-7 {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important; /* 2 columns */
-        gap: 0.25rem !important;
-    }
-    #thesis-structure .grid-7 .chapter-card:nth-child(7) {
-        grid-column: span 2;
-        max-width: 50%;
-        margin: 0 auto;
-    }
-    #thesis-structure .chapter-card {
-        padding: 0.5rem !important;
-        gap: 0.25rem !important;
-    }
-    #thesis-structure .chapter-icon {
-        font-size: 1.5rem !important;
-        margin-bottom: 0 !important;
-    }
-    #thesis-structure .chapter-num {
-        font-size: 0.7rem !important;
-        margin-bottom: 0 !important;
-    }
-    #thesis-structure .chapter-card h3 {
-        font-size: 0.8rem !important;
-        margin-bottom: 0 !important;
-    }
-    #thesis-structure .chapter-card p {
-        display: none !important; /* hide to fit in slide */
-    }
-
-    /* ----------------------------------------------------- */
-    /* index.html - Slide 3: Additional Resources             */
-    /* ----------------------------------------------------- */
-    #slide-3 .grid-3 {
-        grid-template-columns: repeat(3, 1fr) !important; /* 1 row */
-        gap: 0.25rem !important;
-    }
-    #slide-3 .resource-card {
-        padding: 0.5rem !important;
-    }
-    #slide-3 .resource-card i {
-        font-size: 1.5rem !important;
-        margin-bottom: 0 !important;
-    }
-    #slide-3 .resource-card h3 {
-        font-size: 0.65rem !important;
-        margin-bottom: 0 !important;
-    }
-    #slide-3 .resource-card p {
-        display: none !important; /* hide to fit in slide */
-    }
-
-    /* Convert flexbox rows to column direction */
+    /* Convert flexbox rows to column */
     .flex-row, .strategy-flow, .pillar-flow {
         display: flex !important;
         flex-direction: column !important;
-        gap: 0.5rem !important;
+        gap: 0.4rem !important;
     }
 
-    /* Stack information flow map and integrated framework boxes vertically */
-    .slide > div[style*="display: flex"], 
-    .glass-card > div[style*="display: flex"] {
+    /* 4. Make Cards Extremely Compact to fit in 1 column without vertical overflow */
+    .glass-card {
+        padding: 0.5rem !important;
+        gap: 0.25rem !important;
+        min-height: 0 !important;
+        margin-bottom: 0 !important;
+        /* Force row-based content inside cards to save vertical space */
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+        flex-wrap: wrap;
+    }
+
+    /* Exceptions where column layout is strictly needed inside a card */
+    .chart-container, .data-table, .glass-card > div[style*="display: flex"], .state-card, .pyramid {
         flex-direction: column !important;
-        gap: 0.5rem !important;
+        align-items: center !important;
     }
     
     .glass-card > div[style*="display: flex"] > div {
         width: 100% !important;
     }
 
-    /* Hide horizontal arrows */
-    .fa-arrow-right, .fas.fa-arrow-right, .arrow-icon, .fa-arrows-alt-h {
+    /* Reduce spacing for card contents */
+    .glass-card * {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    .glass-card i, .glass-card .fas, .glass-card .far, .chapter-icon {
+        font-size: 1.25rem !important;
+        margin-bottom: 0 !important;
+        margin-right: 0.5rem !important;
+        min-width: 25px;
+        text-align: center;
+    }
+
+    /* Hide descriptions to prevent vertical overflow when 7+ items stack */
+    .chapter-card p, .resource-card p, .glass-card p {
         display: none !important;
     }
 
-    /* Reduce font sizes and margins */
+    /* 5. Typography Scaling */
     h1, .slide-title {
-        font-size: 1.5rem !important;
-        margin-bottom: 0.5rem !important;
+        font-size: 1.4rem !important;
+        margin-bottom: 0.4rem !important;
+        line-height: 1.1 !important;
+        width: 100%;
+        text-align: center;
     }
     h2, .slide-subtitle {
-        font-size: 1.2rem !important;
-        margin-bottom: 0.75rem !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 0.4rem !important;
+        line-height: 1.1 !important;
+        width: 100%;
+        text-align: center;
     }
     h3 {
-        font-size: 1.1rem !important;
-        margin-bottom: 0.25rem !important;
+        font-size: 0.95rem !important;
+        line-height: 1.1 !important;
     }
     h4, h5, h6 {
-        font-size: 1rem !important;
-        margin-bottom: 0.25rem !important;
+        font-size: 0.85rem !important;
+        line-height: 1.1 !important;
     }
-    body, p, li, td, th {
-        font-size: 13px !important;
-        line-height: 1.3 !important;
+    body, li, td, th {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
     }
-
-    /* Make images scale properly */
-    img, video {
+    
+    /* 6. Images & Media */
+    img, video, canvas {
         max-width: 100% !important;
         height: auto !important;
     }
+    
+    .chart-container {
+        height: 200px !important;
+        width: 100% !important;
+        margin: 0.5rem auto !important;
+    }
 
-    /* CARDS: Reduce padding to save space */
-    .glass-card {
-        padding: 0.75rem !important;
+    /* 7. Hide horizontal arrows/separators */
+    .fa-arrow-right, .fas.fa-arrow-right, .arrow-icon, .fa-arrows-alt-h {
+        display: none !important;
+    }
+    
+    /* 8. Fix specific oversized custom elements in chapters */
+    .timeline, .cycle-diagram {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.4rem !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .timeline::before { display: none !important; }
+    .timeline-item {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 8px !important;
+        padding: 0.5rem !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+    }
+    .timeline-content {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        border: none !important;
+        padding: 0 !important;
+        background: transparent !important;
+        text-align: left !important;
+    }
+    .cycle-item {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 0.5rem !important;
+        border-radius: 8px !important;
+        flex-direction: row !important;
+    }
+    
+    /* Pyramids */
+    .pyramid { margin-top: 0.5rem !important; }
+    .pyramid-level {
+        width: 100% !important;
+        height: auto !important;
+        padding: 0.5rem !important;
+        clip-path: none !important; /* disable triangle on mobile to save width */
+        border-radius: 4px !important;
+        margin-bottom: 0.2rem !important;
+    }
+    
+    /* Pillar grids hover state mobile fix */
+    .pillar-click .hover-state {
+        position: static !important;
+        transform: none !important;
+        opacity: 1 !important;
+        display: none !important;
+        width: 100% !important;
+    }
+    .pillar-click .default-state {
+        flex-direction: row !important;
+        text-align: left !important;
+        width: 100% !important;
+        align-items: center !important;
+    }
+    .pillar-click:hover .hover-state {
+        display: block !important;
+    }
+    
+    /* Chapter/Resource specific sizing to fit in 1 col */
+    .chapter-num {
+        display: none !important; /* redundant info, hide to save space */
     }
 }
