@@ -863,3 +863,77 @@ html {
         display: none !important; /* redundant info, hide to save space */
     }
 }
+
+/* Resource Cards with Glowing Gradient */
+.resource-card {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+
+.resource-card:hover {
+  transform: scale(1.02);
+}
+
+.resource-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  opacity: 0.5;
+  filter: blur(35px);
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.resource-card:hover .resource-glow {
+  opacity: 0.8;
+}
+
+.resource-content {
+  position: relative;
+  background: rgba(26, 26, 28, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 32px;
+  padding: 1.5rem;
+  text-align: center;
+  z-index: 1;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.resource-card:hover .resource-content {
+  border-color: rgba(255,255,255,0.2);
+}
+
+.resource-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.resource-card p {
+  color: var(--text-muted);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.resource-card[data-gradient="pink"] .resource-glow {
+  background: linear-gradient(137deg, #FF3D77, #FFB1CE, #FF9D3C);
+}
+
+.resource-card[data-gradient="cyan"] .resource-glow {
+  background: linear-gradient(137deg, #FFFFFF, #7DD3FC, #06B6D4);
+}
+
+.resource-card[data-gradient="purple"] .resource-glow {
+  background: linear-gradient(137deg, #4361EE, #E0AEFF, #F72585);
+}
