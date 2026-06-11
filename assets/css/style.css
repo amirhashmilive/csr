@@ -983,3 +983,208 @@ html {
 .resource-card[data-gradient="purple"] .resource-glow {
   background: linear-gradient(137deg, #4361EE, #E0AEFF, #F72585);
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   SLIDE NUMBER BADGE SYSTEM
+   Dynamic slide numbering: badge at top-right of every .slide
+   See: assets/js/slide-number.js
+   ═══════════════════════════════════════════════════════════════════ */
+
+.sn-badge {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.1rem;
+    z-index: 100;
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--bg-glass-border);
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: var(--card-shadow);
+    transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+    user-select: none;
+    white-space: nowrap;
+    /* Prevent the badge from triggering slide magnify */
+    isolation: isolate;
+}
+
+/* Offset badge slightly right of the progress-dots (right: 2rem) on desktop */
+@media (min-width: 769px) {
+    .sn-badge {
+        right: 3.2rem;
+    }
+}
+
+.sn-badge:hover {
+    background: var(--bg-glass);
+    box-shadow: var(--card-shadow), var(--neon-glow);
+    border-color: var(--accent-cg);
+    transform: translateY(-1px);
+}
+
+.sn-badge__label {
+    letter-spacing: 0.02em;
+    opacity: 0.9;
+}
+
+.sn-badge__caret {
+    font-size: 0.6rem;
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+    line-height: 1;
+}
+
+.sn-badge--open .sn-badge__caret {
+    transform: rotate(180deg);
+}
+
+/* Entry pulse animation */
+@keyframes sn-badge-enter {
+    from { opacity: 0; transform: scale(0.85) translateY(-4px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.sn-badge--entered {
+    animation: sn-badge-enter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Dropdown ──────────────────────────────────────────────────── */
+
+.sn-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 220px;
+    max-width: 300px;
+    max-height: 280px;
+    overflow-y: auto;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--bg-glass-border);
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), var(--neon-glow);
+    padding: 6px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px) scale(0.97);
+    transform-origin: top right;
+    transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.22s;
+    pointer-events: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-glass-border) transparent;
+}
+
+/* Custom scrollbar for dropdown (Chrome) */
+.sn-dropdown::-webkit-scrollbar {
+    width: 4px;
+}
+.sn-dropdown::-webkit-scrollbar-track { background: transparent; }
+.sn-dropdown::-webkit-scrollbar-thumb {
+    background: var(--bg-glass-border);
+    border-radius: 2px;
+}
+
+.sn-badge--open .sn-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.sn-dropdown__header {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-cg);
+    padding: 6px 12px 4px;
+    border-bottom: 1px solid var(--bg-glass-border);
+    margin-bottom: 2px;
+}
+
+.sn-dropdown__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    padding: 6px 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s ease, color 0.15s ease;
+    line-height: 1.4;
+}
+
+.sn-dropdown__item:hover {
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--accent-cg);
+}
+
+.sn-dropdown__item--active {
+    background: rgba(0, 212, 255, 0.12);
+    color: var(--accent-cg);
+    font-weight: 600;
+}
+
+/* Light mode overrides */
+:root .sn-dropdown__item--active {
+    background: rgba(0, 102, 204, 0.1);
+}
+
+.sn-dropdown__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    background: var(--bg-glass-border);
+    border-radius: 50%;
+    font-size: 0.62rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    color: var(--text-muted);
+}
+
+.sn-dropdown__item--active .sn-dropdown__num,
+.sn-dropdown__item:hover .sn-dropdown__num {
+    background: var(--accent-cg);
+    color: #fff;
+}
+
+.sn-dropdown__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+}
+
+/* ── Mobile adjustments ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .sn-badge {
+        top: 0.6rem;
+        right: 0.6rem;
+        font-size: 0.62rem;
+        padding: 3px 7px;
+    }
+
+    .sn-dropdown {
+        min-width: 180px;
+        max-height: 220px;
+        right: 0;
+    }
+}
