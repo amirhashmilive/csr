@@ -129,7 +129,7 @@
         /* Convergence Funnel */
         .funnel-flow { display: flex; flex-direction: column; align-items: center; gap: 1rem; max-width: 1200px; width: 100%; }
         .funnel-top { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; width: 100%; }
-        .funnel-top .glass-card { flex: 1; min-width: 220px; max-width: 280px; text-align: center; padding: 1.8rem 1.2rem; position: relative; }
+        .funnel-top .glass-card { flex: 1; min-width: 220px; max-width: 280px; text-align: center; padding: 1.8rem 1.2rem; position: relative; display: flex; flex-direction: column; justify-content: center; min-height: 160px; }
         .funnel-top .glass-card h4 { font-size: 1.15rem; margin-bottom: 0.6rem; }
         .funnel-top .glass-card p { font-size: 0.95rem; }
         .funnel-arrow { font-size: 2rem; color: var(--text-muted); animation: flowDown 1.5s ease-in-out infinite; margin: 0.2rem 0; }
@@ -141,41 +141,43 @@
         .funnel-result h3 { font-size: 1.55rem; margin-bottom: 0.5rem; }
         .funnel-result p { font-size: 1.15rem; }
 
-        /* Hover tooltip for theory cards inside glass-card */
-        .theory-tooltip {
-            visibility: hidden;
-            opacity: 0;
-            position: absolute;
-            bottom: calc(100% + 5px);
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            background: rgba(12, 12, 18, 0.98);
-            color: #f0f0ff;
-            text-align: center;
-            padding: 0.6rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.7rem; /* Scales 1.5x to 1.05rem on hover */
-            line-height: 1.35;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-            transition: opacity 0.2s ease, visibility 0.2s ease;
-            pointer-events: none;
-            z-index: 1000;
-        }
-        .theory-tooltip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 6px solid transparent;
-            border-top-color: rgba(12, 12, 18, 0.98);
-        }
-        .funnel-top .glass-card:hover .theory-tooltip {
-            visibility: visible;
+        /* Theory card hover logic (mirrors Pillar cards) */
+        .theory-hover .default-state {
+            transition: opacity 0.3s ease, transform 0.3s ease;
             opacity: 1;
+            transform: translateY(0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .theory-hover .hover-state {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            opacity: 0;
+            width: 90%;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .theory-hover:hover .default-state {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        
+        .theory-hover:hover .hover-state {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            pointer-events: auto;
         }
 
         /* Mapping table */
@@ -292,25 +294,41 @@
             
             <div class="funnel-flow" style="margin-bottom: 1.5rem;">
                 <div class="funnel-top">
-                    <div class="glass-card hover-magnify">
-                        <h4 style="color: var(--accent-cg);">Stakeholder Theory</h4>
-                        <p style="color: var(--text-muted);">WHO to communicate with</p>
-                        <div class="theory-tooltip">Defines tribal communities as primary stakeholders, not secondary</div>
+                    <div class="glass-card hover-magnify theory-hover">
+                        <div class="default-state">
+                            <h4 style="color: var(--accent-cg);">Stakeholder Theory</h4>
+                            <p style="color: var(--text-muted);">WHO to communicate with</p>
+                        </div>
+                        <div class="hover-state">
+                            <p style="font-size: 0.95rem; line-height: 1.4; color: #f0f0ff; margin: 0;">Defines tribal communities as primary stakeholders, not secondary</p>
+                        </div>
                     </div>
-                    <div class="glass-card hover-magnify">
-                        <h4 style="color: var(--success-color);">Two-Way Symmetrical</h4>
-                        <p style="color: var(--text-muted);">HOW to communicate</p>
-                        <div class="theory-tooltip">Tests whether dialogue outperforms one-way messaging</div>
+                    <div class="glass-card hover-magnify theory-hover">
+                        <div class="default-state">
+                            <h4 style="color: var(--success-color);">Two-Way Symmetrical</h4>
+                            <p style="color: var(--text-muted);">HOW to communicate</p>
+                        </div>
+                        <div class="hover-state">
+                            <p style="font-size: 0.95rem; line-height: 1.4; color: #f0f0ff; margin: 0;">Tests whether dialogue outperforms one-way messaging</p>
+                        </div>
                     </div>
-                    <div class="glass-card hover-magnify">
-                        <h4 style="color: var(--warning-color);">Agenda-Setting</h4>
-                        <p style="color: var(--text-muted);">WHAT is communicated</p>
-                        <div class="theory-tooltip">Tests whether corporate priorities match community needs</div>
+                    <div class="glass-card hover-magnify theory-hover">
+                        <div class="default-state">
+                            <h4 style="color: var(--warning-color);">Agenda-Setting</h4>
+                            <p style="color: var(--text-muted);">WHAT is communicated</p>
+                        </div>
+                        <div class="hover-state">
+                            <p style="font-size: 0.95rem; line-height: 1.4; color: #f0f0ff; margin: 0;">Tests whether corporate priorities match community needs</p>
+                        </div>
                     </div>
-                    <div class="glass-card hover-magnify">
-                        <h4 style="color: #a020f0;">Diffusion of Innovations</h4>
-                        <p style="color: var(--text-muted);">HOW FAST it spreads</p>
-                        <div class="theory-tooltip">Maps the adoption curve in low-literacy tribal settings</div>
+                    <div class="glass-card hover-magnify theory-hover">
+                        <div class="default-state">
+                            <h4 style="color: #a020f0;">Diffusion of Innovations</h4>
+                            <p style="color: var(--text-muted);">HOW FAST it spreads</p>
+                        </div>
+                        <div class="hover-state">
+                            <p style="font-size: 0.95rem; line-height: 1.4; color: #f0f0ff; margin: 0;">Maps the adoption curve in low-literacy tribal settings</p>
+                        </div>
                     </div>
                 </div>
 
