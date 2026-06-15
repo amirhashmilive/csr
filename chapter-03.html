@@ -248,11 +248,70 @@
             <h2 class="slide-title" style="text-align: center; margin-bottom: 1.5rem;">How the Theories Converge</h2>
             
             <div class="funnel-flow" style="margin-bottom: 2rem;">
+                <style>
+                    /* Custom Tooltip for Funnel Cards */
+                    .funnel-tooltip-card {
+                        position: relative;
+                    }
+                    .funnel-tooltip-text {
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        bottom: 115%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 160px;
+                        background: rgba(15, 15, 20, 0.95);
+                        color: #ffffff;
+                        text-align: center;
+                        padding: 0.6rem 0.8rem;
+                        border-radius: 8px;
+                        font-size: 0.65rem;
+                        line-height: 1.4;
+                        font-weight: 400;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                        pointer-events: none;
+                        z-index: 200;
+                    }
+                    .funnel-tooltip-text::after {
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-width: 6px;
+                        border-style: solid;
+                        border-color: rgba(15, 15, 20, 0.95) transparent transparent transparent;
+                    }
+                    /* When hovered (and magnified), show tooltip */
+                    .funnel-tooltip-card:hover .funnel-tooltip-text {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                </style>
                 <div class="funnel-top">
-                    <div class="glass-card hover-magnify"><h4 style="color: var(--accent-cg);">Stakeholder Theory</h4><p style="font-size: 0.75rem; color: var(--text-muted);">WHO to communicate with</p></div>
-                    <div class="glass-card hover-magnify"><h4 style="color: var(--success-color);">Two-Way Symmetrical</h4><p style="font-size: 0.75rem; color: var(--text-muted);">HOW to communicate</p></div>
-                    <div class="glass-card hover-magnify"><h4 style="color: var(--warning-color);">Agenda-Setting</h4><p style="font-size: 0.75rem; color: var(--text-muted);">WHAT is communicated</p></div>
-                    <div class="glass-card hover-magnify"><h4 style="color: #a020f0;">Diffusion of Innovations</h4><p style="font-size: 0.75rem; color: var(--text-muted);">HOW FAST it spreads</p></div>
+                    <div class="glass-card hover-magnify funnel-tooltip-card">
+                        <h4 style="color: var(--accent-cg);">Stakeholder Theory</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">WHO to communicate with</p>
+                        <div class="funnel-tooltip-text">Defines tribal communities as primary stakeholders, not secondary</div>
+                    </div>
+                    <div class="glass-card hover-magnify funnel-tooltip-card">
+                        <h4 style="color: var(--success-color);">Two-Way Symmetrical</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">HOW to communicate</p>
+                        <div class="funnel-tooltip-text">Tests whether dialogue outperforms one-way messaging</div>
+                    </div>
+                    <div class="glass-card hover-magnify funnel-tooltip-card">
+                        <h4 style="color: var(--warning-color);">Agenda-Setting</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">WHAT is communicated</p>
+                        <div class="funnel-tooltip-text">Tests whether corporate priorities match community needs</div>
+                    </div>
+                    <div class="glass-card hover-magnify funnel-tooltip-card">
+                        <h4 style="color: #a020f0;">Diffusion of Innovations</h4>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">HOW FAST it spreads</p>
+                        <div class="funnel-tooltip-text">Maps the adoption curve in low-literacy tribal settings</div>
+                    </div>
                 </div>
 
                 <div class="funnel-arrow" style="margin: 0.2rem 0;"><i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i></div>
@@ -270,21 +329,7 @@
                 </div>
             </div>
 
-            <h3 style="text-align: center; margin-bottom: 1rem; color: var(--text-main); font-size: 1.1rem;">Why These Four Theories?</h3>
-            <div class="grid-2" style="max-width: 1000px; width: 100%; margin: 0 auto; gap: 0.8rem;">
-                <div class="glass-card hover-magnify" style="border-left: 3px solid var(--accent-cg); padding: 0.8rem 1rem;">
-                    <strong style="color: var(--accent-cg);">Stakeholder Theory:</strong> <span style="font-size: 0.85rem;">Defines tribal communities as primary stakeholders, not secondary</span>
-                </div>
-                <div class="glass-card hover-magnify" style="border-left: 3px solid var(--success-color); padding: 0.8rem 1rem;">
-                    <strong style="color: var(--success-color);">Two-Way Symmetrical:</strong> <span style="font-size: 0.85rem;">Tests whether dialogue outperforms one-way messaging</span>
-                </div>
-                <div class="glass-card hover-magnify" style="border-left: 3px solid var(--warning-color); padding: 0.8rem 1rem;">
-                    <strong style="color: var(--warning-color);">Agenda-Setting:</strong> <span style="font-size: 0.85rem;">Tests whether corporate priorities match community needs</span>
-                </div>
-                <div class="glass-card hover-magnify" style="border-left: 3px solid #a020f0; padding: 0.8rem 1rem;">
-                    <strong style="color: #a020f0;">Diffusion of Innovations:</strong> <span style="font-size: 0.85rem;">Maps the adoption curve in low-literacy tribal settings</span>
-                </div>
-            </div>
+
         </section>
 
         <!-- Slide 6: Theory → Pillar Mapping -->
