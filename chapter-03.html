@@ -248,69 +248,22 @@
             <h2 class="slide-title" style="text-align: center; margin-bottom: 1.5rem;">How the Theories Converge</h2>
             
             <div class="funnel-flow" style="margin-bottom: 2rem;">
-                <style>
-                    /* Custom Tooltip for Funnel Cards */
-                    .funnel-tooltip-card {
-                        position: relative;
-                    }
-                    .funnel-tooltip-text {
-                        visibility: hidden;
-                        opacity: 0;
-                        position: absolute;
-                        bottom: 115%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 160px;
-                        background: rgba(15, 15, 20, 0.95);
-                        color: #ffffff;
-                        text-align: center;
-                        padding: 0.6rem 0.8rem;
-                        border-radius: 8px;
-                        font-size: 0.65rem;
-                        line-height: 1.4;
-                        font-weight: 400;
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-                        transition: opacity 0.3s ease, visibility 0.3s ease;
-                        pointer-events: none;
-                        z-index: 200;
-                    }
-                    .funnel-tooltip-text::after {
-                        content: "";
-                        position: absolute;
-                        top: 100%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        border-width: 6px;
-                        border-style: solid;
-                        border-color: rgba(15, 15, 20, 0.95) transparent transparent transparent;
-                    }
-                    /* When hovered (and magnified), show tooltip */
-                    .funnel-tooltip-card:hover .funnel-tooltip-text {
-                        visibility: visible;
-                        opacity: 1;
-                    }
-                </style>
                 <div class="funnel-top">
-                    <div class="glass-card hover-magnify funnel-tooltip-card">
+                    <div class="glass-card hover-magnify" data-popup="stakeholder-theory" style="cursor: pointer;">
                         <h4 style="color: var(--accent-cg);">Stakeholder Theory</h4>
                         <p style="font-size: 0.75rem; color: var(--text-muted);">WHO to communicate with</p>
-                        <div class="funnel-tooltip-text">Defines tribal communities as primary stakeholders, not secondary</div>
                     </div>
-                    <div class="glass-card hover-magnify funnel-tooltip-card">
+                    <div class="glass-card hover-magnify" data-popup="two-way-symmetrical" style="cursor: pointer;">
                         <h4 style="color: var(--success-color);">Two-Way Symmetrical</h4>
                         <p style="font-size: 0.75rem; color: var(--text-muted);">HOW to communicate</p>
-                        <div class="funnel-tooltip-text">Tests whether dialogue outperforms one-way messaging</div>
                     </div>
-                    <div class="glass-card hover-magnify funnel-tooltip-card">
+                    <div class="glass-card hover-magnify" data-popup="agenda-setting" style="cursor: pointer;">
                         <h4 style="color: var(--warning-color);">Agenda-Setting</h4>
                         <p style="font-size: 0.75rem; color: var(--text-muted);">WHAT is communicated</p>
-                        <div class="funnel-tooltip-text">Tests whether corporate priorities match community needs</div>
                     </div>
-                    <div class="glass-card hover-magnify funnel-tooltip-card">
+                    <div class="glass-card hover-magnify" data-popup="diffusion-innovations" style="cursor: pointer;">
                         <h4 style="color: #a020f0;">Diffusion of Innovations</h4>
                         <p style="font-size: 0.75rem; color: var(--text-muted);">HOW FAST it spreads</p>
-                        <div class="funnel-tooltip-text">Maps the adoption curve in low-literacy tribal settings</div>
                     </div>
                 </div>
 

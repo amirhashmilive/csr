@@ -82,6 +82,30 @@ const popupData = {
         formula: 'One-Way ANOVA comparing Banking, Metal, Energy, Cement',
         rawData: 'F(3,396) = 12.33, p < 0.001, η² = 0.09. Banking Mean = 2.44',
         whyMatters: 'Empirically establishes that the Banking/Financial sector outperforms heavy industries in CSR communication satisfaction.'
+    },
+    'stakeholder-theory': {
+        title: 'Stakeholder Theory',
+        formula: 'Theoretical Context',
+        rawData: 'WHO to communicate with',
+        whyMatters: 'Defines tribal communities as primary stakeholders, not secondary'
+    },
+    'two-way-symmetrical': {
+        title: 'Two-Way Symmetrical',
+        formula: 'Theoretical Context',
+        rawData: 'HOW to communicate',
+        whyMatters: 'Tests whether dialogue outperforms one-way messaging'
+    },
+    'agenda-setting': {
+        title: 'Agenda-Setting',
+        formula: 'Theoretical Context',
+        rawData: 'WHAT is communicated',
+        whyMatters: 'Tests whether corporate priorities match community needs'
+    },
+    'diffusion-innovations': {
+        title: 'Diffusion of Innovations',
+        formula: 'Theoretical Context',
+        rawData: 'HOW FAST it spreads',
+        whyMatters: 'Maps the adoption curve in low-literacy tribal settings'
     }
 };
 
