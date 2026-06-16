@@ -281,34 +281,98 @@
             <h2 class="slide-title">Research Hypotheses</h2>
             
             <div class="grid-3">
-                <div class="glass-card hyp-card hover-magnify" style="grid-column: span 3;">
+                <!-- Row 1 -->
+                <div class="glass-card hyp-card hover-magnify">
                     <div class="hyp-badge">H₁</div>
-                    <p style="font-size: 1.2rem;">There is a significant difference in the Communication Effectiveness Score (CES) between Chhattisgarh and Jharkhand.</p>
+                    <p style="font-size: 1rem;">There is a significant difference in the Communication Effectiveness Score (CES) between Chhattisgarh and Jharkhand.</p>
                     <span class="badge badge-supported">Tested via Independent t-test</span>
                 </div>
                 
                 <div class="glass-card hyp-card hover-magnify">
                     <div class="hyp-badge">H₂</div>
-                    <p>Effective CSR communication significantly increases the likelihood of perceived educational improvement.</p>
+                    <p style="font-size: 1rem;">Effective CSR communication significantly increases the likelihood of perceived educational improvement.</p>
                     <span class="badge badge-supported">Tested via Logistic Regression</span>
                 </div>
                 
                 <div class="glass-card hyp-card hover-magnify">
                     <div class="hyp-badge">H₃</div>
-                    <p>There is a significant interaction effect between state geography and communication channels on healthcare perception.</p>
+                    <p style="font-size: 1rem;">There is a significant interaction effect between state geography and communication channels on healthcare perception.</p>
                     <span class="badge badge-partial">Tested via Two-Way ANOVA</span>
                 </div>
                 
-                <div class="glass-card hyp-card hover-magnify">
+                <!-- Row 2 -->
+                <div class="glass-card hyp-card hover-magnify" style="grid-column: span 1.5;">
                     <div class="hyp-badge">H₄</div>
-                    <p>There is a significant association between the type of communication channel used and environmental impact recognition.</p>
+                    <p style="font-size: 1rem;">There is a significant association between the type of communication channel used and environmental impact recognition.</p>
                     <span class="badge badge-supported">Tested via Chi-Square</span>
                 </div>
                 
-                <div class="glass-card hyp-card hover-magnify" style="grid-column: span 3; text-align: center; align-items: center;">
-                    <div class="hyp-badge" style="align-self: center;">H₅</div>
-                    <p style="max-width: 600px;">Communication Effectiveness is a stronger predictor of perceived livelihood enhancement than geographical state.</p>
+                <div class="glass-card hyp-card hover-magnify" style="grid-column: span 1.5;">
+                    <div class="hyp-badge">H₅</div>
+                    <p style="font-size: 1rem;">Communication Effectiveness is a stronger predictor of perceived livelihood enhancement than geographical state.</p>
                     <span class="badge badge-supported">Tested via Multiple Linear Regression</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Combined Objectives & Hypotheses -->
+        <section class="slide">
+            <h2 class="slide-title">Mapping Objectives to Hypotheses</h2>
+            
+            <div style="display: flex; gap: 2.5rem; width: 100%; max-width: 1300px; align-items: stretch;">
+                <!-- Left Column: Objectives -->
+                <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+                    <h3 style="text-align: center; color: var(--accent-cg); margin-bottom: 0.5rem; font-size: 1.3rem;">Research Objectives</h3>
+                    
+                    <div class="glass-card hover-magnify" style="padding: 1.2rem; display: flex; align-items: center; gap: 1rem; flex: 1;">
+                        <div class="hyp-badge" style="margin: 0; color: var(--accent-cg);">O1</div>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.4;">To compare the effectiveness of CSR communication strategies between companies operating in Chhattisgarh and Jharkhand.</p>
+                    </div>
+                    <div class="glass-card hover-magnify" style="padding: 1.2rem; display: flex; align-items: center; gap: 1rem; flex: 1;">
+                        <div class="hyp-badge" style="margin: 0; color: var(--accent-cg);">O2</div>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.4;">To assess the role of CSR communication in the educational development of beneficiaries.</p>
+                    </div>
+                    <div class="glass-card hover-magnify" style="padding: 1.2rem; display: flex; align-items: center; gap: 1rem; flex: 1;">
+                        <div class="hyp-badge" style="margin: 0; color: var(--accent-cg);">O3</div>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.4;">To evaluate the influence of CSR communication on healthcare access and awareness.</p>
+                    </div>
+                    <div class="glass-card hover-magnify" style="padding: 1.2rem; display: flex; align-items: center; gap: 1rem; flex: 1;">
+                        <div class="hyp-badge" style="margin: 0; color: var(--accent-cg);">O4</div>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.4;">To examine the contribution of CSR communication in promoting environmental conservation.</p>
+                    </div>
+                    <div class="glass-card hover-magnify" style="padding: 1.2rem; display: flex; align-items: center; gap: 1rem; flex: 1;">
+                        <div class="hyp-badge" style="margin: 0; color: var(--accent-cg);">O5</div>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.4;">To analyse the role of CSR communication in enhancing livelihood opportunities.</p>
+                    </div>
+                </div>
+                
+                <!-- Center Divider -->
+                <div style="width: 2px; background: var(--bg-glass-border); margin-top: 3.5rem;"></div>
+
+                <!-- Right Column: Hypotheses -->
+                <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+                    <h3 style="text-align: center; color: var(--accent-jh); margin-bottom: 0.5rem; font-size: 1.3rem;">Research Hypotheses</h3>
+                    
+                    <div class="glass-card hover-magnify" style="padding: 1.2rem; display: flex; align-items: center; gap: 1rem; flex: 1;">
+                        <div class="hyp-badge" style="margin: 0; color: var(--accent-jh);">H1</div>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.4;">There is a significant difference in the Communication Effectiveness Score (CES) between Chhattisgarh and Jharkhand.</p>
+                    </div>
+                    <div class="glass-card hover-magnify" style="padding: 1.2rem; display: flex; align-items: center; gap: 1rem; flex: 1;">
+                        <div class="hyp-badge" style="margin: 0; color: var(--accent-jh);">H2</div>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.4;">Effective CSR communication significantly increases the likelihood of perceived educational improvement.</p>
+                    </div>
+                    <div class="glass-card hover-magnify" style="padding: 1.2rem; display: flex; align-items: center; gap: 1rem; flex: 1;">
+                        <div class="hyp-badge" style="margin: 0; color: var(--accent-jh);">H3</div>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.4;">There is a significant interaction effect between state geography and communication channels on healthcare perception.</p>
+                    </div>
+                    <div class="glass-card hover-magnify" style="padding: 1.2rem; display: flex; align-items: center; gap: 1rem; flex: 1;">
+                        <div class="hyp-badge" style="margin: 0; color: var(--accent-jh);">H4</div>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.4;">There is a significant association between the type of communication channel used and environmental impact recognition.</p>
+                    </div>
+                    <div class="glass-card hover-magnify" style="padding: 1.2rem; display: flex; align-items: center; gap: 1rem; flex: 1;">
+                        <div class="hyp-badge" style="margin: 0; color: var(--accent-jh);">H5</div>
+                        <p style="font-size: 0.95rem; margin: 0; line-height: 1.4;">Communication Effectiveness is a stronger predictor of perceived livelihood enhancement than geographical state.</p>
+                    </div>
                 </div>
             </div>
         </section>
