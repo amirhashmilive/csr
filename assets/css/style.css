@@ -1188,3 +1188,78 @@ html {
         right: 0;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   STRICT 2-COLOR TEXT RULE (LIGHT MODE ONLY)
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* 1. Base rule: Force all text to Dark Gray */
+:root:not([data-theme="dark"]) * {
+    color: var(--text-main) !important;
+    text-shadow: none !important;
+}
+
+/* 2. Protect charts and diagrams from the base rule */
+:root:not([data-theme="dark"]) svg,
+:root:not([data-theme="dark"]) svg *,
+:root:not([data-theme="dark"]) canvas,
+:root:not([data-theme="dark"]) .chart-container * {
+    color: initial !important;
+}
+
+/* 3. Exceptions: Accent elements get Blue. */
+:root:not([data-theme="dark"]) h1,
+:root:not([data-theme="dark"]) h2,
+:root:not([data-theme="dark"]) h3,
+:root:not([data-theme="dark"]) h4,
+:root:not([data-theme="dark"]) h5,
+:root:not([data-theme="dark"]) h6,
+:root:not([data-theme="dark"]) .slide-title,
+:root:not([data-theme="dark"]) .chapter-num,
+:root:not([data-theme="dark"]) .chapter-number,
+:root:not([data-theme="dark"]) .finding-number,
+:root:not([data-theme="dark"]) .neon-text-cg,
+:root:not([data-theme="dark"]) .neon-text-jh,
+:root:not([data-theme="dark"]) .chap-nav a:hover,
+:root:not([data-theme="dark"]) .chap-nav a.active,
+:root:not([data-theme="dark"]) .sn-dropdown__item:hover,
+:root:not([data-theme="dark"]) .sn-dropdown__item--active,
+:root:not([data-theme="dark"]) .section-tab.active,
+:root:not([data-theme="dark"]) i.fas,
+:root:not([data-theme="dark"]) i.far,
+:root:not([data-theme="dark"]) i.fab,
+:root:not([data-theme="dark"]) .popup-trigger,
+:root:not([data-theme="dark"]) .accent-text,
+:root:not([data-theme="dark"]) .data-table th,
+:root:not([data-theme="dark"]) .btn,
+:root:not([data-theme="dark"]) .back-btn:hover,
+:root:not([data-theme="dark"]) .theme-toggle:hover {
+    color: var(--accent-cg) !important;
+}
+
+/* 4. Subtitles and secondary info are explicit exceptions to headings */
+:root:not([data-theme="dark"]) .slide-subtitle,
+:root:not([data-theme="dark"]) .sn-dropdown__num {
+    color: var(--text-main) !important;
+}
+
+/* 5. Restore text-shadow for specific blue text */
+:root:not([data-theme="dark"]) .neon-text-cg,
+:root:not([data-theme="dark"]) .neon-text-jh,
+:root:not([data-theme="dark"]) .slide-title {
+    text-shadow: var(--accent-glow-cg) !important;
+}
+
+/* 6. Explicitly override .framework-card:hover color!important */
+:root:not([data-theme="dark"]) .framework-card:hover,
+:root:not([data-theme="dark"]) .framework-card:hover *,
+:root:not([data-theme="dark"]) .framework-card:hover h3, 
+:root:not([data-theme="dark"]) .framework-card:hover ul, 
+:root:not([data-theme="dark"]) .framework-card:hover li, 
+:root:not([data-theme="dark"]) .framework-card:hover i {
+    color: var(--text-main) !important;
+}
+:root:not([data-theme="dark"]) .framework-card:hover h3,
+:root:not([data-theme="dark"]) .framework-card:hover i {
+    color: var(--accent-cg) !important;
+}
