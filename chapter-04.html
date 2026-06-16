@@ -281,16 +281,101 @@
         <section class="slide">
             <h2 class="slide-title">Research Architecture Flowchart</h2>
             
-            <div class="flowchart">
-                <div class="flowchart-step" style="border-top: 4px solid var(--accent-cg);">1. Identify Research Gap</div>
-                <i class="fas fa-arrow-down" style="color: var(--text-muted);"></i>
-                <div class="flowchart-step" style="border-top: 4px solid var(--accent-cg);">2. Formulate 5 Objectives</div>
-                <i class="fas fa-arrow-down" style="color: var(--text-muted);"></i>
-                <div class="flowchart-step" style="border-top: 4px solid var(--accent-jh);">3. Construct 5 Hypotheses</div>
-                <i class="fas fa-arrow-down" style="color: var(--text-muted);"></i>
-                <div class="flowchart-step" style="border-top: 4px solid var(--accent-jh);">4. Mixed-Methods Testing (SPSS/NVivo)</div>
-                <i class="fas fa-arrow-down" style="color: var(--text-muted);"></i>
-                <div class="flowchart-step" style="border-top: 4px solid var(--success-color);">5. Synthesize Outcomes & Policy</div>
+            <style>
+                .arch-flow-container {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    width: 100%;
+                    margin-top: 2rem;
+                }
+                .arch-flow-card {
+                    width: 200px;
+                    height: 220px;
+                    flex-shrink: 0;
+                    text-decoration: none;
+                    padding: 1rem !important;
+                }
+                .arch-flow-content {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                }
+                .arch-flow-icon {
+                    font-size: 2.5rem;
+                    margin-bottom: 1.5rem;
+                }
+                .arch-flow-arrow {
+                    color: var(--text-muted);
+                    font-size: 1.5rem;
+                }
+                @media (max-width: 1150px) {
+                    .arch-flow-arrow {
+                        display: none;
+                    }
+                }
+            </style>
+            
+            <div class="arch-flow-container">
+                <!-- Step 1 -->
+                <div class="resource-card hover-magnify arch-flow-card" data-gradient="pink">
+                    <div class="resource-glow"></div>
+                    <div class="resource-content arch-flow-content">
+                        <div class="resource-icon arch-flow-icon"><i class="fas fa-search"></i></div>
+                        <h3 style="font-size: 1.1rem; margin: 0; line-height: 1.4;">1. Identify Research Gap</h3>
+                    </div>
+                </div>
+                
+                <i class="fas fa-arrow-right arch-flow-arrow"></i>
+                
+                <!-- Step 2 -->
+                <div class="resource-card hover-magnify arch-flow-card" data-gradient="cyan">
+                    <div class="resource-glow"></div>
+                    <div class="resource-content arch-flow-content">
+                        <div class="resource-icon arch-flow-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3 style="font-size: 1.1rem; margin: 0; line-height: 1.4;">2. Formulate 5 Objectives</h3>
+                    </div>
+                </div>
+                
+                <i class="fas fa-arrow-right arch-flow-arrow"></i>
+                
+                <!-- Step 3 -->
+                <div class="resource-card hover-magnify arch-flow-card" data-gradient="purple">
+                    <div class="resource-glow"></div>
+                    <div class="resource-content arch-flow-content">
+                        <div class="resource-icon arch-flow-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3 style="font-size: 1.1rem; margin: 0; line-height: 1.4;">3. Construct 5 Hypotheses</h3>
+                    </div>
+                </div>
+                
+                <i class="fas fa-arrow-right arch-flow-arrow"></i>
+                
+                <!-- Step 4 -->
+                <div class="resource-card hover-magnify arch-flow-card" data-gradient="pink">
+                    <div class="resource-glow"></div>
+                    <div class="resource-content arch-flow-content">
+                        <div class="resource-icon arch-flow-icon"><i class="fas fa-microscope"></i></div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; line-height: 1.4;">4. Mixed-Methods Testing</h3>
+                        <p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">(SPSS/NVivo)</p>
+                    </div>
+                </div>
+                
+                <i class="fas fa-arrow-right arch-flow-arrow"></i>
+                
+                <!-- Step 5 -->
+                <div class="resource-card hover-magnify arch-flow-card" data-gradient="cyan">
+                    <div class="resource-glow"></div>
+                    <div class="resource-content arch-flow-content">
+                        <div class="resource-icon arch-flow-icon"><i class="fas fa-award"></i></div>
+                        <h3 style="font-size: 1.1rem; margin: 0; line-height: 1.4;">5. Synthesize Outcomes & Policy</h3>
+                    </div>
+                </div>
             </div>
         </section>
 
