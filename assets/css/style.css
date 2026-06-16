@@ -1207,13 +1207,10 @@ html {
     color: initial !important;
 }
 
-/* 3. Exceptions: Accent elements get Blue. */
+/* 3. Exceptions: Minimal Accent elements get Blue. 
+   Most content (h3-h6, icons, regular text) falls back to Dark Gray */
 :root:not([data-theme="dark"]) h1,
 :root:not([data-theme="dark"]) h2,
-:root:not([data-theme="dark"]) h3,
-:root:not([data-theme="dark"]) h4,
-:root:not([data-theme="dark"]) h5,
-:root:not([data-theme="dark"]) h6,
 :root:not([data-theme="dark"]) .slide-title,
 :root:not([data-theme="dark"]) .chapter-num,
 :root:not([data-theme="dark"]) .chapter-number,
@@ -1225,12 +1222,8 @@ html {
 :root:not([data-theme="dark"]) .sn-dropdown__item:hover,
 :root:not([data-theme="dark"]) .sn-dropdown__item--active,
 :root:not([data-theme="dark"]) .section-tab.active,
-:root:not([data-theme="dark"]) i.fas,
-:root:not([data-theme="dark"]) i.far,
-:root:not([data-theme="dark"]) i.fab,
-:root:not([data-theme="dark"]) .popup-trigger,
+:root:not([data-theme="dark"]) .popup-trigger:hover,
 :root:not([data-theme="dark"]) .accent-text,
-:root:not([data-theme="dark"]) .data-table th,
 :root:not([data-theme="dark"]) .btn,
 :root:not([data-theme="dark"]) .back-btn:hover,
 :root:not([data-theme="dark"]) .theme-toggle:hover {
@@ -1250,7 +1243,7 @@ html {
     text-shadow: var(--accent-glow-cg) !important;
 }
 
-/* 6. Explicitly override .framework-card:hover color!important */
+/* 6. Explicitly override .framework-card:hover color!important to Dark Gray */
 :root:not([data-theme="dark"]) .framework-card:hover,
 :root:not([data-theme="dark"]) .framework-card:hover *,
 :root:not([data-theme="dark"]) .framework-card:hover h3, 
@@ -1258,8 +1251,4 @@ html {
 :root:not([data-theme="dark"]) .framework-card:hover li, 
 :root:not([data-theme="dark"]) .framework-card:hover i {
     color: var(--text-main) !important;
-}
-:root:not([data-theme="dark"]) .framework-card:hover h3,
-:root:not([data-theme="dark"]) .framework-card:hover i {
-    color: var(--accent-cg) !important;
 }
