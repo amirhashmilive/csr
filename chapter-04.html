@@ -129,32 +129,28 @@
                     flex-wrap: wrap;
                     justify-content: center;
                     align-items: center;
-                    gap: 0.4rem;
+                    gap: 0.5rem;
                     width: 100%;
-                    margin-top: 1.5rem;
+                    margin-top: 2rem;
                 }
                 .arch-flow-card {
-                    width: 175px;
-                    height: 200px;
+                    width: 150px;
+                    height: 150px;
                     flex-shrink: 0;
-                    text-decoration: none;
-                    padding: 0.75rem !important;
-                }
-                .arch-flow-content {
-                    text-align: center;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    height: 100%;
+                    text-align: center;
+                    padding: 1rem;
                 }
                 .arch-flow-icon {
-                    font-size: 2rem;
-                    margin-bottom: 1rem;
+                    font-size: 1.8rem;
+                    margin-bottom: 0.8rem;
                 }
                 .arch-flow-arrow {
                     color: var(--text-muted);
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     flex-shrink: 0;
                 }
                 @media (max-width: 1100px) {
@@ -166,57 +162,42 @@
             
             <div class="arch-flow-container">
                 <!-- Step 1 -->
-                <div class="resource-card hover-magnify arch-flow-card" data-gradient="pink">
-                    <div class="resource-glow"></div>
-                    <div class="resource-content arch-flow-content">
-                        <div class="resource-icon arch-flow-icon"><i class="fas fa-search"></i></div>
-                        <h3 style="font-size: 1.1rem; margin: 0; line-height: 1.4;">1. Identify Research Gap</h3>
-                    </div>
+                <div class="glass-card hover-magnify arch-flow-card">
+                    <i class="fas fa-search arch-flow-icon" style="color: var(--accent-cg);"></i>
+                    <p style="font-size: 0.9rem; font-weight: 600; margin: 0; line-height: 1.3;">1. Identify Research Gap</p>
                 </div>
                 
                 <i class="fas fa-arrow-right arch-flow-arrow"></i>
                 
                 <!-- Step 2 -->
-                <div class="resource-card hover-magnify arch-flow-card" data-gradient="cyan">
-                    <div class="resource-glow"></div>
-                    <div class="resource-content arch-flow-content">
-                        <div class="resource-icon arch-flow-icon"><i class="fas fa-bullseye"></i></div>
-                        <h3 style="font-size: 1.1rem; margin: 0; line-height: 1.4;">2. Formulate 5 Objectives</h3>
-                    </div>
+                <div class="glass-card hover-magnify arch-flow-card">
+                    <i class="fas fa-bullseye arch-flow-icon" style="color: var(--accent-jh);"></i>
+                    <p style="font-size: 0.9rem; font-weight: 600; margin: 0; line-height: 1.3;">2. Formulate 5 Objectives</p>
                 </div>
                 
                 <i class="fas fa-arrow-right arch-flow-arrow"></i>
                 
                 <!-- Step 3 -->
-                <div class="resource-card hover-magnify arch-flow-card" data-gradient="purple">
-                    <div class="resource-glow"></div>
-                    <div class="resource-content arch-flow-content">
-                        <div class="resource-icon arch-flow-icon"><i class="fas fa-lightbulb"></i></div>
-                        <h3 style="font-size: 1.1rem; margin: 0; line-height: 1.4;">3. Construct 5 Hypotheses</h3>
-                    </div>
+                <div class="glass-card hover-magnify arch-flow-card">
+                    <i class="fas fa-lightbulb arch-flow-icon" style="color: var(--success-color);"></i>
+                    <p style="font-size: 0.9rem; font-weight: 600; margin: 0; line-height: 1.3;">3. Construct 5 Hypotheses</p>
                 </div>
                 
                 <i class="fas fa-arrow-right arch-flow-arrow"></i>
                 
                 <!-- Step 4 -->
-                <div class="resource-card hover-magnify arch-flow-card" data-gradient="pink">
-                    <div class="resource-glow"></div>
-                    <div class="resource-content arch-flow-content">
-                        <div class="resource-icon arch-flow-icon"><i class="fas fa-microscope"></i></div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; line-height: 1.4;">4. Mixed-Methods Testing</h3>
-                        <p style="font-size: 0.85rem; margin: 0; color: var(--text-muted);">(SPSS/NVivo)</p>
-                    </div>
+                <div class="glass-card hover-magnify arch-flow-card">
+                    <i class="fas fa-microscope arch-flow-icon" style="color: var(--warning-color);"></i>
+                    <p style="font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem; line-height: 1.3;">4. Mixed-Methods Testing</p>
+                    <p style="font-size: 0.75rem; margin: 0; color: var(--text-muted);">(SPSS/NVivo)</p>
                 </div>
                 
                 <i class="fas fa-arrow-right arch-flow-arrow"></i>
                 
                 <!-- Step 5 -->
-                <div class="resource-card hover-magnify arch-flow-card" data-gradient="cyan">
-                    <div class="resource-glow"></div>
-                    <div class="resource-content arch-flow-content">
-                        <div class="resource-icon arch-flow-icon"><i class="fas fa-award"></i></div>
-                        <h3 style="font-size: 1.1rem; margin: 0; line-height: 1.4;">5. Synthesize Outcomes & Policy</h3>
-                    </div>
+                <div class="glass-card hover-magnify arch-flow-card">
+                    <i class="fas fa-award arch-flow-icon" style="color: #a020f0;"></i>
+                    <p style="font-size: 0.9rem; font-weight: 600; margin: 0; line-height: 1.3;">5. Synthesize Outcomes & Policy</p>
                 </div>
             </div>
         </section>
