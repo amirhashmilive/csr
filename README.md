@@ -118,3 +118,12 @@ If a new HTML file is created, add this line before `</body>`:
 ```
 
 That's all — the system handles everything else automatically.
+
+---
+
+## UI Maintenance Notes
+
+### Theme-Aware Text Colors
+When designing hover states or elements that appear over transparent or theme-dependent backgrounds, always use CSS variables (like `var(--text-main)` or `var(--text-muted)`) instead of hardcoded hex colors (e.g., `#ffffff` or `#f0f0ff`). This ensures text remains consistently visible and readable across both Light and Dark modes.
+
+*(Fixed June 2026: Theory convergence hover cards in Chapter 03 were updated to use `var(--text-main)` to resolve text invisibility in Light Mode).*
