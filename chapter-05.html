@@ -151,50 +151,6 @@
             opacity: 0.5;
         }
         
-        /* ── Technique card tooltip ── */
-        .tech-card {
-            position: relative;
-        }
-        .tech-tip {
-            visibility: hidden;
-            opacity: 0;
-            pointer-events: none;
-            position: absolute;
-            bottom: calc(100% + 14px);
-            left: 50%;
-            transform: translateX(-50%) scale(0.9);
-            min-width: 220px;
-            max-width: 260px;
-            background: var(--bg-glass);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--bg-glass-border);
-            border-radius: 10px;
-            padding: 0.8rem 1rem;
-            font-size: 0.85rem;
-            line-height: 1.5;
-            color: var(--text-main);
-            text-align: center;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.45);
-            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
-            z-index: 200;
-            white-space: normal;
-        }
-        .tech-tip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 7px solid transparent;
-            border-top-color: var(--bg-glass-border);
-        }
-        .tech-card:hover .tech-tip {
-            visibility: visible;
-            opacity: 1;
-            transform: translateX(-50%) scale(1);
-            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0s;
-        }
 
     </style>
 </head>
@@ -620,83 +576,34 @@
         <!-- Slide 10: Data Analysis -->
         <section class="slide">
             <h2 class="slide-title">Data Analysis Techniques</h2>
-
-            <!-- SPSS Row -->
-            <h3 style="text-align: center; margin: 0.5rem 0 1.2rem 0;"><span style="color: #cc0000; font-size: 1.5rem; font-weight: 800;">SPSS</span> <span style="color: var(--text-muted); font-size: 0.95rem; font-weight: 400;">v26.0 — Quantitative</span></h3>
-            <div class="grid-3" style="margin-bottom: 2.5rem;">
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(204,0,0,0.4); padding: 1.2rem;">
-                    <div class="tech-tip">Shows the average and spread of the data.</div>
-                    <i class="fas fa-chart-bar" style="font-size: 1.8rem; color: #cc0000; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Descriptive Stats</h4>
+            
+            <div class="grid-2">
+                <div class="glass-card hover-magnify" style="text-align: center;">
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem; color: #cc0000;">SPSS</h2>
+                    <h4 style="color: var(--text-muted); margin-bottom: 2rem;">v26.0 (Quantitative)</h4>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Descriptive Stats</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Independent t-test</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Two-Way ANOVA</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Chi-Square</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Logistic Regression</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Multiple Regression</span>
+                    </div>
                 </div>
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(204,0,0,0.4); padding: 1.2rem;">
-                    <div class="tech-tip">Checks if CG and Jharkhand are significantly different.</div>
-                    <i class="fas fa-not-equal" style="font-size: 1.8rem; color: #cc0000; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Independent t-test</h4>
+                
+                <div class="glass-card hover-magnify" style="text-align: center;">
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem; color: #0080ff;">NVivo</h2>
+                    <h4 style="color: var(--text-muted); margin-bottom: 2rem;">v12 (Qualitative)</h4>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Audio Transcription</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Thematic Coding</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Node Generation</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Sentiment Analysis</span>
+                        <span class="badge" style="background: rgba(255,255,255,0.1);">Word Frequency</span>
+                    </div>
                 </div>
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(204,0,0,0.4); padding: 1.2rem;">
-                    <div class="tech-tip">Checks if a communication channel works differently in each state.</div>
-                    <i class="fas fa-table" style="font-size: 1.8rem; color: #cc0000; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Two-Way ANOVA</h4>
-                </div>
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(204,0,0,0.4); padding: 1.2rem;">
-                    <div class="tech-tip">Checks if channel choice and environmental awareness are related.</div>
-                    <i class="fas fa-th" style="font-size: 1.8rem; color: #cc0000; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Chi-Square</h4>
-                </div>
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(204,0,0,0.4); padding: 1.2rem;">
-                    <div class="tech-tip">Predicts YES/NO outcomes (e.g., did education improve?).</div>
-                    <i class="fas fa-toggle-on" style="font-size: 1.8rem; color: #cc0000; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Logistic Regression</h4>
-                </div>
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(204,0,0,0.4); padding: 1.2rem;">
-                    <div class="tech-tip">Predicts a score (e.g., livelihood improvement) using multiple factors.</div>
-                    <i class="fas fa-wave-square" style="font-size: 1.8rem; color: #cc0000; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Multiple Regression</h4>
-                </div>
-
-            </div>
-
-            <!-- NVivo Row -->
-            <h3 style="text-align: center; margin: 0 0 1.2rem 0;"><span style="color: #0080ff; font-size: 1.5rem; font-weight: 800;">NVivo</span> <span style="color: var(--text-muted); font-size: 0.95rem; font-weight: 400;">v12 — Qualitative</span></h3>
-            <div style="display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;">
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(0,128,255,0.4); padding: 1.2rem; flex: 1; min-width: 130px; max-width: 170px;">
-                    <div class="tech-tip">Converts spoken interviews into written text.</div>
-                    <i class="fas fa-microphone-alt" style="font-size: 1.8rem; color: #0080ff; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Audio Transcription</h4>
-                </div>
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(0,128,255,0.4); padding: 1.2rem; flex: 1; min-width: 130px; max-width: 170px;">
-                    <div class="tech-tip">Groups similar ideas into themes (e.g., 'trust', 'communication gap').</div>
-                    <i class="fas fa-tags" style="font-size: 1.8rem; color: #0080ff; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Thematic Coding</h4>
-                </div>
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(0,128,255,0.4); padding: 1.2rem; flex: 1; min-width: 130px; max-width: 170px;">
-                    <div class="tech-tip">Creates folders to store themes for organised analysis.</div>
-                    <i class="fas fa-folder-open" style="font-size: 1.8rem; color: #0080ff; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Node Generation</h4>
-                </div>
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(0,128,255,0.4); padding: 1.2rem; flex: 1; min-width: 130px; max-width: 170px;">
-                    <div class="tech-tip">Checks if people are positive, negative, or neutral.</div>
-                    <i class="fas fa-smile" style="font-size: 1.8rem; color: #0080ff; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Sentiment Analysis</h4>
-                </div>
-
-                <div class="glass-card hover-magnify tech-card" style="text-align: center; border-color: rgba(0,128,255,0.4); padding: 1.2rem; flex: 1; min-width: 130px; max-width: 170px;">
-                    <div class="tech-tip">Counts the most repeated words in interviews.</div>
-                    <i class="fas fa-sort-amount-down" style="font-size: 1.8rem; color: #0080ff; margin-bottom: 0.7rem;"></i>
-                    <h4 style="font-size: 0.95rem; color: var(--text-main);">Word Frequency</h4>
-                </div>
-
             </div>
         </section>
 

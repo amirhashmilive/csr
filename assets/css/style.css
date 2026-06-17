@@ -908,6 +908,175 @@ html {
     }
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   LIGHT MODE — MOBILE TEXT VISIBILITY FIXES
+   Ensures all text, headings, badges, nav, and UI elements are visible
+   in Light Mode on small screens (max-width: 768px).
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    /* ── Core text elements ── */
+    :root body,
+    :root .slide,
+    :root h1, :root h2, :root h3, :root h4, :root h5, :root h6,
+    :root p, :root li, :root td, :root th, :root span,
+    :root label, :root button, :root a {
+        color: var(--text-main);
+    }
+
+    /* ── Glass cards and their direct children ── */
+    :root .glass-card,
+    :root .glass-card h1,
+    :root .glass-card h2,
+    :root .glass-card h3,
+    :root .glass-card h4,
+    :root .glass-card span,
+    :root .glass-card li {
+        color: var(--text-main);
+    }
+
+    /* Muted text helpers must stay muted */
+    :root [style*="color: var(--text-muted)"],
+    :root .slide-subtitle,
+    :root .chap-nav-sep,
+    :root .text-muted {
+        color: var(--text-muted) !important;
+    }
+
+    /* ── Navigation ── */
+    :root .chap-nav a {
+        color: var(--text-main) !important;
+    }
+    :root .chap-nav a.active {
+        color: var(--accent-cg) !important;
+    }
+    :root .back-btn {
+        color: var(--text-main) !important;
+    }
+
+    /* ── Badges — fix hardcoded dark backgrounds ── */
+    :root .badge {
+        color: var(--text-main) !important;
+    }
+    :root .badge-supported {
+        color: var(--success-color) !important;
+    }
+    :root .badge-partial {
+        color: var(--warning-color) !important;
+    }
+    /* Badges with inline rgba(255,255,255,0.1) backgrounds are near-invisible in light mode */
+    :root .glass-card .badge[style*="rgba(255,255,255"] {
+        background: rgba(0, 0, 0, 0.06) !important;
+        color: var(--text-main) !important;
+    }
+
+    /* ── Slide Number Badge & Dropdown ── */
+    :root .sn-badge,
+    :root .sn-badge__label,
+    :root .sn-dropdown__item,
+    :root .sn-dropdown__header {
+        color: var(--text-main) !important;
+    }
+
+    /* ── Theme toggle button ── */
+    :root .theme-toggle {
+        color: var(--text-main) !important;
+    }
+
+    /* ── Chapter-06: Section Tab toolbar ── */
+    :root .section-tab {
+        color: var(--text-muted) !important;
+    }
+    :root .section-tab:hover {
+        color: var(--text-main) !important;
+    }
+    :root .section-tab.active {
+        color: #ffffff !important; /* white on coloured active bg is intentional */
+    }
+
+    /* ── Hypothesis result cards ── */
+    :root .hyp-result-card h3,
+    :root .hyp-result-card p {
+        color: var(--text-main) !important;
+    }
+
+    /* ── Quote boxes (chapter-06) ── */
+    :root .quote-box,
+    :root .quote-box p,
+    :root .quote-box span {
+        color: var(--text-main) !important;
+    }
+
+    /* ── Part-divider labels ── */
+    :root .part-divider {
+        color: var(--text-muted) !important;
+    }
+
+    /* ── Timeline content (chapter-01) ── */
+    :root .timeline-content h4,
+    :root .timeline-content p {
+        color: var(--text-main) !important;
+    }
+
+    /* ── Sampling stage (chapter-05) ── */
+    :root .sampling-stage h3,
+    :root .sampling-stage p {
+        color: var(--text-main) !important;
+    }
+
+    /* ── FY timeline blocks (chapter-05) ── */
+    :root .fy-block {
+        color: var(--text-main) !important;
+    }
+
+    /* ── Venn diagram — fix hardcoded #fff on coloured circles ── */
+    /* The circles have semi-transparent coloured backgrounds; text must stay readable.
+       In light mode with mix-blend-mode: multiply the circles are darker, so white text
+       is actually fine. We only need to ensure the center label stays readable. */
+    :root .venn-center {
+        color: var(--text-main) !important;
+        text-shadow: none !important;
+    }
+
+    /* ── Data tables ── */
+    :root .data-table th,
+    :root .data-table td {
+        color: var(--text-main) !important;
+    }
+
+    /* ── Pub-title (appendices) ── */
+    :root .pub-title {
+        color: var(--text-main) !important;
+    }
+
+    /* ── Stage numbers (chapter-05) ── */
+    :root .stage-num {
+        color: var(--accent-cg) !important;
+    }
+
+    /* ── Hyp-badge (chapter-04) ── */
+    :root .hyp-badge {
+        color: var(--accent-jh) !important;
+    }
+
+    /* ── Download / action buttons — keep white text on coloured bg ── */
+    :root .download-btn {
+        color: #ffffff !important;
+    }
+
+    /* ── Anchor cards (chapter-card) ── */
+    :root a.glass-card,
+    :root a.chapter-card,
+    :root a.resource-card {
+        color: var(--text-main) !important;
+    }
+
+    /* ── Resource-content (index.html cards) ── */
+    :root .resource-content h3,
+    :root .resource-content p {
+        color: var(--text-main) !important;
+    }
+}
+
 /* Resource Cards with Glowing Gradient */
 .resource-card {
   position: relative;
