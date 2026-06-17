@@ -65,7 +65,6 @@
             margin-top: 3rem;
             background: var(--bg-glass);
             border-radius: 8px;
-            overflow: hidden;
             border: 1px solid var(--bg-glass-border);
         }
         
@@ -75,11 +74,65 @@
             padding: 1.5rem 0;
             border-right: 1px solid var(--bg-glass-border);
             font-weight: 600;
+            cursor: pointer;
         }
         
         .fy-block:last-child { border-right: none; }
         
         .fy-block:hover { background: rgba(0, 212, 255, 0.1); color: var(--accent-cg); }
+        
+        .fy-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 10000;
+            background: var(--bg-glass);
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--accent-cg);
+            border-radius: 16px;
+            padding: 2.5rem;
+            width: 90vw;
+            max-width: 750px;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: var(--text-main);
+            text-align: left;
+            cursor: default;
+        }
+
+        html[data-theme="light"] .fy-popup {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 50px rgba(0,0,0,0.2);
+        }
+
+        .fy-block:hover .fy-popup {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            pointer-events: auto;
+        }
+        
+        .fy-bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 180px;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid rgba(128,128,128,0.3);
+            padding-bottom: 1rem;
+        }
+
+        .fy-bar-wrapper {
+            display: flex; flex-direction: column; align-items: center; width: 28%; height: 100%;
+        }
+        .fy-bar-container {
+            display: flex; flex-direction: column; justify-content: flex-end; align-items: center; width: 100%; flex: 1;
+        }
+        .fy-bar { width: 100%; border-radius: 4px 4px 0 0; transition: height 0.5s ease; }
+        .fy-bar-label { margin-top: 1rem; text-align: center; font-size: 0.95rem; font-weight: 500;}
+        .fy-bar-val { font-weight: bold; margin-bottom: 0.5rem; font-size: 0.95rem; }
         
         .sampling-stage {
             display: flex;
@@ -229,11 +282,216 @@
             <h2 class="slide-title">Retrospective Study Timeline</h2>
             
             <div class="timeline-fy">
-                <div class="fy-block">FY 2018-19</div>
-                <div class="fy-block">FY 2019-20</div>
-                <div class="fy-block">FY 2020-21</div>
-                <div class="fy-block">FY 2021-22</div>
-                <div class="fy-block" style="background: rgba(0, 212, 255, 0.2); color: var(--accent-cg);">FY 2022-23</div>
+                <div class="fy-block">FY 2018-19
+                    <div class="fy-popup glass-card">
+                        <h2 style="color: var(--text-main); margin-bottom: 1.5rem; text-align: center; font-size: 1.8rem;">FY 2018-19 CSR Expenditure</h2>
+                        <div class="fy-bar-chart">
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 149.35 Cr</span>
+                                    <div class="fy-bar" style="background: var(--accent-cg); height: 20%;"></div>
+                                </div>
+                                <span class="fy-bar-label">Chhattisgarh</span>
+                            </div>
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 109.80 Cr</span>
+                                    <div class="fy-bar" style="background: var(--accent-jh); height: 15%;"></div>
+                                </div>
+                                <span class="fy-bar-label">Jharkhand</span>
+                            </div>
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 20,217.65 Cr</span>
+                                    <div class="fy-bar" style="background: var(--success-color); height: 100%;"></div>
+                                </div>
+                                <span class="fy-bar-label">India Total</span>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; gap: 1rem;">
+                            <div style="background: rgba(128,128,128,0.1); padding: 1.5rem; border-radius: 8px;">
+                                <h4 style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Combined (CG + JH)</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-main);">₹ 259.15 Cr</p>
+                            </div>
+                            <div style="background: rgba(0, 212, 255, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(0,212,255,0.2);">
+                                <h4 style="color: var(--accent-cg); font-size: 0.9rem; margin-bottom: 0.5rem;">CG % of India Total</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-cg);">0.74%</p>
+                            </div>
+                            <div style="background: rgba(255, 107, 53, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,107,53,0.2);">
+                                <h4 style="color: var(--accent-jh); font-size: 0.9rem; margin-bottom: 0.5rem;">JH % of India Total</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-jh);">0.54%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fy-block">FY 2019-20
+                    <div class="fy-popup glass-card">
+                        <h2 style="color: var(--text-main); margin-bottom: 1.5rem; text-align: center; font-size: 1.8rem;">FY 2019-20 CSR Expenditure</h2>
+                        <div class="fy-bar-chart">
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 269.68 Cr</span>
+                                    <div class="fy-bar" style="background: var(--accent-cg); height: 35%;"></div>
+                                </div>
+                                <span class="fy-bar-label">Chhattisgarh</span>
+                            </div>
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 155.21 Cr</span>
+                                    <div class="fy-bar" style="background: var(--accent-jh); height: 20%;"></div>
+                                </div>
+                                <span class="fy-bar-label">Jharkhand</span>
+                            </div>
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 24,965.82 Cr</span>
+                                    <div class="fy-bar" style="background: var(--success-color); height: 100%;"></div>
+                                </div>
+                                <span class="fy-bar-label">India Total</span>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; gap: 1rem;">
+                            <div style="background: rgba(128,128,128,0.1); padding: 1.5rem; border-radius: 8px;">
+                                <h4 style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Combined (CG + JH)</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-main);">₹ 424.89 Cr</p>
+                            </div>
+                            <div style="background: rgba(0, 212, 255, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(0,212,255,0.2);">
+                                <h4 style="color: var(--accent-cg); font-size: 0.9rem; margin-bottom: 0.5rem;">CG % of India Total</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-cg);">1.08%</p>
+                            </div>
+                            <div style="background: rgba(255, 107, 53, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,107,53,0.2);">
+                                <h4 style="color: var(--accent-jh); font-size: 0.9rem; margin-bottom: 0.5rem;">JH % of India Total</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-jh);">0.62%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fy-block">FY 2020-21
+                    <div class="fy-popup glass-card">
+                        <h2 style="color: var(--text-main); margin-bottom: 1.5rem; text-align: center; font-size: 1.8rem;">FY 2020-21 CSR Expenditure</h2>
+                        <div class="fy-bar-chart">
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 325.63 Cr</span>
+                                    <div class="fy-bar" style="background: var(--accent-cg); height: 45%;"></div>
+                                </div>
+                                <span class="fy-bar-label">Chhattisgarh</span>
+                            </div>
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 226.54 Cr</span>
+                                    <div class="fy-bar" style="background: var(--accent-jh); height: 30%;"></div>
+                                </div>
+                                <span class="fy-bar-label">Jharkhand</span>
+                            </div>
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 26,210.95 Cr</span>
+                                    <div class="fy-bar" style="background: var(--success-color); height: 100%;"></div>
+                                </div>
+                                <span class="fy-bar-label">India Total</span>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; gap: 1rem;">
+                            <div style="background: rgba(128,128,128,0.1); padding: 1.5rem; border-radius: 8px;">
+                                <h4 style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Combined (CG + JH)</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-main);">₹ 552.17 Cr</p>
+                            </div>
+                            <div style="background: rgba(0, 212, 255, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(0,212,255,0.2);">
+                                <h4 style="color: var(--accent-cg); font-size: 0.9rem; margin-bottom: 0.5rem;">CG % of India Total</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-cg);">1.24%</p>
+                            </div>
+                            <div style="background: rgba(255, 107, 53, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,107,53,0.2);">
+                                <h4 style="color: var(--accent-jh); font-size: 0.9rem; margin-bottom: 0.5rem;">JH % of India Total</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-jh);">0.86%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fy-block">FY 2021-22
+                    <div class="fy-popup glass-card">
+                        <h2 style="color: var(--text-main); margin-bottom: 1.5rem; text-align: center; font-size: 1.8rem;">FY 2021-22 CSR Expenditure</h2>
+                        <div class="fy-bar-chart">
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 305.29 Cr</span>
+                                    <div class="fy-bar" style="background: var(--accent-cg); height: 40%;"></div>
+                                </div>
+                                <span class="fy-bar-label">Chhattisgarh</span>
+                            </div>
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 193.33 Cr</span>
+                                    <div class="fy-bar" style="background: var(--accent-jh); height: 25%;"></div>
+                                </div>
+                                <span class="fy-bar-label">Jharkhand</span>
+                            </div>
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 26,616.30 Cr</span>
+                                    <div class="fy-bar" style="background: var(--success-color); height: 100%;"></div>
+                                </div>
+                                <span class="fy-bar-label">India Total</span>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; gap: 1rem;">
+                            <div style="background: rgba(128,128,128,0.1); padding: 1.5rem; border-radius: 8px;">
+                                <h4 style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Combined (CG + JH)</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-main);">₹ 498.62 Cr</p>
+                            </div>
+                            <div style="background: rgba(0, 212, 255, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(0,212,255,0.2);">
+                                <h4 style="color: var(--accent-cg); font-size: 0.9rem; margin-bottom: 0.5rem;">CG % of India Total</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-cg);">1.15%</p>
+                            </div>
+                            <div style="background: rgba(255, 107, 53, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,107,53,0.2);">
+                                <h4 style="color: var(--accent-jh); font-size: 0.9rem; margin-bottom: 0.5rem;">JH % of India Total</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-jh);">0.73%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fy-block" style="background: rgba(0, 212, 255, 0.2); color: var(--accent-cg);">FY 2022-23
+                    <div class="fy-popup glass-card">
+                        <h2 style="color: var(--text-main); margin-bottom: 1.5rem; text-align: center; font-size: 1.8rem;">FY 2022-23 CSR Expenditure</h2>
+                        <div class="fy-bar-chart">
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 596.11 Cr</span>
+                                    <div class="fy-bar" style="background: var(--accent-cg); height: 80%;"></div>
+                                </div>
+                                <span class="fy-bar-label">Chhattisgarh</span>
+                            </div>
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 388.13 Cr</span>
+                                    <div class="fy-bar" style="background: var(--accent-jh); height: 50%;"></div>
+                                </div>
+                                <span class="fy-bar-label">Jharkhand</span>
+                            </div>
+                            <div class="fy-bar-wrapper">
+                                <div class="fy-bar-container">
+                                    <span class="fy-bar-val">₹ 29,987.92 Cr</span>
+                                    <div class="fy-bar" style="background: var(--success-color); height: 100%;"></div>
+                                </div>
+                                <span class="fy-bar-label">India Total</span>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; gap: 1rem;">
+                            <div style="background: rgba(128,128,128,0.1); padding: 1.5rem; border-radius: 8px;">
+                                <h4 style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Combined (CG + JH)</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-main);">₹ 984.24 Cr</p>
+                            </div>
+                            <div style="background: rgba(0, 212, 255, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(0,212,255,0.2);">
+                                <h4 style="color: var(--accent-cg); font-size: 0.9rem; margin-bottom: 0.5rem;">CG % of India Total</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-cg);">1.99%</p>
+                            </div>
+                            <div style="background: rgba(255, 107, 53, 0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,107,53,0.2);">
+                                <h4 style="color: var(--accent-jh); font-size: 0.9rem; margin-bottom: 0.5rem;">JH % of India Total</h4>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: var(--accent-jh);">1.29%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="glass-card hover-magnify" style="margin-top: 3rem; max-width: 800px; text-align: center;">
