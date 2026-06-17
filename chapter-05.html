@@ -151,39 +151,51 @@
             opacity: 0.5;
         }
         /* ── Technique Popups ── */
-        .tech-wrapper {
+        .tech-swap-badge {
             position: relative;
-            display: inline-block;
-        }
-        .tech-popup {
-            position: absolute;
-            bottom: 120%; /* Position above the badge */
-            left: 50%;
-            transform: translateX(-50%) translateY(10px);
-            width: max-content;
-            max-width: 250px;
-            padding: 0.8rem;
-            font-size: 0.85rem;
-            color: var(--text-main);
-            background: var(--bg-glass);
-            backdrop-filter: blur(15px);
-            border: 1px solid var(--bg-glass-border);
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 100;
-            pointer-events: none;
-            white-space: normal;
-            text-transform: none;
-            line-height: 1.4;
+            cursor: pointer;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            vertical-align: middle;
+            min-height: 40px;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
         }
-        .tech-wrapper:hover .tech-popup {
+        
+        .tech-swap-badge .default-state {
+            transition: opacity 0.3s ease, transform 0.3s ease;
             opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
+            transform: translateY(0);
+            width: 100%;
+        }
+        
+        .tech-swap-badge .hover-state {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            opacity: 0;
+            width: 95%;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            font-size: 0.8rem;
+            white-space: normal;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+        
+        .tech-swap-badge:hover .default-state {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        
+        .tech-swap-badge:hover .hover-state {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            pointer-events: auto;
         }
 
     </style>
@@ -617,29 +629,29 @@
                     <h4 style="color: var(--text-muted); margin-bottom: 2rem;">v26.0 (Quantitative)</h4>
                     
                     <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Descriptive Stats</span>
-                            <div class="tech-popup">Shows the average and spread of the data.</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Descriptive Stats</div>
+                            <div class="hover-state">Shows the average and spread of the data.</div>
                         </div>
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Independent t-test</span>
-                            <div class="tech-popup">Checks if CG and JH are significantly different.</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Independent t-test</div>
+                            <div class="hover-state">Checks if CG and JH are significantly different.</div>
                         </div>
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Two-Way ANOVA</span>
-                            <div class="tech-popup">Checks if communication channel works differently in each state.</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Two-Way ANOVA</div>
+                            <div class="hover-state">Checks if communication channel works differently in each state.</div>
                         </div>
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Chi-Square</span>
-                            <div class="tech-popup">Checks if channel choice and environmental awareness are related.</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Chi-Square</div>
+                            <div class="hover-state">Checks if channel choice and environmental awareness are related.</div>
                         </div>
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Logistic Regression</span>
-                            <div class="tech-popup">Predicts YES/NO outcomes (e.g., did education improve?).</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Logistic Regression</div>
+                            <div class="hover-state">Predicts YES/NO outcomes (e.g., did education improve?).</div>
                         </div>
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Multiple Regression</span>
-                            <div class="tech-popup">Predicts a score using multiple factors.</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Multiple Regression</div>
+                            <div class="hover-state">Predicts a score using multiple factors.</div>
                         </div>
                     </div>
                 </div>
@@ -649,25 +661,25 @@
                     <h4 style="color: var(--text-muted); margin-bottom: 2rem;">v12 (Qualitative)</h4>
                     
                     <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Audio Transcription</span>
-                            <div class="tech-popup">Converts spoken interviews into written text.</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Audio Transcription</div>
+                            <div class="hover-state">Converts spoken interviews into written text.</div>
                         </div>
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Thematic Coding</span>
-                            <div class="tech-popup">Groups similar ideas into themes.</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Thematic Coding</div>
+                            <div class="hover-state">Groups similar ideas into themes.</div>
                         </div>
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Node Generation</span>
-                            <div class="tech-popup">Creates folders to store these themes.</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Node Generation</div>
+                            <div class="hover-state">Creates folders to store these themes.</div>
                         </div>
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Sentiment Analysis</span>
-                            <div class="tech-popup">Checks if people are positive, negative, or neutral.</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Sentiment Analysis</div>
+                            <div class="hover-state">Checks if people are positive, negative, or neutral.</div>
                         </div>
-                        <div class="tech-wrapper">
-                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Word Frequency</span>
-                            <div class="tech-popup">Counts the most repeated words in interviews.</div>
+                        <div class="badge hover-magnify tech-swap-badge" style="background: rgba(255,255,255,0.1);">
+                            <div class="default-state">Word Frequency</div>
+                            <div class="hover-state">Counts the most repeated words in interviews.</div>
                         </div>
                     </div>
                 </div>
