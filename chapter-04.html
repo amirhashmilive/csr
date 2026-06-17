@@ -10,37 +10,46 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <style>
-        /* Custom Tooltip */
-        .custom-tooltip-container {
+        /* Hypotheses Swap Hover */
+        .hyp-swap-card {
             position: relative;
+            cursor: pointer;
         }
         
-        .custom-tooltip-container .custom-tooltip {
-            visibility: hidden;
-            width: max-content;
-            max-width: 250px;
-            background-color: var(--bg-glass);
-            color: var(--text-main);
-            text-align: center;
-            border-radius: 8px;
-            padding: 10px;
-            position: absolute;
-            z-index: 100;
-            bottom: 105%;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s;
-            border: 1px solid var(--accent-jh);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            font-size: 0.85rem;
-            line-height: 1.4;
-            pointer-events: none;
-        }
-
-        .custom-tooltip-container:hover .custom-tooltip {
-            visibility: visible;
+        .hyp-swap-card .default-state {
+            transition: opacity 0.3s ease, transform 0.3s ease;
             opacity: 1;
+            transform: translateY(0);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+        }
+        
+        .hyp-swap-card .hover-state {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            opacity: 0;
+            width: 85%;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .hyp-swap-card:hover .default-state {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        
+        .hyp-swap-card:hover .hover-state {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            pointer-events: auto;
         }
 
         /* Lightbox Styles */
@@ -380,40 +389,60 @@
             
             <div class="grid-3">
                 <!-- Row 1 -->
-                <div class="glass-card hyp-card hover-magnify custom-tooltip-container">
+                <div class="glass-card hyp-card hover-magnify hyp-swap-card">
                     <div class="hyp-badge">H₁</div>
-                    <p style="font-size: 1rem;">There is a significant difference in the Communication Effectiveness Score (CES) between Chhattisgarh and Jharkhand.</p>
-                    <span class="badge badge-supported">Tested via Independent t-test</span>
-                    <div class="custom-tooltip">Compares mean CES between two independent groups (CG and JH).</div>
+                    <div class="default-state">
+                        <p style="font-size: 1rem;">There is a significant difference in the Communication Effectiveness Score (CES) between Chhattisgarh and Jharkhand.</p>
+                        <span class="badge badge-supported" style="align-self: flex-start;">Tested via Independent t-test</span>
+                    </div>
+                    <div class="hover-state">
+                        <p style="font-size: 1rem; line-height: 1.5; margin: 0; color: var(--text-main);">Compares mean CES between two independent groups (CG and JH).</p>
+                    </div>
                 </div>
                 
-                <div class="glass-card hyp-card hover-magnify custom-tooltip-container">
+                <div class="glass-card hyp-card hover-magnify hyp-swap-card">
                     <div class="hyp-badge">H₂</div>
-                    <p style="font-size: 1rem;">Effective CSR communication significantly increases the likelihood of perceived educational improvement.</p>
-                    <span class="badge badge-supported">Tested via Logistic Regression</span>
-                    <div class="custom-tooltip">Predicts probability of binary outcome (Yes/No) based on CES.</div>
+                    <div class="default-state">
+                        <p style="font-size: 1rem;">Effective CSR communication significantly increases the likelihood of perceived educational improvement.</p>
+                        <span class="badge badge-supported" style="align-self: flex-start;">Tested via Logistic Regression</span>
+                    </div>
+                    <div class="hover-state">
+                        <p style="font-size: 1rem; line-height: 1.5; margin: 0; color: var(--text-main);">Predicts probability of binary outcome (Yes/No) based on CES.</p>
+                    </div>
                 </div>
                 
-                <div class="glass-card hyp-card hover-magnify custom-tooltip-container">
+                <div class="glass-card hyp-card hover-magnify hyp-swap-card">
                     <div class="hyp-badge">H₃</div>
-                    <p style="font-size: 1rem;">There is a significant interaction effect between state geography and communication channels on healthcare perception.</p>
-                    <span class="badge badge-partial">Tested via Two-Way ANOVA</span>
-                    <div class="custom-tooltip">Tests interaction between State and Channel on healthcare perception.</div>
+                    <div class="default-state">
+                        <p style="font-size: 1rem;">There is a significant interaction effect between state geography and communication channels on healthcare perception.</p>
+                        <span class="badge badge-partial" style="align-self: flex-start;">Tested via Two-Way ANOVA</span>
+                    </div>
+                    <div class="hover-state">
+                        <p style="font-size: 1rem; line-height: 1.5; margin: 0; color: var(--text-main);">Tests interaction between State and Channel on healthcare perception.</p>
+                    </div>
                 </div>
                 
                 <!-- Row 2 -->
-                <div class="glass-card hyp-card hover-magnify custom-tooltip-container" style="grid-column: span 1.5;">
+                <div class="glass-card hyp-card hover-magnify hyp-swap-card" style="grid-column: span 1.5;">
                     <div class="hyp-badge">H₄</div>
-                    <p style="font-size: 1rem;">There is a significant association between the type of communication channel used and environmental impact recognition.</p>
-                    <span class="badge badge-supported">Tested via Chi-Square</span>
-                    <div class="custom-tooltip">Tests association between two categorical variables.</div>
+                    <div class="default-state">
+                        <p style="font-size: 1rem;">There is a significant association between the type of communication channel used and environmental impact recognition.</p>
+                        <span class="badge badge-supported" style="align-self: flex-start;">Tested via Chi-Square</span>
+                    </div>
+                    <div class="hover-state">
+                        <p style="font-size: 1rem; line-height: 1.5; margin: 0; color: var(--text-main);">Tests association between two categorical variables.</p>
+                    </div>
                 </div>
                 
-                <div class="glass-card hyp-card hover-magnify custom-tooltip-container" style="grid-column: span 1.5;">
+                <div class="glass-card hyp-card hover-magnify hyp-swap-card" style="grid-column: span 1.5;">
                     <div class="hyp-badge">H₅</div>
-                    <p style="font-size: 1rem;">Communication Effectiveness is a stronger predictor of perceived livelihood enhancement than geographical state.</p>
-                    <span class="badge badge-supported">Tested via Multiple Linear Regression</span>
-                    <div class="custom-tooltip">Predicts continuous outcome using CES while controlling for State.</div>
+                    <div class="default-state">
+                        <p style="font-size: 1rem;">Communication Effectiveness is a stronger predictor of perceived livelihood enhancement than geographical state.</p>
+                        <span class="badge badge-supported" style="align-self: flex-start;">Tested via Multiple Linear Regression</span>
+                    </div>
+                    <div class="hover-state">
+                        <p style="font-size: 1rem; line-height: 1.5; margin: 0; color: var(--text-main);">Predicts continuous outcome using CES while controlling for State.</p>
+                    </div>
                 </div>
             </div>
             
