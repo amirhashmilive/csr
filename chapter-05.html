@@ -151,36 +151,7 @@
             opacity: 0.5;
         }
         
-        .data-card {
-            position: relative;
-        }
-        .data-content {
-            transition: opacity 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-        }
-        .data-card:hover .data-content {
-            opacity: 0;
-        }
-        .data-explanation {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            color: var(--text-main);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            text-align: center;
-        }
-        .data-card:hover .data-explanation {
-            opacity: 1;
-        }
+
 
     </style>
 </head>
@@ -562,73 +533,43 @@
             
             <h3 style="color: var(--accent-cg); margin: 1rem 0 1.5rem 0; text-align: center;"><i class="fas fa-user-edit"></i> Primary Sources</h3>
             <div class="grid-3" style="margin-bottom: 3rem;">
-                <div class="glass-card hover-magnify data-card" style="text-align: center; border-color: var(--accent-cg); min-height: 180px;">
-                    <div class="data-content">
-                        <i class="fas fa-clipboard-list" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Structured Surveys</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Bilingual (Hindi/English) Likert-scale questionnaires.</p>
-                    </div>
-                    <div class="data-explanation">
-                        N = 400 beneficiaries from CSR catchment areas.
-                    </div>
+                <div class="glass-card hover-magnify" style="text-align: center; border-color: var(--accent-cg); min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-clipboard-list" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Structured Surveys</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Bilingual (Hindi/English) Likert-scale questionnaires.</p>
                 </div>
                 
-                <div class="glass-card hover-magnify data-card" style="text-align: center; border-color: var(--accent-cg); min-height: 180px;">
-                    <div class="data-content">
-                        <i class="fas fa-comments" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">In-depth Interviews</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Semi-structured discussions with stakeholders.</p>
-                    </div>
-                    <div class="data-explanation">
-                        N = 40 (CSR Heads, NGO Reps, Govt Officials).
-                    </div>
+                <div class="glass-card hover-magnify" style="text-align: center; border-color: var(--accent-cg); min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-comments" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">In-depth Interviews</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Semi-structured discussions with stakeholders.</p>
                 </div>
                 
-                <div class="glass-card hover-magnify data-card" style="text-align: center; border-color: var(--accent-cg); min-height: 180px;">
-                    <div class="data-content">
-                        <i class="fas fa-binoculars" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Field Observations</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Conducted across 10 districts over 6 months.</p>
-                    </div>
-                    <div class="data-explanation">
-                        On-ground validation of CSR initiatives and impact.
-                    </div>
+                <div class="glass-card hover-magnify" style="text-align: center; border-color: var(--accent-cg); min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-binoculars" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Field Observations</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Conducted across 10 districts over 6 months.</p>
                 </div>
             </div>
             
             <h3 style="color: var(--accent-jh); margin: 0 0 1.5rem 0; text-align: center;"><i class="fas fa-database"></i> Secondary Sources</h3>
             <div class="grid-3">
-                <div class="glass-card hover-magnify data-card" style="text-align: center; border-color: var(--accent-jh); min-height: 180px;">
-                    <div class="data-content">
-                        <i class="fas fa-globe" style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">National CSR Portal</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Expenditure data from Ministry of Corporate Affairs.</p>
-                    </div>
-                    <div class="data-explanation">
-                        Analysis of state-wise mandated vs actual spending.
-                    </div>
+                <div class="glass-card hover-magnify" style="text-align: center; border-color: var(--accent-jh); min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-globe" style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">National CSR Portal</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Expenditure data from Ministry of Corporate Affairs.</p>
                 </div>
                 
-                <div class="glass-card hover-magnify data-card" style="text-align: center; border-color: var(--accent-jh); min-height: 180px;">
-                    <div class="data-content">
-                        <i class="fas fa-file-invoice" style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Corporate Reports</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Annual Reports, Business Responsibility Reports (BRSR).</p>
-                    </div>
-                    <div class="data-explanation">
-                        Review of company-disclosed policies and outcomes.
-                    </div>
+                <div class="glass-card hover-magnify" style="text-align: center; border-color: var(--accent-jh); min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-file-invoice" style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Corporate Reports</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Annual Reports, Business Responsibility Reports (BRSR).</p>
                 </div>
                 
-                <div class="glass-card hover-magnify data-card" style="text-align: center; border-color: var(--accent-jh); min-height: 180px;">
-                    <div class="data-content">
-                        <i class="fas fa-book-reader" style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Academic Databases</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Scopus, Web of Science, Google Scholar.</p>
-                    </div>
-                    <div class="data-explanation">
-                        Literature review to ground findings in existing theory.
-                    </div>
+                <div class="glass-card hover-magnify" style="text-align: center; border-color: var(--accent-jh); min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-book-reader" style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Academic Databases</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">Scopus, Web of Science, Google Scholar.</p>
                 </div>
             </div>
         </section>
