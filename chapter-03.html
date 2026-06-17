@@ -80,19 +80,22 @@
         .arch-title {
             font-size: 1.2rem;
             font-weight: 700;
-            transition: transform 0.3s ease, top 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             width: 100%;
             padding: 0 1rem;
+            opacity: 1;
         }
 
         .arch-content {
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease;
             position: absolute;
-            top: 5rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
             width: 90%;
             font-size: 0.85rem;
             color: var(--text-muted);
@@ -117,12 +120,13 @@
         }
 
         .architecture-card:hover .arch-title {
-            top: 1.5rem;
-            transform: translateY(0);
+            opacity: 0;
+            transform: translateY(-60%);
         }
 
         .architecture-card:hover .arch-content {
             opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
             pointer-events: auto;
         }
 

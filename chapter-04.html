@@ -425,8 +425,10 @@
                         <p style="font-size: 1rem;">There is a significant difference in the Communication Effectiveness Score (CES) between Chhattisgarh and Jharkhand.</p>
                         <span class="badge badge-supported" style="align-self: flex-start;">Tested via Independent t-test</span>
                     </div>
-                    <div class="hover-state">
-                        <p style="font-size: 1rem; line-height: 1.5; margin: 0; color: var(--text-main);">Compares mean CES between two independent groups (CG and JH).</p>
+                    <div class="hover-state" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; width: 100%; height: 100%;">
+                        <div style="font-size: 2.5rem; color: var(--accent-cg); margin-bottom: 0.5rem; font-family: serif; font-style: italic;">t</div>
+                        <h4 style="margin-bottom: 0.5rem;">Independent t-test</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-muted);">Compares CES means between CG and JH (H₁)</p>
                     </div>
                 </div>
                 
@@ -436,8 +438,10 @@
                         <p style="font-size: 1rem;">Effective CSR communication significantly increases the likelihood of perceived educational improvement.</p>
                         <span class="badge badge-supported" style="align-self: flex-start;">Tested via Logistic Regression</span>
                     </div>
-                    <div class="hover-state">
-                        <p style="font-size: 1rem; line-height: 1.5; margin: 0; color: var(--text-main);">Predicts probability of binary outcome (Yes/No) based on CES.</p>
+                    <div class="hover-state" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; width: 100%; height: 100%;">
+                        <div style="font-size: 2.5rem; color: var(--accent-jh); margin-bottom: 0.5rem; font-family: serif;">β</div>
+                        <h4 style="margin-bottom: 0.5rem;">Logistic Regression</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-muted);">Predicts binary educational outcomes based on CES (H₂)</p>
                     </div>
                 </div>
                 
@@ -447,8 +451,10 @@
                         <p style="font-size: 1rem;">There is a significant interaction effect between state geography and communication channels on healthcare perception.</p>
                         <span class="badge badge-partial" style="align-self: flex-start;">Tested via Two-Way ANOVA</span>
                     </div>
-                    <div class="hover-state">
-                        <p style="font-size: 1rem; line-height: 1.5; margin: 0; color: var(--text-main);">Tests interaction between State and Channel on healthcare perception.</p>
+                    <div class="hover-state" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; width: 100%; height: 100%;">
+                        <div style="font-size: 2.5rem; color: var(--success-color); margin-bottom: 0.5rem; font-family: serif;">F</div>
+                        <h4 style="margin-bottom: 0.5rem;">ANOVA</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-muted);">Tests interaction between state and channel on health (H₃)</p>
                     </div>
                 </div>
                 
@@ -459,8 +465,10 @@
                         <p style="font-size: 1rem;">There is a significant association between the type of communication channel used and environmental impact recognition.</p>
                         <span class="badge badge-supported" style="align-self: flex-start;">Tested via Chi-Square</span>
                     </div>
-                    <div class="hover-state">
-                        <p style="font-size: 1rem; line-height: 1.5; margin: 0; color: var(--text-main);">Tests association between two categorical variables.</p>
+                    <div class="hover-state" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; width: 100%; height: 100%;">
+                        <div style="font-size: 2.5rem; color: var(--warning-color); margin-bottom: 0.5rem; font-family: serif;">χ²</div>
+                        <h4 style="margin-bottom: 0.5rem;">Chi-Square</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-muted);">Tests association between channels and environment (H₄)</p>
                     </div>
                 </div>
                 
@@ -470,8 +478,10 @@
                         <p style="font-size: 1rem;">Communication Effectiveness is a stronger predictor of perceived livelihood enhancement than geographical state.</p>
                         <span class="badge badge-supported" style="align-self: flex-start;">Tested via Multiple Linear Regression</span>
                     </div>
-                    <div class="hover-state">
-                        <p style="font-size: 1rem; line-height: 1.5; margin: 0; color: var(--text-main);">Predicts continuous outcome using CES while controlling for State.</p>
+                    <div class="hover-state" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; width: 100%; height: 100%;">
+                        <div style="font-size: 2.5rem; color: #a020f0; margin-bottom: 0.5rem; font-family: serif;">R²</div>
+                        <h4 style="margin-bottom: 0.5rem;">Multiple Linear Regression</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-muted);">Predicts continuous livelihood score using CES and State (H₅)</p>
                     </div>
                 </div>
             </div>
