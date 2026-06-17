@@ -38,16 +38,19 @@
         
         .venn-left {
             background: rgba(0, 102, 204, 0.7);
-            left: calc(50% - 150px);
+            left: calc(50% - 180px);
         }
         
         .venn-right {
             background: rgba(204, 68, 0, 0.7);
-            right: calc(50% - 150px);
+            right: calc(50% - 180px);
         }
         
         .venn-center {
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: 10;
             text-align: center;
             font-weight: bold;
