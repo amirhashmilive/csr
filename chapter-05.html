@@ -150,7 +150,41 @@
             color: var(--accent-cg);
             opacity: 0.5;
         }
-        
+        /* ── Technique Popups ── */
+        .tech-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .tech-popup {
+            position: absolute;
+            bottom: 120%; /* Position above the badge */
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            width: max-content;
+            max-width: 250px;
+            padding: 0.8rem;
+            font-size: 0.85rem;
+            color: var(--text-main);
+            background: var(--bg-glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 100;
+            pointer-events: none;
+            white-space: normal;
+            text-transform: none;
+            line-height: 1.4;
+            text-align: center;
+        }
+        .tech-wrapper:hover .tech-popup {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
 
     </style>
 </head>
@@ -583,12 +617,30 @@
                     <h4 style="color: var(--text-muted); margin-bottom: 2rem;">v26.0 (Quantitative)</h4>
                     
                     <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Descriptive Stats</span>
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Independent t-test</span>
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Two-Way ANOVA</span>
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Chi-Square</span>
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Logistic Regression</span>
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Multiple Regression</span>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Descriptive Stats</span>
+                            <div class="tech-popup">Shows the average and spread of the data.</div>
+                        </div>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Independent t-test</span>
+                            <div class="tech-popup">Checks if CG and JH are significantly different.</div>
+                        </div>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Two-Way ANOVA</span>
+                            <div class="tech-popup">Checks if communication channel works differently in each state.</div>
+                        </div>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Chi-Square</span>
+                            <div class="tech-popup">Checks if channel choice and environmental awareness are related.</div>
+                        </div>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Logistic Regression</span>
+                            <div class="tech-popup">Predicts YES/NO outcomes (e.g., did education improve?).</div>
+                        </div>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Multiple Regression</span>
+                            <div class="tech-popup">Predicts a score using multiple factors.</div>
+                        </div>
                     </div>
                 </div>
                 
@@ -597,11 +649,26 @@
                     <h4 style="color: var(--text-muted); margin-bottom: 2rem;">v12 (Qualitative)</h4>
                     
                     <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Audio Transcription</span>
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Thematic Coding</span>
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Node Generation</span>
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Sentiment Analysis</span>
-                        <span class="badge" style="background: rgba(255,255,255,0.1);">Word Frequency</span>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Audio Transcription</span>
+                            <div class="tech-popup">Converts spoken interviews into written text.</div>
+                        </div>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Thematic Coding</span>
+                            <div class="tech-popup">Groups similar ideas into themes.</div>
+                        </div>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Node Generation</span>
+                            <div class="tech-popup">Creates folders to store these themes.</div>
+                        </div>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Sentiment Analysis</span>
+                            <div class="tech-popup">Checks if people are positive, negative, or neutral.</div>
+                        </div>
+                        <div class="tech-wrapper">
+                            <span class="badge hover-magnify" style="background: rgba(255,255,255,0.1);">Word Frequency</span>
+                            <div class="tech-popup">Counts the most repeated words in interviews.</div>
+                        </div>
                     </div>
                 </div>
             </div>
