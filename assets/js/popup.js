@@ -145,8 +145,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const whyEl = document.getElementById('popup-why');
     const closeBtn = document.querySelector('.popup-close');
 
-    // Event Delegation for popup triggers
-    document.body.addEventListener('click', (e) => {
+    // Close popup functionality
+    const closePopup = () => {
+        overlay.classList.remove('active');
+        overlay.style.pointerEvents = ''; // Restore original
+    };
+
+    // Event Delegation for popup triggers (changed to hover)
+    document.body.addEventListener('mouseover', (e) => {
         const trigger = e.target.closest('[data-popup]');
         if (trigger) {
             const popupId = trigger.getAttribute('data-popup');
@@ -158,13 +164,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 rawEl.textContent = data.rawData;
                 whyEl.textContent = data.whyMatters;
                 
+                // Disable pointer events on overlay to prevent it from stealing hover and causing flickering
+                overlay.style.pointerEvents = 'none';
                 overlay.classList.add('active');
             }
         }
     });
 
-    // Close popup functionality
-    const closePopup = () => overlay.classList.remove('active');
+    document.body.addEventListener('mouseout', (e) => {
+        const trigger = e.target.closest('[data-popup]');
+        if (trigger) {
+            // Check if the mouse actually left the trigger element
+            if (!trigger.contains(e.relatedTarget)) {
+                closePopup();
+            }
+        }
+    });
     
     closeBtn.addEventListener('click', closePopup);
     overlay.addEventListener('click', (e) => {
