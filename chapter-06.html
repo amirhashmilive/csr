@@ -60,8 +60,8 @@
         .hyp-result-card {
             background: var(--bg-glass);
             border: 1px solid var(--bg-glass-border);
-            border-radius: 16px;
-            padding: 2rem;
+            border-radius:  12px;
+            padding:  1rem 1.5rem;
             width: 100%;
             max-width: 800px;
             position: relative;
@@ -667,53 +667,53 @@
         <section class="slide" id="part-c">
             <div class="part-divider">PART C: HYPOTHESIS &amp; SYNTHESIS</div>
             <h2 class="slide-title">Hypothesis Testing Results</h2>
-            <h3 class="slide-subtitle">5 Hypotheses Validated via Statistical Modeling</h3>
+            <h3 class="slide-subtitle" style="margin-bottom: 0;">5 Hypotheses Validated via Statistical Modeling</h3>
             
-            <div class="grid-2" style="width: 100%; max-width: 1000px; margin-top: 1.5rem;">
+            <div class="grid-2" style="width: 100%; max-width: 1000px; margin-top: 1rem; gap: 1rem;">
                 
                 <!-- H1 -->
                 <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 class="popup-trigger" data-popup="h1-ttest">H₁: CES Difference Between States</h3>
+                        <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h1-ttest">H₁: CES Difference Between States</h3>
                         <span class="badge badge-supported">SUPPORTED</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-muted);">Independent Samples t-test: t(398) = 12.41, p < 0.001</p>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Independent Samples t-test: t(398) = 12.41, p < 0.001</p>
                 </div>
                 
                 <!-- H2 -->
                 <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 class="popup-trigger" data-popup="h2-regression">H₂: Communication → Education</h3>
+                        <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h2-regression">H₂: Communication → Education</h3>
                         <span class="badge badge-supported">SUPPORTED</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-muted);">Binary Logistic Regression: Nagelkerke R² = 0.31</p>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Binary Logistic Regression: Nagelkerke R² = 0.31</p>
                 </div>
                 
                 <!-- H3 -->
                 <div class="hyp-result-card partial hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 class="popup-trigger" data-popup="h3-anova">H₃: Communication → Healthcare</h3>
+                        <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h3-anova">H₃: Communication → Healthcare</h3>
                         <span class="badge badge-partial">PARTIALLY SUPPORTED</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-muted);">Two-Way ANOVA: Interaction F(3,389) = 5.14, p = 0.002</p>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Two-Way ANOVA: Interaction F(3,389) = 5.14, p = 0.002</p>
                 </div>
                 
                 <!-- H4 -->
                 <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 class="popup-trigger" data-popup="h4-chisq">H₄: Communication → Environment</h3>
+                        <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h4-chisq">H₄: Communication → Environment</h3>
                         <span class="badge badge-supported">SUPPORTED</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-muted);">Chi-square: χ²(3) = 24.88, Cramer's V = 0.25</p>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Chi-square: χ²(3) = 24.88, Cramer's V = 0.25</p>
                 </div>
                 
                 <!-- H5 -->
                 <div class="hyp-result-card supported hover-magnify" style="grid-column: 1 / -1; max-width: 100%;">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 class="popup-trigger" data-popup="h5-mlr">H₅: Communication → Livelihood</h3>
+                        <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h5-mlr">H₅: Communication → Livelihood</h3>
                         <span class="badge badge-supported">SUPPORTED</span>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-muted);">Multiple Linear Regression: β(CES) = 0.67, R² = 0.50</p>
+                    <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Multiple Linear Regression: β(CES) = 0.67, R² = 0.50</p>
                 </div>
                 
             </div>
