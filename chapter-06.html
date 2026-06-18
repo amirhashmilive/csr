@@ -161,12 +161,23 @@
         .slide {
             position: relative;
         }
-        
-        .q-badge {
+
+        .q-badge-container {
             position: absolute;
             left: 2rem;
             top: 50%;
             transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 150;
+        }
+        
+        .q-badge-group {
+            display: flex;
+        }
+
+        .q-badge {
             width: 50px;
             height: 50px;
             background: var(--bg-glass);
@@ -179,19 +190,33 @@
             font-weight: bold;
             color: var(--text-muted);
             cursor: pointer;
-            z-index: 100;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
         }
         
         .q-badge:hover {
             color: var(--accent-cg);
             border-color: var(--accent-cg);
             box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+            z-index: 250;
+        }
+
+        .q-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 1;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
         }
 
         .q-popup {
-            position: absolute;
+            position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(0.9);
@@ -217,7 +242,11 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
-        .q-badge:hover + .q-popup {
+        .q-badge:hover ~ .q-overlay {
+            opacity: 1;
+        }
+
+        .q-badge:hover ~ .q-popup {
             opacity: 1;
             transform: translate(-50%, -50%) scale(1);
         }
@@ -265,8 +294,13 @@
             <div class="part-divider">PART A: QUANTITATIVE</div>
             <h2 class="slide-title">Q6: State Distribution</h2>
             <div class="chart-container"><canvas id="q6Chart"></canvas></div>
-            <div class="q-badge">Q</div>
-            <div class="q-popup">State: <br><br>☐ Chhattisgarh &nbsp;&nbsp; ☐ Jharkhand</div>
+            <div class="q-badge-container">
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q6">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">State: <br><br>☐ Chhattisgarh &nbsp;&nbsp; ☐ Jharkhand</div>
+                </div>
+            </div>
         </section>
 
         <section class="slide">
@@ -274,8 +308,13 @@
             <h2 class="slide-title">Q7: CSR Awareness Gap</h2>
             <h3 class="slide-subtitle popup-trigger" data-popup="awareness-gap">13-Point Awareness Gap</h3>
             <div class="chart-container"><canvas id="q7Chart"></canvas></div>
-            <div class="q-badge">Q</div>
-            <div class="q-popup">Which company is undertaking CSR activities in your area?</div>
+            <div class="q-badge-container">
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q7">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Which company is undertaking CSR activities in your area?</div>
+                </div>
+            </div>
         </section>
 
         <section class="slide">
@@ -283,8 +322,13 @@
             <h2 class="slide-title">Q8: Corporate Identification</h2>
             <h3 class="slide-subtitle popup-trigger" data-popup="identification-gap">Jharkhand incorrect ID rate is double CG</h3>
             <div class="chart-container"><canvas id="q8Chart"></canvas></div>
-            <div class="q-badge">Q</div>
-            <div class="q-popup">Are you aware of any CSR initiatives being implemented in your area?</div>
+            <div class="q-badge-container">
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q8">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Are you aware of any CSR initiatives being implemented in your area?</div>
+                </div>
+            </div>
         </section>
 
         <section class="slide">
@@ -300,6 +344,18 @@
                     <div class="chart-container" style="height: 250px;"><canvas id="q10Chart"></canvas></div>
                 </div>
             </div>
+            <div class="q-badge-container">
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q9">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Do you agree that CSR activities in your area have had an impact?</div>
+                </div>
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q10">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Which sector does the company belong to?<br><br>☐ Energy &nbsp;&nbsp; ☐ Metal &nbsp;&nbsp; ☐ Cement &nbsp;&nbsp; ☐ Other</div>
+                </div>
+            </div>
         </section>
 
         <!-- Combining multiple charts per slide to save DOM nodes and fit within 35 total logical blocks -->
@@ -312,6 +368,28 @@
                 <div><h4 style="text-align:center;">Q14: Environment</h4><div class="chart-container" style="height:200px;"><canvas id="q14Chart"></canvas></div></div>
                 <div><h4 style="text-align:center;">Q15: Poverty Alleviation</h4><div class="chart-container" style="height:200px;"><canvas id="q15Chart"></canvas></div></div>
             </div>
+            <div class="q-badge-container">
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q12">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Do you agree that CSR initiatives have improved educational facilities?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
+                </div>
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q13">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Do you agree that CSR projects have made healthcare more accessible?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
+                </div>
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q14">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Do you believe environmental initiatives under CSR have positively impacted your area?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
+                </div>
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q15">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Do you think CSR initiatives have contributed to poverty alleviation?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
+                </div>
+            </div>
         </section>
 
         <section class="slide">
@@ -323,6 +401,28 @@
                 <div><h4 style="text-align:center;">Q18: Livelihood</h4><div class="chart-container" style="height:200px;"><canvas id="q18Chart"></canvas></div></div>
                 <div><h4 style="text-align:center;">Q19: Women Empowerment</h4><div class="chart-container" style="height:200px;"><canvas id="q19Chart"></canvas></div></div>
             </div>
+            <div class="q-badge-container">
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q16">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Has the quality of public infrastructure improved due to CSR activities?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
+                </div>
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q17">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Have you seen any improvements in sanitation facilities due to CSR initiatives?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
+                </div>
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q18">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">CSR initiatives contributed to providing livelihood opportunities in which areas?<br><br>☐ Agriculture &nbsp;&nbsp; ☐ Livelihood development &nbsp;&nbsp; ☐ Animal husbandry &nbsp;&nbsp; ☐ Other</div>
+                </div>
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q19">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Do you agree that CSR initiatives have empowered women in your community?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
+                </div>
+            </div>
         </section>
 
         <section class="slide">
@@ -330,6 +430,13 @@
             <h2 class="slide-title">Q21: Perceived Quality of Life</h2>
             <h3 class="slide-subtitle popup-trigger" data-popup="qol-gap">Largest Gap: 18 Points</h3>
             <div class="chart-container"><canvas id="q21Chart"></canvas></div>
+            <div class="q-badge-container">
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q21">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Do you agree that the CSR projects improved your quality of life?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
+                </div>
+            </div>
         </section>
         
         <section class="slide">
@@ -345,12 +452,31 @@
                     <div class="chart-container" style="height: 300px;"><canvas id="q24Chart"></canvas></div>
                 </div>
             </div>
+            <div class="q-badge-container">
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q23">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Was the information you received about CSR activities simple and in clear language?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
+                </div>
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q24">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Did you receive information about CSR activities in your local language?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
+                </div>
+            </div>
         </section>
 
         <section class="slide">
             <div class="part-divider">PART A: QUANTITATIVE</div>
             <h2 class="slide-title">Q25: Communication Channels</h2>
             <div class="chart-container"><canvas id="q25Chart"></canvas></div>
+            <div class="q-badge-container">
+                <div class="q-badge-group">
+                    <div class="q-badge" title="Q25">Q</div>
+                    <div class="q-overlay"></div>
+                    <div class="q-popup">Through which medium do you receive information about CSR projects?<br><br>☐ Verbal &nbsp;&nbsp; ☐ Print Media &nbsp;&nbsp; ☐ Social Media &nbsp;&nbsp; ☐ Electronic Media</div>
+                </div>
+            </div>
         </section>
 
         <section class="slide">
