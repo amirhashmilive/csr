@@ -276,6 +276,113 @@
             </div>
         </section>
 
+        <!-- Slide 3: Why Pragmatism? -->
+        <section class="slide">
+            <h2 class="slide-title">Why Pragmatism?</h2>
+            
+            <style>
+                .pragmatism-flow {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-top: 1.5rem;
+                    width: 100%;
+                }
+                .flow-row {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+                    width: 100%;
+                }
+                .flow-card {
+                    padding: 1.5rem;
+                    text-align: center;
+                    width: 280px;
+                    border-radius: 12px;
+                    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
+                .flow-card:hover {
+                    transform: scale(1.5);
+                    z-index: 100;
+                    position: relative;
+                }
+                .flow-arrow {
+                    color: var(--text-muted);
+                    font-size: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .flow-down-arrow {
+                    color: var(--text-muted);
+                    font-size: 1.5rem;
+                    margin: 0.5rem 0;
+                }
+            </style>
+
+            <div class="pragmatism-flow">
+                <!-- Row 1: The Problem -->
+                <div class="flow-row">
+                    <div class="glass-card flow-card" style="border-top: 4px solid var(--accent-cg);">
+                        <i class="fas fa-list-ol" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Surveys (Numbers)</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-muted);">Tell us <strong>"HOW MANY"</strong></p>
+                        <p style="font-size: 0.85rem; color: #ff6b6b; margin-top: 0.5rem;"><i class="fas fa-times-circle"></i> But not "WHY"</p>
+                    </div>
+                    
+                    <div class="flow-arrow">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    
+                    <div class="glass-card flow-card" style="border-top: 4px solid var(--accent-jh);">
+                        <i class="fas fa-comments" style="font-size: 2rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Interviews (Stories)</h4>
+                        <p style="font-size: 0.95rem; color: var(--text-muted);">Tell us <strong>"WHY"</strong></p>
+                        <p style="font-size: 0.85rem; color: #ff6b6b; margin-top: 0.5rem;"><i class="fas fa-times-circle"></i> But not "HOW MANY"</p>
+                    </div>
+                </div>
+
+                <!-- Arrow Down -->
+                <div class="flow-down-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <!-- Row 2: The Solution -->
+                <div class="glass-card flow-card" style="width: 450px; border-top: 4px solid var(--success-color); background: rgba(0, 255, 136, 0.05);">
+                    <i class="fas fa-puzzle-piece" style="font-size: 2rem; color: var(--success-color); margin-bottom: 1rem;"></i>
+                    <h3 style="color: var(--success-color); margin-bottom: 0.5rem; font-size: 1.5rem;">Pragmatism</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-main); font-weight: bold;">"Use BOTH to get the FULL STORY"</p>
+                </div>
+
+                <!-- Arrow Down -->
+                <div class="flow-down-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <!-- Row 3: The Flow -->
+                <div class="glass-card flow-card" style="width: 650px; padding: 1.2rem; border-color: rgba(255,255,255,0.2);">
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <div style="text-align: center; flex: 1;">
+                            <i class="fas fa-users" style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 0.3rem;"></i>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Surveys (400) + Interviews (40)</p>
+                        </div>
+                        <div style="color: var(--text-muted); padding: 0 1rem;"><i class="fas fa-chevron-right"></i></div>
+                        <div style="text-align: center; flex: 1;">
+                            <i class="fas fa-layer-group" style="color: var(--accent-cg); font-size: 1.2rem; margin-bottom: 0.3rem;"></i>
+                            <p style="font-size: 0.95rem; color: var(--text-main); font-weight: bold;">Triangulation</p>
+                        </div>
+                        <div style="color: var(--text-muted); padding: 0 1rem;"><i class="fas fa-chevron-right"></i></div>
+                        <div style="text-align: center; flex: 1;">
+                            <i class="fas fa-trophy" style="color: var(--success-color); font-size: 1.2rem; margin-bottom: 0.3rem;"></i>
+                            <p style="font-size: 0.95rem; color: var(--success-color); font-weight: bold;">Stronger Conclusions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 
 
