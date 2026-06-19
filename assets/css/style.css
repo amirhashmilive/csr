@@ -785,9 +785,12 @@ html {
         text-align: center;
     }
 
-    /* Hide descriptions to prevent vertical overflow when 7+ items stack */
+    /* Ensure descriptions are fully visible instead of hiding them */
     .chapter-card p, .resource-card p, .glass-card p {
-        display: none !important;
+        display: block !important;
+        font-size: 0.8rem !important;
+        line-height: 1.3 !important;
+        margin-top: 0.4rem !important;
     }
 
     /* 5. Typography Scaling */
