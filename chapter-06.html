@@ -715,7 +715,10 @@
                 <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h1-ttest">H₁: CES Difference Between States</h3>
-                        <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h1-ttest')">SUPPORTED</span>
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h1-ttest')">SUPPORTED</span>
+                            <button style="background:none; border:none; cursor:pointer; font-size:1.2rem; filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));" onclick="showImageSlider('assets/images/chapter-06/hypotheses/hypothesis-1.webp')" title="View Explanation">🔍</button>
+                        </div>
                     </div>
                     <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Independent Samples t-test: t(398) = 12.41, p < 0.001</p>
                 </div>
@@ -724,7 +727,10 @@
                 <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h2-regression">H₂: Communication → Education</h3>
-                        <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h2-regression')">SUPPORTED</span>
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h2-regression')">SUPPORTED</span>
+                            <button style="background:none; border:none; cursor:pointer; font-size:1.2rem; filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));" onclick="showImageSlider('assets/images/chapter-06/hypotheses/hypothesis-2.webp')" title="View Explanation">🔍</button>
+                        </div>
                     </div>
                     <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Binary Logistic Regression: Nagelkerke R² = 0.31</p>
                 </div>
@@ -733,7 +739,10 @@
                 <div class="hyp-result-card partial hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h3-anova">H₃: Communication → Healthcare</h3>
-                        <span class="badge badge-partial" style="cursor:pointer;" onclick="showHypPopup('h3-anova')">PARTIALLY SUPPORTED</span>
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <span class="badge badge-partial" style="cursor:pointer;" onclick="showHypPopup('h3-anova')">PARTIALLY SUPPORTED</span>
+                            <button style="background:none; border:none; cursor:pointer; font-size:1.2rem; filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));" onclick="showImageSlider('assets/images/chapter-06/hypotheses/hypothesis-3.webp')" title="View Explanation">🔍</button>
+                        </div>
                     </div>
                     <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Two-Way ANOVA: Interaction F(3,389) = 5.14, p = 0.002</p>
                 </div>
@@ -742,7 +751,10 @@
                 <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h4-chisq">H₄: Communication → Environment</h3>
-                        <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h4-chisq')">SUPPORTED</span>
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h4-chisq')">SUPPORTED</span>
+                            <button style="background:none; border:none; cursor:pointer; font-size:1.2rem; filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));" onclick="showImageSlider('assets/images/chapter-06/hypotheses/hypothesis-4.webp')" title="View Explanation">🔍</button>
+                        </div>
                     </div>
                     <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Chi-square: χ²(3) = 24.88, Cramer's V = 0.25</p>
                 </div>
@@ -751,7 +763,10 @@
                 <div class="hyp-result-card supported hover-magnify" style="grid-column: 1 / -1; max-width: 100%;">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h5-mlr">H₅: Communication → Livelihood</h3>
-                        <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h5-mlr')">SUPPORTED</span>
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h5-mlr')">SUPPORTED</span>
+                            <button style="background:none; border:none; cursor:pointer; font-size:1.2rem; filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));" onclick="showImageSlider('assets/images/chapter-06/hypotheses/hypothesis-5.webp')" title="View Explanation">🔍</button>
+                        </div>
                     </div>
                     <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Multiple Linear Regression: β(CES) = 0.67, R² = 0.50</p>
                 </div>
@@ -973,11 +988,176 @@
                     backgroundColor: colors.cgSecondary,
                     borderColor: colors.cgPrimary,
                     borderWidth: 2,
+    </script>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/charts.js"></script>
+
+    <script>
+        /* ── Section Jump & Active Tab Logic ── */
+        function jumpTo(sectionId) {
+            const target = document.getElementById(sectionId);
+            if (!target) return;
+            // slide-container is the scroll host
+            const container = document.querySelector('.slide-container');
+            container.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+        }
+
+        (function () {
+            const container  = document.querySelector('.slide-container');
+            const sections   = [{ id: 'part-a', tab: 'tab-quant' }, { id: 'part-b', tab: 'tab-qual' }, { id: 'part-c', tab: 'tab-hyp' }];
+            const tabs       = { 'tab-quant': document.getElementById('tab-quant'), 'tab-hyp': document.getElementById('tab-hyp'), 'tab-qual': document.getElementById('tab-qual') };
+
+            function setActive(tabId) {
+                Object.values(tabs).forEach(t => t.classList.remove('active'));
+                if (tabs[tabId]) tabs[tabId].classList.add('active');
+            }
+
+            container.addEventListener('scroll', function () {
+                const scrollMid = container.scrollTop + container.clientHeight / 3;
+                let current = sections[0].tab;
+                sections.forEach(s => {
+                    const el = document.getElementById(s.id);
+                    if (el && el.offsetTop <= scrollMid) current = s.tab;
+                });
+                setActive(current);
+            }, { passive: true });
+        })();
+    </script>
+    <script>
+        window.renderPageCharts = function(colors) {
+            const commonOptions = { scales: { y: { beginAtZero: true, max: 100 } } };
+            
+            // Q6 State
+            createChart('q6Chart', 'pie', {
+                labels: ['Chhattisgarh', 'Jharkhand'],
+                datasets: [{ data: [50, 50], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderWidth: 0 }]
+            });
+
+            // Q7 Awareness
+            createChart('q7Chart', 'bar', {
+                labels: ['Chhattisgarh', 'Jharkhand'],
+                datasets: [{ label: '% Aware of CSR Initiatives', data: [78, 65], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 8 }]
+            }, commonOptions);
+
+            // Q8 Identification
+            createChart('q8Chart', 'bar', {
+                labels: ['Chhattisgarh', 'Jharkhand'],
+                datasets: [
+                    { label: 'Accurate ID', data: [52, 38], backgroundColor: colors.successColor || '#28a745' },
+                    { label: 'Partial ID', data: [30, 30], backgroundColor: colors.warningColor || '#ffc107' },
+                    { label: 'Incorrect ID', data: [18, 32], backgroundColor: '#dc3545' }
+                ]
+            }, { scales: { x: { stacked: true }, y: { stacked: true, max: 100 } } });
+
+            // Q9 Impact
+            createChart('q9Chart', 'bar', {
+                labels: ['CG', 'JH'],
+                datasets: [{ label: '% Visible Impact', data: [86, 76], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 4 }]
+            }, commonOptions);
+
+            // Q10 Sector
+            createChart('q10Chart', 'doughnut', {
+                labels: ['Banking', 'Metal', 'Energy', 'Cement'],
+                datasets: [{ data: [40, 25, 20, 15], backgroundColor: [colors.cgPrimary, colors.jhPrimary, colors.other1, colors.other2], borderWidth: 0 }]
+            });
+
+            // Mini Charts Q12-Q19
+            const createMiniBar = (id, label, cg, jh) => {
+                createChart(id, 'bar', {
+                    labels: ['CG', 'JH'],
+                    datasets: [{ label: label, data: [cg, jh], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 4 }]
+                }, { plugins: { legend: { display: false } }, scales: { y: { max: 100 } } });
+            };
+            
+            createMiniBar('q12Chart', 'Education', 82, 74);
+            createMiniBar('q13Chart', 'Healthcare', 79, 80);
+            createMiniBar('q14Chart', 'Environment', 72, 60);
+            createMiniBar('q15Chart', 'Poverty', 62, 52);
+            createMiniBar('q16Chart', 'Infrastructure', 75, 65);
+            createMiniBar('q17Chart', 'Sanitation', 74, 64);
+            createMiniBar('q18Chart', 'Livelihood', 66, 52);
+            createMiniBar('q19Chart', 'Women Emp.', 68, 54);
+
+            // Q21 Quality of Life
+            createChart('q21Chart', 'bar', {
+                labels: ['Chhattisgarh', 'Jharkhand'],
+                datasets: [{ label: '% Reporting Improved Quality of Life', data: [80, 62], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 8 }]
+            }, commonOptions);
+
+            // Q23 Clarity
+            createChart('q23Chart', 'bar', {
+                labels: ['CG', 'JH'],
+                datasets: [{ label: '% Finding Comm. Clear', data: [86, 60], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 6 }]
+            }, commonOptions);
+
+            // Q24 Language
+            createChart('q24Chart', 'bar', {
+                labels: ['CG', 'JH'],
+                datasets: [{ label: '% In Local Language', data: [80, 54], backgroundColor: [colors.cgPrimary, colors.jhPrimary], borderRadius: 6 }]
+            }, commonOptions);
+
+            // Q25 Channels
+            createChart('q25Chart', 'bar', {
+                labels: ['Verbal', 'Print', 'Electronic', 'Social Media'],
+                datasets: [
+                    { label: 'Chhattisgarh', data: [58, 20, 18, 4], backgroundColor: colors.cgPrimary, borderRadius: 6 },
+                    { label: 'Jharkhand', data: [32, 35, 22, 11], backgroundColor: colors.jhPrimary, borderRadius: 6 }
+                ]
+            }, { indexAxis: 'y', scales: { x: { max: 70 } } });
+
+            // Sector ANOVA
+            createChart('sectorAnovaChart', 'bar', {
+                labels: ['Banking/Finance', 'Metal', 'Energy', 'Cement'],
+                datasets: [{
+                    label: 'Mean Satisfaction Score',
+                    data: [2.44, 2.10, 2.05, 1.87],
+                    backgroundColor: [colors.successColor || '#28a745', colors.jhPrimary, colors.other1, colors.gridColor],
+                    borderRadius: 8
+                }]
+            }, { scales: { y: { max: 3 } } });
+
+            // Thematic Chart
+            createChart('thematicChart', 'bar', {
+                labels: ['Livelihood', 'Education', 'Environment', 'Health'],
+                datasets: [{
+                    label: 'Thematic References in NVivo',
+                    data: [76, 54, 41, 39],
+                    backgroundColor: colors.cgSecondary,
+                    borderColor: colors.cgPrimary,
+                    borderWidth: 2,
                     borderRadius: 8
                 }]
             }, { indexAxis: 'y' });
         };
     </script>
     <script src="assets/js/slide-number.js"></script>
+
+    <!-- Image Slider Lightbox Overlay -->
+    <div id="imageSliderOverlay" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); backdrop-filter:blur(10px); z-index:2500; opacity:0; pointer-events:none; transition:all 0.3s ease; display:flex; justify-content:center; align-items:center;" onclick="closeImageSlider()">
+        <span style="position:absolute; top:20px; right:30px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer;" onclick="closeImageSlider()">&times;</span>
+        <img id="sliderImage" src="" style="max-width:90%; max-height:90vh; border-radius:8px; box-shadow:0 0 30px rgba(0,0,0,0.8); object-fit:contain;" onclick="event.stopPropagation();">
+    </div>
+
+    <script>
+        function showImageSlider(imageSrc) {
+            document.getElementById('sliderImage').src = imageSrc;
+            const overlay = document.getElementById('imageSliderOverlay');
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'all';
+        }
+        function closeImageSlider() {
+            const overlay = document.getElementById('imageSliderOverlay');
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageSlider();
+            }
+        });
+    </script>
 </body>
 </html>
