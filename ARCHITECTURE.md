@@ -1,0 +1,132 @@
+# ARCHITECTURE.md — Project Structure
+
+## Technology Stack
+
+| Layer | Technology | Version/Source |
+|---|---|---|
+| Markup | HTML5 | Static files, no templating |
+| Styling | CSS3 | Custom properties, Flexbox/Grid, animations |
+| Logic | Vanilla JavaScript | ES6+ |
+| Charts | Chart.js | 4.4.0 (CDN: `cdn.jsdelivr.net`) |
+| Icons | Font Awesome | 6.0.0-beta3 (CDN: `cdnjs.cloudflare.com`) |
+| Typography | Google Fonts | Inter (weights: 300–800) |
+
+**No build tools, no frameworks, no npm.** Open `index.html` in a browser.
+
+---
+
+## Directory Tree
+
+```
+/
+├── index.html                     ← Homepage (3 slides)
+├── chapter-01.html                ← Introduction (14 slides)
+├── chapter-02.html                ← Review of Literature (9 slides)
+├── chapter-03.html                ← Theoretical Framework (8 slides)
+├── chapter-04.html                ← Objectives & Hypotheses (8 slides)
+├── chapter-05.html                ← Research Methodology (9 slides)
+├── chapter-06.html                ← Data Analysis (17 slides)
+├── chapter-07.html                ← Findings & Conclusions (8 slides)
+├── appendices.html                ← Supplemental Materials (9 slides)
+├── bibliography.html              ← Reference List (1 slide)
+├── academic-engagements.html      ← Publications & Reports (7 slides)
+├── README.md                      ← Project overview and documentation
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css              ← Main design system (1363 lines)
+│   │   ├── style.css.backup       ← Pre-cinematic-enhancements backup
+│   │   └── slider-styles.css      ← Lightbox slider styles
+│   ├── js/
+│   │   ├── main.js                ← Scroll snap, dot nav, cinematic effects, text enforcement
+│   │   ├── main.js.backup         ← Pre-cinematic-enhancements backup
+│   │   ├── theme.js               ← Dark/light mode toggle with localStorage
+│   │   ├── charts.js              ← Chart.js wrapper, theme-aware colours
+│   │   ├── popup.js               ← Statistical insight popups (hover-triggered)
+│   │   ├── slide-number.js        ← Dynamic slide numbering badge system
+│   │   └── slider.js              ← Lightbox image slider with keyboard nav
+│   └── images/
+│       ├── chapter-01/            ← CES, comparison, evolution, pillars images
+│       ├── chapter-02/            ← Review of Literature images
+│       ├── chapter-04/            ← Hypothesis images
+│       └── chapter-06/            ← Data Analysis images
+│
+├── docs/
+│   ├── border-style-guide.md      ← `.border-glow-blue` class reference
+│   └── slider-style-guide.md      ← Lightbox slider usage guide
+│
+├── pdf/
+│   ├── certificates/              ← 5 conference/webinar certificates
+│   ├── journals/                  ← 10 published journal PDFs
+│   ├── questionnaires/            ← Beneficiary survey questionnaire
+│   └── reports/                   ← Publication bundle PDF
+│
+├── scratch/                       ← One-off fix scripts (JS/Python)
+│   ├── fix_css.js
+│   ├── fix_hyp_overflow.js
+│   ├── fix_q_badges.js
+│   ├── fix_q_badges.py
+│   └── insert_slide.js
+│
+├── capture_slides.py              ← Selenium-based PDF export of all slides
+├── convert_to_pptx.py             ← HTML-to-PPTX converter (BeautifulSoup + python-pptx)
+└── modify.py                      ← One-off HTML modification script (chapter-03)
+```
+
+---
+
+## Slide Counts (Total: 93 slides)
+
+| Page | Slides | Content |
+|---|---|---|
+| `index.html` | 3 | Hero, thesis structure cards, additional resources |
+| `chapter-01.html` | 14 | Introduction, CSR in India, evolution, pillars, CES, states |
+| `chapter-02.html` | 9 | Literature review, theoretical evolution, research gaps |
+| `chapter-03.html` | 8 | Theoretical framework, 4 theories, Five-Pillar Framework |
+| `chapter-04.html` | 8 | 5 objectives, 5 hypotheses |
+| `chapter-05.html` | 9 | Mixed-methods design, sampling, data collection |
+| `chapter-06.html` | 17 | Full data analysis, 400 surveys, 5 hypothesis tests |
+| `chapter-07.html` | 8 | Key findings, recommendations, conclusions |
+| `appendices.html` | 9 | Questionnaire, CSR data, Section 135 |
+| `bibliography.html` | 1 | 164+ references |
+| `academic-engagements.html` | 7 | Publications, conferences, progress reports |
+
+---
+
+## Script Loading Order (per chapter page)
+
+```html
+<script src="assets/js/theme.js"></script>      <!-- 1. Theme toggle (creates button, reads localStorage) -->
+<script src="assets/js/slider.js"></script>       <!-- 2. Lightbox slider (chapter pages only) -->
+<script src="assets/js/main.js"></script>         <!-- 3. Dot nav, cinematic effects, text enforcement -->
+<script src="assets/js/charts.js"></script>       <!-- 4. Chart.js wrapper (chapter pages with charts) -->
+<script src="assets/js/slide-number.js"></script> <!-- 5. Dynamic slide badges (always last) -->
+```
+
+Index page omits `slider.js` and `charts.js`.
+
+---
+
+## CSS Architecture
+
+The main stylesheet (`style.css`) is organised in these sections:
+
+1. **CSS Custom Properties** (lines 1–53) — Light/dark mode tokens
+2. **Reset & Base** (lines 55–67) — Box-sizing, font-family
+3. **Scroll Snap** (lines 69–96) — `.slide-container`, `.slide`
+4. **Typography** (lines 98–118) — `.slide-title`, `.slide-subtitle`
+5. **Glassmorphism Cards** (lines 120–134) — `.glass-card`
+6. **Grid Layouts** (lines 136–140) — `.grid-2` through `.grid-7`
+7. **Navigation** (lines 142–211) — `.theme-toggle`, `.back-btn`, `.progress-dots`
+8. **UI Components** (lines 240–323) — `.popup-trigger`, `.badge`, `.popup-overlay`
+9. **Tables** (lines 324–338) — `.data-table`
+10. **Animations** (lines 340–355) — `fadeInDown`, `fadeInUp`, `pulseGlow`
+11. **Responsive** (lines 357–368) — 1024px and 768px breakpoints
+12. **Chapter Nav** (lines 370–477) — `.chap-nav` pill bar
+13. **Hover Magnify** (lines 484–505) — Universal `.hover-magnify` effect
+14. **Cinematic Enhancements** (lines 508–658) — Fade-ins, micro-interactions, gradients
+15. **Breathing Glows** (lines 676–712) — `.glow-blue`, `.glow-green`, etc.
+16. **Mobile Responsiveness** (lines 714–912) — Comprehensive mobile overrides
+17. **Light Mode Mobile Fixes** (lines 914–1081) — Text visibility in light mode
+18. **Resource Cards** (lines 1083–1157) — Gradient glow resource cards
+19. **Slide Number Badge System** (lines 1160–1363) — `.sn-badge`, `.sn-dropdown`
