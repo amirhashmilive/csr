@@ -274,6 +274,62 @@
             opacity: 1;
             transform: translate(-50%, -50%) scale(1);
         }
+
+        /* Update 1: Slide 17 Integrated Interpretation */
+        .interp-card {
+            background: var(--bg-glass);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            cursor: default;
+        }
+        .interp-card:hover {
+            transform: scale(1.5);
+            z-index: 100;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+            background: rgba(20, 20, 25, 0.98);
+        }
+        .interp-default {
+            transition: opacity 0.3s ease;
+        }
+        .interp-hover {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-weight: 600;
+            color: var(--accent-cg);
+            font-size: 1rem;
+        }
+        .interp-card:hover .interp-default { opacity: 0; }
+        .interp-card:hover .interp-hover { opacity: 1; }
+
+        /* Update 3: Slide 11 Custom Popup */
+        #q25-popup-custom {
+            position: fixed;
+            top: 50%;
+            left: auto;
+            right: 5rem;
+            transform: translateY(-50%) scale(0.9);
+            width: 380px;
+            max-width: unset;
+            font-size: 2rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .q-badge-wrapper:hover ~ #q25-popup-custom {
+            transform: translateY(-50%) scale(1);
+        }
     </style>
 </head>
 <body>
@@ -565,6 +621,8 @@
                         <div class="q-badge" title="Q24">Q24</div>
                     </div>
                     <div class="q-overlay"></div>
+                    </div>
+                    <div class="q-overlay"></div>
                     <div class="q-popup">Did you receive information about CSR activities in your local language?<br><br>☐ Yes &nbsp;&nbsp; ☐ No</div>
                 </div>
             </div>
@@ -581,7 +639,7 @@
                         <div class="q-badge" title="Q25">Q25</div>
                     </div>
                     <div class="q-overlay"></div>
-                    <div class="q-popup">Through which medium do you receive information about CSR projects?<br><br>☐ Verbal &nbsp;&nbsp; ☐ Print Media &nbsp;&nbsp; ☐ Social Media &nbsp;&nbsp; ☐ Electronic Media</div>
+                    <div class="q-popup" id="q25-popup-custom">Through which medium do you receive information about CSR projects?<br><br>☐ Verbal<br>☐ Print Media<br>☐ Social Media<br>☐ Electronic Media</div>
                 </div>
             </div>
         </section>
@@ -675,7 +733,7 @@
                 <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h1-ttest">H₁: CES Difference Between States</h3>
-                        <span class="badge badge-supported">SUPPORTED</span>
+                        <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h1-ttest')">SUPPORTED</span>
                     </div>
                     <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Independent Samples t-test: t(398) = 12.41, p < 0.001</p>
                 </div>
@@ -684,7 +742,7 @@
                 <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h2-regression">H₂: Communication → Education</h3>
-                        <span class="badge badge-supported">SUPPORTED</span>
+                        <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h2-regression')">SUPPORTED</span>
                     </div>
                     <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Binary Logistic Regression: Nagelkerke R² = 0.31</p>
                 </div>
@@ -693,7 +751,7 @@
                 <div class="hyp-result-card partial hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h3-anova">H₃: Communication → Healthcare</h3>
-                        <span class="badge badge-partial">PARTIALLY SUPPORTED</span>
+                        <span class="badge badge-partial" style="cursor:pointer;" onclick="showHypPopup('h3-anova')">PARTIALLY SUPPORTED</span>
                     </div>
                     <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Two-Way ANOVA: Interaction F(3,389) = 5.14, p = 0.002</p>
                 </div>
@@ -702,7 +760,7 @@
                 <div class="hyp-result-card supported hover-magnify">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h4-chisq">H₄: Communication → Environment</h3>
-                        <span class="badge badge-supported">SUPPORTED</span>
+                        <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h4-chisq')">SUPPORTED</span>
                     </div>
                     <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Chi-square: χ²(3) = 24.88, Cramer's V = 0.25</p>
                 </div>
@@ -711,7 +769,7 @@
                 <div class="hyp-result-card supported hover-magnify" style="grid-column: 1 / -1; max-width: 100%;">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <h3 class="popup-trigger" style="font-size: 1.1rem; margin: 0;" data-popup="h5-mlr">H₅: Communication → Livelihood</h3>
-                        <span class="badge badge-supported">SUPPORTED</span>
+                        <span class="badge badge-supported" style="cursor:pointer;" onclick="showHypPopup('h5-mlr')">SUPPORTED</span>
                     </div>
                     <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.95rem;">Multiple Linear Regression: β(CES) = 0.67, R² = 0.50</p>
                 </div>
@@ -731,37 +789,89 @@
         <section class="slide">
             <div class="part-divider">PART C: HYPOTHESIS &amp; SYNTHESIS</div>
             <h2 class="slide-title">Integrated Interpretation</h2>
+            <h3 style="color: var(--success-color); margin-bottom: 2rem; font-size: 1.8rem; text-align: center;">The Chhattisgarh Advantage</h3>
             
-            <div class="glass-card hover-magnify" style="width: 100%; max-width: 900px; text-align: center;">
-                <h3 style="color: var(--success-color); margin-bottom: 2rem; font-size: 1.8rem;">The Chhattisgarh Advantage</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; width: 100%; max-width: 900px; margin: 0 auto;">
                 
-                <div class="grid-3" style="text-align: left;">
-                    <div>
-                        <i class="fas fa-comments" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem;">Verbal Dominance</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">58% rely on verbal channels vs 32% in JH. Overcomes low literacy.</p>
+                <!-- Card 1 -->
+                <div class="interp-card">
+                    <div class="interp-default">
+                        <i class="fas fa-comments" style="font-size: 2.5rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                        <h4>Verbal Dominance</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">58% verbal reliance vs 32%</p>
                     </div>
-                    
-                    <div>
-                        <i class="fas fa-language" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem;">Local Language</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">80% info in native dialect vs 54% in JH. Builds trust.</p>
-                    </div>
-                    
-                    <div>
-                        <i class="fas fa-project-diagram" style="font-size: 2rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
-                        <h4 style="margin-bottom: 0.5rem;">Embedded Structures</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Use of existing Gram Sabhas rather than corporate-imposed structures.</p>
+                    <div class="interp-hover">
+                        Overcomes low literacy by prioritizing spoken channels.
                     </div>
                 </div>
                 
-                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px dashed var(--bg-glass-border);">
-                    <p style="font-size: 1.2rem; font-weight: 600;">Resulting in a monumental <span class="popup-trigger" data-popup="cohens-d" style="color: var(--accent-jh);">Cohen's d = 1.24</span> gap in effectiveness.</p>
+                <!-- Card 2 -->
+                <div class="interp-card">
+                    <div class="interp-default">
+                        <i class="fas fa-language" style="font-size: 2.5rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                        <h4>Local Language</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">80% native dialect vs 54%</p>
+                    </div>
+                    <div class="interp-hover">
+                        Builds deep community trust through familiar communication.
+                    </div>
                 </div>
+                
+                <!-- Card 3 -->
+                <div class="interp-card">
+                    <div class="interp-default">
+                        <i class="fas fa-project-diagram" style="font-size: 2.5rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
+                        <h4>Embedded Structures</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Use of existing Gram Sabhas</p>
+                    </div>
+                    <div class="interp-hover">
+                        Leverages existing community structures over corporate ones.
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="interp-card">
+                    <div class="interp-default">
+                        <i class="fas fa-chart-line" style="font-size: 2.5rem; color: var(--accent-jh); margin-bottom: 1rem;"></i>
+                        <h4>Resulting Gap</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Cohen's d = 1.24</p>
+                    </div>
+                    <div class="interp-hover" style="color: var(--accent-jh);">
+                        A monumental gap in overall communication effectiveness.
+                    </div>
+                </div>
+                
             </div>
         </section>
 
     </div>
+
+    <!-- Modal for Badges -->
+    <div id="badgeModalOverlay" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); backdrop-filter:blur(8px); z-index:2000; opacity:0; pointer-events:none; transition:all 0.3s ease;" onclick="this.style.opacity='0';this.style.pointerEvents='none';">
+        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:rgba(20,20,25,0.95); border:1px solid rgba(255,255,255,0.15); border-radius:16px; padding:3rem; max-width:600px; width:90%; color:var(--text-main); text-align:left; box-shadow:0 15px 40px rgba(0,0,0,0.6);" onclick="event.stopPropagation();">
+            <h3 id="badgeModalTitle" style="color:var(--accent-cg); margin-bottom:1rem; font-size:1.5rem;"></h3>
+            <p id="badgeModalFormula" style="font-family:monospace; margin-bottom:1rem; color:var(--accent-jh);"></p>
+            <p id="badgeModalRaw" style="font-size:1.1rem; font-weight:600; margin-bottom:1rem;"></p>
+            <div style="border-left: 4px solid var(--success-color); padding-left: 1rem; margin-top: 1rem;">
+                <h4 style="margin-bottom: 0.5rem;"><i class="fas fa-lightbulb"></i> Why It Matters</h4>
+                <p id="badgeModalWhy" style="line-height:1.6;"></p>
+            </div>
+            <button onclick="document.getElementById('badgeModalOverlay').style.opacity='0';document.getElementById('badgeModalOverlay').style.pointerEvents='none';" style="margin-top:2rem; padding:0.5rem 1.5rem; background:var(--accent-jh); color:#fff; border:none; border-radius:20px; cursor:pointer; display:block; margin-left:auto; margin-right:auto;">Close</button>
+        </div>
+    </div>
+    <script>
+        function showHypPopup(id) {
+            if(typeof popupData !== 'undefined' && popupData[id]) {
+                document.getElementById('badgeModalTitle').innerText = popupData[id].title;
+                document.getElementById('badgeModalFormula').innerText = popupData[id].formula;
+                document.getElementById('badgeModalRaw').innerText = popupData[id].rawData;
+                document.getElementById('badgeModalWhy').innerText = popupData[id].whyMatters;
+                const overlay = document.getElementById('badgeModalOverlay');
+                overlay.style.opacity = '1';
+                overlay.style.pointerEvents = 'auto';
+            }
+        }
+    </script>
 
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
