@@ -486,80 +486,89 @@
         </section>
 
         <!-- Slide 7: Chhattisgarh & Jharkhand -->
-        <section class="slide" style="padding-top: 1rem;">
-            <h2 class="slide-title" style="margin-bottom: 1.5rem;">Chhattisgarh & Jharkhand</h2>
+        <section class="slide" style="padding-top: 2rem;">
+            <h2 class="slide-title" style="margin-bottom: 2rem;">Chhattisgarh & Jharkhand</h2>
             
-            <div class="grid-2" style="gap: 1rem; margin-bottom: 1.5rem;">
-                <!-- Chhattisgarh -->
-                <div class="glass-card state-card hover-magnify" style="border-top: 4px solid var(--accent-cg); padding: 1rem; cursor: pointer; gap: 0.8rem;" onclick="document.querySelector('.comparison-click').click()">
-                    <h3 style="color: var(--accent-cg); text-align: center; margin-bottom: 0;">Chhattisgarh</h3>
-                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Formation</span> <strong>01 Nov, 2000</strong></div>
-                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Capital</span> <strong>Raipur</strong></div>
-                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Population</span> <strong>25.5 Million</strong></div>
-                    <div class="state-stat" style="border-bottom: none; padding-bottom: 0;"><span>Key Industries</span> <strong style="text-align: right;">Steel, Power, Cement, Mining</strong></div>
+            <div class="grid-2" style="align-items: stretch; gap: 2rem;">
+                
+                <!-- Left Column -->
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <!-- State Profiles Side by Side -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <!-- Chhattisgarh -->
+                        <div class="glass-card state-card hover-magnify" style="border-top: 4px solid var(--accent-cg); padding: 1.2rem; cursor: pointer; gap: 0.6rem;" onclick="document.querySelector('.comparison-click').click()">
+                            <h3 style="color: var(--accent-cg); text-align: center; margin-bottom: 0.5rem; font-size: 1.3rem;">Chhattisgarh</h3>
+                            <div class="state-stat" style="font-size: 0.9rem; padding-bottom: 0.3rem;"><span>Formation</span> <strong>01 Nov, 2000</strong></div>
+                            <div class="state-stat" style="font-size: 0.9rem; padding-bottom: 0.3rem;"><span>Capital</span> <strong>Raipur</strong></div>
+                            <div class="state-stat" style="font-size: 0.9rem; padding-bottom: 0.3rem;"><span>Population</span> <strong>25.5 Million</strong></div>
+                            <div class="state-stat" style="border-bottom: none; font-size: 0.9rem; padding-bottom: 0;"><span>Key Industries</span> <strong style="text-align: right;">Steel, Power, Cement, Mining</strong></div>
+                        </div>
+                        
+                        <!-- Jharkhand -->
+                        <div class="glass-card state-card hover-magnify" style="border-top: 4px solid var(--accent-jh); padding: 1.2rem; cursor: pointer; gap: 0.6rem;" onclick="document.querySelector('.comparison-click').click()">
+                            <h3 style="color: var(--accent-jh); text-align: center; margin-bottom: 0.5rem; font-size: 1.3rem;">Jharkhand</h3>
+                            <div class="state-stat" style="font-size: 0.9rem; padding-bottom: 0.3rem;"><span>Formation</span> <strong>15 Nov, 2000</strong></div>
+                            <div class="state-stat" style="font-size: 0.9rem; padding-bottom: 0.3rem;"><span>Capital</span> <strong>Ranchi</strong></div>
+                            <div class="state-stat" style="font-size: 0.9rem; padding-bottom: 0.3rem;"><span>Population</span> <strong>32.9 Million</strong></div>
+                            <div class="state-stat" style="border-bottom: none; font-size: 0.9rem; padding-bottom: 0;"><span>Key Industries</span> <strong style="text-align: right;">Mining, Steel, Power, Engineering</strong></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Rationale (Similarities/Differences) -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div class="glass-card hover-magnify" style="padding: 1.2rem;">
+                            <h3 style="color: var(--success-color); margin-bottom: 0.8rem; font-size: 1.1rem;"><i class="fas fa-check-circle" style="margin-right: 0.3rem;"></i> Similarities</h3>
+                            <ul style="padding-left: 1.2rem; line-height: 1.5; font-size: 0.9rem; margin: 0; color: var(--text-muted);">
+                                <li style="margin-bottom: 0.4rem;">Formed in 2000, mineral-rich</li>
+                                <li>High tribal pop. & heavy industries</li>
+                            </ul>
+                        </div>
+                        <div class="glass-card hover-magnify" style="padding: 1.2rem;">
+                            <h3 style="color: var(--warning-color); margin-bottom: 0.8rem; font-size: 1.1rem;"><i class="fas fa-balance-scale" style="margin-right: 0.3rem;"></i> Differences</h3>
+                            <ul style="padding-left: 1.2rem; line-height: 1.5; font-size: 0.9rem; margin: 0; color: var(--text-muted);">
+                                <li style="margin-bottom: 0.4rem;">Governance & development paths</li>
+                                <li>CSR approaches & local dynamics</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Jharkhand -->
-                <div class="glass-card state-card hover-magnify" style="border-top: 4px solid var(--accent-jh); padding: 1rem; cursor: pointer; gap: 0.8rem;" onclick="document.querySelector('.comparison-click').click()">
-                    <h3 style="color: var(--accent-jh); text-align: center; margin-bottom: 0;">Jharkhand</h3>
-                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Formation</span> <strong>15 Nov, 2000</strong></div>
-                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Capital</span> <strong>Ranchi</strong></div>
-                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Population</span> <strong>32.9 Million</strong></div>
-                    <div class="state-stat" style="border-bottom: none; padding-bottom: 0;"><span>Key Industries</span> <strong style="text-align: right;">Mining, Steel, Power, Engineering</strong></div>
+                <!-- Right Column: Demographic Comparison Table -->
+                <div class="glass-card hover-magnify" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--text-main); font-size: 1.4rem;">Demographic Comparison</h3>
+                    <table class="data-table" style="font-size: 1rem; margin: 0; width: 100%;">
+                        <thead>
+                            <tr>
+                                <th style="padding: 1rem 0.5rem;">Indicator</th>
+                                <th style="color: var(--accent-cg); padding: 1rem 0.5rem; text-align: center;">Chhattisgarh</th>
+                                <th style="color: var(--accent-jh); padding: 1rem 0.5rem; text-align: center;">Jharkhand</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 1rem 0.5rem;">Tribal Population</td>
+                                <td style="color: var(--accent-cg); font-weight: bold; padding: 1rem 0.5rem; text-align: center;">30.6%</td>
+                                <td style="padding: 1rem 0.5rem; text-align: center;">26.2%</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem 0.5rem;">Literacy Rate</td>
+                                <td style="color: var(--accent-cg); font-weight: bold; padding: 1rem 0.5rem; text-align: center;">77.3%</td>
+                                <td style="padding: 1rem 0.5rem; text-align: center;">74.3%</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem 0.5rem;">Sex Ratio</td>
+                                <td style="color: var(--accent-cg); font-weight: bold; padding: 1rem 0.5rem; text-align: center;">991</td>
+                                <td style="padding: 1rem 0.5rem; text-align: center;">948</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem 0.5rem; border-bottom: none;">Poverty Rate (MPI)</td>
+                                <td style="padding: 1rem 0.5rem; border-bottom: none; text-align: center;">29.9%</td>
+                                <td style="color: var(--accent-jh); font-weight: bold; padding: 1rem 0.5rem; border-bottom: none; text-align: center;">42.1%</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
 
-            <!-- Demographic Comparison Table -->
-            <div class="glass-card hover-magnify" style="width: 100%; margin-bottom: 1.5rem; padding: 1rem;">
-                <table class="data-table" style="font-size: 0.9rem; margin: 0;">
-                    <thead>
-                        <tr>
-                            <th style="padding: 0.5rem;">Demographic Indicator</th>
-                            <th style="color: var(--accent-cg); padding: 0.5rem;">Chhattisgarh</th>
-                            <th style="color: var(--accent-jh); padding: 0.5rem;">Jharkhand</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding: 0.5rem;">Tribal Population</td>
-                            <td style="color: var(--accent-cg); font-weight: bold; padding: 0.5rem;">30.6%</td>
-                            <td style="padding: 0.5rem;">26.2%</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0.5rem;">Literacy Rate</td>
-                            <td style="color: var(--accent-cg); font-weight: bold; padding: 0.5rem;">77.3%</td>
-                            <td style="padding: 0.5rem;">74.3%</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0.5rem;">Sex Ratio</td>
-                            <td style="color: var(--accent-cg); font-weight: bold; padding: 0.5rem;">991</td>
-                            <td style="padding: 0.5rem;">948</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0.5rem; border-bottom: none;">Poverty Rate (MPI)</td>
-                            <td style="padding: 0.5rem; border-bottom: none;">29.9%</td>
-                            <td style="color: var(--accent-jh); font-weight: bold; padding: 0.5rem; border-bottom: none;">42.1%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Rationale -->
-            <div class="grid-2" style="gap: 1rem;">
-                <div class="glass-card hover-magnify" style="padding: 1rem;">
-                    <h3 style="color: var(--success-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Similarities</h3>
-                    <ul style="padding-left: 1.2rem; line-height: 1.4; font-size: 0.9rem; margin: 0;">
-                        <li style="margin-bottom: 0.3rem;">Formed in 2000 with mineral-rich geographies</li>
-                        <li>High tribal populations & heavy extractive industries</li>
-                    </ul>
-                </div>
-                <div class="glass-card hover-magnify" style="padding: 1rem;">
-                    <h3 style="color: var(--warning-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Differences</h3>
-                    <ul style="padding-left: 1.2rem; line-height: 1.4; font-size: 0.9rem; margin: 0;">
-                        <li style="margin-bottom: 0.3rem;">Governance histories & development trajectories</li>
-                        <li>CSR approaches & corporate-community dynamics</li>
-                    </ul>
-                </div>
             </div>
             
             <!-- Hidden Slider Triggers for Comparison Images -->
@@ -585,7 +594,10 @@
         <!-- Slide 10: CSR Expenditure Trends -->
         <section class="slide" style="padding: 2.5rem 2rem 1.5rem 2rem;">
             <h2 class="slide-title" style="margin-bottom: 0.25rem; font-size: 3rem;">CSR Expenditure (FY 2018–23)</h2>
-            <h3 class="slide-subtitle" style="margin-bottom: 0.5rem; font-size: 1.3rem;">Data Source: National CSR Portal</h3>
+            <h3 class="slide-subtitle" style="margin-bottom: 0.5rem; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                Data Source: National CSR Portal
+                <span class="badge badge-supported" style="margin-top: 0;">Retrospective Study</span>
+            </h3>
             
             <div class="chart-container" style="height: 280px; margin: 0.5rem auto;">
                 <canvas id="expenditureChart"></canvas>

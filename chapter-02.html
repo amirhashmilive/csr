@@ -144,7 +144,7 @@
             text-align: center;
             font-size: 2.5rem;
             font-weight: 800;
-            color: var(--warning-color);
+            color: var(--warning-text-color, var(--warning-color));
             animation: pulseGap 2s ease-in-out infinite;
         }
 
@@ -153,7 +153,7 @@
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--warning-color);
+            color: var(--warning-text-color, var(--warning-color));
             margin-top: 0.25rem;
         }
 
@@ -234,14 +234,12 @@
             <div class="venn-container">
                 <div class="venn-circle venn-cg">
                     <div>
-                        <div style="color: var(--accent-cg); margin-bottom: 0.5rem;">Chhattisgarh</div>
-                        <div style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">Sinha 2018<br>IJSDR 2023</div>
+                        <div style="color: var(--accent-cg); margin-bottom: 0;">Chhattisgarh</div>
                     </div>
                 </div>
                 <div class="venn-circle venn-jh">
                     <div>
-                        <div style="color: var(--accent-jh); margin-bottom: 0.5rem;">Jharkhand</div>
-                        <div style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">Sharma 2019<br>Swaniti 2022</div>
+                        <div style="color: var(--accent-jh); margin-bottom: 0;">Jharkhand</div>
                     </div>
                 </div>
                 <div class="venn-gap">

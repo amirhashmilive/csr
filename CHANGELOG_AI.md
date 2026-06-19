@@ -12,6 +12,13 @@ All changes made by AI agents are logged here in reverse chronological order.
 - Merged "Chhattisgarh & Jharkhand", "Demographic Comparison", and "Rationale for State Selection" slides into one "Chhattisgarh & Jharkhand" slide.
 - Removed redundant slides: "Why a Comparative Analysis?" and "Key Terms Defined".
 
+### Visual & Layout Enhancements (Chapter 01 & 02)
+
+- Added "Retrospective Study" badge to the CSR Expenditure slide in Chapter 01.
+- Redesigned the "Chhattisgarh & Jharkhand" slide in Chapter 01 with a robust 2-column grid to prevent overflow.
+- Cleaned up the Venn diagram in "The Missing Intersection" slide in Chapter 02 by removing paper citations.
+- Added a `--warning-text-color` token to `style.css` to fix visibility issues of yellow text in Light Mode.
+
 ### Initialized project memory files
 
 - Created `AGENTS.md` — Master AI agent instructions

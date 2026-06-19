@@ -16,6 +16,7 @@
     --nav-bg: rgba(255, 255, 255, 0.8);
     --success-color: #28a745;
     --warning-color: #ffc107;
+    --warning-text-color: #856404;
     --popup-bg: rgba(255, 255, 255, 0.95);
     /* Extended light-mode tokens */
     --tooltip-bg: rgba(240, 240, 248, 0.97);
@@ -42,6 +43,7 @@
     --nav-bg: rgba(10, 10, 15, 0.8);
     --success-color: #00e676;
     --warning-color: #ffd600;
+    --warning-text-color: #ffd600;
     --popup-bg: rgba(20, 20, 25, 0.95);
     /* Extended dark-mode tokens */
     --tooltip-bg: rgba(20, 20, 25, 0.95);
