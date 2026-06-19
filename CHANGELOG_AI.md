@@ -6,6 +6,12 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ## 2026-06-20
 
+### Clean up Academic Engagements & Appendices
+
+- Fixed overflow issues in "Third Progress Report" and "Fourth Progress Report" slides by adjusting table padding and font size.
+- Removed redundant slides: "Certificates & Evidence" and "Publication Links" from Academic Engagements.
+- Removed redundant slides: "Journal Publications", "Certificates", "Interview Recordings (Excerpts)", and "Raw Data & Documentation" from Appendices.
+
 ### Updated Chapter 01 Slides
 
 - Removed bottom text and adjusted layout on CES Slide (Slide 5).
