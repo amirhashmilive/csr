@@ -6,6 +6,12 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ## 2026-06-20
 
+### Updated Chapter 01 Slides
+
+- Removed bottom text and adjusted layout on CES Slide (Slide 5).
+- Merged "Chhattisgarh & Jharkhand", "Demographic Comparison", and "Rationale for State Selection" slides into one "Chhattisgarh & Jharkhand" slide.
+- Removed redundant slides: "Why a Comparative Analysis?" and "Key Terms Defined".
+
 ### Initialized project memory files
 
 - Created `AGENTS.md` — Master AI agent instructions

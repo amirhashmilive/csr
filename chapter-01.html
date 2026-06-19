@@ -406,9 +406,6 @@
                 });
             </script>
 
-            <div class="glass-card" style="width: 100%; max-width: 900px; text-align: center; border: 2px solid var(--accent-jh);">
-                <p style="font-size: 1.2rem; font-weight: 500; margin: 0; color: var(--text-main);">CES is the primary communication variable used to compare CSR effectiveness between Chhattisgarh and Jharkhand.</p>
-            </div>
         </section>
 
         <!-- Slide: Why Communication Matters More Than Spending -->
@@ -489,32 +486,79 @@
         </section>
 
         <!-- Slide 7: Chhattisgarh & Jharkhand -->
-        <section class="slide">
-            <h2 class="slide-title">Chhattisgarh & Jharkhand</h2>
+        <section class="slide" style="padding-top: 1rem;">
+            <h2 class="slide-title" style="margin-bottom: 1.5rem;">Chhattisgarh & Jharkhand</h2>
             
-            <div class="grid-2">
+            <div class="grid-2" style="gap: 1rem; margin-bottom: 1.5rem;">
                 <!-- Chhattisgarh -->
-                <div class="glass-card state-card hover-magnify" style="border-top: 4px solid var(--accent-cg); cursor: pointer;" onclick="document.querySelector('.comparison-click').click()">
-                    <h3 style="color: var(--accent-cg); text-align: center; margin-bottom: 1.5rem;">Chhattisgarh</h3>
-                    <div class="state-stat"><span>Formation</span> <strong>01 November, 2000</strong></div>
-                    <div class="state-stat"><span>Capital</span> <strong>Raipur</strong></div>
-                    <div class="state-stat"><span>Population</span> <strong>25.5 Million</strong></div>
-                    <div class="state-stat"><span>Tribal Population</span> <strong>30.6%</strong></div>
-                    <div class="state-stat"><span>Literacy Rate</span> <strong>77.3%</strong></div>
-                    <div class="state-stat"><span>Sex Ratio</span> <strong>991</strong></div>
-                    <div class="state-stat" style="border-bottom: none;"><span>Key Industries</span> <strong style="text-align: right;">Steel, Power, Cement, Mining</strong></div>
+                <div class="glass-card state-card hover-magnify" style="border-top: 4px solid var(--accent-cg); padding: 1rem; cursor: pointer; gap: 0.8rem;" onclick="document.querySelector('.comparison-click').click()">
+                    <h3 style="color: var(--accent-cg); text-align: center; margin-bottom: 0;">Chhattisgarh</h3>
+                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Formation</span> <strong>01 Nov, 2000</strong></div>
+                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Capital</span> <strong>Raipur</strong></div>
+                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Population</span> <strong>25.5 Million</strong></div>
+                    <div class="state-stat" style="border-bottom: none; padding-bottom: 0;"><span>Key Industries</span> <strong style="text-align: right;">Steel, Power, Cement, Mining</strong></div>
                 </div>
                 
                 <!-- Jharkhand -->
-                <div class="glass-card state-card hover-magnify" style="border-top: 4px solid var(--accent-jh); cursor: pointer;" onclick="document.querySelector('.comparison-click').click()">
-                    <h3 style="color: var(--accent-jh); text-align: center; margin-bottom: 1.5rem;">Jharkhand</h3>
-                    <div class="state-stat"><span>Formation</span> <strong>15 November, 2000</strong></div>
-                    <div class="state-stat"><span>Capital</span> <strong>Ranchi</strong></div>
-                    <div class="state-stat"><span>Population</span> <strong>32.9 Million</strong></div>
-                    <div class="state-stat"><span>Tribal Population</span> <strong>26.2%</strong></div>
-                    <div class="state-stat"><span>Literacy Rate</span> <strong>74.3%</strong></div>
-                    <div class="state-stat"><span>Sex Ratio</span> <strong>948</strong></div>
-                    <div class="state-stat" style="border-bottom: none;"><span>Key Industries</span> <strong style="text-align: right;">Mining, Steel, Power, Heavy Engineering</strong></div>
+                <div class="glass-card state-card hover-magnify" style="border-top: 4px solid var(--accent-jh); padding: 1rem; cursor: pointer; gap: 0.8rem;" onclick="document.querySelector('.comparison-click').click()">
+                    <h3 style="color: var(--accent-jh); text-align: center; margin-bottom: 0;">Jharkhand</h3>
+                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Formation</span> <strong>15 Nov, 2000</strong></div>
+                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Capital</span> <strong>Ranchi</strong></div>
+                    <div class="state-stat" style="padding-bottom: 0.3rem;"><span>Population</span> <strong>32.9 Million</strong></div>
+                    <div class="state-stat" style="border-bottom: none; padding-bottom: 0;"><span>Key Industries</span> <strong style="text-align: right;">Mining, Steel, Power, Engineering</strong></div>
+                </div>
+            </div>
+
+            <!-- Demographic Comparison Table -->
+            <div class="glass-card hover-magnify" style="width: 100%; margin-bottom: 1.5rem; padding: 1rem;">
+                <table class="data-table" style="font-size: 0.9rem; margin: 0;">
+                    <thead>
+                        <tr>
+                            <th style="padding: 0.5rem;">Demographic Indicator</th>
+                            <th style="color: var(--accent-cg); padding: 0.5rem;">Chhattisgarh</th>
+                            <th style="color: var(--accent-jh); padding: 0.5rem;">Jharkhand</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.5rem;">Tribal Population</td>
+                            <td style="color: var(--accent-cg); font-weight: bold; padding: 0.5rem;">30.6%</td>
+                            <td style="padding: 0.5rem;">26.2%</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem;">Literacy Rate</td>
+                            <td style="color: var(--accent-cg); font-weight: bold; padding: 0.5rem;">77.3%</td>
+                            <td style="padding: 0.5rem;">74.3%</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem;">Sex Ratio</td>
+                            <td style="color: var(--accent-cg); font-weight: bold; padding: 0.5rem;">991</td>
+                            <td style="padding: 0.5rem;">948</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; border-bottom: none;">Poverty Rate (MPI)</td>
+                            <td style="padding: 0.5rem; border-bottom: none;">29.9%</td>
+                            <td style="color: var(--accent-jh); font-weight: bold; padding: 0.5rem; border-bottom: none;">42.1%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Rationale -->
+            <div class="grid-2" style="gap: 1rem;">
+                <div class="glass-card hover-magnify" style="padding: 1rem;">
+                    <h3 style="color: var(--success-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Similarities</h3>
+                    <ul style="padding-left: 1.2rem; line-height: 1.4; font-size: 0.9rem; margin: 0;">
+                        <li style="margin-bottom: 0.3rem;">Formed in 2000 with mineral-rich geographies</li>
+                        <li>High tribal populations & heavy extractive industries</li>
+                    </ul>
+                </div>
+                <div class="glass-card hover-magnify" style="padding: 1rem;">
+                    <h3 style="color: var(--warning-color); margin-bottom: 0.5rem; font-size: 1.1rem;">Differences</h3>
+                    <ul style="padding-left: 1.2rem; line-height: 1.4; font-size: 0.9rem; margin: 0;">
+                        <li style="margin-bottom: 0.3rem;">Governance histories & development trajectories</li>
+                        <li>CSR approaches & corporate-community dynamics</li>
+                    </ul>
                 </div>
             </div>
             
@@ -536,44 +580,7 @@
             </script>
         </section>
 
-        <!-- Slide 9: Comparison -->
-        <section class="slide">
-            <h2 class="slide-title">Demographic Comparison</h2>
-            
-            <div class="glass-card hover-magnify" style="width: 100%; max-width: 900px;">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Indicator</th>
-                            <th style="color: var(--accent-cg);">Chhattisgarh</th>
-                            <th style="color: var(--accent-jh);">Jharkhand</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tribal Population</td>
-                            <td style="color: var(--accent-cg); font-weight: bold;">30.6%</td>
-                            <td>26.2%</td>
-                        </tr>
-                        <tr>
-                            <td>Literacy Rate</td>
-                            <td style="color: var(--accent-cg); font-weight: bold;">77.3%</td>
-                            <td>74.3%</td>
-                        </tr>
-                        <tr>
-                            <td>Sex Ratio</td>
-                            <td style="color: var(--accent-cg); font-weight: bold;">991</td>
-                            <td>948</td>
-                        </tr>
-                        <tr>
-                            <td>Poverty Rate (MPI)</td>
-                            <td>29.9%</td>
-                            <td style="color: var(--accent-jh); font-weight: bold;">42.1%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+
 
         <!-- Slide 10: CSR Expenditure Trends -->
         <section class="slide" style="padding: 2.5rem 2rem 1.5rem 2rem;">
@@ -607,44 +614,7 @@
             </div>
         </section>
 
-        <!-- Slide 11: Rationale State Selection -->
-        <section class="slide">
-            <h2 class="slide-title">Rationale for State Selection</h2>
-            
-            <div class="grid-2">
-                <div class="glass-card hover-magnify">
-                    <h3 style="color: var(--success-color); margin-bottom: 1.5rem;">Similarities</h3>
-                    <ul style="padding-left: 1.5rem; line-height: 2;">
-                        <li>Both formed in the year 2000</li>
-                        <li>High concentration of tribal populations</li>
-                        <li>Mineral-rich geographies</li>
-                        <li>Dominated by heavy extractive industries</li>
-                    </ul>
-                </div>
-                
-                <div class="glass-card hover-magnify">
-                    <h3 style="color: var(--warning-color); margin-bottom: 1.5rem;">Differences</h3>
-                    <ul style="padding-left: 1.5rem; line-height: 2;">
-                        <li>Governance histories and stability</li>
-                        <li>Development indicator trajectories</li>
-                        <li>CSR implementation approaches</li>
-                        <li>Corporate-community relationship dynamics</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <!-- Slide 12: Rationale Comparative Analysis -->
-        <section class="slide">
-            <h2 class="slide-title">Why a Comparative Analysis?</h2>
-            
-            <div class="glass-card hover-magnify" style="max-width: 800px; text-align: center;">
-                <i class="fas fa-balance-scale" style="font-size: 4rem; color: var(--accent-cg); margin-bottom: 2rem;"></i>
-                <p style="font-size: 1.2rem; line-height: 1.8;">
-                    While individual state studies exist, a comparative lens isolates the <strong>communication variable</strong>. Since both states share similar industrial and demographic profiles, differing outcomes in CSR satisfaction can be more confidently attributed to <strong>how companies communicate</strong> with beneficiaries rather than what they spend.
-                </p>
-            </div>
-        </section>
 
         <!-- Slide 13: Significance -->
         <section class="slide">
@@ -671,37 +641,7 @@
             </div>
         </section>
 
-        <!-- Slide 14: Glossary -->
-        <section class="slide">
-            <h2 class="slide-title">Key Terms Defined</h2>
-            
-            <div class="grid-3">
-                <div class="glass-card hover-magnify">
-                    <h4 style="color: var(--accent-cg);">CSR</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Mandatory corporate allocation of profits for societal welfare under Section 135.</p>
-                </div>
-                <div class="glass-card hover-magnify">
-                    <h4 style="color: var(--accent-cg);">CSR Communication</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">The strategic flow of information between a company and its stakeholders regarding its social initiatives.</p>
-                </div>
-                <div class="glass-card hover-magnify">
-                    <h4 style="color: var(--accent-cg);">Beneficiary</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">The ultimate end-user or community member who receives the impact of a CSR project.</p>
-                </div>
-                <div class="glass-card hover-magnify">
-                    <h4 style="color: var(--accent-jh);">Betterment of Society</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Measurable improvements in education, healthcare, environment, and livelihood.</p>
-                </div>
-                <div class="glass-card hover-magnify">
-                    <h4 style="color: var(--accent-jh);">CES</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Communication Effectiveness Score, a composite metric developed for this study.</p>
-                </div>
-                <div class="glass-card hover-magnify">
-                    <h4 style="color: var(--accent-jh);">Five-Pillar Framework</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">The conceptual model analyzing the lifecycle of CSR from entity to communication.</p>
-                </div>
-            </div>
-        </section>
+
 
     </div>
 
