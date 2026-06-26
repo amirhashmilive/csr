@@ -6,6 +6,10 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ## 2026-06-27
 
+### Remove Hover Text Swap from Research Hypotheses Slide
+
+- **`chapter-04.html`**: Removed `.hyp-swap-card` class and inner `.hover-state` content from the cards on Slide 5 (Research Hypotheses) to prevent text replacement on hover, keeping only the `.hover-magnify` scale effect.
+
 ### Mobile Responsiveness Phase 1 Overhaul
 
 - **`assets/css/style.css`**: Added mobile overrides for resource cards (flex-direction: row, horizontal layout, compact sizing) on viewports <= 768px.
