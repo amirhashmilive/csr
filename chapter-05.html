@@ -202,6 +202,151 @@
             pointer-events: auto;
         }
 
+        /* ═══════════════════════════════════════════════════════════════════
+           MOBILE RESPONSIVE OVERRIDES (max-width: 768px)
+           ═══════════════════════════════════════════════════════════════════ */
+        @media (max-width: 768px) {
+            /* Slide 3: Why Pragmatism? Flowchart */
+            section.slide:nth-of-type(3) {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+                justify-content: flex-start !important;
+            }
+            section.slide:nth-of-type(3) .slide-title {
+                margin-bottom: 0.5rem !important;
+            }
+            .pragmatism-flow {
+                gap: 0.3rem !important;
+                margin-top: 0.3rem !important;
+            }
+            .flow-row {
+                flex-direction: column !important;
+                gap: 0.3rem !important;
+            }
+            .flow-card {
+                width: 100% !important;
+                max-width: 320px !important;
+                padding: 0.5rem 0.8rem !important;
+            }
+            .flow-card:hover {
+                transform: none !important;
+            }
+            .flow-card i {
+                font-size: 1.2rem !important;
+                margin-bottom: 0.2rem !important;
+            }
+            .flow-card h4 {
+                margin-bottom: 0.1rem !important;
+                font-size: 0.85rem !important;
+            }
+            .flow-card p {
+                font-size: 0.75rem !important;
+                margin-top: 0.1rem !important;
+            }
+            .flow-arrow, .flow-down-arrow {
+                display: none !important;
+            }
+            .pragmatism-flow .glass-card[style*="width: 450px"],
+            .pragmatism-flow .glass-card[style*="width: 650px"] {
+                width: 100% !important;
+                max-width: 320px !important;
+            }
+            .flow-triangulation-inner {
+                flex-direction: column !important;
+                gap: 0.3rem !important;
+            }
+            .flow-triangulation-inner .fa-chevron-right {
+                transform: rotate(90deg) !important;
+            }
+            .flow-triangulation-inner div[style*="padding: 0 1rem"] {
+                padding: 0 !important;
+                margin: 0.1rem 0 !important;
+            }
+            .flow-triangulation-inner p {
+                font-size: 0.75rem !important;
+                margin-top: 0.1rem !important;
+            }
+
+            /* Slide 5: Sample Distribution Grids */
+            .district-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 0.4rem !important;
+            }
+            section.slide:nth-of-type(5) .glass-card {
+                padding: 0.6rem !important;
+            }
+            section.slide:nth-of-type(5) h3 {
+                margin-bottom: 0.2rem !important;
+                font-size: 1.1rem !important;
+            }
+            section.slide:nth-of-type(5) p[style*="margin-bottom: 1.2rem"] {
+                margin-bottom: 0.5rem !important;
+                font-size: 0.8rem !important;
+            }
+            section.slide:nth-of-type(5) .district-grid h4 {
+                font-size: 0.75rem !important;
+                margin-bottom: 0.2rem !important;
+            }
+            section.slide:nth-of-type(5) .district-grid p {
+                font-size: 1.1rem !important;
+            }
+
+            /* Slide 6: Data Collection compact overrides */
+            section.slide:nth-of-type(6) h3 {
+                margin: 0.4rem 0 !important;
+                font-size: 1rem !important;
+            }
+            section.slide:nth-of-type(6) .grid-3 {
+                margin-bottom: 0.8rem !important;
+                gap: 0.3rem !important;
+            }
+            section.slide:nth-of-type(6) .glass-card {
+                min-height: 0 !important;
+                padding: 0.5rem !important;
+                gap: 0.3rem !important;
+            }
+            section.slide:nth-of-type(6) .glass-card i {
+                font-size: 1.3rem !important;
+                margin-right: 0.4rem !important;
+            }
+            section.slide:nth-of-type(6) .glass-card h4 {
+                font-size: 0.85rem !important;
+                margin-bottom: 0 !important;
+            }
+            section.slide:nth-of-type(6) .glass-card p {
+                font-size: 0.75rem !important;
+                margin-top: 0.1rem !important;
+            }
+
+            /* Slide 7: Data Analysis compact overrides */
+            section.slide:nth-of-type(7) .grid-2 {
+                gap: 0.6rem !important;
+            }
+            section.slide:nth-of-type(7) .glass-card {
+                padding: 0.6rem !important;
+            }
+            section.slide:nth-of-type(7) .glass-card h2[style*="font-size: 3rem"] {
+                font-size: 1.6rem !important;
+                margin-bottom: 0.2rem !important;
+            }
+            section.slide:nth-of-type(7) .glass-card h4[style*="margin-bottom: 2rem"] {
+                margin-bottom: 0.6rem !important;
+                font-size: 0.85rem !important;
+            }
+            section.slide:nth-of-type(7) .glass-card div[style*="display: flex"] {
+                gap: 0.3rem !important;
+            }
+            section.slide:nth-of-type(7) .badge {
+                font-size: 0.7rem !important;
+                padding: 3px 6px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .district-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -363,7 +508,7 @@
 
                 <!-- Row 3: The Flow -->
                 <div class="glass-card flow-card" style="width: 650px; padding: 1.2rem; border-color: rgba(255,255,255,0.2);">
-                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div class="flow-triangulation-inner" style="display: flex; align-items: center; justify-content: space-between;">
                         <div style="text-align: center; flex: 1;">
                             <i class="fas fa-users" style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 0.3rem;"></i>
                             <p style="font-size: 0.85rem; color: var(--text-muted);">Surveys (400) + Interviews (40)</p>
@@ -612,13 +757,13 @@
         <section class="slide">
             <h2 class="slide-title">Sample Distribution</h2>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; width: 100%; max-width: 1100px; margin-top: 1.5rem;">
+            <div class="grid-2" style="gap: 2rem; width: 100%; max-width: 1100px; margin-top: 1.5rem;">
 
                 <!-- Chhattisgarh Distribution -->
                 <div class="glass-card" style="border-top: 4px solid var(--accent-cg); padding: 1.5rem;">
                     <h3 class="neon-text-cg" style="text-align: center; margin-bottom: 0.3rem;">Chhattisgarh</h3>
                     <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">Total Respondents: 200</p>
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem;">
+                    <div class="district-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem;">
                         <div class="glass-card hover-magnify" style="text-align: center; padding: 0.9rem; border-color: var(--accent-cg);">
                             <h4 style="margin-bottom: 0.4rem; font-size: 0.9rem;">Raipur</h4>
                             <p style="font-size: 1.6rem; font-weight: bold; color: var(--accent-cg); margin: 0;">30</p>
@@ -650,7 +795,7 @@
                 <div class="glass-card" style="border-top: 4px solid var(--accent-jh); padding: 1.5rem;">
                     <h3 class="neon-text-jh" style="text-align: center; margin-bottom: 0.3rem;">Jharkhand</h3>
                     <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">Total Respondents: 200</p>
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem;">
+                    <div class="district-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem;">
                         <div class="glass-card hover-magnify" style="text-align: center; padding: 0.9rem; border-color: var(--accent-jh);">
                             <h4 style="margin-bottom: 0.4rem; font-size: 0.9rem;">E. Singhbhum</h4>
                             <p style="font-size: 1.6rem; font-weight: bold; color: var(--accent-jh); margin: 0;">30</p>

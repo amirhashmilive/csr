@@ -6,6 +6,20 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ## 2026-06-27
 
+### Mobile Responsiveness Phase 1 Overhaul
+
+- **`assets/css/style.css`**: Added mobile overrides for resource cards (flex-direction: row, horizontal layout, compact sizing) on viewports <= 768px.
+- **`index.html`**:
+  - Compressed Slide 1 (Hero) text sizes and margins to fit on smaller mobile screens.
+  - Formatted Slide 3 resource cards to support the compact row layout on mobile viewports.
+- **`chapter-02.html`**:
+  - Slide 3 (Venn Diagram): Added media query overrides to scale down container and reposition circles horizontally to prevent right-edge overflow.
+  - Slide 4 (Timeline): Converted timeline to a vertical layout and modified theorist cards container to wrap.
+  - Slides 2 & 8: Resized text, padding, and statistics cards to prevent vertical clipping.
+- **`chapter-05.html`**:
+  - Slide 3 (Why Pragmatism?): Converted flow chart row to stacked column format, rotated plus/arrow elements, and formatted triangulation cards to vertical rows.
+  - Slide 5 (Sample Distribution): Replaced inline column sizes with responsive `grid-2` class and added a `district-grid` layout that collapses on mobile.
+
 ### Add Fieldwork Photographs Gallery to Appendices
 
 - **`convert_fieldwork.py`** (new): Python/Pillow script scans source folder (`D:\DRIVE (D) Images\...`), converts 125 fieldwork images to WebP (full 1920px + thumbs 600px), generates `assets/images/fieldwork/manifest.json`.

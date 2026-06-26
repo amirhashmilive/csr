@@ -161,6 +161,208 @@
             0%, 100% { opacity: 1; text-shadow: 0 0 10px rgba(255, 193, 7, 0.3); }
             50% { opacity: 0.5; text-shadow: 0 0 25px rgba(255, 193, 7, 0.8); }
         }
+
+        /* ═══════════════════════════════════════════════════════════════════
+           MOBILE RESPONSIVE OVERRIDES (max-width: 768px)
+           ═══════════════════════════════════════════════════════════════════ */
+        @media (max-width: 768px) {
+            /* Slide 2: Literature Review at a Glance */
+            section.slide:nth-of-type(2) > div[style*="display: flex"] {
+                gap: 0.5rem !important;
+            }
+            section.slide:nth-of-type(2) .glass-card {
+                flex: 1 1 140px !important;
+                max-width: 160px !important;
+                padding: 0.5rem !important;
+                min-height: 0 !important;
+            }
+            section.slide:nth-of-type(2) .glass-card div[style*="font-size: 3.5rem"] {
+                font-size: 1.8rem !important;
+                margin-bottom: 0.2rem !important;
+            }
+            section.slide:nth-of-type(2) .glass-card div[style*="font-size: 1.1rem"] {
+                font-size: 0.75rem !important;
+                line-height: 1.2 !important;
+            }
+            section.slide:nth-of-type(2) .glass-card div[style*="font-size: 0.85rem"] {
+                font-size: 0.65rem !important;
+                line-height: 1.2 !important;
+            }
+
+            /* Slide 3: The Missing Intersection (Venn Diagram) */
+            section.slide:nth-of-type(3) {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+                justify-content: flex-start !important;
+            }
+            section.slide:nth-of-type(3) .slide-title {
+                font-size: 1.2rem !important;
+                margin-bottom: 0.3rem !important;
+            }
+            .venn-container {
+                width: 290px !important;
+                height: 165px !important;
+                margin: 0.1rem auto !important;
+            }
+            .venn-circle {
+                width: 130px !important;
+                height: 130px !important;
+                top: 15px !important;
+                font-size: 0.72rem !important;
+            }
+            .venn-cg {
+                left: 10px !important;
+                padding-right: 25px !important;
+            }
+            .venn-jh {
+                right: 10px !important;
+                padding-left: 25px !important;
+            }
+            .venn-gap {
+                font-size: 1.3rem !important;
+            }
+            .venn-gap-label {
+                font-size: 0.5rem !important;
+                letter-spacing: 0.5px !important;
+            }
+            section.slide:nth-of-type(3) div[style*="display: flex"] {
+                gap: 0.3rem !important;
+            }
+            section.slide:nth-of-type(3) .glass-card {
+                padding: 0.3rem !important;
+                flex: 1 1 95px !important;
+                max-width: 105px !important;
+                min-height: 0 !important;
+            }
+            section.slide:nth-of-type(3) .glass-card div[style*="font-size: 0.85rem"] {
+                font-size: 0.7rem !important;
+                margin-bottom: 0.1rem !important;
+            }
+            section.slide:nth-of-type(3) .gap-detail {
+                font-size: 0.65rem !important;
+                line-height: 1.15 !important;
+            }
+
+            /* Slide 4: Timeline & Theory Cards */
+            .timeline-horizontal {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 2.2rem !important;
+                padding: 0.5rem 0 1rem 0 !important;
+                margin-left: 20px !important;
+                width: calc(100% - 40px) !important;
+            }
+            .timeline-horizontal::before {
+                left: 10px !important;
+                top: 0 !important;
+                bottom: 0 !important;
+                width: 4px !important;
+                height: 100% !important;
+            }
+            .timeline-node {
+                margin-left: 0px !important;
+            }
+            .timeline-label {
+                position: absolute !important;
+                top: -8px !important;
+                left: 35px !important;
+                transform: none !important;
+                width: calc(100vw - 110px) !important;
+                max-width: 250px !important;
+                text-align: left !important;
+            }
+            .timeline-author {
+                font-size: 0.95rem !important;
+                margin-bottom: 0.2rem !important;
+            }
+            .timeline-label div[style*="font-size: 0.9rem"] {
+                font-size: 0.75rem !important;
+                line-height: 1.3 !important;
+            }
+            section.slide:nth-of-type(4) .flex-row {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.4rem !important;
+                width: 100% !important;
+                margin-top: 0.4rem !important;
+                margin-bottom: 0.4rem !important;
+            }
+            section.slide:nth-of-type(4) .theory-card {
+                min-height: 0 !important;
+                height: 75px !important;
+                padding: 0.3rem !important;
+                flex: 1 1 calc(50% - 0.4rem) !important;
+            }
+            section.slide:nth-of-type(4) .theory-card .default-state {
+                padding: 0.2rem !important;
+                position: static !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
+            section.slide:nth-of-type(4) .theory-card .hover-state {
+                display: none !important;
+            }
+
+            /* Slide 8: Key Findings in CG & JH */
+            section.slide:nth-of-type(8) {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+                justify-content: flex-start !important;
+            }
+            section.slide:nth-of-type(8) .slide-title {
+                margin-bottom: 0.5rem !important;
+            }
+            section.slide:nth-of-type(8) .grid-2 {
+                gap: 0.5rem !important;
+            }
+            section.slide:nth-of-type(8) .glass-card {
+                padding: 0.6rem !important;
+                gap: 0.3rem !important;
+            }
+            section.slide:nth-of-type(8) .glass-card > div[style*="text-align: center"] {
+                margin-bottom: 0.4rem !important;
+                padding-bottom: 0.2rem !important;
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 0.4rem !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+            }
+            section.slide:nth-of-type(8) .glass-card i {
+                font-size: 1.1rem !important;
+                margin-bottom: 0 !important;
+                margin-right: 0 !important;
+            }
+            section.slide:nth-of-type(8) .glass-card h3 {
+                font-size: 1.1rem !important;
+                margin-top: 0 !important;
+            }
+            section.slide:nth-of-type(8) .glass-card h4 {
+                font-size: 0.8rem !important;
+                margin-bottom: 0.2rem !important;
+            }
+            section.slide:nth-of-type(8) .glass-card ul {
+                font-size: 0.72rem !important;
+                line-height: 1.25 !important;
+                margin-bottom: 0.2rem !important;
+                padding-left: 1rem !important;
+            }
+            section.slide:nth-of-type(8) .glass-card li {
+                margin-bottom: 0.15rem !important;
+            }
+            section.slide:nth-of-type(8) .glass-card div[style*="padding: 1.5rem"] {
+                padding: 0.5rem !important;
+            }
+            section.slide:nth-of-type(8) .glass-card div[style*="padding: 1.5rem"] p {
+                font-size: 0.72rem !important;
+                line-height: 1.25 !important;
+            }
+            section.slide:nth-of-type(8) .glass-card div[style*="padding: 1.5rem"] strong {
+                font-size: 0.78rem !important;
+                margin-bottom: 0.1rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -317,7 +519,7 @@
                 </div>
             </div>
 
-            <div style="display: flex; gap: 1rem; width: 100%; max-width: 1400px; justify-content: center; flex-wrap: nowrap; margin-top: auto; margin-bottom: 4rem;">
+            <div class="flex-row" style="display: flex; gap: 1rem; width: 100%; max-width: 1400px; justify-content: center; flex-wrap: wrap; margin-top: auto; margin-bottom: 4rem;">
                 
                 <div class="glass-card hover-magnify theory-card" style="border-top: 3px solid var(--accent-cg); min-width: 150px;">
                     <div class="default-state">
