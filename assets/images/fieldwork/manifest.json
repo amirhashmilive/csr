@@ -1,0 +1,828 @@
+{
+  "generatedAt": "2026-06-26T18:14:48.806613+00:00",
+  "totalImages": 125,
+  "categories": [
+    {
+      "id": "education",
+      "name": "Education",
+      "icon": "fa-graduation-cap",
+      "count": 19,
+      "images": [
+        {
+          "src": "assets/images/fieldwork/education/a-high-capacity-seminar-hall-equipped-with-state-of-the-art-audiovisual-equipmen.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/a-high-capacity-seminar-hall-equipped-with-state-of-the-art-audiovisual-equipmen.webp",
+          "caption": "A high capacity seminar hall equipped with state of the art audiovisual equipment and facilities is leveraged daily to various social organizations almost free of cost and is considered an absolute gift to the society",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/education/1.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/1.webp",
+          "caption": "Anokha Dhaga",
+          "subcategory": "Anokha Dhaga"
+        },
+        {
+          "src": "assets/images/fieldwork/education/1736784407972.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/1736784407972.webp",
+          "caption": "Anokha Dhaga",
+          "subcategory": "Anokha Dhaga"
+        },
+        {
+          "src": "assets/images/fieldwork/education/1736784418253.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/1736784418253.webp",
+          "caption": "Anokha Dhaga",
+          "subcategory": "Anokha Dhaga"
+        },
+        {
+          "src": "assets/images/fieldwork/education/1736784427357.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/1736784427357.webp",
+          "caption": "Anokha Dhaga",
+          "subcategory": "Anokha Dhaga"
+        },
+        {
+          "src": "assets/images/fieldwork/education/1736784429534.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/1736784429534.webp",
+          "caption": "Anokha Dhaga",
+          "subcategory": "Anokha Dhaga"
+        },
+        {
+          "src": "assets/images/fieldwork/education/img-20250228-115913.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/img-20250228-115913.webp",
+          "caption": "Img_20250228_115913",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/education/img-20250228-120120.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/img-20250228-120120.webp",
+          "caption": "Img_20250228_120120",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/education/img-20250228-121906.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/img-20250228-121906.webp",
+          "caption": "Img_20250228_121906",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/education/img-20250228-122643-1.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/img-20250228-122643-1.webp",
+          "caption": "Img_20250228_122643_1",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/education/img-20250228-131230.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/img-20250228-131230.webp",
+          "caption": "Img_20250228_131230",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/education/digital-tranformation-van-2.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/digital-tranformation-van-2.webp",
+          "caption": "Digital Tranformation Van",
+          "subcategory": "indus tower"
+        },
+        {
+          "src": "assets/images/fieldwork/education/digital-tranformation-van.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/digital-tranformation-van.webp",
+          "caption": "Digital Tranformation Van",
+          "subcategory": "indus tower"
+        },
+        {
+          "src": "assets/images/fieldwork/education/real-group-skill-center-real-skill-academy-is-the-newly-established-vocational-t.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/real-group-skill-center-real-skill-academy-is-the-newly-established-vocational-t.webp",
+          "caption": "REAL group skill center (Real Skill Academy is the newly established vocational training center with an aim to provide free training to around 500 people annually of abo)",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/education/real-skill-academy-is-the-newly-established-vocational-training-center-with-an-a.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/real-skill-academy-is-the-newly-established-vocational-training-center-with-an-a.webp",
+          "caption": "Real Skill Academy is the newly established vocational training center with an aim to provide free training to around 500 people annually of about 12 villages and help them in job placement thereafter",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/education/img-20250405-180432.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/img-20250405-180432.webp",
+          "caption": "Img_20250405_180432",
+          "subcategory": "tata vocational training center"
+        },
+        {
+          "src": "assets/images/fieldwork/education/img-20250405-180438.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/img-20250405-180438.webp",
+          "caption": "Img_20250405_180438",
+          "subcategory": "tata vocational training center"
+        },
+        {
+          "src": "assets/images/fieldwork/education/img-20250405-180544.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/img-20250405-180544.webp",
+          "caption": "Img_20250405_180544",
+          "subcategory": "tata vocational training center"
+        },
+        {
+          "src": "assets/images/fieldwork/education/img-20250405-180548.webp",
+          "thumb": "assets/images/fieldwork/education/thumbs/img-20250405-180548.webp",
+          "caption": "Img_20250405_180548",
+          "subcategory": "tata vocational training center"
+        }
+      ]
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare",
+      "icon": "fa-heartbeat",
+      "count": 8,
+      "images": [
+        {
+          "src": "assets/images/fieldwork/healthcare/health-camp-2.webp",
+          "thumb": "assets/images/fieldwork/healthcare/thumbs/health-camp-2.webp",
+          "caption": "Health Camp",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/healthcare/health-camp.webp",
+          "thumb": "assets/images/fieldwork/healthcare/thumbs/health-camp.webp",
+          "caption": "Health Camp",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/healthcare/mobile-eye-clinics-01.webp",
+          "thumb": "assets/images/fieldwork/healthcare/thumbs/mobile-eye-clinics-01.webp",
+          "caption": "Mobile eye clinics",
+          "subcategory": "Mobile eye clinics"
+        },
+        {
+          "src": "assets/images/fieldwork/healthcare/mobile-eye-clinics-02.webp",
+          "thumb": "assets/images/fieldwork/healthcare/thumbs/mobile-eye-clinics-02.webp",
+          "caption": "Mobile eye clinics",
+          "subcategory": "Mobile eye clinics"
+        },
+        {
+          "src": "assets/images/fieldwork/healthcare/wheelchair-for-person-with-disabilities-pwds.webp",
+          "thumb": "assets/images/fieldwork/healthcare/thumbs/wheelchair-for-person-with-disabilities-pwds.webp",
+          "caption": "wheelchair for person with disabilities (PwDs)",
+          "subcategory": "SBI CSR"
+        },
+        {
+          "src": "assets/images/fieldwork/healthcare/meherbai-tata-memorial-hostpital-2.webp",
+          "thumb": "assets/images/fieldwork/healthcare/thumbs/meherbai-tata-memorial-hostpital-2.webp",
+          "caption": "Meherbai Tata Memorial Hostpital",
+          "subcategory": "Tata Steel"
+        },
+        {
+          "src": "assets/images/fieldwork/healthcare/meherbai-tata-memorial-hostpital.webp",
+          "thumb": "assets/images/fieldwork/healthcare/thumbs/meherbai-tata-memorial-hostpital.webp",
+          "caption": "Meherbai Tata Memorial Hostpital",
+          "subcategory": "Tata Steel"
+        },
+        {
+          "src": "assets/images/fieldwork/healthcare/meherbai-tata-memorial-hostpital-3.webp",
+          "thumb": "assets/images/fieldwork/healthcare/thumbs/meherbai-tata-memorial-hostpital-3.webp",
+          "caption": "Meherbai Tata Memorial Hostpital",
+          "subcategory": "Tata Steel"
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "Environment",
+      "icon": "fa-leaf",
+      "count": 2,
+      "images": [
+        {
+          "src": "assets/images/fieldwork/environment/img-20250403-094306.webp",
+          "thumb": "assets/images/fieldwork/environment/thumbs/img-20250403-094306.webp",
+          "caption": "Img_20250403_094306",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/environment/tata-group-save-trees-hordings.webp",
+          "thumb": "assets/images/fieldwork/environment/thumbs/tata-group-save-trees-hordings.webp",
+          "caption": "Tata Group Save Trees Hordings",
+          "subcategory": ""
+        }
+      ]
+    },
+    {
+      "id": "livelihood",
+      "name": "Livelihood",
+      "icon": "fa-seedling",
+      "count": 30,
+      "images": [
+        {
+          "src": "assets/images/fieldwork/livelihood/1.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/1.webp",
+          "caption": "Anokha Dhaga, Jojobera, East Singhbhum",
+          "subcategory": "Anokha Dhaga, Jojobera, East Singhbhum"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/1736784407972.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/1736784407972.webp",
+          "caption": "Anokha Dhaga, Jojobera, East Singhbhum",
+          "subcategory": "Anokha Dhaga, Jojobera, East Singhbhum"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/1736784418253.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/1736784418253.webp",
+          "caption": "Anokha Dhaga, Jojobera, East Singhbhum",
+          "subcategory": "Anokha Dhaga, Jojobera, East Singhbhum"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/1736784427357.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/1736784427357.webp",
+          "caption": "Anokha Dhaga, Jojobera, East Singhbhum",
+          "subcategory": "Anokha Dhaga, Jojobera, East Singhbhum"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/1736784429534.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/1736784429534.webp",
+          "caption": "Anokha Dhaga, Jojobera, East Singhbhum",
+          "subcategory": "Anokha Dhaga, Jojobera, East Singhbhum"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/a7s06578.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/a7s06578.webp",
+          "caption": "APC (Agricultural Production Commissioner)",
+          "subcategory": "APC (Agricultural Production Commissioner)"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/dji-0092.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/dji-0092.webp",
+          "caption": "APC (Agricultural Production Commissioner)",
+          "subcategory": "APC (Agricultural Production Commissioner)"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/a7s06578-2.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/a7s06578-2.webp",
+          "caption": "fishery culture",
+          "subcategory": "fishery culture"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/phisriculture-food-prepreation-for-fish.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/phisriculture-food-prepreation-for-fish.webp",
+          "caption": "Phisriculture food prepreation for fish",
+          "subcategory": "fishery culture"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/phisriculture-ready-fishesh.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/phisriculture-ready-fishesh.webp",
+          "caption": "Phisriculture Ready fishesh",
+          "subcategory": "fishery culture"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/phisriculture-water-ph-level-training.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/phisriculture-water-ph-level-training.webp",
+          "caption": "Phisriculture water Ph level training",
+          "subcategory": "fishery culture"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/a7s8829.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/a7s8829.webp",
+          "caption": "Lakh Processing Unit",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/benificiary-of-lac-cultivation.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/benificiary-of-lac-cultivation.webp",
+          "caption": "Benificiary of lac cultivation",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0023t01-copy.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0023t01-copy.webp",
+          "caption": "C0023T01 - Copy",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0049t01.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0049t01.webp",
+          "caption": "Lakh Processing Unit",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0107t01.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0107t01.webp",
+          "caption": "Lakh Processing Unit",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0114t01.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0114t01.webp",
+          "caption": "Lakh Processing Unit",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0116t01.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0116t01.webp",
+          "caption": "Lakh Processing Unit",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0125t01.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0125t01.webp",
+          "caption": "Lakh Processing Unit",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/dji-20250310151958-0060-d-rk.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/dji-20250310151958-0060-d-rk.webp",
+          "caption": "Dji_20250310151958_0060_D_Rk",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/lac-cultivation-livelihood-revival-2.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/lac-cultivation-livelihood-revival-2.webp",
+          "caption": "Lac Cultivation & Livelihood Revival",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/lac-cultivation-livelihood-revival-3.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/lac-cultivation-livelihood-revival-3.webp",
+          "caption": "Lac Cultivation & Livelihood Revival",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/lac-cultivation-livelihood-revival-4.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/lac-cultivation-livelihood-revival-4.webp",
+          "caption": "Lac Cultivation & Livelihood Revival",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/lac-cultivation-livelihood-revival.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/lac-cultivation-livelihood-revival.webp",
+          "caption": "Lac Cultivation & Livelihood Revival",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/my-picture-of-fieldwork.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/my-picture-of-fieldwork.webp",
+          "caption": "My Picture Of Fieldwork",
+          "subcategory": "Lakh Processing Unit"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0060t01.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0060t01.webp",
+          "caption": "Temrind",
+          "subcategory": "Temrind"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0061t01.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0061t01.webp",
+          "caption": "Temrind",
+          "subcategory": "Temrind"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0071t01.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0071t01.webp",
+          "caption": "Temrind",
+          "subcategory": "Temrind"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0082t01.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0082t01.webp",
+          "caption": "Temrind",
+          "subcategory": "Temrind"
+        },
+        {
+          "src": "assets/images/fieldwork/livelihood/c0118t01.webp",
+          "thumb": "assets/images/fieldwork/livelihood/thumbs/c0118t01.webp",
+          "caption": "Temrind",
+          "subcategory": "Temrind"
+        }
+      ]
+    },
+    {
+      "id": "community-meetings",
+      "name": "Community Meetings",
+      "icon": "fa-users",
+      "count": 4,
+      "images": [
+        {
+          "src": "assets/images/fieldwork/community-meetings/c0005t01.webp",
+          "thumb": "assets/images/fieldwork/community-meetings/thumbs/c0005t01.webp",
+          "caption": "Community meetings",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/community-meetings/c0015t01.webp",
+          "thumb": "assets/images/fieldwork/community-meetings/thumbs/c0015t01.webp",
+          "caption": "Community meetings",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/community-meetings/img-20221110-144931.webp",
+          "thumb": "assets/images/fieldwork/community-meetings/thumbs/img-20221110-144931.webp",
+          "caption": "Img_20221110_144931",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/community-meetings/img-20221111-142330.webp",
+          "thumb": "assets/images/fieldwork/community-meetings/thumbs/img-20221111-142330.webp",
+          "caption": "Img_20221111_142330",
+          "subcategory": ""
+        }
+      ]
+    },
+    {
+      "id": "csr-hoardings",
+      "name": "CSR Hoardings",
+      "icon": "fa-sign",
+      "count": 2,
+      "images": [
+        {
+          "src": "assets/images/fieldwork/csr-hoardings/img-20250403-095932.webp",
+          "thumb": "assets/images/fieldwork/csr-hoardings/thumbs/img-20250403-095932.webp",
+          "caption": "Img_20250403_095932",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/csr-hoardings/img-20251013-140538.webp",
+          "thumb": "assets/images/fieldwork/csr-hoardings/thumbs/img-20251013-140538.webp",
+          "caption": "Img_20251013_140538",
+          "subcategory": ""
+        }
+      ]
+    },
+    {
+      "id": "interviews",
+      "name": "Interviews",
+      "icon": "fa-microphone",
+      "count": 22,
+      "images": [
+        {
+          "src": "assets/images/fieldwork/interviews/fishery-inspector-mahendra.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/fishery-inspector-mahendra.webp",
+          "caption": "Fishery Inspector Mahendra",
+          "subcategory": "Interview with govt. officials"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/abha-phd.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/abha-phd.webp",
+          "caption": "Abha (Ph.D.)",
+          "subcategory": "Interview with NGO Implementing Agency"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/anurag.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/anurag.webp",
+          "caption": "Interview with NGO Implementing Agency",
+          "subcategory": "Interview with NGO Implementing Agency"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/c0055t01.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/c0055t01.webp",
+          "caption": "Interview with NGO Implementing Agency",
+          "subcategory": "Interview with NGO Implementing Agency"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/mohini.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/mohini.webp",
+          "caption": "Interview with NGO Implementing Agency",
+          "subcategory": "Interview with NGO Implementing Agency"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/nitin.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/nitin.webp",
+          "caption": "Interview with NGO Implementing Agency",
+          "subcategory": "Interview with NGO Implementing Agency"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/pratyesh.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/pratyesh.webp",
+          "caption": "Interview with NGO Implementing Agency",
+          "subcategory": "Interview with NGO Implementing Agency"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/shubham.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/shubham.webp",
+          "caption": "Interview with NGO Implementing Agency",
+          "subcategory": "Interview with NGO Implementing Agency"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/a7s06900.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/a7s06900.webp",
+          "caption": "Interviews of Beneficiary & Community Leaders",
+          "subcategory": "Interviews of Beneficiary & Community Leaders"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/anita-vishwakarma.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/anita-vishwakarma.webp",
+          "caption": "Anita Vishwakarma, Beneficiary",
+          "subcategory": "Anita Vishwakarma"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/bholaram-vishwakarma.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/bholaram-vishwakarma.webp",
+          "caption": "Bholaram Vishwakarma, Beneficiary",
+          "subcategory": "Bholaram Vishwakarma"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/bisavrao-sauri.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/bisavrao-sauri.webp",
+          "caption": "Bisavrao Sauri, Beneficiary",
+          "subcategory": "Bisavrao Sauri"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/ganita-gomra.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/ganita-gomra.webp",
+          "caption": "Ganita Gomra, Beneficiary",
+          "subcategory": "Ganita Gomra"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/kachari-netam.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/kachari-netam.webp",
+          "caption": "Kachari Netam, Beneficiary",
+          "subcategory": "Kachari Netam"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/kunti-markam.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/kunti-markam.webp",
+          "caption": "Kunti Markam, Beneficiary",
+          "subcategory": "Kunti Markam"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/mahesh-kumar-markam.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/mahesh-kumar-markam.webp",
+          "caption": "Mahesh Kumar Markam, Beneficiary",
+          "subcategory": "Mahesh Kumar Markam"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/sunti-netam.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/sunti-netam.webp",
+          "caption": "Sunti Netam, Beneficiary",
+          "subcategory": "Sunti Netam"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/benificiary-interveiw.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/benificiary-interveiw.webp",
+          "caption": "Benificiary Interveiw",
+          "subcategory": "Interviews of Beneficiary & Community Leaders"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/bholaram-vishwakarma-sarpanch.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/bholaram-vishwakarma-sarpanch.webp",
+          "caption": "Bholaram Vishwakarma sarpanch",
+          "subcategory": "Interviews of Beneficiary & Community Leaders"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/c0001t01.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/c0001t01.webp",
+          "caption": "Interviews of Beneficiary & Community Leaders",
+          "subcategory": "Interviews of Beneficiary & Community Leaders"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/c0003t01-copy.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/c0003t01-copy.webp",
+          "caption": "C0003T01 - Copy",
+          "subcategory": "Interviews of Beneficiary & Community Leaders"
+        },
+        {
+          "src": "assets/images/fieldwork/interviews/c0003t01.webp",
+          "thumb": "assets/images/fieldwork/interviews/thumbs/c0003t01.webp",
+          "caption": "Interviews of Beneficiary & Community Leaders",
+          "subcategory": "Interviews of Beneficiary & Community Leaders"
+        }
+      ]
+    },
+    {
+      "id": "researcher-fieldwork",
+      "name": "Researcher's Fieldwork",
+      "icon": "fa-user-circle",
+      "count": 7,
+      "images": [
+        {
+          "src": "assets/images/fieldwork/researcher-fieldwork/img-20221110-144931.webp",
+          "thumb": "assets/images/fieldwork/researcher-fieldwork/thumbs/img-20221110-144931.webp",
+          "caption": "Img_20221110_144931",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/researcher-fieldwork/meherbai-tata-memorial-hospital.webp",
+          "thumb": "assets/images/fieldwork/researcher-fieldwork/thumbs/meherbai-tata-memorial-hospital.webp",
+          "caption": "Meherbai Tata Memorial Hospital",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/researcher-fieldwork/my-picture-of-fieldwork-2.webp",
+          "thumb": "assets/images/fieldwork/researcher-fieldwork/thumbs/my-picture-of-fieldwork-2.webp",
+          "caption": "My Picture Of Fieldwork",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/researcher-fieldwork/my-picture-of-fieldwork.webp",
+          "thumb": "assets/images/fieldwork/researcher-fieldwork/thumbs/my-picture-of-fieldwork.webp",
+          "caption": "My Picture Of Fieldwork",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/researcher-fieldwork/sheds-construction-for-hospital-infrastructure-of-govt-hospital-by-csr.webp",
+          "thumb": "assets/images/fieldwork/researcher-fieldwork/thumbs/sheds-construction-for-hospital-infrastructure-of-govt-hospital-by-csr.webp",
+          "caption": "Sheds construction for hospital (infrastructure of govt hospital by CSR )",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/researcher-fieldwork/tata-steel-park.webp",
+          "thumb": "assets/images/fieldwork/researcher-fieldwork/thumbs/tata-steel-park.webp",
+          "caption": "Tata Steel Park",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/researcher-fieldwork/with-worker-installing-the-pothols-in-the-city.webp",
+          "thumb": "assets/images/fieldwork/researcher-fieldwork/thumbs/with-worker-installing-the-pothols-in-the-city.webp",
+          "caption": "With Worker Installing The Pothols In The City",
+          "subcategory": ""
+        }
+      ]
+    },
+    {
+      "id": "uncategorized",
+      "name": "Uncategorized",
+      "icon": "fa-folder-open",
+      "count": 31,
+      "images": [
+        {
+          "src": "assets/images/fieldwork/uncategorized/chair-in-the-tata-steel-garden.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/chair-in-the-tata-steel-garden.webp",
+          "caption": "Chair In The Tata Steel Garden",
+          "subcategory": "Sculpture"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/make-in-india-sculpture-in-raipur-telibandha-chowk-2.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/make-in-india-sculpture-in-raipur-telibandha-chowk-2.webp",
+          "caption": "Make In India Sculpture In Raipur Telibandha Chowk",
+          "subcategory": "Sculpture"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/make-in-india-sculpture-in-raipur-telibandha-chowk-3.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/make-in-india-sculpture-in-raipur-telibandha-chowk-3.webp",
+          "caption": "Make In India Sculpture In Raipur Telibandha Chowk",
+          "subcategory": "Sculpture"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/make-in-india-sculpture-in-raipur-telibandha-chowk-4.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/make-in-india-sculpture-in-raipur-telibandha-chowk-4.webp",
+          "caption": "Make In India Sculpture In Raipur Telibandha Chowk",
+          "subcategory": "Sculpture"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/make-in-india-sculpture-in-raipur-telibandha-chowk.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/make-in-india-sculpture-in-raipur-telibandha-chowk.webp",
+          "caption": "Make In India Sculpture In Raipur Telibandha Chowk",
+          "subcategory": "Sculpture"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/sculpture.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/sculpture.webp",
+          "caption": "Sculpture",
+          "subcategory": "Sculpture"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/tata-steel-jusco-jh-2.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/tata-steel-jusco-jh-2.webp",
+          "caption": "Tata Steel (Jusco)  JH",
+          "subcategory": "Sculpture"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/tata-steel-jusco-jh.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/tata-steel-jusco-jh.webp",
+          "caption": "Tata Steel (Jusco)  JH",
+          "subcategory": "Sculpture"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/tata-steel-braning-in-pothol-bricks.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/tata-steel-braning-in-pothol-bricks.webp",
+          "caption": "Tata Steel Braning In Pothol Bricks",
+          "subcategory": ""
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/blue-lines-tmt-cg-2.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/blue-lines-tmt-cg-2.webp",
+          "caption": "Blue lines TMT CG",
+          "subcategory": "Blue lines TMT CG"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/blue-lines-tmt-cg.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/blue-lines-tmt-cg.webp",
+          "caption": "Blue lines TMT CG",
+          "subcategory": "Blue lines TMT CG"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/tata-steel-jusco-jh-2-2.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/tata-steel-jusco-jh-2-2.webp",
+          "caption": "Tata Steel (Jusco)  JH",
+          "subcategory": "Traffic barricading"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/console-branding-board.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/console-branding-board.webp",
+          "caption": "Console Branding Board",
+          "subcategory": "Urban forestry & Beatification"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/console.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/console.webp",
+          "caption": "Urban forestry & Beatification",
+          "subcategory": "Urban forestry & Beatification"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/gk-tmt-near-airport-2.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/gk-tmt-near-airport-2.webp",
+          "caption": "GK TMT near airport",
+          "subcategory": "Urban forestry & Beatification"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/gk-tmt-near-airport.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/gk-tmt-near-airport.webp",
+          "caption": "GK TMT near airport",
+          "subcategory": "Urban forestry & Beatification"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/goel-tmt-neear-airport.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/goel-tmt-neear-airport.webp",
+          "caption": "GOEL TMT neear airport",
+          "subcategory": "Urban forestry & Beatification"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-150315.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-150315.webp",
+          "caption": "Img_20221019_150315",
+          "subcategory": "Goel TMT Urban forestry & Beatification"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-150327.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-150327.webp",
+          "caption": "Img_20221019_150327",
+          "subcategory": "Goel TMT Urban forestry & Beatification"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-152903.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-152903.webp",
+          "caption": "Img_20221019_152903",
+          "subcategory": "Goel TMT Urban forestry & Beatification"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-153008.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-153008.webp",
+          "caption": "Img_20221019_153008",
+          "subcategory": "Goel TMT Urban forestry & Beatification"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-142633.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-142633.webp",
+          "caption": "Img_20221019_142633",
+          "subcategory": "Heera Group"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-142826.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-142826.webp",
+          "caption": "Img_20221019_142826",
+          "subcategory": "Heera Group"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-143042.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-143042.webp",
+          "caption": "Img_20221019_143042",
+          "subcategory": "Heera Group"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-143124.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-143124.webp",
+          "caption": "Img_20221019_143124",
+          "subcategory": "Heera Group"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/heera-group-near-airport.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/heera-group-near-airport.webp",
+          "caption": "Heera Group near airport",
+          "subcategory": "Urban forestry & Beatification"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/dustbeen-in-veriar-areas-in-the-city-seraikela-kharsawan-district-in-jharkhand.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/dustbeen-in-veriar-areas-in-the-city-seraikela-kharsawan-district-in-jharkhand.webp",
+          "caption": "dustbeen in veriar areas in the city  (Seraikela Kharsawan district in Jharkhand)",
+          "subcategory": "rama forgings"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/dustbeen-in-veriar-areas-in-the-city-seraikela-kharsawan-district-in-jharkhand-2.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/dustbeen-in-veriar-areas-in-the-city-seraikela-kharsawan-district-in-jharkhand-2.webp",
+          "caption": "dustbeen in veriar areas in the city (Seraikela Kharsawan district in Jharkhand)",
+          "subcategory": "rama forgings"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-150143.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-150143.webp",
+          "caption": "Img_20221019_150143",
+          "subcategory": "RAMA TMT"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-150212.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-150212.webp",
+          "caption": "Img_20221019_150212",
+          "subcategory": "RAMA TMT"
+        },
+        {
+          "src": "assets/images/fieldwork/uncategorized/img-20221019-150251.webp",
+          "thumb": "assets/images/fieldwork/uncategorized/thumbs/img-20221019-150251.webp",
+          "caption": "Img_20221019_150251",
+          "subcategory": "RAMA TMT"
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,19 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ---
 
+## 2026-06-27
+
+### Add Fieldwork Photographs Gallery to Appendices
+
+- **`convert_fieldwork.py`** (new): Python/Pillow script scans source folder (`D:\DRIVE (D) Images\...`), converts 125 fieldwork images to WebP (full 1920px + thumbs 600px), generates `assets/images/fieldwork/manifest.json`.
+- **`assets/images/fieldwork/`** (new): 125 WebP photographs across 9 categories (Education, Healthcare, Environment, Livelihood, Community Meetings, CSR Hoardings, Interviews, Researcher's Fieldwork, Uncategorized). Each category has a `thumbs/` subfolder.
+- **`appendices.html`**: Replaced placeholder Slide 5 (icon placeholders) with dynamic tabbed gallery. Gallery loads from `manifest.json` via `fetch()`. Includes: category pill tabs, 3-column scrollable grid, 1.5× hover magnify on cards, caption overlay, lightbox integration.
+- **`assets/js/slider.js`**: Added `data-caption` attribute support to `initLightbox()`. Caption displays below image in lightbox overlay. Backwards-compatible.
+- **`assets/css/slider-styles.css`**: Added `.lightbox-caption` style.
+- **`assets/css/style.css`**: Added Section 20 — Fieldwork Gallery styles (`.gallery-tabs`, `.gallery-tab-btn`, `.gallery-scroll-area`, `.gallery-grid-3col`, `.gallery-card`, `.gallery-card-caption`, `.gallery-card-badge`, responsive overrides).
+
+---
+
 ## 2026-06-20
 
 ### Clean up Academic Engagements & Appendices

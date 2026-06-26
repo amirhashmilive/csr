@@ -100,3 +100,5 @@ This is a PhD thesis presentation website for Sayed Amir Mustafa Hashmi. The the
 | June 2026 | Hypothesis slider converted to full slideshow with navigation |
 | June 2026 | Light mode mobile text visibility fixes added |
 | June 2026 | Project memory files initialised |
+| June 2026 | Fieldwork gallery added to appendices.html: 125 WebP images, 9 categories, tabbed UI, manifest.json loader, lightbox with captions |
+

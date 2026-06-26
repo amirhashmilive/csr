@@ -3,10 +3,12 @@ function initLightbox(triggerSelector, lightboxClass) {
     const triggers = document.querySelectorAll(triggerSelector);
     if (triggers.length === 0) return;
 
-    // Collect images
+    // Collect images AND captions
     const images = [];
+    const captions = [];
     triggers.forEach((el, index) => {
         images.push(el.getAttribute('data-image'));
+        captions.push(el.getAttribute('data-caption') || '');
         el.setAttribute('data-index', index);
     });
 
@@ -20,15 +22,17 @@ function initLightbox(triggerSelector, lightboxClass) {
             <button class="lightbox-prev">&#10094;</button>
             <button class="lightbox-next">&#10095;</button>
             <div class="lightbox-counter">1 / ${images.length}</div>
+            <div class="lightbox-caption"></div>
         </div>
     `;
     document.body.appendChild(overlay);
 
-    const imgEl = overlay.querySelector('.lightbox-img');
-    const counterEl = overlay.querySelector('.lightbox-counter');
-    const closeBtn = overlay.querySelector('.lightbox-close');
-    const prevBtn = overlay.querySelector('.lightbox-prev');
-    const nextBtn = overlay.querySelector('.lightbox-next');
+    const imgEl     = overlay.querySelector('.lightbox-img');
+    const counterEl  = overlay.querySelector('.lightbox-counter');
+    const captionEl  = overlay.querySelector('.lightbox-caption');
+    const closeBtn   = overlay.querySelector('.lightbox-close');
+    const prevBtn    = overlay.querySelector('.lightbox-prev');
+    const nextBtn    = overlay.querySelector('.lightbox-next');
     
     let currentIndex = 0;
 
@@ -38,6 +42,10 @@ function initLightbox(triggerSelector, lightboxClass) {
         if (currentIndex >= images.length) currentIndex = 0;
         imgEl.src = images[currentIndex];
         counterEl.textContent = `${currentIndex + 1} / ${images.length}`;
+        if (captionEl) {
+            captionEl.textContent = captions[currentIndex] || '';
+            captionEl.style.display = captions[currentIndex] ? 'block' : 'none';
+        }
     }
 
     function openLightbox(index) {

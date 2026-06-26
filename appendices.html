@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/slider-styles.css">
     
     <style>
         .download-btn {
@@ -23,88 +24,11 @@
             margin-top: 1rem;
             transition: all 0.3s ease;
         }
-        
         .download-btn:hover {
             box-shadow: var(--accent-glow-cg);
             transform: translateY(-2px);
         }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            width: 100%;
-            max-width: 1000px;
-        }
-        
-        .gallery-item {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            aspect-ratio: 4/3;
-            background: var(--bg-glass-border);
-            border: 1px solid var(--bg-glass-border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-caption {
-            position: absolute;
-            bottom: 0; left: 0; width: 100%;
-            background: rgba(0,0,0,0.7);
-            color: #fff;
-            padding: 0.8rem;
-            font-size: 0.85rem;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover .gallery-caption {
-            transform: translateY(0);
-        }
-        
-        .placeholder-icon {
-            font-size: 3rem;
-            color: var(--text-muted);
-            opacity: 0.5;
-        }
-        
-        .video-player {
-            width: 100%;
-            max-width: 600px;
-            aspect-ratio: 16/9;
-            background: #000;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--bg-glass-border);
-            position: relative;
-        }
-        
-        .play-btn {
-            font-size: 4rem;
-            color: rgba(255,255,255,0.8);
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .play-btn:hover { color: var(--accent-cg); }
-        
         .appendix-table th { background: rgba(0, 102, 204, 0.2); }
-    
         .pub-title {
             font-weight: 600;
             font-size: 1.1rem;
@@ -121,6 +45,26 @@
         }
         .doi-link:hover { text-decoration: underline; }
 
+        /* Gallery slide layout */
+        .gallery-slide-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 0 1rem;
+        }
+        .gallery-stats {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+        .gallery-loading {
+            color: var(--text-muted);
+            font-size: 1rem;
+            padding: 4rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -184,7 +128,7 @@
                     <thead>
                         <tr>
                             <th>Financial Year</th>
-                            <th>Total Amount Spent (₹ Cr.)</th>
+                            <th>Total Amount Spent (&#8377; Cr.)</th>
                             <th>No. of Companies</th>
                             <th>No. of CSR Projects</th>
                         </tr>
@@ -217,7 +161,7 @@
                     <h4 style="text-align: center; margin-bottom: 1rem;">135. Corporate Social Responsibility</h4>
                     <p>(1) Every company having net worth of rupees five hundred crore or more, or turnover of rupees one thousand crore or more or a net profit of rupees five crore or more during any financial year shall constitute a Corporate Social Responsibility Committee of the Board consisting of three or more directors, out of which at least one director shall be an independent director.</p>
                     <p style="margin-top: 1rem;">(2) The Board's report under sub-section (3) of section 134 shall disclose the composition of the Corporate Social Responsibility Committee.</p>
-                    <p style="margin-top: 1rem;">(3) The Corporate Social Responsibility Committee shall,—<br>
+                    <p style="margin-top: 1rem;">(3) The Corporate Social Responsibility Committee shall,&mdash;<br>
                     (a) formulate and recommend to the Board, a Corporate Social Responsibility Policy which shall indicate the activities to be undertaken by the company as specified in Schedule VII;<br>
                     (b) recommend the amount of expenditure to be incurred on the activities referred to in clause (a); and<br>
                     (c) monitor the Corporate Social Responsibility Policy of the company from time to time.</p>
@@ -226,45 +170,162 @@
             </div>
         </section>
 
-
-        <!-- Slide 5: Gallery -->
-        <section class="slide">
+        <!-- Slide 5: Fieldwork Photographs Gallery -->
+        <section class="slide" id="fieldwork-gallery-slide">
             <h2 class="slide-title">Fieldwork Photographs</h2>
-            
-            <div class="gallery-grid">
-                <!-- Placeholders for actual images -->
-                <div class="gallery-item">
-                    <i class="fas fa-camera placeholder-icon"></i>
-                    <div class="gallery-caption">Gram Sabha Meeting, Bastar (CG)</div>
-                </div>
-                <div class="gallery-item">
-                    <i class="fas fa-camera placeholder-icon"></i>
-                    <div class="gallery-caption">Medical Camp Assessment, Ranchi (JH)</div>
-                </div>
-                <div class="gallery-item">
-                    <i class="fas fa-camera placeholder-icon"></i>
-                    <div class="gallery-caption">Smart Classroom Visit, Balodabazar (CG)</div>
-                </div>
-                <div class="gallery-item">
-                    <i class="fas fa-camera placeholder-icon"></i>
-                    <div class="gallery-caption">Women SHG Interview, Ramgarh (JH)</div>
-                </div>
-                <div class="gallery-item">
-                    <i class="fas fa-camera placeholder-icon"></i>
-                    <div class="gallery-caption">Solar Panel Installation Site (CG)</div>
-                </div>
-                <div class="gallery-item">
-                    <i class="fas fa-camera placeholder-icon"></i>
-                    <div class="gallery-caption">Focus Group Discussion (JH)</div>
+
+            <div class="gallery-slide-inner">
+                <p id="gallery-stats" class="gallery-stats"></p>
+
+                <!-- Category tab pills -->
+                <div class="gallery-tabs" id="gallery-tabs" role="tablist" aria-label="Photo categories"></div>
+
+                <!-- Scrollable photo grid -->
+                <div class="gallery-scroll-area">
+                    <div class="gallery-grid-3col" id="gallery-grid">
+                        <p class="gallery-loading"><i class="fas fa-spinner fa-spin"></i>&nbsp; Loading photographs&hellip;</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-
     </div>
 
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/slider.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/slide-number.js"></script>
+
+    <script>
+    /* ------------------------------------------------------------------ *
+     *  Fieldwork Gallery — dynamic loader from manifest.json             *
+     * ------------------------------------------------------------------ */
+    (function () {
+        'use strict';
+
+        var MANIFEST      = 'assets/images/fieldwork/manifest.json';
+        var LIGHTBOX_CLS  = 'fieldwork-click';
+
+        var tabsEl  = document.getElementById('gallery-tabs');
+        var gridEl  = document.getElementById('gallery-grid');
+        var statsEl = document.getElementById('gallery-stats');
+
+        var allImages  = [];
+        var categories = [];
+        var activeTab  = 'all';
+
+        /* ---- Tab rendering ------------------------------------------- */
+        function renderTabs() {
+            tabsEl.innerHTML = '';
+            tabsEl.appendChild(makeTab('all', 'All Photos', 'fa-images', allImages.length));
+            categories.forEach(function (cat) {
+                if (cat.count === 0) return;
+                tabsEl.appendChild(makeTab(cat.id, cat.name, cat.icon, cat.count));
+            });
+        }
+
+        function makeTab(id, name, icon, count) {
+            var btn = document.createElement('button');
+            btn.className = 'gallery-tab-btn' + (id === activeTab ? ' active' : '');
+            btn.setAttribute('role', 'tab');
+            btn.setAttribute('aria-selected', id === activeTab ? 'true' : 'false');
+            btn.dataset.tab = id;
+            btn.innerHTML = '<i class="fas ' + icon + '"></i> ' + name +
+                            ' <span class="tab-count">' + count + '</span>';
+            btn.addEventListener('click', function () { switchTab(id); });
+            return btn;
+        }
+
+        /* ---- Tab switching ------------------------------------------- */
+        function switchTab(id) {
+            activeTab = id;
+            tabsEl.querySelectorAll('.gallery-tab-btn').forEach(function (btn) {
+                var active = btn.dataset.tab === id;
+                btn.classList.toggle('active', active);
+                btn.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+            renderGrid();
+        }
+
+        /* ---- Grid rendering ------------------------------------------ */
+        function renderGrid() {
+            var imgs = activeTab === 'all'
+                ? allImages
+                : allImages.filter(function (img) { return img._catId === activeTab; });
+
+            if (imgs.length === 0) {
+                gridEl.innerHTML = '<p class="gallery-empty">No photographs in this category.</p>';
+                return;
+            }
+
+            gridEl.innerHTML = '';
+
+            imgs.forEach(function (img) {
+                var card = document.createElement('div');
+                card.className = 'gallery-card ' + LIGHTBOX_CLS;
+                card.setAttribute('data-image',   img.src);
+                card.setAttribute('data-caption', img.caption);
+                card.setAttribute('role', 'button');
+                card.setAttribute('tabindex', '0');
+                card.setAttribute('aria-label', 'View: ' + img.caption);
+
+                var badge = img.subcategory
+                    ? '<span class="gallery-card-badge">' + img.subcategory + '</span>'
+                    : '';
+
+                card.innerHTML =
+                    '<img src="' + img.thumb + '" alt="' + img.caption + '" loading="lazy">' +
+                    badge +
+                    '<div class="gallery-card-caption">' + img.caption + '</div>';
+
+                card.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') { card.click(); }
+                });
+
+                gridEl.appendChild(card);
+            });
+
+            /* Re-initialise lightbox for the current grid */
+            document.querySelectorAll('.' + LIGHTBOX_CLS + '-overlay').forEach(function (el) {
+                el.remove();
+            });
+            if (typeof initLightbox === 'function') {
+                initLightbox('.' + LIGHTBOX_CLS, LIGHTBOX_CLS);
+            }
+        }
+
+        /* ---- Fetch manifest ------------------------------------------ */
+        fetch(MANIFEST)
+            .then(function (r) {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.json();
+            })
+            .then(function (data) {
+                categories = data.categories || [];
+
+                allImages = [];
+                categories.forEach(function (cat) {
+                    cat.images.forEach(function (img) {
+                        allImages.push(Object.assign({}, img, { _catId: cat.id }));
+                    });
+                });
+
+                var activeCats = categories.filter(function (c) { return c.count > 0; }).length;
+                statsEl.textContent =
+                    data.totalImages + ' photographs across ' + activeCats + ' categories';
+
+                renderTabs();
+                renderGrid();
+            })
+            .catch(function (err) {
+                gridEl.innerHTML =
+                    '<p class="gallery-empty"><i class="fas fa-exclamation-triangle"></i>' +
+                    ' Could not load gallery: ' + err.message + '</p>';
+                console.error('[Gallery] Failed to load manifest:', err);
+            });
+
+    }());
+    </script>
+
 </body>
 </html>
