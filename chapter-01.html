@@ -190,82 +190,87 @@
         </section>
 
         <!-- Slide: India's Development Landscape -->
-        <section class="slide" style="display: flex; flex-direction: column; justify-content: center; padding: 1rem 2rem; box-sizing: border-box;">
-            <h2 class="slide-title" style="margin-bottom: 0.5rem; font-size: 2.5rem;">India's Development Landscape (2015–2026)</h2>
+        <section class="slide" style="display: flex; flex-direction: column; justify-content: center; min-height: 100vh; padding: 2rem; box-sizing: border-box;">
+            <style>
+                .index-card {
+                    transition: all 0.2s ease;
+                }
+                .index-card:hover {
+                    border-color: var(--accent-cg);
+                    background: rgba(255,255,255,0.03);
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                }
+            </style>
             
-            <div style="display: flex; gap: 1.5rem; align-items: stretch; margin: 0.5rem 0; flex: 1; min-height: 0;">
+            <h2 class="slide-title" style="margin-bottom: 2rem; font-size: 2.2rem; text-align: center;">India's Development Landscape (2015–2026)</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; width: 100%;">
                 
-                <!-- Primary Card: SDG Index -->
-                <div class="glass-card hover-magnify" style="flex: 1.2; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: 2px solid var(--accent-cg); box-shadow: var(--neon-glow); padding: 1.5rem;">
-                    <i class="fas fa-globe" style="font-size: 3.5rem; color: var(--accent-cg); margin-bottom: 1rem;"></i>
-                    <h3 style="font-size: 2rem; margin-bottom: 0.5rem;">SDG Index</h3>
-                    <p style="font-size: 3rem; font-weight: bold; margin: 0.5rem 0;">112 &rarr; 94</p>
-                    <div style="background: rgba(46, 204, 113, 0.1); padding: 0.6rem 1.5rem; border-radius: 30px; margin-top: 0.5rem;">
-                        <p style="color: var(--success-color); font-weight: 700; font-size: 1.5rem; margin: 0;">▲ +18</p>
-                    </div>
+                <!-- SDG Index (Primary Styling) -->
+                <div class="glass-card index-card" style="text-align: center; padding: 1.2rem 1rem; border: 2px solid var(--accent-cg); box-shadow: var(--neon-glow); display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-cg);">SDG Index</h3>
+                    <p style="font-size: 1.6rem; font-weight: bold; margin: 0.5rem 0;">112 &rarr; 94</p>
+                    <p style="color: var(--success-color); font-weight: 700; font-size: 1.1rem; margin: 0;">▲ +18</p>
                 </div>
                 
-                <!-- Secondary Cards: 3x3 Grid -->
-                <div style="flex: 2.5; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; overflow: hidden;">
-                    
-                    <div class="glass-card hover-magnify" style="text-align: center; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 0.95rem; margin-bottom: 0.3rem;">Nominal GDP Rank</h3>
-                        <p style="font-size: 1.15rem; font-weight: bold; margin: 0.15rem 0;">10th &rarr; 4th</p>
-                        <p style="color: var(--success-color); font-weight: 600; margin: 0; font-size: 0.9rem;">▲ +6</p>
-                    </div>
-                    
-                    <div class="glass-card hover-magnify" style="text-align: center; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 0.95rem; margin-bottom: 0.3rem;">GDP (PPP)</h3>
-                        <p style="font-size: 1.15rem; font-weight: bold; margin: 0.15rem 0;">3rd &rarr; 3rd</p>
-                        <p style="color: #f1c40f; font-weight: 600; margin: 0; font-size: 0.9rem;">➜ No change</p>
-                    </div>
-                    
-                    <div class="glass-card hover-magnify" style="text-align: center; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 0.95rem; margin-bottom: 0.3rem; line-height: 1.2;">Human Development Index (HDI)</h3>
-                        <p style="font-size: 1.15rem; font-weight: bold; margin: 0.15rem 0;">130th &rarr; 130th</p>
-                        <p style="color: #f1c40f; font-weight: 600; margin: 0; font-size: 0.9rem;">➜ No change</p>
-                    </div>
-                    
-                    <div class="glass-card hover-magnify" style="text-align: center; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 0.95rem; margin-bottom: 0.3rem; line-height: 1.2;">Global Innovation Index</h3>
-                        <p style="font-size: 1.15rem; font-weight: bold; margin: 0.15rem 0;">81st &rarr; 38th</p>
-                        <p style="color: var(--success-color); font-weight: 600; margin: 0; font-size: 0.9rem;">▲ +43</p>
-                    </div>
-                    
-                    <div class="glass-card hover-magnify" style="text-align: center; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 0.95rem; margin-bottom: 0.3rem; line-height: 1.2;">Press Freedom Index</h3>
-                        <p style="font-size: 1.15rem; font-weight: bold; margin: 0.15rem 0;">136th &rarr; 157th</p>
-                        <p style="color: #e74c3c; font-weight: 600; margin: 0; font-size: 0.9rem;">▼ &minus;21</p>
-                    </div>
-                    
-                    <div class="glass-card hover-magnify" style="text-align: center; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 0.95rem; margin-bottom: 0.3rem; line-height: 1.2;">Corruption Perceptions Index</h3>
-                        <p style="font-size: 1.15rem; font-weight: bold; margin: 0.15rem 0;">76th &rarr; 96th</p>
-                        <p style="color: #e74c3c; font-weight: 600; margin: 0; font-size: 0.9rem;">▼ &minus;20</p>
-                    </div>
-                    
-                    <div class="glass-card hover-magnify" style="text-align: center; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 0.95rem; margin-bottom: 0.3rem; line-height: 1.2;">Global Hunger Index</h3>
-                        <p style="font-size: 1.15rem; font-weight: bold; margin: 0.15rem 0;">80th &rarr; 105th</p>
-                        <p style="color: #e74c3c; font-weight: 600; margin: 0; font-size: 0.9rem;">▼ &minus;25</p>
-                    </div>
-                    
-                    <div class="glass-card hover-magnify" style="text-align: center; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 0.95rem; margin-bottom: 0.3rem; line-height: 1.2;">Global Gender Gap Index</h3>
-                        <p style="font-size: 1.15rem; font-weight: bold; margin: 0.15rem 0;">108th &rarr; 131st</p>
-                        <p style="color: #e74c3c; font-weight: 600; margin: 0; font-size: 0.9rem;">▼ &minus;23</p>
-                    </div>
-                    
-                    <div class="glass-card hover-magnify" style="text-align: center; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 0.95rem; margin-bottom: 0.3rem; line-height: 1.2;">Ease of Doing Business</h3>
-                        <p style="font-size: 1.15rem; font-weight: bold; margin: 0.15rem 0;">142nd &rarr; 63rd</p>
-                        <p style="color: var(--success-color); font-weight: 600; margin: 0; font-size: 0.9rem;">▲ +79</p>
-                    </div>
+                <!-- Other 9 Indices -->
+                <div class="glass-card index-card" style="text-align: center; padding: 1.2rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">Nominal GDP Rank</h3>
+                    <p style="font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0;">10th &rarr; 4th</p>
+                    <p style="color: var(--success-color); font-weight: 600; margin: 0; font-size: 0.9rem;">▲ +6</p>
+                </div>
+                
+                <div class="glass-card index-card" style="text-align: center; padding: 1.2rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">GDP (PPP)</h3>
+                    <p style="font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0;">3rd &rarr; 3rd</p>
+                    <p style="color: #f1c40f; font-weight: 600; margin: 0; font-size: 0.9rem;">➜ No change</p>
+                </div>
+                
+                <div class="glass-card index-card" style="text-align: center; padding: 1.2rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.2; color: var(--text-main);">Human Development Index (HDI)</h3>
+                    <p style="font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0;">130th &rarr; 130th</p>
+                    <p style="color: #f1c40f; font-weight: 600; margin: 0; font-size: 0.9rem;">➜ No change</p>
+                </div>
+                
+                <div class="glass-card index-card" style="text-align: center; padding: 1.2rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.2; color: var(--text-main);">Global Innovation Index</h3>
+                    <p style="font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0;">81st &rarr; 38th</p>
+                    <p style="color: var(--success-color); font-weight: 600; margin: 0; font-size: 0.9rem;">▲ +43</p>
+                </div>
+                
+                <div class="glass-card index-card" style="text-align: center; padding: 1.2rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.2; color: var(--text-main);">Press Freedom Index</h3>
+                    <p style="font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0;">136th &rarr; 157th</p>
+                    <p style="color: #e74c3c; font-weight: 600; margin: 0; font-size: 0.9rem;">▼ &minus;21</p>
+                </div>
+                
+                <div class="glass-card index-card" style="text-align: center; padding: 1.2rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.2; color: var(--text-main);">Corruption Perceptions Index</h3>
+                    <p style="font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0;">76th &rarr; 96th</p>
+                    <p style="color: #e74c3c; font-weight: 600; margin: 0; font-size: 0.9rem;">▼ &minus;20</p>
+                </div>
+                
+                <div class="glass-card index-card" style="text-align: center; padding: 1.2rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.2; color: var(--text-main);">Global Hunger Index</h3>
+                    <p style="font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0;">80th &rarr; 105th</p>
+                    <p style="color: #e74c3c; font-weight: 600; margin: 0; font-size: 0.9rem;">▼ &minus;25</p>
+                </div>
+                
+                <div class="glass-card index-card" style="text-align: center; padding: 1.2rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.2; color: var(--text-main);">Global Gender Gap Index</h3>
+                    <p style="font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0;">108th &rarr; 131st</p>
+                    <p style="color: #e74c3c; font-weight: 600; margin: 0; font-size: 0.9rem;">▼ &minus;23</p>
+                </div>
+                
+                <div class="glass-card index-card" style="text-align: center; padding: 1.2rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.2; color: var(--text-main);">Ease of Doing Business</h3>
+                    <p style="font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0;">142nd &rarr; 63rd</p>
+                    <p style="color: var(--success-color); font-weight: 600; margin: 0; font-size: 0.9rem;">▲ +79</p>
+                </div>
 
-                </div>
             </div>
             
-            <p style="font-size: 0.8rem; color: var(--text-muted); text-align: left; margin: 0; padding-top: 0.5rem;">
+            <p style="font-size: 0.8rem; color: var(--text-muted); text-align: left; margin-top: 2rem;">
                 <i class="fas fa-info-circle"></i> Source: SDSN, IMF, UNDP, WIPO, RSF, Transparency International, GHI, WEF, World Bank
             </p>
         </section>
