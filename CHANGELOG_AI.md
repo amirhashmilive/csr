@@ -12,6 +12,8 @@ All changes made by AI agents are logged here in reverse chronological order.
   - Displayed the 10 key indices, with the "SDG Index" highlighted prominently as a large primary card.
   - Organized the remaining 9 indices in a supporting 3x3 grid.
   - Formatted layout using flexbox to fit optimally within a 100vh viewport height.
+  - Reduced padding and font sizes to prevent slide overflow and ensure proper sizing.
+  - Renamed specific indices for clarity (e.g., "Human Development Index (HDI)").
 
 ## 2026-06-27
 
