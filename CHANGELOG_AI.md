@@ -9,9 +9,9 @@ All changes made by AI agents are logged here in reverse chronological order.
 ### Add India's Development Landscape Slide to Chapter 01
 
 - **`chapter-01.html`**: Inserted a new slide titled "India's Development Landscape (2015–2026)".
-  - Restructured to a highly compact 5x2 grid to ensure all 10 cards fit perfectly within 100vh.
-  - Replaced the 1.5x hover magnification effect with a subtle color and border glow (`.index-card`) to save space while retaining interactivity.
-  - Renamed specific indices for clarity (e.g., "Human Development Index (HDI)").
+  - Restructured to a customized 5x3 CSS grid layout, keeping the "SDG Index" card twice as large (2x2 span) while placing the other 9 cards seamlessly into the remaining cells.
+  - Implemented an absolute `65vh` height limit on the grid and `100vh` constraint on the slide to completely eliminate vertical overflow while displaying all 10 cards.
+  - Re-introduced representative FontAwesome icons for all 9 secondary cards and styled them compactly.
 
 ## 2026-06-27
 
