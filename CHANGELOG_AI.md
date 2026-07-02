@@ -9,9 +9,7 @@ All changes made by AI agents are logged here in reverse chronological order.
 ### Add India's Development Landscape Slide to Chapter 01
 
 - **`chapter-01.html`**: Inserted a new slide titled "India's Development Landscape (2015–2026)".
-  - Simplified the layout to feature only 5 key indices (removed 5).
-  - Designed a split layout: A prominent, large "SDG Index" card on the left side, and a 2x2 grid containing the other 4 indices on the right.
-  - Constrained the slide to exactly `100vh` and increased card padding, font sizes, and icon sizes to fully utilize the newly freed space while maintaining zero overflow.
+  - Completely removed the "India's Development Landscape (2015–2026)" slide as per user request.
 
 ## 2026-06-27
 
