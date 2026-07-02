@@ -4,6 +4,12 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ---
 
+## 2026-07-03
+
+### Add India's Development Landscape Slide to Chapter 01
+
+- **`chapter-01.html`**: Inserted a new slide titled "India's Development Landscape (2015–2026)" displaying 10 key indices as glass cards in a 5-column grid with hover magnification, accompanied by key observations highlighting improvements and remaining challenges.
+
 ## 2026-06-27
 
 ### Remove Hover Text Swap from Research Hypotheses Slide
