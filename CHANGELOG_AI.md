@@ -4,6 +4,15 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ---
 
+## 2026-08-01
+
+### Add "Understanding the Thesis Title" Slide to Chapter 01
+
+- **`chapter-01.html`**: Inserted new slide breaking down the thesis title into 4 core components in a 2x2 grid (Corporate Social Responsibility, CSR Communication, Betterment of Society, Chhattisgarh & Jharkhand) with glass-card styling, icons, and hover magnification (1.5x). Positioned after Introduction slide and before CSR in India slide.
+- **`ARCHITECTURE.md`**: Updated Chapter 01 slide count to 15 (total: 94 slides).
+
+---
+
 ## 2026-07-03
 
 ### Add India's Development Landscape Slide to Chapter 01
