@@ -394,6 +394,44 @@
                     max-width: 1200px;
                     margin: 3rem 0;
                 }
+                .ces-click {
+                    position: relative;
+                    min-height: 220px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .ces-click .default-state {
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                    opacity: 1;
+                    transform: translateY(0);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                }
+                .ces-click .hover-state {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.9);
+                    opacity: 0;
+                    width: 90%;
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                    pointer-events: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .ces-click:hover .default-state {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                .ces-click:hover .hover-state {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                    pointer-events: auto;
+                }
                 @media (max-width: 900px) {
                     .ces-grid {
                         grid-template-columns: repeat(3, 1fr);
@@ -408,29 +446,58 @@
 
             <div class="ces-grid">
                 <div class="glass-card hover-magnify ces-click" data-image="assets/images/chapter-01/ces/ces-communication-channels.webp" style="text-align: center; cursor: pointer;">
-                    <i class="fas fa-bullhorn" style="font-size: 3rem; color: #3498db; margin-bottom: 1rem;"></i>
-                    <h3>Communication Channels</h3>
-                    <div style="height: 2px; background: #3498db; margin-top: 1rem;"></div>
+                    <div class="default-state">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; line-height: 1;">📡</div>
+                        <h3 style="font-size: 1.1rem;">Communication Channels</h3>
+                        <div style="height: 2px; background: #3498db; margin-top: 1rem; width: 100%;"></div>
+                    </div>
+                    <div class="hover-state">
+                        <p style="font-size: 0.95rem; line-height: 1.5; margin: 0; color: var(--text-main);">Channels used: Verbal, Print, Electronic, Social Media</p>
+                    </div>
                 </div>
+                
                 <div class="glass-card hover-magnify ces-click" data-image="assets/images/chapter-01/ces/ces-language-accessibility.webp" style="text-align: center; cursor: pointer;">
-                    <i class="fas fa-language" style="font-size: 3rem; color: #e74c3c; margin-bottom: 1rem;"></i>
-                    <h3>Language Accessibility</h3>
-                    <div style="height: 2px; background: #e74c3c; margin-top: 1rem;"></div>
+                    <div class="default-state">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; line-height: 1;">🗣️</div>
+                        <h3 style="font-size: 1.1rem;">Language Accessibility</h3>
+                        <div style="height: 2px; background: #e74c3c; margin-top: 1rem; width: 100%;"></div>
+                    </div>
+                    <div class="hover-state">
+                        <p style="font-size: 0.95rem; line-height: 1.5; margin: 0; color: var(--text-main);">Information provided in local/tribal dialects</p>
+                    </div>
                 </div>
+                
                 <div class="glass-card hover-magnify ces-click" data-image="assets/images/chapter-01/ces/ces-feedback-mechanisms.webp" style="text-align: center; cursor: pointer;">
-                    <i class="fas fa-comments" style="font-size: 3rem; color: #2ecc71; margin-bottom: 1rem;"></i>
-                    <h3>Feedback Mechanisms</h3>
-                    <div style="height: 2px; background: #2ecc71; margin-top: 1rem;"></div>
+                    <div class="default-state">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; line-height: 1;">🔄</div>
+                        <h3 style="font-size: 1.1rem;">Feedback Mechanisms</h3>
+                        <div style="height: 2px; background: #2ecc71; margin-top: 1rem; width: 100%;"></div>
+                    </div>
+                    <div class="hover-state">
+                        <p style="font-size: 0.95rem; line-height: 1.5; margin: 0; color: var(--text-main);">Two-way communication loops for beneficiary input</p>
+                    </div>
                 </div>
+                
                 <div class="glass-card hover-magnify ces-click" data-image="assets/images/chapter-01/ces/ces-interaction-frequency.webp" style="text-align: center; cursor: pointer;">
-                    <i class="fas fa-sync-alt" style="font-size: 3rem; color: #f1c40f; margin-bottom: 1rem;"></i>
-                    <h3>Interaction Frequency</h3>
-                    <div style="height: 2px; background: #f1c40f; margin-top: 1rem;"></div>
+                    <div class="default-state">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; line-height: 1;">⏱️</div>
+                        <h3 style="font-size: 1.1rem;">Interaction Frequency</h3>
+                        <div style="height: 2px; background: #f1c40f; margin-top: 1rem; width: 100%;"></div>
+                    </div>
+                    <div class="hover-state">
+                        <p style="font-size: 0.95rem; line-height: 1.5; margin: 0; color: var(--text-main);">Regular engagement between company and community</p>
+                    </div>
                 </div>
+                
                 <div class="glass-card hover-magnify ces-click" data-image="assets/images/chapter-01/ces/ces-message-clarity.webp" style="text-align: center; cursor: pointer;">
-                    <i class="fas fa-check-circle" style="font-size: 3rem; color: #9b59b6; margin-bottom: 1rem;"></i>
-                    <h3>Message Clarity</h3>
-                    <div style="height: 2px; background: #9b59b6; margin-top: 1rem;"></div>
+                    <div class="default-state">
+                        <div style="font-size: 3rem; margin-bottom: 1rem; line-height: 1;">💡</div>
+                        <h3 style="font-size: 1.1rem;">Message Clarity</h3>
+                        <div style="height: 2px; background: #9b59b6; margin-top: 1rem; width: 100%;"></div>
+                    </div>
+                    <div class="hover-state">
+                        <p style="font-size: 0.95rem; line-height: 1.5; margin: 0; color: var(--text-main);">Information is simple, clear, and understandable</p>
+                    </div>
                 </div>
             </div>
 
