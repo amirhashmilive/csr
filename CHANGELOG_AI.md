@@ -6,6 +6,11 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ## 2026-08-01
 
+### Add "Research Summary" Slide to Homepage
+
+- **`index.html`**: Added a new "Research Summary — At a Glance" slide at the end of the homepage. Used a compact 4-column grid of tiny glass cards to summarize all 7 key sections of the thesis (Study Design, Framework, Objectives, Key Findings, Hypotheses, Recommendations, Contributions) with a hover-swap state that replaces the title and icon with detailed information.
+- **`ARCHITECTURE.md`**: Updated `index.html` slide count to 4 (total: 95 slides).
+
 ### Update CES Slide in Chapter 01
 
 - **`chapter-01.html`**: Updated the Communication Effectiveness Score (CES) slide. Replaced Font Awesome icons with emojis (📡, 🗣️, 🔄, ⏱️, 💡) and added a CSS-based content swap on hover so the default icon/title is replaced by descriptive hover text while scaling to 1.5x.

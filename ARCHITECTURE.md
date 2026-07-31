@@ -86,11 +86,11 @@
 
 ---
 
-## Slide Counts (Total: 94 slides)
+## Slide Counts (Total: 95 slides)
 
 | Page | Slides | Content |
 |---|---|---|
-| `index.html` | 3 | Hero, thesis structure cards, additional resources |
+| `index.html` | 4 | Hero, thesis structure cards, additional resources, research summary |
 | `chapter-01.html` | 15 | Introduction, title breakdown, CSR in India, evolution, pillars, CES, states |
 | `chapter-02.html` | 9 | Literature review, theoretical evolution, research gaps |
 | `chapter-03.html` | 8 | Theoretical framework, 4 theories, Five-Pillar Framework |

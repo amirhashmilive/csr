@@ -1,17 +1,19 @@
 ## Status: Complete
 
 ### Task
-Update the Communication Effectiveness Score (CES) slide in Chapter 01 (`chapter-01.html`) with icons and hover text.
+Create a new "Research Summary" slide on the homepage (`index.html`) that provides a comprehensive end-to-end overview of the entire thesis.
 
 ### Scope
-- `chapter-01.html` — updated the 5 CES component cards to swap content on hover.
+- `index.html` — inserted the new Research Summary slide at the end of the file.
+- `ARCHITECTURE.md` — updated `index.html` slide count from 3 to 4.
 
 ### Progress
-- [x] Replace font awesome icons with requested emojis (📡, 🗣️, 🔄, ⏱️, 💡).
-- [x] Implement content swap on hover for the 5 cards (title disappears, hover text appears).
-- [x] Keep existing glass card styling, 5-column layout, and dark/light mode compatibility.
-- [x] Update `CURRENT_TASK.md` and `CHANGELOG_AI.md`.
+- [x] Create a 4-column compact grid layout for the summary cards.
+- [x] Add all 7 sections specified (Study Design, Theoretical Framework, Research Objectives, Key Findings, Hypothesis Results, Recommendations, Contributions).
+- [x] Implement hover-swap state: default icon/title swaps with a one-line explanation on hover.
+- [x] Update `ARCHITECTURE.md` slide count.
+- [x] Update `CHANGELOG_AI.md`.
 - [x] Commit and push changes to GitHub `main` branch.
 
 ### Notes
-- Extracted logic similar to the pillars slide to implement `.default-state` and `.hover-state` content swapping on the `.ces-click` cards.
+- Extracted logic similar to the CES slide to implement `.default-state` and `.hover-state` content swapping on the `.summary-card` cards in `index.html`.

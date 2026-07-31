@@ -316,7 +316,170 @@
             </div>
         </section>
 
+        <!-- Slide 4: Research Summary -->
+        <section class="slide" id="slide-4" style="padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h2 class="slide-title" style="margin-bottom: 0.5rem; font-size: 2rem;">Research Summary — At a Glance</h2>
+            
+            <style>
+                .summary-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 0.8rem;
+                    width: 100%;
+                    max-width: 1100px;
+                    margin: 1.5rem auto 0 auto;
+                }
+                .summary-card {
+                    position: relative;
+                    min-height: 140px;
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    border: 1px solid var(--bg-glass-border);
+                }
+                .summary-card .default-state {
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                    opacity: 1;
+                    transform: translateY(0);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    width: 100%;
+                }
+                .summary-card .hover-state {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.9);
+                    opacity: 0;
+                    width: 95%;
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                    pointer-events: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                .summary-card:hover .default-state {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                .summary-card:hover .hover-state {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                    pointer-events: auto;
+                }
+                .summary-icon {
+                    font-size: 2.2rem;
+                    margin-bottom: 0.5rem;
+                }
+                .summary-title {
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    color: var(--text-main);
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    margin: 0;
+                }
+                .summary-hover-text {
+                    font-size: 0.75rem;
+                    line-height: 1.4;
+                    color: var(--text-main);
+                    margin: 0;
+                }
+                @media (max-width: 900px) {
+                    .summary-grid {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+                @media (max-width: 600px) {
+                    .summary-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+            </style>
 
+            <div class="summary-grid">
+                <!-- 1. STUDY DESIGN -->
+                <div class="glass-card hover-magnify summary-card">
+                    <div class="default-state">
+                        <div class="summary-icon">🔬</div>
+                        <h3 class="summary-title">Study Design</h3>
+                    </div>
+                    <div class="hover-state">
+                        <p class="summary-hover-text">Retrospective (FY18-19 to FY22-23)<br>Mixed-Methods (400 Surveys, 40 Interviews)<br>Comparative (CG vs JH, 10 Districts)</p>
+                    </div>
+                </div>
+
+                <!-- 2. THEORETICAL FRAMEWORK -->
+                <div class="glass-card hover-magnify summary-card">
+                    <div class="default-state">
+                        <div class="summary-icon">🏛️</div>
+                        <h3 class="summary-title">Framework</h3>
+                    </div>
+                    <div class="hover-state">
+                        <p class="summary-hover-text">4 Grand Theories (Stakeholder, Two-Way Symmetrical, Agenda-Setting, Diffusion)<br>5-Pillar Framework</p>
+                    </div>
+                </div>
+
+                <!-- 3. RESEARCH OBJECTIVES -->
+                <div class="glass-card hover-magnify summary-card">
+                    <div class="default-state">
+                        <div class="summary-icon">🎯</div>
+                        <h3 class="summary-title">Objectives</h3>
+                    </div>
+                    <div class="hover-state">
+                        <p class="summary-hover-text">Compare CG vs JH communication outcomes across Education, Healthcare, Environment, and Livelihood</p>
+                    </div>
+                </div>
+
+                <!-- 4. KEY FINDINGS -->
+                <div class="glass-card hover-magnify summary-card">
+                    <div class="default-state">
+                        <div class="summary-icon">📊</div>
+                        <h3 class="summary-title">Key Findings</h3>
+                    </div>
+                    <div class="hover-state">
+                        <p class="summary-hover-text">CES Gap: CG 2.67 vs JH 1.89 (d=1.24)<br>Verbal/Local: CG 58/80% vs JH 32/54%<br>QoL Gap: CG 80% vs JH 62%<br>Banking Sector Highest Satisfaction</p>
+                    </div>
+                </div>
+
+                <!-- 5. HYPOTHESIS RESULTS -->
+                <div class="glass-card hover-magnify summary-card">
+                    <div class="default-state">
+                        <div class="summary-icon">✅</div>
+                        <h3 class="summary-title">Hypotheses</h3>
+                    </div>
+                    <div class="hover-state">
+                        <p class="summary-hover-text">H₁: Supported<br>H₂: Supported<br>H₃: Partially Supported<br>H₄: Supported<br>H₅: Supported</p>
+                    </div>
+                </div>
+
+                <!-- 6. RECOMMENDATIONS -->
+                <div class="glass-card hover-magnify summary-card">
+                    <div class="default-state">
+                        <div class="summary-icon">💡</div>
+                        <h3 class="summary-title">Recommendations</h3>
+                    </div>
+                    <div class="hover-state">
+                        <p class="summary-hover-text">Companies: 4 recs<br>NGOs: 3 recs<br>MCA: 5 policy recs</p>
+                    </div>
+                </div>
+
+                <!-- 7. CONTRIBUTIONS -->
+                <div class="glass-card hover-magnify summary-card">
+                    <div class="default-state">
+                        <div class="summary-icon">🌟</div>
+                        <h3 class="summary-title">Contributions</h3>
+                    </div>
+                    <div class="hover-state">
+                        <p class="summary-hover-text">Theoretical: Five-Pillar Framework<br>Practical: CES Metric, Guidelines</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </div>
 
