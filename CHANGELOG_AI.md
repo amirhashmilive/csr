@@ -4,6 +4,18 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ---
 
+## 2026-10-16
+
+### Redesign Home Page (Slide 1) Layout & Remove Address
+
+- **`index.html`**:
+  - Removed `"Raipur – 492013, Chhattisgarh, India"` from the academic institution details.
+  - Replaced the single narrow vertical card with a 3-column glass card layout (`max-width: 1180px`) dividing details into **Research Scholar**, **Research Supervision**, and **Academic Institution**.
+  - Added a horizontal thesis scope meta bar beneath the cards to present key comparative parameters (Chhattisgarh & Jharkhand, 400 Surveys & 40 Interviews, FY 2018–19 to FY 2022–23).
+  - Maintained zero vertical overflow within the `100vh` scroll-snap viewport across desktop and laptop displays, with full responsive adaptation for mobile devices.
+
+---
+
 ## 2026-08-01
 
 ### Add "Research Summary" Slide to Homepage

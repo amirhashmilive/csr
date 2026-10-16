@@ -1,19 +1,16 @@
 ## Status: Complete
 
 ### Task
-Create a new "Research Summary" slide on the homepage (`index.html`) that provides a comprehensive end-to-end overview of the entire thesis.
+Redesign Slide 1 (Hero Section) on `index.html` to eliminate empty space, enhance visual balance across desktop and mobile viewports with zero overflow, and remove the Raipur address line.
 
 ### Scope
-- `index.html` — inserted the new Research Summary slide at the end of the file.
-- `ARCHITECTURE.md` — updated `index.html` slide count from 3 to 4.
+- `index.html` — Updated hero section layout with a 3-column glass card triad (Scholar, Supervisory Committee, Academic Institution) and bottom scope meta bar; removed "Raipur – 492013, Chhattisgarh, India".
 
 ### Progress
-- [x] Create a 4-column compact grid layout for the summary cards.
-- [x] Add all 7 sections specified (Study Design, Theoretical Framework, Research Objectives, Key Findings, Hypothesis Results, Recommendations, Contributions).
-- [x] Implement hover-swap state: default icon/title swaps with a one-line explanation on hover.
-- [x] Update `ARCHITECTURE.md` slide count.
-- [x] Update `CHANGELOG_AI.md`.
+- [x] Remove "Raipur – 492013, Chhattisgarh, India" line from institution block.
+- [x] Replace monolithic hero card with a balanced 3-card grid (Scholar, Supervision, Institution) spanning up to 1180px.
+- [x] Add horizontal scope meta bar (Comparative Scope, Mixed-Methods, Study Timeline).
+- [x] Guarantee zero vertical overflow within 100vh viewport across desktop and laptop screens.
+- [x] Maintain full light and dark mode styling with theme-aware tokens.
+- [x] Verify visual appearance and responsive breakpoints with browser subagent.
 - [x] Commit and push changes to GitHub `main` branch.
-
-### Notes
-- Extracted logic similar to the CES slide to implement `.default-state` and `.hover-state` content swapping on the `.summary-card` cards in `index.html`.
