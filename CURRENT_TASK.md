@@ -1,16 +1,13 @@
 ## Status: Complete
 
 ### Task
-Redesign Slide 1 (Hero Section) on `index.html` to eliminate empty space, enhance visual balance across desktop and mobile viewports with zero overflow, and remove the Raipur address line.
+Restore single card layout and remove extra detail lines from home page (`index.html`).
 
 ### Scope
-- `index.html` — Updated hero section layout with a 3-column glass card triad (Scholar, Supervisory Committee, Academic Institution) and bottom scope meta bar; removed "Raipur – 492013, Chhattisgarh, India".
+- `index.html` — Restored the single card layout (`.thesis-hero-card`), removed the extra detail lines (Comparative Scope, Mixed-Methods, Study Timeline), and kept the address line removed.
 
 ### Progress
-- [x] Remove "Raipur – 492013, Chhattisgarh, India" line from institution block.
-- [x] Replace monolithic hero card with a balanced 3-card grid (Scholar, Supervision, Institution) spanning up to 1180px.
-- [x] Add horizontal scope meta bar (Comparative Scope, Mixed-Methods, Study Timeline).
-- [x] Guarantee zero vertical overflow within 100vh viewport across desktop and laptop screens.
-- [x] Maintain full light and dark mode styling with theme-aware tokens.
-- [x] Verify visual appearance and responsive breakpoints with browser subagent.
-- [x] Commit and push changes to GitHub `main` branch.
+- [x] Remove the 3 extra detail lines from home page.
+- [x] Restore single card layout on Slide 1.
+- [x] Update local files.
+- [x] Commit and push to GitHub with message: "Restore single card layout and remove extra detail lines from home page".

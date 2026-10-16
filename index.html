@@ -40,220 +40,7 @@
             letter-spacing: 2px;
         }
         
-        /* Hero Section (Slide 1) Redesign */
-        #slide-1 {
-            padding: 2.2rem 2rem 1.8rem 2rem;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.25rem;
-            width: 100%;
-            max-width: 1180px;
-            margin-top: 0.4rem;
-        }
-
-        .hero-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 1.3rem 1.2rem;
-            border-radius: 14px;
-            position: relative;
-            background: var(--bg-glass);
-            border: 1px solid var(--bg-glass-border);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-
-        .hero-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--card-shadow), var(--neon-glow);
-        }
-
-        .hero-card-scholar:hover {
-            border-color: var(--accent-cg);
-            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.25);
-        }
-
-        .hero-card-supervisors:hover {
-            border-color: var(--accent-jh);
-            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.25);
-        }
-
-        .hero-card-institution:hover {
-            border-color: var(--accent-cg);
-            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.25);
-        }
-
-        .hero-card-icon {
-            font-size: 1.45rem;
-            margin-bottom: 0.45rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--bg-glass-border);
-        }
-
-        .hero-card-scholar .hero-card-icon {
-            color: var(--accent-cg);
-            box-shadow: var(--neon-glow);
-        }
-
-        .hero-card-supervisors .hero-card-icon {
-            color: var(--accent-jh);
-            box-shadow: var(--accent-glow-jh);
-        }
-
-        .hero-card-institution .hero-card-icon {
-            color: var(--accent-cg);
-            box-shadow: var(--neon-glow);
-        }
-
-        .hero-card-tag {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-muted);
-            margin-bottom: 0.4rem;
-        }
-
-        .hero-card-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 0.2rem;
-            line-height: 1.3;
-        }
-
-        .hero-card-detail {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        .supervisors-duo {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-            width: 100%;
-            margin-top: 0.2rem;
-            padding-top: 0.45rem;
-            border-top: 1px solid var(--bg-glass-border);
-        }
-
-        .supervisor-item p {
-            font-size: 0.68rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 0.15rem;
-        }
-
-        .supervisor-item h4 {
-            font-size: 0.92rem;
-            font-weight: 600;
-            color: var(--text-main);
-            margin: 0;
-            line-height: 1.25;
-        }
-
-        .hero-univ-title {
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: var(--text-main);
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
-            margin-bottom: 0.25rem;
-            line-height: 1.3;
-        }
-
-        .hero-univ-dept {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-        }
-
-        .hero-year-pill {
-            display: inline-block;
-            font-weight: 700;
-            font-size: 0.78rem;
-            color: var(--accent-cg);
-            letter-spacing: 1.5px;
-            padding: 0.15rem 0.75rem;
-            background: var(--bg-glass);
-            border: 1px solid var(--bg-glass-border);
-            border-radius: 20px;
-            margin-top: auto;
-        }
-
-        /* Scope Meta Bar */
-        .hero-meta-strip {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.25rem;
-            margin-top: 0.9rem;
-            width: 100%;
-            max-width: 1180px;
-            flex-wrap: wrap;
-        }
-
-        .hero-meta-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            background: var(--bg-glass);
-            border: 1px solid var(--bg-glass-border);
-            padding: 0.35rem 0.9rem;
-            border-radius: 30px;
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            transition: all 0.3s ease;
-        }
-
-        .hero-meta-pill:hover {
-            color: var(--text-main);
-            border-color: var(--accent-cg);
-        }
-
-        .hero-meta-pill i {
-            color: var(--accent-cg);
-            font-size: 0.85rem;
-        }
-
-        .hero-meta-pill strong {
-            color: var(--text-main);
-            font-weight: 600;
-        }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 900px) {
-            .hero-cards-grid {
-                grid-template-columns: 1fr;
-                gap: 0.85rem;
-                max-width: 550px;
-            }
-            .hero-meta-strip {
-                gap: 0.5rem;
-                flex-direction: column;
-            }
-        }
-
+        /* Mobile-specific styles for Slide 1 (Hero) */
         @media (max-width: 768px) {
             #slide-1 {
                 justify-content: flex-start !important;
@@ -262,15 +49,15 @@
             }
 
             #slide-1 .slide-subtitle {
-                font-size: 0.82rem !important;
-                margin-bottom: 0.2rem !important;
+                font-size: 0.85rem !important;
+                margin-bottom: 0.25rem !important;
             }
 
             #slide-1 .slide-title {
                 font-size: 1.15rem !important;
                 line-height: 1.3 !important;
                 padding: 0 0.5rem;
-                margin-bottom: 0.3rem !important;
+                margin-bottom: 0.35rem !important;
             }
 
             #slide-1 .thesis-fulfillment-text {
@@ -283,20 +70,56 @@
             #slide-1 .thesis-degree-text {
                 font-size: 0.82rem !important;
                 letter-spacing: 0.5px !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            #slide-1 .thesis-hero-card {
+                padding: 0.75rem 0.6rem !important;
+                margin-top: 0.25rem !important;
+            }
+
+            #slide-1 .scholar-block {
+                margin-bottom: 0.4rem !important;
+            }
+
+            #slide-1 .scholar-block h3 {
+                font-size: 1.05rem !important;
+                margin-bottom: 0.1rem !important;
+            }
+
+            #slide-1 .scholar-block p {
+                font-size: 0.75rem !important;
+                margin: 0 !important;
+            }
+            
+            #slide-1 .supervisors-block {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0.3rem !important;
+                width: 100% !important;
+                padding-top: 0.4rem !important;
                 margin-bottom: 0.4rem !important;
             }
             
-            .hero-card {
-                padding: 0.75rem 0.6rem !important;
+            #slide-1 .supervisors-block h4 {
+                text-align: center !important;
+                font-size: 0.88rem !important;
+                width: 100%;
             }
 
-            .hero-card-title {
-                font-size: 1rem !important;
+            #slide-1 .supervisors-block p {
+                font-size: 0.7rem !important;
+                margin-bottom: 0.05rem !important;
+            }
+            
+            #slide-1 .institution-block {
+                padding-top: 0.4rem !important;
             }
 
-            .hero-meta-pill {
+            #slide-1 .institution-block p {
                 font-size: 0.72rem !important;
-                padding: 0.25rem 0.6rem !important;
+                line-height: 1.3 !important;
+                margin-bottom: 0.15rem !important;
             }
         }
         .university-logo {
@@ -311,69 +134,48 @@
         
         <!-- Slide 1: Hero Section -->
         <section class="slide" id="slide-1">
-            <h2 class="slide-subtitle" style="margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; color: var(--accent-cg);">Thesis Presentation</h2>
-            <h1 class="slide-title" style="color: var(--text-main); max-width: 1100px; font-size: clamp(1.6rem, 2.6vw, 2.5rem); line-height: 1.25; margin-bottom: 0.5rem;">
+            <h2 class="slide-subtitle" style="margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 2px; font-size: 1rem; color: var(--accent-cg);">Thesis Presentation</h2>
+            <h1 class="slide-title" style="color: var(--text-main); max-width: 1050px; font-size: clamp(1.8rem, 3.2vw, 2.75rem); line-height: 1.25; margin-bottom: 0.75rem;">
                 A Comparative Study on Betterment of Society through Corporate Social Responsibility Communication in Chhattisgarh and Jharkhand
             </h1>
             
-            <div class="thesis-fulfillment-wrapper" style="text-align: center; margin-bottom: 0.85rem;">
-                <p class="thesis-fulfillment-text" style="font-size: 0.9rem; color: var(--text-muted); font-style: italic; letter-spacing: 0.4px; margin-bottom: 0.2rem;">
+            <div class="thesis-fulfillment-wrapper" style="text-align: center; margin-bottom: 1.25rem;">
+                <p class="thesis-fulfillment-text" style="font-size: 0.95rem; color: var(--text-muted); font-style: italic; letter-spacing: 0.4px; margin-bottom: 0.25rem;">
                     A Thesis Submitted in Partial Fulfilment of the Requirements for the Award of the Degree of
                 </p>
-                <p class="thesis-degree-text" style="font-size: 1.15rem; font-weight: 700; color: var(--accent-jh); text-transform: uppercase; letter-spacing: 1.5px; text-shadow: var(--accent-glow-jh); margin: 0;">
-                    Doctor of Philosophy <span style="font-weight: 500; font-size: 0.9rem; color: var(--text-muted); text-transform: none; font-style: italic; text-shadow: none;">in</span> Mass Communication
+                <p class="thesis-degree-text" style="font-size: 1.2rem; font-weight: 700; color: var(--accent-jh); text-transform: uppercase; letter-spacing: 1.5px; text-shadow: var(--accent-glow-jh); margin: 0;">
+                    Doctor of Philosophy <span style="font-weight: 500; font-size: 0.95rem; color: var(--text-muted); text-transform: none; font-style: italic; text-shadow: none;">in</span> Mass Communication
                 </p>
             </div>
             
-            <div class="hero-cards-grid">
-                <!-- Card 1: Research Scholar -->
-                <div class="glass-card hero-card hero-card-scholar">
-                    <div class="hero-card-icon"><i class="fas fa-user-graduate"></i></div>
-                    <span class="hero-card-tag">Submitted By</span>
-                    <h3 class="hero-card-title">Sayed Amir Mustafa Hashmi</h3>
-                    <p class="hero-card-detail" style="color: var(--accent-cg); font-weight: 600; margin-bottom: 0.35rem;">Enrolment No.: R/Ph.D. 005</p>
-                    <span style="display: inline-block; font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; padding: 0.15rem 0.55rem; background: var(--bg-glass); border: 1px solid var(--bg-glass-border); border-radius: 12px; margin-top: auto;">Research Scholar</span>
+            <div class="glass-card thesis-hero-card" style="max-width: 840px; width: 100%; text-align: center; padding: 1.6rem 2rem;">
+                <div class="scholar-block" style="margin-bottom: 0.9rem;">
+                    <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.2rem;">Submitted by</p>
+                    <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 0.15rem; color: var(--text-main);">Sayed Amir Mustafa Hashmi</h3>
+                    <p style="color: var(--accent-cg); font-weight: 600; font-size: 0.88rem; margin: 0;">Enrolment No.: R/Ph.D. 005</p>
                 </div>
-
-                <!-- Card 2: Supervisory Committee -->
-                <div class="glass-card hero-card hero-card-supervisors">
-                    <div class="hero-card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <span class="hero-card-tag">Research Supervision</span>
-                    <div class="supervisors-duo">
-                        <div class="supervisor-item">
-                            <p>Supervisor</p>
-                            <h4>Dr. Ashutosh Mandavi</h4>
-                        </div>
-                        <div class="supervisor-item">
-                            <p>Co-Supervisor</p>
-                            <h4>Dr. Nripendra Kumar Sharma</h4>
-                        </div>
+                
+                <div class="grid-2 supervisors-block" style="border-top: 1px solid var(--bg-glass-border); padding-top: 0.9rem; margin-bottom: 0.9rem;">
+                    <div>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.2rem;">Supervisor</p>
+                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 600; margin: 0;">Dr. Ashutosh Mandavi</h4>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.2rem;">Co-Supervisor</p>
+                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 600; margin: 0;">Dr. Nripendra Kumar Sharma</h4>
                     </div>
                 </div>
-
-                <!-- Card 3: Academic Institution -->
-                <div class="glass-card hero-card hero-card-institution">
-                    <div class="hero-card-icon"><i class="fas fa-university"></i></div>
-                    <span class="hero-card-tag">Academic Institution</span>
-                    <h4 class="hero-univ-title">Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya</h4>
-                    <p class="hero-univ-dept">Research Centre, Department of Mass Communication</p>
-                    <span class="hero-year-pill">2026</span>
-                </div>
-            </div>
-
-            <!-- Scope Meta Bar -->
-            <div class="hero-meta-strip">
-                <div class="hero-meta-pill">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <span>Comparative Scope: <strong>Chhattisgarh &amp; Jharkhand</strong></span>
-                </div>
-                <div class="hero-meta-pill">
-                    <i class="fas fa-chart-pie"></i>
-                    <span>Mixed-Methods: <strong>400 Surveys &bull; 40 In-Depth Interviews</strong></span>
-                </div>
-                <div class="hero-meta-pill">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>Study Timeline: <strong>FY 2018–19 to FY 2022–23</strong></span>
+                
+                <div class="institution-block" style="border-top: 1px solid var(--bg-glass-border); padding-top: 0.9rem;">
+                    <p style="font-weight: 600; font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.25rem;">
+                        Research Centre, Department of Mass Communication
+                    </p>
+                    <p style="font-weight: 700; font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-main); margin-bottom: 0.25rem;">
+                        Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya
+                    </p>
+                    <p style="display: inline-block; font-weight: 700; font-size: 0.85rem; color: var(--accent-cg); letter-spacing: 2px; padding: 0.2rem 0.85rem; background: var(--bg-glass); border: 1px solid var(--bg-glass-border); border-radius: 20px; margin: 0;">
+                        2026
+                    </p>
                 </div>
             </div>
         </section>

@@ -6,6 +6,13 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ## 2026-10-16
 
+### Restore Single Card Layout & Remove Extra Detail Lines on Home Page
+
+- **`index.html`**:
+  - Restored the single glass card layout (`.thesis-hero-card`) on Slide 1, reverting the multi-card split.
+  - Removed the extra detail lines (*Comparative Scope: Chhattisgarh & Jharkhand*, *Mixed-Methods: 400 Surveys • 40 In-Depth Interviews*, and *Study Timeline: FY 2018–19 to FY 2022–23*).
+  - Maintained the removal of the Raipur address line as requested previously.
+
 ### Redesign Home Page (Slide 1) Layout & Remove Address
 
 - **`index.html`**:
