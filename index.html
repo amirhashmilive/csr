@@ -16,31 +16,6 @@
     
     <style>
         /* Specific Homepage Styles */
-        .hero-stats {
-            display: flex;
-            gap: 3rem;
-            margin-top: 1.5rem;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--accent-cg);
-            text-shadow: var(--accent-glow-cg);
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-        }
-        
         .chapter-card {
             text-decoration: none;
             color: var(--text-main);
@@ -65,94 +40,86 @@
             letter-spacing: 2px;
         }
         
-
-        
         /* Mobile-specific styles for Slide 1 (Hero) */
         @media (max-width: 768px) {
             #slide-1 {
                 justify-content: flex-start !important;
-                padding-top: 1rem !important;
-                padding-bottom: 1rem !important;
+                padding-top: 1.25rem !important;
+                padding-bottom: 1.25rem !important;
             }
 
             #slide-1 .slide-subtitle {
-                font-size: 0.9rem !important;
-                margin-bottom: 0.2rem !important;
+                font-size: 0.85rem !important;
+                margin-bottom: 0.25rem !important;
             }
 
             #slide-1 .slide-title {
-                font-size: 1.05rem !important;
-                line-height: 1.25 !important;
+                font-size: 1.15rem !important;
+                line-height: 1.3 !important;
                 padding: 0 0.5rem;
+                margin-bottom: 0.35rem !important;
+            }
+
+            #slide-1 .thesis-fulfillment-text {
+                font-size: 0.72rem !important;
+                line-height: 1.25 !important;
+                margin-bottom: 0.15rem !important;
+                padding: 0 0.5rem !important;
+            }
+
+            #slide-1 .thesis-degree-text {
+                font-size: 0.82rem !important;
+                letter-spacing: 0.5px !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            #slide-1 .thesis-hero-card {
+                padding: 0.75rem 0.6rem !important;
+                margin-top: 0.25rem !important;
+            }
+
+            #slide-1 .scholar-block {
                 margin-bottom: 0.4rem !important;
             }
-            
-            #slide-1 .glass-card {
-                flex-direction: column !important;
-                padding: 0.6rem !important;
-                margin-top: 0.4rem !important;
-                align-items: center !important;
-                gap: 0.3rem !important;
-            }
-            
-            #slide-1 .glass-card h3 {
+
+            #slide-1 .scholar-block h3 {
                 font-size: 1.05rem !important;
-                text-align: center !important;
-                width: 100%;
+                margin-bottom: 0.1rem !important;
             }
-            
-            #slide-1 .glass-card p {
-                display: block !important;
-                text-align: center !important;
-                width: 100%;
+
+            #slide-1 .scholar-block p {
                 font-size: 0.75rem !important;
-                margin-bottom: 0.2rem !important;
-                white-space: normal !important;
-                margin-top: 0.1rem !important;
-            }
-            
-            #slide-1 .glass-card .grid-2 {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 0.2rem !important;
-                width: 100% !important;
-            }
-            
-            #slide-1 .glass-card h4 {
-                text-align: center !important;
-                font-size: 0.85rem !important;
-                width: 100%;
-            }
-            
-            #slide-1 .glass-card div[style*="margin-top: 1rem"] {
-                margin-top: 0.4rem !important;
-                padding-top: 0.4rem !important;
-            }
-            
-            .hero-stats {
-                display: grid !important;
-                grid-template-columns: repeat(4, 1fr) !important;
-                gap: 0.4rem !important;
-                margin-top: 0.6rem !important;
-                width: 100%;
-                max-width: 360px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            
-            .hero-stats .stat-item {
-                padding: 0 !important;
                 margin: 0 !important;
             }
             
-            .hero-stats .stat-number {
-                font-size: 1.4rem !important;
-                margin-bottom: 0.1rem !important;
+            #slide-1 .supervisors-block {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0.3rem !important;
+                width: 100% !important;
+                padding-top: 0.4rem !important;
+                margin-bottom: 0.4rem !important;
             }
             
-            .hero-stats .stat-label {
-                font-size: 0.6rem !important;
-                letter-spacing: 0.5px !important;
+            #slide-1 .supervisors-block h4 {
+                text-align: center !important;
+                font-size: 0.88rem !important;
+                width: 100%;
+            }
+
+            #slide-1 .supervisors-block p {
+                font-size: 0.7rem !important;
+                margin-bottom: 0.05rem !important;
+            }
+            
+            #slide-1 .institution-block {
+                padding-top: 0.4rem !important;
+            }
+
+            #slide-1 .institution-block p {
+                font-size: 0.72rem !important;
+                line-height: 1.3 !important;
+                margin-bottom: 0.15rem !important;
             }
         }
         .university-logo {
@@ -167,48 +134,51 @@
         
         <!-- Slide 1: Hero Section -->
         <section class="slide" id="slide-1">
-            <h2 class="slide-subtitle" style="margin-bottom: 1rem;">Thesis Presentation</h2>
-            <h1 class="slide-title" style="color: var(--text-main); max-width: 1000px; font-size: 3.5rem; line-height: 1.2;">
+            <h2 class="slide-subtitle" style="margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 2px; font-size: 1rem; color: var(--accent-cg);">Thesis Presentation</h2>
+            <h1 class="slide-title" style="color: var(--text-main); max-width: 1050px; font-size: clamp(1.8rem, 3.2vw, 2.75rem); line-height: 1.25; margin-bottom: 0.75rem;">
                 A Comparative Study on Betterment of Society through Corporate Social Responsibility Communication in Chhattisgarh and Jharkhand
             </h1>
             
-            <div class="glass-card" style="margin-top: 1.5rem; max-width: 800px; width: 100%; text-align: center; padding: 1.5rem;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 0.2rem;">Sayed Amir Mustafa Hashmi</h3>
-                <p style="color: var(--text-muted); margin-bottom: 1rem;">Enrolment No.: R/Ph.D. 005</p>
-                
-                <div class="grid-2">
-                    <div>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Supervisor</p>
-                        <h4 style="font-size: 1.1rem;">Dr. Ashutosh Mandavi</h4>
-                    </div>
-                    <div>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Co-Supervisor</p>
-                        <h4 style="font-size: 1.1rem;">Dr. Nripendra Kumar Sharma</h4>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 1rem; border-top: 1px solid var(--bg-glass-border); padding-top: 1rem;">
-                    <p style="font-weight: 600; font-size: 0.95rem;">Dept. of Mass Communication</p>
-                    <p style="color: var(--text-muted); font-size: 0.85rem;">Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya, Raipur</p>
-                </div>
+            <div class="thesis-fulfillment-wrapper" style="text-align: center; margin-bottom: 1.25rem;">
+                <p class="thesis-fulfillment-text" style="font-size: 0.95rem; color: var(--text-muted); font-style: italic; letter-spacing: 0.4px; margin-bottom: 0.25rem;">
+                    A Thesis Submitted in Partial Fulfilment of the Requirements for the Award of the Degree of
+                </p>
+                <p class="thesis-degree-text" style="font-size: 1.2rem; font-weight: 700; color: var(--accent-jh); text-transform: uppercase; letter-spacing: 1.5px; text-shadow: var(--accent-glow-jh); margin: 0;">
+                    Doctor of Philosophy <span style="font-weight: 500; font-size: 0.95rem; color: var(--text-muted); text-transform: none; font-style: italic; text-shadow: none;">in</span> Mass Communication
+                </p>
             </div>
             
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">400</div>
-                    <div class="stat-label">Surveys</div>
+            <div class="glass-card thesis-hero-card" style="max-width: 840px; width: 100%; text-align: center; padding: 1.6rem 2rem;">
+                <div class="scholar-block" style="margin-bottom: 0.9rem;">
+                    <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.2rem;">Submitted by</p>
+                    <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 0.15rem; color: var(--text-main);">Sayed Amir Mustafa Hashmi</h3>
+                    <p style="color: var(--accent-cg); font-weight: 600; font-size: 0.88rem; margin: 0;">Enrolment No.: R/Ph.D. 005</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">40</div>
-                    <div class="stat-label">Interviews</div>
+                
+                <div class="grid-2 supervisors-block" style="border-top: 1px solid var(--bg-glass-border); padding-top: 0.9rem; margin-bottom: 0.9rem;">
+                    <div>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.2rem;">Supervisor</p>
+                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 600; margin: 0;">Dr. Ashutosh Mandavi</h4>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.2rem;">Co-Supervisor</p>
+                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 600; margin: 0;">Dr. Nripendra Kumar Sharma</h4>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">5</div>
-                    <div class="stat-label">Hypotheses</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">States</div>
+                
+                <div class="institution-block" style="border-top: 1px solid var(--bg-glass-border); padding-top: 0.9rem;">
+                    <p style="font-weight: 600; font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.25rem;">
+                        Research Centre, Department of Mass Communication
+                    </p>
+                    <p style="font-weight: 700; font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-main); margin-bottom: 0.25rem;">
+                        Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.35rem;">
+                        Raipur – 492013, Chhattisgarh, India
+                    </p>
+                    <p style="display: inline-block; font-weight: 700; font-size: 0.85rem; color: var(--accent-cg); letter-spacing: 2px; padding: 0.2rem 0.85rem; background: var(--bg-glass); border: 1px solid var(--bg-glass-border); border-radius: 20px; margin: 0;">
+                        2026
+                    </p>
                 </div>
             </div>
         </section>
