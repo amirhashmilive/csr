@@ -4,6 +4,18 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ---
 
+## 2026-10-17
+
+### Maximize Slide 1 Layout to ~90% Viewport with Larger Fonts
+
+- **`index.html`**:
+  - Restructured Slide 1 so that `.thesis-hero-card` wraps the full presentation cover content (subtitle, title, degree requirements, scholar block, supervisors committee, and academic institution).
+  - Maximized card footprint to fill ~90% of viewport width (`90vw`, max-width `1600px`) and ~88% of viewport height (`88vh`), reducing excessive empty margins.
+  - Increased font sizes across all elements using responsive `clamp()` units (Title up to 2.65rem, Scholar up to 2.1rem, Supervisors up to 1.5rem, University up to 1.45rem).
+  - Verified zero vertical and horizontal overflow across common desktop resolutions (1920×1080, 1440×900, 1366×768) in both Dark and Light themes.
+
+---
+
 ## 2026-10-16
 
 ### Restore Single Card Layout & Remove Extra Detail Lines on Home Page

@@ -40,86 +40,229 @@
             letter-spacing: 2px;
         }
         
-        /* Mobile-specific styles for Slide 1 (Hero) */
+        /* ── Slide 1 Maximized Viewport Styling (~90% Width & Height) ── */
+        #slide-1 {
+            height: 100vh;
+            max-height: 100vh;
+            padding: 3vh 3vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        #slide-1 .thesis-hero-card {
+            width: 90vw;
+            max-width: 1600px;
+            height: 88vh;
+            max-height: 88vh;
+            padding: clamp(1rem, 2.5vh, 2.4rem) clamp(1.2rem, 3.5vw, 3.5rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow), 0 0 40px rgba(0, 102, 204, 0.15);
+            overflow: hidden;
+            position: relative;
+        }
+
+        #slide-1 .hero-card-header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #slide-1 .slide-subtitle {
+            margin-bottom: clamp(0.2rem, 0.8vh, 0.6rem);
+            text-transform: uppercase;
+            letter-spacing: clamp(1.5px, 0.2vw, 3px);
+            font-size: clamp(0.85rem, 1.1vw, 1.25rem);
+            color: var(--accent-cg);
+            font-weight: 700;
+        }
+
+        #slide-1 .slide-title {
+            color: var(--text-main);
+            max-width: 1400px;
+            font-size: clamp(1.5rem, 2.3vw, 2.65rem);
+            line-height: 1.22;
+            margin-bottom: clamp(0.3rem, 1vh, 0.75rem);
+            font-weight: 800;
+            text-shadow: var(--neon-glow);
+        }
+
+        #slide-1 .thesis-fulfillment-wrapper {
+            text-align: center;
+            margin-bottom: clamp(0.2rem, 0.8vh, 0.6rem);
+        }
+
+        #slide-1 .thesis-fulfillment-text {
+            font-size: clamp(0.82rem, 1vw, 1.1rem);
+            color: var(--text-muted);
+            font-style: italic;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.2rem;
+            line-height: 1.3;
+        }
+
+        #slide-1 .thesis-degree-text {
+            font-size: clamp(1.1rem, 1.4vw, 1.55rem);
+            font-weight: 800;
+            color: var(--accent-jh);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: var(--accent-glow-jh);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        #slide-1 .hero-card-body {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: clamp(1rem, 2.5vw, 3rem);
+            align-items: center;
+            padding: clamp(0.5rem, 1.4vh, 1.2rem) 0;
+            border-top: 1px solid var(--bg-glass-border);
+            border-bottom: 1px solid var(--bg-glass-border);
+        }
+
+        #slide-1 .scholar-block {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #slide-1 .scholar-block .block-label {
+            font-size: clamp(0.72rem, 0.85vw, 0.95rem);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        #slide-1 .scholar-block h3 {
+            font-size: clamp(1.3rem, 1.85vw, 2.1rem);
+            font-weight: 800;
+            margin-bottom: 0.2rem;
+            color: var(--text-main);
+            letter-spacing: 0.5px;
+        }
+
+        #slide-1 .scholar-block .scholar-enrolment {
+            color: var(--accent-cg);
+            font-weight: 700;
+            font-size: clamp(0.85rem, 1.05vw, 1.2rem);
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        #slide-1 .supervisors-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(0.8rem, 1.5vw, 2rem);
+            text-align: center;
+            border-left: 1px solid var(--bg-glass-border);
+            padding-left: clamp(0.8rem, 1.5vw, 2rem);
+        }
+
+        #slide-1 .supervisor-item .block-label {
+            font-size: clamp(0.72rem, 0.85vw, 0.95rem);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        #slide-1 .supervisor-item h4 {
+            font-size: clamp(1.05rem, 1.35vw, 1.5rem);
+            color: var(--text-main);
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        #slide-1 .institution-block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: clamp(0.3rem, 1vh, 0.8rem);
+        }
+
+        #slide-1 .institution-block .dept-text {
+            font-weight: 600;
+            font-size: clamp(0.9rem, 1.15vw, 1.3rem);
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
+            letter-spacing: 0.3px;
+        }
+
+        #slide-1 .institution-block .univ-text {
+            font-weight: 800;
+            font-size: clamp(0.95rem, 1.25vw, 1.45rem);
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: var(--text-main);
+            margin-bottom: 0.4rem;
+            line-height: 1.3;
+        }
+
+        #slide-1 .institution-block .year-badge {
+            display: inline-block;
+            font-weight: 800;
+            font-size: clamp(0.82rem, 1vw, 1.15rem);
+            color: var(--accent-cg);
+            letter-spacing: 2.5px;
+            padding: 0.25rem 1.25rem;
+            background: var(--bg-glass);
+            border: 1px solid var(--bg-glass-border);
+            border-radius: 25px;
+            box-shadow: var(--card-shadow);
+        }
+
+        /* Responsive Breakpoints for Tablet & Mobile */
+        @media (max-width: 900px) {
+            #slide-1 .hero-card-body {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            #slide-1 .supervisors-block {
+                border-left: none;
+                padding-left: 0;
+                border-top: 1px solid var(--bg-glass-border);
+                padding-top: 0.6rem;
+            }
+        }
+
         @media (max-width: 768px) {
             #slide-1 {
-                justify-content: flex-start !important;
-                padding-top: 1.25rem !important;
-                padding-bottom: 1.25rem !important;
+                height: auto !important;
+                min-height: 100vh !important;
+                max-height: none !important;
+                padding: 1.5rem 1rem !important;
+                overflow-y: auto !important;
             }
 
-            #slide-1 .slide-subtitle {
-                font-size: 0.85rem !important;
-                margin-bottom: 0.25rem !important;
-            }
-
-            #slide-1 .slide-title {
-                font-size: 1.15rem !important;
-                line-height: 1.3 !important;
-                padding: 0 0.5rem;
-                margin-bottom: 0.35rem !important;
-            }
-
-            #slide-1 .thesis-fulfillment-text {
-                font-size: 0.72rem !important;
-                line-height: 1.25 !important;
-                margin-bottom: 0.15rem !important;
-                padding: 0 0.5rem !important;
-            }
-
-            #slide-1 .thesis-degree-text {
-                font-size: 0.82rem !important;
-                letter-spacing: 0.5px !important;
-                margin-bottom: 0.5rem !important;
-            }
-            
             #slide-1 .thesis-hero-card {
-                padding: 0.75rem 0.6rem !important;
-                margin-top: 0.25rem !important;
-            }
-
-            #slide-1 .scholar-block {
-                margin-bottom: 0.4rem !important;
-            }
-
-            #slide-1 .scholar-block h3 {
-                font-size: 1.05rem !important;
-                margin-bottom: 0.1rem !important;
-            }
-
-            #slide-1 .scholar-block p {
-                font-size: 0.75rem !important;
-                margin: 0 !important;
-            }
-            
-            #slide-1 .supervisors-block {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 0.3rem !important;
                 width: 100% !important;
-                padding-top: 0.4rem !important;
-                margin-bottom: 0.4rem !important;
-            }
-            
-            #slide-1 .supervisors-block h4 {
-                text-align: center !important;
-                font-size: 0.88rem !important;
-                width: 100%;
+                height: auto !important;
+                max-height: none !important;
+                padding: 1.2rem 1rem !important;
             }
 
-            #slide-1 .supervisors-block p {
-                font-size: 0.7rem !important;
-                margin-bottom: 0.05rem !important;
-            }
-            
-            #slide-1 .institution-block {
-                padding-top: 0.4rem !important;
-            }
-
-            #slide-1 .institution-block p {
-                font-size: 0.72rem !important;
-                line-height: 1.3 !important;
-                margin-bottom: 0.15rem !important;
+            #slide-1 .supervisors-block {
+                grid-template-columns: 1fr !important;
+                gap: 0.5rem !important;
             }
         }
         .university-logo {
@@ -134,48 +277,52 @@
         
         <!-- Slide 1: Hero Section -->
         <section class="slide" id="slide-1">
-            <h2 class="slide-subtitle" style="margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 2px; font-size: 1rem; color: var(--accent-cg);">Thesis Presentation</h2>
-            <h1 class="slide-title" style="color: var(--text-main); max-width: 1050px; font-size: clamp(1.8rem, 3.2vw, 2.75rem); line-height: 1.25; margin-bottom: 0.75rem;">
-                A Comparative Study on Betterment of Society through Corporate Social Responsibility Communication in Chhattisgarh and Jharkhand
-            </h1>
-            
-            <div class="thesis-fulfillment-wrapper" style="text-align: center; margin-bottom: 1.25rem;">
-                <p class="thesis-fulfillment-text" style="font-size: 0.95rem; color: var(--text-muted); font-style: italic; letter-spacing: 0.4px; margin-bottom: 0.25rem;">
-                    A Thesis Submitted in Partial Fulfilment of the Requirements for the Award of the Degree of
-                </p>
-                <p class="thesis-degree-text" style="font-size: 1.2rem; font-weight: 700; color: var(--accent-jh); text-transform: uppercase; letter-spacing: 1.5px; text-shadow: var(--accent-glow-jh); margin: 0;">
-                    Doctor of Philosophy <span style="font-weight: 500; font-size: 0.95rem; color: var(--text-muted); text-transform: none; font-style: italic; text-shadow: none;">in</span> Mass Communication
-                </p>
-            </div>
-            
-            <div class="glass-card thesis-hero-card" style="max-width: 840px; width: 100%; text-align: center; padding: 1.6rem 2rem;">
-                <div class="scholar-block" style="margin-bottom: 0.9rem;">
-                    <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.2rem;">Submitted by</p>
-                    <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 0.15rem; color: var(--text-main);">Sayed Amir Mustafa Hashmi</h3>
-                    <p style="color: var(--accent-cg); font-weight: 600; font-size: 0.88rem; margin: 0;">Enrolment No.: R/Ph.D. 005</p>
-                </div>
-                
-                <div class="grid-2 supervisors-block" style="border-top: 1px solid var(--bg-glass-border); padding-top: 0.9rem; margin-bottom: 0.9rem;">
-                    <div>
-                        <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.2rem;">Supervisor</p>
-                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 600; margin: 0;">Dr. Ashutosh Mandavi</h4>
-                    </div>
-                    <div>
-                        <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.2rem;">Co-Supervisor</p>
-                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 600; margin: 0;">Dr. Nripendra Kumar Sharma</h4>
+            <div class="glass-card thesis-hero-card">
+                <div class="hero-card-header">
+                    <h2 class="slide-subtitle">Thesis Presentation</h2>
+                    <h1 class="slide-title">
+                        A Comparative Study on Betterment of Society through Corporate Social Responsibility Communication in Chhattisgarh and Jharkhand
+                    </h1>
+                    
+                    <div class="thesis-fulfillment-wrapper">
+                        <p class="thesis-fulfillment-text">
+                            A Thesis Submitted in Partial Fulfilment of the Requirements for the Award of the Degree of
+                        </p>
+                        <p class="thesis-degree-text">
+                            Doctor of Philosophy <span style="font-weight: 500; font-size: 0.85em; color: var(--text-muted); text-transform: none; font-style: italic; text-shadow: none;">in</span> Mass Communication
+                        </p>
                     </div>
                 </div>
                 
-                <div class="institution-block" style="border-top: 1px solid var(--bg-glass-border); padding-top: 0.9rem;">
-                    <p style="font-weight: 600; font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.25rem;">
+                <div class="hero-card-body">
+                    <div class="scholar-block">
+                        <p class="block-label">Submitted by</p>
+                        <h3>Sayed Amir Mustafa Hashmi</h3>
+                        <p class="scholar-enrolment">Enrolment No.: R/Ph.D. 005</p>
+                    </div>
+                    
+                    <div class="supervisors-block">
+                        <div class="supervisor-item">
+                            <p class="block-label">Supervisor</p>
+                            <h4>Dr. Ashutosh Mandavi</h4>
+                        </div>
+                        <div class="supervisor-item">
+                            <p class="block-label">Co-Supervisor</p>
+                            <h4>Dr. Nripendra Kumar Sharma</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="institution-block">
+                    <p class="dept-text">
                         Research Centre, Department of Mass Communication
                     </p>
-                    <p style="font-weight: 700; font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-main); margin-bottom: 0.25rem;">
+                    <p class="univ-text">
                         Kushabhau Thakre Patrakarita Avam Jansanchar Vishwavidyalaya
                     </p>
-                    <p style="display: inline-block; font-weight: 700; font-size: 0.85rem; color: var(--accent-cg); letter-spacing: 2px; padding: 0.2rem 0.85rem; background: var(--bg-glass); border: 1px solid var(--bg-glass-border); border-radius: 20px; margin: 0;">
+                    <span class="year-badge">
                         2026
-                    </p>
+                    </span>
                 </div>
             </div>
         </section>
