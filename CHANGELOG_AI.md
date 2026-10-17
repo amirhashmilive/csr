@@ -6,6 +6,14 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ## 2026-10-17
 
+### Move Title to Top of Card in All Caps & Remove Formality Lines on Slide 1
+
+- **`index.html`**:
+  - Removed thesis formality lead text (*"A Thesis Submitted in Partial Fulfilment of the Requirements for the Award of the Degree of"*) and degree text (*"Doctor of Philosophy in Mass Communication"*).
+  - Moved thesis title to the upper side of the card, styled in ALL CAPS (*"A COMPARATIVE STUDY ON BETTERMENT OF SOCIETY THROUGH CORPORATE SOCIAL RESPONSIBILITY COMMUNICATION IN CHHATTISGARH AND JHARKHAND"*).
+  - Rebalanced internal card spacing between header, scholar/supervisors body, and institution footer to maintain visual harmony without awkward gaps.
+  - Verified layout across desktop viewports ensuring zero overflow and no scrollbars.
+
 ### Maximize Slide 1 Layout to ~90% Viewport with Larger Fonts
 
 - **`index.html`**:
