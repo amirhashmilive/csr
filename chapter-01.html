@@ -123,6 +123,35 @@
         .pyramid-2 { width: 250px; background: #e67e22; }
         .pyramid-3 { width: 350px; background: #f1c40f; color: #333; }
         .pyramid-4 { width: 450px; background: #2ecc71; }
+        
+        .csr-definition-card {
+            max-width: 960px;
+            width: 92%;
+            margin: 0 auto;
+            padding: clamp(2rem, 4.5vw, 3.5rem) clamp(1.5rem, 5vw, 4rem);
+            text-align: center;
+            border-left: 6px solid var(--accent-cg);
+            box-shadow: var(--card-shadow), var(--neon-glow);
+            position: relative;
+        }
+        
+        .csr-quote-icon {
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            color: var(--accent-cg);
+            opacity: 0.8;
+            margin-bottom: 1.25rem;
+            display: inline-block;
+        }
+
+        .csr-definition-text {
+            font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+            line-height: 1.75;
+            font-weight: 500;
+            color: var(--text-main);
+            margin: 0;
+            letter-spacing: -0.01em;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -155,37 +184,15 @@
             </div>
         </section>
 
-        <!-- Slide 2: Understanding the Thesis Title -->
+        <!-- Slide 2: What is CSR? -->
         <section class="slide">
-            <h2 class="slide-title">Understanding the Thesis Title</h2>
-            <h3 class="slide-subtitle" style="max-width: 950px; margin: 0 auto 2.5rem auto; font-style: italic; line-height: 1.5; font-size: 1.15rem; color: var(--text-muted); text-align: center;">
-                "A Comparative Study on Betterment of Society through Corporate Social Responsibility Communication in Chhattisgarh and Jharkhand"
-            </h3>
+            <h2 class="slide-title">What is CSR?</h2>
             
-            <div class="grid-2" style="max-width: 1100px; width: 100%; gap: 1.5rem;">
-                <div class="glass-card hover-magnify" style="padding: 1.8rem; text-align: left; display: flex; flex-direction: column; justify-content: flex-start;">
-                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem; line-height: 1;">🏢</div>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 0.6rem; color: var(--text-main); font-weight: 700;">Corporate Social Responsibility (CSR)</h3>
-                    <p style="color: var(--text-muted); line-height: 1.5; margin: 0; font-size: 0.95rem;">A company's commitment to contribute to social, environmental, and economic welfare — mandated under Section 135, Companies Act, 2013.</p>
-                </div>
-                
-                <div class="glass-card hover-magnify" style="padding: 1.8rem; text-align: left; display: flex; flex-direction: column; justify-content: flex-start;">
-                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem; line-height: 1;">💬</div>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 0.6rem; color: var(--text-main); font-weight: 700;">CSR Communication</h3>
-                    <p style="color: var(--text-muted); line-height: 1.5; margin: 0; font-size: 0.95rem;">The systematic process of conveying CSR initiatives, implementation, and impacts to stakeholders through transparent, culturally responsive dialogue.</p>
-                </div>
-                
-                <div class="glass-card hover-magnify" style="padding: 1.8rem; text-align: left; display: flex; flex-direction: column; justify-content: flex-start;">
-                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem; line-height: 1;">🌍</div>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 0.6rem; color: var(--text-main); font-weight: 700;">Betterment of Society</h3>
-                    <p style="color: var(--text-muted); line-height: 1.5; margin: 0; font-size: 0.95rem;">Measurable improvements in socio-economic well-being and quality of life across education, healthcare, environment, and livelihood.</p>
-                </div>
-                
-                <div class="glass-card hover-magnify" style="padding: 1.8rem; text-align: left; display: flex; flex-direction: column; justify-content: flex-start;">
-                    <div style="font-size: 2.5rem; margin-bottom: 0.8rem; line-height: 1;">🗺️</div>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 0.6rem; color: var(--text-main); font-weight: 700;">Chhattisgarh & Jharkhand</h3>
-                    <p style="color: var(--text-muted); line-height: 1.5; margin: 0; font-size: 0.95rem;">Two mineral-rich, tribal-majority states formed in 2000. Similar industrial profiles but distinct CSR communication outcomes — ideal for comparative analysis.</p>
-                </div>
+            <div class="glass-card csr-definition-card">
+                <i class="fas fa-quote-left csr-quote-icon"></i>
+                <blockquote class="csr-definition-text">
+                    "Corporate Social Responsibility (CSR) is a company's commitment to contribute to social, environmental, and economic welfare — mandated under Section 135 of the Companies Act, 2013, which requires qualifying companies to spend at least 2% of their average net profits of the preceding three financial years on CSR activities listed under Schedule VII."
+                </blockquote>
             </div>
         </section>
 

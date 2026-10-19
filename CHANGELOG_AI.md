@@ -4,6 +4,14 @@ All changes made by AI agents are logged here in reverse chronological order.
 
 ---
 
+## 2026-10-19
+
+### Replace "Understanding the Thesis Title" Slide with Highlighted CSR Definition Slide
+
+- **`chapter-01.html`**: Removed the entire "Understanding the Thesis Title" slide (4-card grid: CSR, CSR Communication, Betterment of Society, Chhattisgarh & Jharkhand). Replaced with a clean, minimal "What is CSR?" slide containing a single prominently highlighted glass-card definition block with quote styling, border-left accent, and italic blockquote. Added scoped CSS classes (`.csr-definition-card`, `.csr-quote-icon`, `.csr-definition-text`) using `clamp()` for responsive sizing. Slide count unchanged (still 11 slides). Dynamic numbering via `slide-number.js` unaffected.
+
+---
+
 ## 2026-10-17
 
 ### Move Title to Top of Card in All Caps & Remove Formality Lines on Slide 1
